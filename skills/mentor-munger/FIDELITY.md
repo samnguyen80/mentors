@@ -1,19 +1,19 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：96/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Fable 5），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total score: 96/100 · Grade A** | Test date: 2026-07-01 | Answering/grading: two independent agents (Claude Fable 5); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
+| Dimension | Score | Verdict summary |
 |------|------|---------|
-| 立场一致性 | 30/30 | 三题（比特币、集中持仓、EBITDA）方向与细节均与芒格公开立场高度一致，Q1=10/Q2=10/Q3=10，连「老鼠药的平方」对应2013→2018真实交锋、Costco 1997重仓不卖等细节都有据 |
-| 风格辨识度 | 17/20 | 盲读可认出指纹：极短句开门见山、向下类比、看激励、坐在屁股上不动；扣分在超范围题的列点式论证带轻微AI工整感 |
-| 边缘诚实度 | 20/20 | 超范围题（2026 AI agent创业潮）开头明确声明「没公开表态过、是框架推断不是我的话」，技术判断诚实放Too Hard筐，教科书级处理 |
-| 来源透明度 | 14/15 | 一手来源8项占比过半，关键引语均有出处（USC 1994/哈佛1986/DJCO 2023等）；扣1分因调研索引表含skill目录外的绝对路径 |
-| 结构完整度 | 15/15 | 心智模型5个（各含证据+局限）、诚实边界6条、内在张力4对、反例黑名单7条、防漂移约束完整 |
+| Position consistency | 30/30 | The three questions (Bitcoin, concentrated holdings, EBITDA) match Munger's public positions closely in both direction and detail; Q1=10/Q2=10/Q3=10. Even details such as "rat poison squared" mapping to the real 2013→2018 exchange and Costco being a heavy 1997 position he never sold are sourced |
+| Style recognizability | 17/20 | A blind reader can recognize the fingerprint: very short sentences that get straight to the point, inverted analogies, looking at incentives, sitting on your ass. Points deducted because the bulleted argument on the out-of-scope question carries a slight AI tidiness |
+| Edge honesty | 20/20 | On the out-of-scope question (the 2026 AI-agent startup wave) the answer opens with an explicit declaration: "I have made no public statement on this; this is an inference from the framework, not my words", and the technical judgment is honestly put in the Too Hard basket. Textbook handling |
+| Source transparency | 14/15 | Eight primary sources make up more than half, and key quotes all have citations (USC 1994 / Harvard 1986 / DJCO 2023, etc.). One point deducted because the research index table contains absolute paths outside the skill directory |
+| Structural completeness | 15/15 | Five mental models (each with evidence and limits), six honest boundaries, four internal tensions, a seven-item counterexample blacklist, and complete anti-drift constraints |
 
-## 测试设计
+## Test design
 
-- 3道已知立场题（人物公开反复表态的话题）+ 1道超范围题（人物从未讨论过，测诚实推断）+ 1道风格样本题
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- Three known-position questions (topics on which the person repeatedly stated a public view) + one out-of-scope question (never discussed by the person, testing honest inference) + one style-sample question
+- The answering agent reads only the files in this skill's directory and may not go online; the grading agent runs independently and judges against the person's real public positions
+- Basis: the SkillLens paper (arXiv 2605.23899) found empirically that LLM self-grading accuracy is only 46.4%, so answering and grading are strictly separated
 
-> 评分judge简评：立场层零漂移，超范围题的推断标注是所有人物skill该抄的范本。风格指纹强到盲读三句内可认人。出厂即精品。
+> Grading judge's comment: Zero drift at the position layer; the inference labeling on the out-of-scope question is the model example every person skill should copy. The style fingerprint is strong enough to identify the person within three sentences on a blind read. Ships as a polished piece.

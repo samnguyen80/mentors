@@ -1,444 +1,444 @@
-# Steve Jobs 表达风格DNA分析
+# Steve Jobs Expression Style DNA Analysis
 
-> Agent 3 调研成果 | 调研日期：2026-04-05
-> 信息标注：[一手] = Jobs本人原话/演讲实录 | [二手] = 传记/他人转述 | [推断] = 基于多个来源的归纳
+> Agent 3 research output | Research date: 2026-04-05
+> Source tags: [Primary] = Jobs's own words/speech transcripts | [Secondary] = biographies/accounts by others | [Inference] = synthesis drawn from multiple sources
 
 ---
 
-## 一、Keynote演讲：语言特征与叙事结构
+## I. Keynote Speeches: Linguistic Features and Narrative Structure
 
-### 1. 标志性用语清单
+### 1. Inventory of Signature Phrases
 
-Jobs的Keynote演讲（被称为"Stevenotes"）形成了一套高度辨识度的语言系统。这不是偶然的口癖，而是精心打磨的表演工具箱：
+Jobs's keynotes (known as "Stevenotes") formed a highly recognizable linguistic system. These were not accidental verbal tics but a carefully honed performance toolkit:
 
 **"One more thing..."**
-- 首次出现：1998年Macworld San Francisco，Jobs当时是"Interim CEO"
-- 使用频率：职业生涯中记录在案超过30次，其中12次在Macworld大会
-- [二手] 他会假装要结束演讲，走向舞台侧面，然后转身说出这句话，再揭示一个"insanely great"的保留大招
-- [推断] 这是一个**叙事装置**而非即兴发挥——每次使用都经过精确计算。当他担心一场Keynote的高潮不够强时，就会启用"one more thing"作为结构补丁
-- 来源：[Macworld](https://www.macworld.com/article/669636/watch-every-steve-jobs-one-more-thing.html)、[Apple Gazette](https://www.applegazette.com/lifestyle/every-one-more-thing-from-steve-jobs-keynotes/)
+- First appearance: Macworld San Francisco 1998, when Jobs was "Interim CEO"
+- Frequency: documented more than 30 times in his career, 12 of them at Macworld
+- [Secondary] He would pretend to be wrapping up, walk toward the side of the stage, then turn back and say the line, then reveal an "insanely great" card held in reserve
+- [Inference] This is a **narrative device**, not improvisation — every use was precisely calculated. When he worried a keynote's climax wasn't strong enough, he would deploy "one more thing" as a structural patch
+- Source: [Macworld](https://www.macworld.com/article/669636/watch-every-steve-jobs-one-more-thing.html), [Apple Gazette](https://www.applegazette.com/lifestyle/every-one-more-thing-from-steve-jobs-keynotes/)
 
 **"Boom!"**
-- 用作音效式的语气词，通常在功能演示切换瞬间使用
-- [推断] 功能类似鼓点——标记节奏转换，提醒观众"刚才那个很厉害，但现在看这个"
-- [一手] 整体语言风格高度口语化：用"gonna"代替"going to"，用"cranking out"代替"producing"，频繁使用加州口语"you know"
-- 来源：[European Rhetoric](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/steve-jobs-figures-speech/)
+- Used as a sound-effect-like interjection, usually at the instant of switching between feature demos
+- [Inference] Functions like a drumbeat — marking the change of rhythm and reminding the audience "that was impressive, but now look at this"
+- [Primary] The overall language style is highly colloquial: "gonna" instead of "going to," "cranking out" instead of "producing," and frequent use of the Californian "you know"
+- Source: [European Rhetoric](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/steve-jobs-figures-speech/)
 
-**反问句系列**
-- [一手] "Isn't that incredible?" / "Want to see that again?" / "Pretty cool, huh?" / "Isn't that amazing?"
-- [推断] 这些不是真问句。它们的功能是**强制观众情感共振**——把观众从"观看者"拉成"参与者"。修辞学上叫Interrogatio（反问），Jobs用得极其频繁，几乎每个功能演示后都跟一句
+**The series of rhetorical questions**
+- [Primary] "Isn't that incredible?" / "Want to see that again?" / "Pretty cool, huh?" / "Isn't that amazing?"
+- [Inference] These are not real questions. Their function is to **force the audience into emotional resonance** — pulling them from "viewers" into "participants." In rhetoric this is called Interrogatio (the rhetorical question); Jobs used it extremely often, with one following almost every feature demo
 
 **"That's it."**
-- 极简确认句，通常在完成一个操作后使用
-- [推断] 与"Boom"构成一对：Boom标记开始，That's it标记完成。传递的潜台词是"就这么简单"——把复杂操作的简洁性戏剧化
+- A minimal confirmation, usually used after completing an operation
+- [Inference] Forms a pair with "Boom": Boom marks the start, That's it marks the completion. The subtext is "it's that simple" — dramatizing the simplicity of a complex operation
 
-### 2. 超级形容词词库
+### 2. The Superlative Adjective Lexicon
 
-Jobs有一个固定的产品描述词库，这些词在不同年份的Keynote中反复出现：
+Jobs had a fixed vocabulary for describing products, and these words recurred across keynotes in different years:
 
-| 词汇 | 使用场景 | 分析 |
+| Word | Context | Analysis |
 |------|---------|------|
-| **insanely great** | 最高级赞美，Mac发布时的标志性用语 | "insanely"把"great"从正常赞美推到疯狂领域，传递的不是理性评估而是情感激动 |
-| **revolutionary** | 产品定位，iPhone/iPad发布 | 不是"改进"而是"革命"——框定认知：这不是迭代，是范式转移 |
-| **magical** | 用户体验描述 | 跳过技术解释直接诉诸感受，暗示"你不需要理解原理，只需要感受奇迹" |
-| **incredible** | 功能演示后的感叹 | |
-| **breakthrough** | 技术创新定位 | |
-| **unbelievable** | 数据/成绩展示 | |
-| **amazing** | 泛用赞美 | |
-| **gorgeous** | 外观/设计描述 | |
+| **insanely great** | Highest-grade praise, the signature phrase at the Mac launch | "Insanely" pushes "great" from normal praise into crazy territory, conveying not a rational assessment but emotional excitement |
+| **revolutionary** | Product positioning, iPhone/iPad launches | Not "improvement" but "revolution" — frames perception: this is not iteration, it's a paradigm shift |
+| **magical** | Describing user experience | Skips technical explanation and appeals directly to feeling, implying "you don't need to understand how it works, just feel the miracle" |
+| **incredible** | Exclamation after a feature demo | |
+| **breakthrough** | Positioning technical innovation | |
+| **unbelievable** | Presenting data/results | |
+| **amazing** | General-purpose praise | |
+| **gorgeous** | Describing appearance/design | |
 
-[推断] 这个词库有一个显著pattern：**全部是绝对化表述，没有比较级**。Jobs从不说"比竞品好30%"——他说"revolutionary"。这种语言选择把产品从"同类中较好"的坐标系里拔出来，放进"前所未有"的坐标系里。
+[Inference] This lexicon has a notable pattern: **all are absolute statements, with no comparatives.** Jobs never says "30% better than the competition" — he says "revolutionary." This word choice pulls the product out of the coordinate system of "better among its peers" and places it in the coordinate system of "unprecedented."
 
-- 来源：[Vocabulary.com](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/)
+- Source: [Vocabulary.com](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/)
 
-### 3. 叙事结构：三幕剧与悬念构建
+### 3. Narrative Structure: Three-Act Drama and Suspense Building
 
-**iPhone 2007 Keynote——史上最伟大的产品发布会结构拆解**
+**The 2007 iPhone Keynote — a breakdown of the greatest product-launch structure ever**
 
-这是Jobs叙事技巧的巅峰之作。完整结构：
+This is the pinnacle of Jobs's narrative craft. The full structure:
 
-**第一幕：设置问题（Problem Setup）**
-- 先展示现有手机的糟糕之处，让观众感受痛点
-- [一手] 展示了四个品牌的智能手机，指出它们的键盘占了手机一半空间，"whether you need them or not, they're always there"
+**Act One: Problem Setup**
+- First show what is bad about existing phones, so the audience feels the pain points
+- [Primary] Showed smartphones from four brands, pointing out that their keyboards took up half the phone, "whether you need them or not, they're always there"
 
-**第二幕：悬念渐进（Progressive Reveal）**
-- [一手] "Well, today we're introducing three revolutionary products of this class. The first one is a widescreen iPod with touch controls. The second is a revolutionary mobile phone. And the third is a breakthrough Internet communications device."
-- 然后重复三遍，每次重复都加快节奏，同时观众开始意识到这是同一个设备
-- [一手] "An iPod, a phone... are you getting it? These are not three separate devices, this is one device, and we are calling it iPhone."
+**Act Two: Progressive Reveal**
+- [Primary] "Well, today we're introducing three revolutionary products of this class. The first one is a widescreen iPod with touch controls. The second is a revolutionary mobile phone. And the third is a breakthrough Internet communications device."
+- Then he repeated it three times, speeding up each time, while the audience began to realize these were the same device
+- [Primary] "An iPod, a phone... are you getting it? These are not three separate devices, this is one device, and we are calling it iPhone."
 
-**第三幕：活体演示（Live Demo）**
-- 不是放预录视频，而是在台上真实操作
-- 高潮段落：用Google Maps找到附近的Starbucks，然后**真的拨通电话**
-- [一手] "Yes, I'd like to order 4,000 lattes to go, please. No, just kidding. Wrong number. Goodbye!"
-- [二手] 这是人类历史上第一个公开的iPhone通话。之前和Jony Ive、Phil Schiller的通话是预先安排的，这个是即兴的
-- 来源：[Inc.](https://www.inc.com/jeff-haden/the-day-steve-jobs-prank-called-a-starbucks-ordered-4000-lattes-power-of-humor-storytelling.html)、[Fast Company](https://www.fastcompany.com/3006147/because-steve-jobss-first-public-iphone-call-starbucks-still-)
+**Act Three: Live Demo**
+- Not a pre-recorded video, but real operation on stage
+- Climactic passage: using Google Maps to find a nearby Starbucks, then **actually placing the call**
+- [Primary] "Yes, I'd like to order 4,000 lattes to go, please. No, just kidding. Wrong number. Goodbye!"
+- [Secondary] This was the first public iPhone call in human history. The earlier calls with Jony Ive and Phil Schiller were pre-arranged; this one was improvised
+- Source: [Inc.](https://www.inc.com/jeff-haden/the-day-steve-jobs-prank-called-a-starbucks-ordered-4000-lattes-power-of-humor-storytelling.html), [Fast Company](https://www.fastcompany.com/3006147/because-steve-jobss-first-public-iphone-call-starbucks-still-)
 
-**Rule of Three（三的法则）**
+**The Rule of Three**
 
-[二手] Carmine Gallo在《The Presentation Secrets of Steve Jobs》中总结：Jobs几乎所有演讲都遵循"三的法则"。他始终把要点压缩到三个，因为：
-- 三比两更有戏剧性
-- 三比六或八更容易记住
-- 三创造了"开头-中间-结尾"的完整叙事弧
+[Secondary] Carmine Gallo concludes in *The Presentation Secrets of Steve Jobs* that nearly all of Jobs's talks follow the "Rule of Three." He consistently compressed his points to three, because:
+- Three is more dramatic than two
+- Three is easier to remember than six or eight
+- Three creates a complete narrative arc of "beginning-middle-end"
 
-[推断] Jobs的"三"不只是信息组织方式，更是**节奏装置**。三次重复创造了音乐般的韵律感。
+[Inference] Jobs's "three" is not just a way of organizing information but a **rhythm device**. Three repetitions create a musical sense of cadence.
 
-**Headline先行（一句话定义）**
+**Headline First (a one-sentence definition)**
 
-[二手] 每个产品都先有一句tweetable的headline，再展开细节：
-- [一手] Mac：Mac是"insanely great"
-- [一手] iPod："1,000 songs in your pocket"
-- [一手] MacBook Air："The world's thinnest notebook"
-- [一手] iPhone："An iPod, a phone, and an Internet communicator"
+[Secondary] Every product got a tweetable headline first, with details unfolding afterward:
+- [Primary] Mac: the Mac is "insanely great"
+- [Primary] iPod: "1,000 songs in your pocket"
+- [Primary] MacBook Air: "The world's thinnest notebook"
+- [Primary] iPhone: "An iPod, a phone, and an Internet communicator"
 
-这些headline的共同特征：**不超过10个英文单词，不提技术参数，直接传达用户价值或感受**。
+What these headlines share: **no more than 10 English words, no technical specs, directly conveying user value or feeling.**
 
-来源：[Carmine Gallo / McGraw-Hill](https://www.accessengineeringlibrary.com/content/book/9780071636087)
+Source: [Carmine Gallo / McGraw-Hill](https://www.accessengineeringlibrary.com/content/book/9780071636087)
 
-### 4. 演讲节奏：停顿、重复、渐进
+### 4. Delivery Rhythm: Pause, Repetition, Escalation
 
-**戏剧性停顿**
-- [二手] 切换话题或要说重要内容前，Jobs不会急着往下讲。他经常走到舞台侧面，拿起一瓶水喝一口，或者只是站在那里说一句"Isn't that amazing?"
-- [推断] 停顿的功能不是休息，而是**制造真空**。真空产生期待。期待产生注意力。
+**The Dramatic Pause**
+- [Secondary] When switching topics or before saying something important, Jobs would not rush on. He often walked to the side of the stage and took a sip from a water bottle, or just stood there and said "Isn't that amazing?"
+- [Inference] The function of the pause is not rest but **creating a vacuum**. A vacuum creates anticipation. Anticipation creates attention.
 
-**重复固化**
-- [二手] Jobs会先以列表形式介绍新概念，然后逐一展开每个要素，最后用**完全相同的措辞**再总结一遍
-- 修辞学术语：
-  - **Anaphora**（首语重复）：句子开头用同样的词。如"We've got the iPod... We've got the iPod Nano... We've got the iPod Shuffle..."
-  - **Epiphora**（尾语重复）：句子结尾用同样的词。如"This is what their contacts look like. This is what iPhone's contacts look like."
-  - **Geminatio**（连续重复）：同一句中重复词组以制造节奏
+**Repetition as Reinforcement**
+- [Secondary] Jobs would first introduce a new concept as a list, then expand on each element in turn, and finally summarize again in **exactly the same wording**
+- Rhetorical terms:
+  - **Anaphora** (repetition at the start of sentences): the same words opening sentences. E.g., "We've got the iPod... We've got the iPod Nano... We've got the iPod Shuffle..."
+  - **Epiphora** (repetition at the end of sentences): the same words closing sentences. E.g., "This is what their contacts look like. This is what iPhone's contacts look like."
+  - **Geminatio** (continuous repetition): repeating a phrase within one sentence to create rhythm
 
-**渐进式升级**
-- 产品功能从"好"到"更好"到"最好"逐步展示
-- 每个功能演示后观众鼓掌，形成"展示→掌声→展示→掌声"的波浪节奏
-- [推断] 这像是音乐的crescendo——渐强，直到"one more thing"的最终高潮
+**Progressive Escalation**
+- Product features shown step by step from "good" to "better" to "best"
+- Applause after each feature demo, forming a wave rhythm of "show → applause → show → applause"
+- [Inference] This is like a musical crescendo — building up until the final climax of "one more thing"
 
-来源：[European Rhetoric](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/steve-jobs-figures-speech/)、[Presono](https://presono.com/blog/en/present-like-steve-jobs-these-are-the-techniques-behind-the-legendary-presentations/)
-
----
-
-## 二、邮件风格：极简的艺术
-
-### 1. 核心特征
-
-Jobs的邮件以极端简短著称。这不是懒，是一种深思熟虑的沟通哲学。
-
-**长度**
-- 典型回复：1-2句话，有时只有一个词
-- [一手] 回复Bertrand Serlet关于iPhone SDK的提议："Sure, as long as we can roll it all out at Macworld on Jan 15, 2008." ——13个词，同时传达了批准、条件、截止日期三个信息
-- 来源：[Inc. / Justin Bariso](https://www.inc.com/justin-bariso/steve-jobs-how-to-write-great-email.html)
-
-**语气**
-- [二手] 即使在高层决策邮件中，语气也是对话式的，像在跟朋友说话而非下达命令
-- [推断] 短 ≠ 冷。Jobs的短邮件往往同时传达confidence和humility——他不是在教训人，而是在陈述想法并征求回应
-
-**回复公众邮件**
-- [二手] Jobs会亲自回复普通用户和开发者的邮件，回复同样极简
-- [二手] 这些简短回复在苹果社区引发"ecstasy and awe"（狂喜和敬畏）
-- 来源：[CNN Money](https://money.cnn.com/2014/12/01/technology/steve-jobs-emails/index.html)、[HuffPost](https://www.huffpost.com/entry/steve-jobs-emails-photos_n_539517)
-
-### 2. Pattern提取
-
-Jobs的邮件风格可以提炼为三条规则：
-1. **一封邮件一个决定**：不在一封邮件里讨论三件事
-2. **条件显性化**：如果有条件，直接说"as long as..."，不委婉暗示
-3. **不加装饰**：没有"Hope this email finds you well"之类的社交润滑
+Source: [European Rhetoric](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/steve-jobs-figures-speech/), [Presono](https://presono.com/blog/en/present-like-steve-jobs-these-are-the-techniques-behind-the-legendary-presentations/)
 
 ---
 
-## 三、批评方式：Binary Judgment与"Shit"哲学
+## II. Email Style: The Art of Extreme Brevity
 
-### 1. 二元判断系统
+### 1. Core Features
 
-这是Jobs表达风格中最具争议也最有特色的部分。
+Jobs's emails were known for being extremely short. This was not laziness but a deliberate philosophy of communication.
 
-[二手] Walter Isaacson在传记中写道："Steve Jobs had a tendency to see things in a binary way. A person was either a hero or a bozo, a product was either amazing or shit." 
+**Length**
+- Typical reply: 1-2 sentences, sometimes a single word
+- [Primary] His reply to Bertrand Serlet's proposal about the iPhone SDK: "Sure, as long as we can roll it all out at Macworld on Jan 15, 2008." — 13 words conveying three things at once: approval, condition, deadline
+- Source: [Inc. / Justin Bariso](https://www.inc.com/justin-bariso/steve-jobs-how-to-write-great-email.html)
 
-[二手] 同样的二元性延伸到一切事物——"Something was either 'the best thing ever', or it was shitty, brain-dead, inedible."
+**Tone**
+- [Secondary] Even in senior decision emails, the tone was conversational, like talking to a friend rather than issuing orders
+- [Inference] Short ≠ cold. Jobs's short emails often conveyed confidence and humility at once — he wasn't lecturing but stating an idea and inviting a response
 
-[推断] 这种binary thinking有几个语言层面的表现：
-- **没有中间地带的形容词**：从不说"还行""不错""有待改进"，只有"amazing"和"shit"两个档位
-- **突然切换**：一个方案可能在某个瞬间从"completely sucks"变成"absolutely perfect"——不是渐变，是跳变
-- **分类标签化**：人被分为"A player"或"bozo"，不存在"B+ player"
+**Replying to the Public**
+- [Secondary] Jobs personally replied to emails from ordinary users and developers, with equally minimal replies
+- [Secondary] These short replies provoked "ecstasy and awe" in the Apple community
+- Source: [CNN Money](https://money.cnn.com/2014/12/01/technology/steve-jobs-emails/index.html), [HuffPost](https://www.huffpost.com/entry/steve-jobs-emails-photos_n_539517)
 
-### 2. 直接否定的语言
+### 2. Pattern Extraction
 
-[一手] "I'm brutally honest, because the price of admission to being in the room with me is I get to tell you you're full of shit if you're full of shit, and you get to say to me I'm full of shit, and we have some rip-roaring fights."
-
-[一手] 面试时的压力测试："God, that really turned out to be a bomb. That really turned out to be a bozo product." ——故意贬低面试者之前的工作，观察对方是否有坚定信念
-
-[一手] "The most important thing I think you can do for someone who's really good and who's really being counted on is to point out to them when they're not—when their work isn't good enough."
-
-### 3. Pattern提取
-
-Jobs的批评语言有一个核心矛盾被他自己解决了：
-
-**表面悖论**：极端粗暴 vs. 极端关心
-**Jobs的解法**：[推断] 在他的逻辑里，不告诉你真话才是不尊重你。"Your work is shit"的潜台词是"我认为你能做得比这好得多"。如果他不在乎你，他根本不会说什么。
-
-**语言特征**：
-- 直接使用"shit""bozo""brain-dead"等粗口，不用委婉语
-- 批评对象是**作品**而非**人**（虽然界限模糊）
-- 批评通常伴随"这不够好"的隐含标准，而非"你不行"的人格否定
-
-来源：[Complex](https://www.complex.com/pop-culture/2012/10/steve-jobs-quotes/brutal-honesty)、[Inc.](https://www.inc.com/jessica-stillman/the-2-questions-steve-jobs-used-to-get-brutally-honest-feedback.html)、[WordPress/Gary Borjesson](https://garyborjesson.wordpress.com/2013/07/20/your-work-is-shit-steve-jobs-on-negative-feedback/)
+Jobs's email style can be distilled into three rules:
+1. **One decision per email**: never discuss three things in one email
+2. **Make conditions explicit**: if there is a condition, say "as long as..." directly, without euphemistic hints
+3. **No decoration**: none of the social lubricant like "Hope this email finds you well"
 
 ---
 
-## 四、Reality Distortion Field的语言机制
+## III. Style of Criticism: Binary Judgment and the "Shit" Philosophy
 
-### 1. 概念起源
+### 1. The Binary Judgment System
 
-[二手] 1981年，Apple的软件工程师Bud Tribble创造了"Reality Distortion Field"（现实扭曲力场）这个说法来描述Jobs的魅力及其对Macintosh开发团队的效果。这个术语借自《星际迷航》中外星人通过精神力量创造自己现实的概念。
+This is the most controversial and most distinctive part of Jobs's expression style.
 
-[二手] Andy Hertzfeld的定义：Jobs"能够用魅力、魄力、夸张、营销、安抚和执着的混合体，说服自己和周围的人相信几乎任何事情"。
+[Secondary] Walter Isaacson writes in the biography: "Steve Jobs had a tendency to see things in a binary way. A person was either a hero or a bozo, a product was either amazing or shit."
 
-来源：[Wikipedia](https://en.wikipedia.org/wiki/Reality_distortion_field)
+[Secondary] The same binary extended to everything — "Something was either 'the best thing ever', or it was shitty, brain-dead, inedible."
 
-### 2. 语言层面的具体技术
+[Inference] This binary thinking shows up in several ways at the linguistic level:
+- **No adjectives for the middle ground**: never "okay," "decent," or "needs work" — only two settings, "amazing" and "shit"
+- **Sudden switches**: a proposal could flip in an instant from "completely sucks" to "absolutely perfect" — not a gradual change but a jump
+- **Categorical labels**: people are sorted into "A player" or "bozo"; there is no "B+ player"
 
-**技术一：描述未来而非现在**
-- [推断] Jobs的语言不是描述性的（"这个产品有X功能"），而是**创造性的**（"想象一下这样的世界..."）。他不是在报告现实，而是在**构建**一个新现实，然后邀请你走进去
-- [一手] "We want to make a leapfrog product, not just a new product."——"leapfrog"这个词把增量改进变成了跳跃式突破
+### 2. The Language of Direct Negation
 
-**技术二：极端自信的语气**
-- [推断] Jobs说话时没有hedging language（犹豫语）。没有"I think""maybe""kind of"。当他说一个产品是revolutionary，他的语气传达的是"这是事实"而非"这是我的看法"
-- 这种绝对确定性具有传染性——如果演讲者自己100%相信，听众更容易被带入
+[Primary] "I'm brutally honest, because the price of admission to being in the room with me is I get to tell you you're full of shit if you're full of shit, and you get to say to me I'm full of shit, and we have some rip-roaring fights."
 
-**技术三：情感优先于逻辑**
-- [推断] RDF不靠数据说服人（虽然Jobs也用数据），而是靠**让你想要相信**。他先激活你对美好未来的渴望，然后才告诉你技术细节
-- 演讲结构总是：先讲Why（为什么这很重要），再讲What（这是什么），最后讲How（怎么实现）
+[Primary] The stress test in interviews: "God, that really turned out to be a bomb. That really turned out to be a bozo product." — deliberately disparaging the interviewee's earlier work to see whether they held firm convictions
 
-**技术四：重新定义品类**
-- [一手] iPhone不是"a smartphone"——它是"an iPod, a phone, and an internet communicator"
-- [一手] iPod不是"an MP3 player"——它是"1,000 songs in your pocket"
-- [推断] 通过重新定义品类，Jobs让竞品的参照系失效。如果iPhone是三个产品合一，你就没法拿它跟诺基亚比，因为比较框架不存在
+[Primary] "The most important thing I think you can do for someone who's really good and who's really being counted on is to point out to them when they're not—when their work isn't good enough."
 
----
+### 3. Pattern Extraction
 
-## 五、营销文案语言：Think Different与品牌叙事
+Jobs's language of criticism contains a core contradiction that he resolved himself:
 
-### 1. Think Different的内部营销演讲
+**Apparent paradox**: extreme harshness vs. extreme care
+**Jobs's resolution**: [Inference] In his logic, not telling you the truth was what disrespected you. The subtext of "Your work is shit" is "I think you can do much better than this." If he didn't care about you, he wouldn't say anything at all.
 
-[一手] Jobs在1997年内部发布Think Different时的演讲："To me, marketing is about values. This is a very complicated world; it's a very noisy world. And we have to be really clear on what we want them to know about us."
+**Linguistic features**:
+- Directly uses profanity such as "shit," "bozo," and "brain-dead," with no euphemism
+- The target of criticism is the **work**, not the **person** (though the line is blurry)
+- Criticism usually carries an implied standard of "this isn't good enough," rather than a personal negation of "you're no good"
 
-[一手] "Our customers want to know who is Apple and what is it that we stand for. And it's not about speeds and fees—it's not about MIPS and megahertz... it's not about why we're better than Windows."
-
-[推断] 这段话揭示了Jobs营销语言的第一原理：**不卖产品，卖价值观**。技术参数是工程师语言，品牌是人类语言。
-
-来源：[Speakola](https://speakola.com/corp/steve-jobs-marketing-think-differently-1997)
-
-### 2. "Here's to the Crazy Ones"文案分析
-
-虽然这段文案由TBWA\Chiat\Day的Rob Siltanen和Craig Tanimoto团队创作，但Jobs深度参与了方向定义和文案审核。文本本身体现了Jobs认同的语言哲学：
-
-[一手/来源存疑] "Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently."
-
-**语言特征分析**：
-- **碎片句**：每一行都不是完整句子，只有名词短语。这创造了诗歌般的节奏
-- **累积式列举**：crazy ones → misfits → rebels → troublemakers → round pegs——每个词从不同角度描绘同一类人，形成包围式定义
-- **对比转折**："And while some may see them as the crazy ones, we see genius." ——"some"vs"we"，世界vs Apple
-- **结尾金句**："Because the people who are crazy enough to think they can change the world, are the ones who do." ——把"crazy"从贬义反转为最高赞美
-
-[推断] 这段文案的核心策略是**身份认同**：不告诉你Apple的产品好，而是告诉你"用Apple的人是改变世界的人"。购买Apple = 加入这个身份群体。
-
-来源：[Wikipedia](https://en.wikipedia.org/wiki/Think_different)、[Basic Apple Guy](https://basicappleguy.com/basicappleblog/heres-to-the-crazy-ones)
-
-### 3. "i-"前缀：语言品牌化
-
-[二手] Jobs解释"i-"前缀主要代表internet，但同时也代表individual、instruct、inform、inspire以及第一人称代词"I"。
-
-[推断] 这是语言层面的品牌创新——用一个字母前缀创建了一个完整的产品宇宙（iMac → iPod → iTunes → iPhone → iPad）。每个产品名自动继承了前缀携带的所有联想。
-
-来源：[Vocabulary.com](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/)
+Source: [Complex](https://www.complex.com/pop-culture/2012/10/steve-jobs-quotes/brutal-honesty), [Inc.](https://www.inc.com/jessica-stillman/the-2-questions-steve-jobs-used-to-get-brutally-honest-feedback.html), [WordPress/Gary Borjesson](https://garyborjesson.wordpress.com/2013/07/20/your-work-is-shit-steve-jobs-on-negative-feedback/)
 
 ---
 
-## 六、核心隐喻与类比
+## IV. The Linguistic Mechanics of the Reality Distortion Field
+
+### 1. Origin of the Concept
+
+[Secondary] In 1981, Apple software engineer Bud Tribble coined the phrase "Reality Distortion Field" to describe Jobs's charisma and its effect on the Macintosh development team. The term was borrowed from the concept in *Star Trek* of aliens creating their own reality through mental power.
+
+[Secondary] Andy Hertzfeld's definition: Jobs "could convince himself, and those around him, to believe almost anything with a mix of charm, bravado, hyperbole, marketing, appeasement and persistence."
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Reality_distortion_field)
+
+### 2. Specific Techniques at the Linguistic Level
+
+**Technique 1: Describe the future, not the present**
+- [Inference] Jobs's language is not descriptive ("this product has feature X") but **creative** ("imagine a world where..."). He isn't reporting reality but **constructing** a new one, then inviting you to step into it
+- [Primary] "We want to make a leapfrog product, not just a new product." — the word "leapfrog" turns incremental improvement into a leap-forward breakthrough
+
+**Technique 2: A tone of extreme confidence**
+- [Inference] Jobs spoke without hedging language. No "I think," "maybe," "kind of." When he said a product was revolutionary, his tone conveyed "this is a fact," not "this is my opinion"
+- This absolute certainty is contagious — if the speaker is 100% convinced, the audience is more easily carried along
+
+**Technique 3: Emotion before logic**
+- [Inference] The RDF doesn't persuade with data (though Jobs did use data) but by **making you want to believe**. He first activates your longing for a better future, and only then tells you the technical details
+- The structure of his talks is always: first Why (why this matters), then What (what this is), and finally How (how it's achieved)
+
+**Technique 4: Redefine the category**
+- [Primary] The iPhone is not "a smartphone" — it is "an iPod, a phone, and an internet communicator"
+- [Primary] The iPod is not "an MP3 player" — it is "1,000 songs in your pocket"
+- [Inference] By redefining the category, Jobs invalidates the competition's frame of reference. If the iPhone is three products in one, you can't compare it with Nokia, because the comparison framework doesn't exist
+
+---
+
+## V. Marketing Copy Language: Think Different and Brand Narrative
+
+### 1. The Internal Marketing Talk for Think Different
+
+[Primary] Jobs's talk when Think Different was introduced internally in 1997: "To me, marketing is about values. This is a very complicated world; it's a very noisy world. And we have to be really clear on what we want them to know about us."
+
+[Primary] "Our customers want to know who is Apple and what is it that we stand for. And it's not about speeds and fees—it's not about MIPS and megahertz... it's not about why we're better than Windows."
+
+[Inference] This passage reveals the first principle of Jobs's marketing language: **don't sell products, sell values**. Technical specs are the language of engineers; brand is the language of humans.
+
+Source: [Speakola](https://speakola.com/corp/steve-jobs-marketing-think-differently-1997)
+
+### 2. Analysis of the "Here's to the Crazy Ones" Copy
+
+Although the copy was written by the TBWA\Chiat\Day team of Rob Siltanen and Craig Tanimoto, Jobs was deeply involved in defining its direction and reviewing the text. The text itself embodies the linguistic philosophy Jobs endorsed:
+
+[Primary/source disputed] "Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently."
+
+**Linguistic feature analysis**:
+- **Fragment sentences**: each line is not a complete sentence, only a noun phrase. This creates a poetic rhythm
+- **Cumulative enumeration**: crazy ones → misfits → rebels → troublemakers → round pegs — each word portrays the same kind of person from a different angle, forming an encircling definition
+- **Contrast and turn**: "And while some may see them as the crazy ones, we see genius." — "some" vs. "we," the world vs. Apple
+- **Closing line**: "Because the people who are crazy enough to think they can change the world, are the ones who do." — flips "crazy" from a pejorative into the highest praise
+
+[Inference] The core strategy of this copy is **identity**: it doesn't tell you Apple's products are good, it tells you that "people who use Apple are people who change the world." Buying Apple = joining this identity group.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Think_different), [Basic Apple Guy](https://basicappleguy.com/basicappleblog/heres-to-the-crazy-ones)
+
+### 3. The "i-" Prefix: Branding Through Language
+
+[Secondary] Jobs explained that the "i-" prefix mainly stood for internet, but also for individual, instruct, inform, inspire, and the first-person pronoun "I."
+
+[Inference] This is a linguistic brand innovation — a single-letter prefix created an entire product universe (iMac → iPod → iTunes → iPhone → iPad). Each product name automatically inherits all the associations the prefix carries.
+
+Source: [Vocabulary.com](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/)
+
+---
+
+## VI. Core Metaphors and Analogies
 
 ### 1. "A Bicycle for the Mind"
 
-这是Jobs最持久、最深刻的隐喻，从1980年代一直使用到最后。
+This is Jobs's most enduring and deepest metaphor, used from the 1980s to the very end.
 
-[一手] "I read a study that measured the efficiency of locomotion for various species on the planet. The condor used the least energy to move a kilometer. And humans came in with a rather unimpressive showing, about a third of the way down the list. But then somebody at Scientific American had the insight to test the efficiency of locomotion for a man on a bicycle. And a human on a bicycle blew the condor away, completely off the top of the charts. And that's what a computer is to me. What a computer is to me is the most remarkable tool that we've ever come up with, and it's the equivalent of a bicycle for our minds."
+[Primary] "I read a study that measured the efficiency of locomotion for various species on the planet. The condor used the least energy to move a kilometer. And humans came in with a rather unimpressive showing, about a third of the way down the list. But then somebody at Scientific American had the insight to test the efficiency of locomotion for a man on a bicycle. And a human on a bicycle blew the condor away, completely off the top of the charts. And that's what a computer is to me. What a computer is to me is the most remarkable tool that we've ever come up with, and it's the equivalent of a bicycle for our minds."
 
-**隐喻分析**：
-- **具体化抽象概念**：计算机是什么？不是"信息处理工具"（抽象），而是"心智的自行车"（具体可感）
-- **赋予人类主体性**：自行车不替你走路，是你在骑。计算机不替你思考，是放大你的思考
-- **暗含的谦逊**：人类本身不是最高效的，但人+工具是——承认人类的局限性，同时提供解决方案
+**Metaphor analysis**:
+- **Concretizes an abstract concept**: what is a computer? Not an "information-processing tool" (abstract) but a "bicycle for the mind" (tangible)
+- **Preserves human agency**: a bicycle doesn't walk for you; you ride it. A computer doesn't think for you; it amplifies your thinking
+- **Implied humility**: humans alone are not the most efficient, but human + tool is — acknowledging human limits while offering a solution
 
-[二手] 1980年Apple在《华尔街日报》投放全版广告使用这个类比。Jobs甚至建议用"Bicycle"作为后来Mac的内部代号（被否决）。
+[Secondary] In 1980, Apple ran a full-page ad in the *Wall Street Journal* using this analogy. Jobs even suggested "Bicycle" as the internal codename for what became the Mac (rejected).
 
-来源：[The Marginalian](https://www.themarginalian.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/)、[Fortune](https://fortune.com/2011/12/14/video-steve-jobs-in-1980-on-pcs-as-bicycles-for-the-mind/)
+Source: [The Marginalian](https://www.themarginalian.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/), [Fortune](https://fortune.com/2011/12/14/video-steve-jobs-in-1980-on-pcs-as-bicycles-for-the-mind/)
 
 ### 2. "The Intersection of Technology and Liberal Arts"
 
-[一手] "It's in Apple's DNA that technology alone is not enough. It's technology married with liberal arts, married with the humanities, that yields us the results that make our hearts sing."
+[Primary] "It's in Apple's DNA that technology alone is not enough. It's technology married with liberal arts, married with the humanities, that yields us the results that make our hearts sing."
 
-[推断] "married with"这个措辞比"combined with"或"integrated with"更强烈——marriage意味着不可分割的结合，不是临时搭配。
+[Inference] The phrasing "married with" is stronger than "combined with" or "integrated with" — marriage implies an inseparable union, not a temporary pairing.
 
-### 3. 其他标志性类比
+### 3. Other Signature Analogies
 
-- [一手] "Design is not just what it looks like and feels like. Design is how it works." ——用否定句拆掉错误定义，再用肯定句建立正确定义
-- [一手] "Death is very likely the single best invention of Life. It is Life's change agent." ——用"invention"和"change agent"把最可怕的事物重新编码为积极概念
-- [一手] "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life." ——死亡不是威胁，是"工具"
-
----
-
-## 七、散文与私人写作的语言特征
-
-### 来自《Make Something Wonderful》的一手文本
-
-这本2023年出版的书收录了Jobs的笔记、草稿、信件、邮件，展现了非演讲场合的语言特征：
-
-**特征一：对话感**
-- [一手] "Are you crazy, lady? Nobody's ever done this before!"
-- [一手] 描述小时候被老师激励回来学习："She basically bribed me back into learning, with candy and money, and it sort of reignited my desire to learn."
-- [推断] 即使在文字中，Jobs也保持口语化。"sort of""basically"这些口语词没被编辑掉
-
-**特征二：感官丰富的描写**
-- [一手] "Silicon Valley, for the most part, at that time, was still orchards—apricot orchards and prune orchards—and it was really paradise. I remember almost every day the air being crystal clear, where you could see from one end of the valley to the other. It was really the most wonderful place in the world to grow up."
-- [推断] 这段散文与Keynote语言完全不同——Keynote是短句、冲击、节奏；散文是长句、回忆、温度。Jobs有两种语言模式，他在两者之间切换自如
-
-**特征三：深层哲思的表达**
-- [一手] "I grow little of the food I eat, and of the little I do grow I did not breed or perfect the seeds. I do not make any of my own clothing. I speak a language I did not invent or refine. I did not discover the mathematics I use. I am protected by freedoms and laws I did not conceive of or legislate, and do not enforce or adjudicate."
-- [推断] 这段使用了**密集的首语重复**（"I do not..."/"I did not..."），但目的不是Keynote式的煽动，而是建立一种冥想般的累积效果——每一句都在说"我依赖他人"，反复叠加直到产生深刻的谦卑感。这是Jobs最不为人知的语言面向
-
-来源：[Steve Jobs Archive](https://book.stevejobsarchive.com/)、[Daniel Scrivner评注](https://www.danielscrivner.com/make-something-wonderful-steve-jobs-in-his-own-words-by-the-steve-jobs-archives/)
+- [Primary] "Design is not just what it looks like and feels like. Design is how it works." — uses a negative sentence to tear down the wrong definition, then a positive one to establish the right definition
+- [Primary] "Death is very likely the single best invention of Life. It is Life's change agent." — uses "invention" and "change agent" to recode the most frightening thing as a positive concept
+- [Primary] "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life." — death is not a threat, it's a "tool"
 
 ---
 
-## 八、幽默方式
+## VII. Linguistic Features of Prose and Private Writing
 
-### 1. 幽默类型分析
+### Primary Text from *Make Something Wonderful*
 
-Jobs的幽默不是段子式的，而是**情境式的**和**姿态式的**。
+This book, published in 2023, collects Jobs's notes, drafts, letters, and emails, showing the linguistic features of his non-speech settings:
 
-**类型一：轻描淡写的夸张**
-- [一手] Starbucks 4000杯拿铁电话——幽默不在台词本身，在于**谁在说、在什么场合说**。iPhone第一次公开通话，通话内容是恶作剧
-- [推断] 这种幽默的本质是反差：全世界最严肃的科技发布会上做了最不严肃的事
+**Feature 1: A conversational feel**
+- [Primary] "Are you crazy, lady? Nobody's ever done this before!"
+- [Primary] Describing being motivated by a teacher to come back to learning as a child: "She basically bribed me back into learning, with candy and money, and it sort of reignited my desire to learn."
+- [Inference] Even in writing, Jobs stays colloquial. Spoken words like "sort of" and "basically" were not edited out
 
-**类型二：自嘲式的骄傲**
-- [二手] 演讲中经常在展示惊人数据后露出"我也没想到"的表情，但显然他完全知道这些数字
-- [推断] 这是假谦虚的幽默——观众知道他在装，他也知道观众知道，共谋创造了轻松感
+**Feature 2: Sensory-rich description**
+- [Primary] "Silicon Valley, for the most part, at that time, was still orchards—apricot orchards and prune orchards—and it was really paradise. I remember almost every day the air being crystal clear, where you could see from one end of the valley to the other. It was really the most wonderful place in the world to grow up."
+- [Inference] This prose is completely different from keynote language — keynotes are short sentences, impact, and rhythm; prose is long sentences, memory, and warmth. Jobs had two language modes and switched between them with ease
 
-**类型三：对竞品的嘲讽**
-- [推断] Jobs嘲笑竞品时从不直接攻击，而是**让产品自己说话**。展示竞品手机的丑陋键盘，不说"这很糟"，而是默默展示，然后说"We can do better than that, can't we?"——让观众自己得出结论
+**Feature 3: Expression of deep philosophical thought**
+- [Primary] "I grow little of the food I eat, and of the little I do grow I did not breed or perfect the seeds. I do not make any of my own clothing. I speak a language I did not invent or refine. I did not discover the mathematics I use. I am protected by freedoms and laws I did not conceive of or legislate, and do not enforce or adjudicate."
+- [Inference] This passage uses **dense anaphora** ("I do not..."/"I did not..."), but the purpose is not keynote-style stirring up; it builds a meditative cumulative effect — every sentence says "I depend on others," stacking until a deep sense of humility emerges. This is the least-known side of Jobs's language
 
-**类型四：断句式的笑点**
-- [一手] "People who know what they're talking about don't need PowerPoint."——这句话本身就有喜剧节奏。先给出一个听起来像赞美的开头，然后用"don't need PowerPoint"制造意外
-
-来源：[MethodShop](https://methodshop.com/steve-jobs-funniest/)
+Source: [Steve Jobs Archive](https://book.stevejobsarchive.com/), [Daniel Scrivner's commentary](https://www.danielscrivner.com/make-something-wonderful-steve-jobs-in-his-own-words-by-the-steve-jobs-archives/)
 
 ---
 
-## 九、综合Pattern提取
+## VIII. Ways of Using Humor
 
-### 1. 句式偏好
+### 1. Analysis of Humor Types
 
-| 模式 | 示例 | 使用场景 |
+Jobs's humor was not joke-style but **situational** and **postural**.
+
+**Type 1: Understated exaggeration**
+- [Primary] The Starbucks 4,000-latte call — the humor is not in the line itself but in **who is saying it, and on what occasion**. The first public iPhone call, and its content was a prank
+- [Inference] The essence of this humor is contrast: doing the least serious thing at the world's most serious tech launch event
+
+**Type 2: Self-deprecating pride**
+- [Secondary] In talks he often wore an "I didn't expect that either" look after showing stunning numbers, though he obviously knew those numbers perfectly well
+- [Inference] This is the humor of false modesty — the audience knows he's pretending, he knows the audience knows, and the shared conspiracy creates ease
+
+**Type 3: Mocking competitors**
+- [Inference] When Jobs mocked competitors he never attacked directly, but **let the product speak for itself**. He showed the ugly keyboards of competing phones without saying "this is bad," just silently displayed them, then said "We can do better than that, can't we?" — letting the audience reach the conclusion themselves
+
+**Type 4: The clipped-sentence punchline**
+- [Primary] "People who know what they're talking about don't need PowerPoint." — this line has comic rhythm in itself. It opens with something that sounds like praise, then uses "don't need PowerPoint" to create surprise
+
+Source: [MethodShop](https://methodshop.com/steve-jobs-funniest/)
+
+---
+
+## IX. Synthesized Pattern Extraction
+
+### 1. Sentence-Structure Preferences
+
+| Pattern | Example | Context |
 |------|------|---------|
-| **极短陈述句** | "That's it." / "Boom." / "It just works." | 演示后的确认 |
-| **三重列举** | "An iPod, a phone, an internet communicator" | 产品定义 |
-| **反问句** | "Isn't that incredible?" | 功能展示后引导情绪 |
-| **否定→肯定** | "It's not about X. It's about Y." | 重新框定问题 |
-| **假设句** | "Imagine if..." / "What if..." | 愿景描绘 |
-| **碎片名词句** | "The misfits. The rebels. The troublemakers." | 品牌叙事/诗性段落 |
+| **Ultra-short declaratives** | "That's it." / "Boom." / "It just works." | Confirmation after a demo |
+| **Triple enumeration** | "An iPod, a phone, an internet communicator" | Product definition |
+| **Rhetorical questions** | "Isn't that incredible?" | Steering emotion after a feature demo |
+| **Negation → affirmation** | "It's not about X. It's about Y." | Reframing the problem |
+| **Hypotheticals** | "Imagine if..." / "What if..." | Painting a vision |
+| **Fragment noun sentences** | "The misfits. The rebels. The troublemakers." | Brand narrative/poetic passages |
 
-### 2. 高频词与专属术语
+### 2. High-Frequency Words and Signature Vocabulary
 
-**绝对化正面词**：insanely great, revolutionary, magical, incredible, breakthrough, unbelievable, amazing, gorgeous, beautiful
-**绝对化负面词**：shit, bozo, brain-dead, sucks
-**标志性动词**：reinvent（重新发明）, leapfrog（跳跃超越）
-**连接词/过渡词**：And one more thing..., Now..., So..., Boom!
-**品牌术语**：i-前缀系列, Stevenote, Think Different
+**Absolute positive words**: insanely great, revolutionary, magical, incredible, breakthrough, unbelievable, amazing, gorgeous, beautiful
+**Absolute negative words**: shit, bozo, brain-dead, sucks
+**Signature verbs**: reinvent, leapfrog
+**Connectives/transitions**: And one more thing..., Now..., So..., Boom!
+**Brand terms**: the i- prefix series, Stevenote, Think Different
 
-### 3. 确定性表达方式
+### 3. Ways of Expressing Certainty
 
-- **零hedging**：不说"I think""probably""kind of"，说"This IS the best"
-- **事实化陈述**：把主观判断说成客观事实。"This is revolutionary"不是"I believe this is revolutionary"
-- **未来时态的确定性**：描述未来时用"will"而非"might"。"This will change everything"
+- **Zero hedging**: doesn't say "I think," "probably," "kind of"; says "This IS the best"
+- **Factualized statements**: presents subjective judgment as objective fact. "This is revolutionary," not "I believe this is revolutionary"
+- **Certainty in the future tense**: describes the future with "will" rather than "might." "This will change everything"
 
-### 4. 赞美方式
+### 4. Ways of Praising
 
-- **极端化**："The best thing ever" / "Insanely great" / "Amazing"
-- **与历史对标**：暗示产品与Mac/iPod同级别的历史地位
-- **对人的赞美**：称团队为"the most talented people on the planet"——不是"很优秀"，是"全球最优秀"
+- **Extremes**: "The best thing ever" / "Insanely great" / "Amazing"
+- **Historical benchmarking**: implies the product has the same historical standing as the Mac/iPod
+- **Praising people**: calls the team "the most talented people on the planet" — not "very good," but "the best in the world"
 
-### 5. 修辞策略总结
+### 5. Summary of Rhetorical Strategies
 
-| 策略 | 本质 | Jobs的实现方式 |
+| Strategy | Essence | How Jobs Implements It |
 |------|------|--------------|
-| **类比具象化** | 把抽象概念转化为可感知的事物 | "bicycle for the mind" / "1000 songs in your pocket" |
-| **品类重定义** | 让竞品参照系失效 | iPhone不是手机，是三个设备合一 |
-| **二元极化** | 消除中间地带，迫使选择 | amazing或shit，hero或bozo |
-| **叙事先于论证** | 先讲故事再给结论 | Stanford三个故事 → 三个人生哲学 |
-| **重复锚定** | 通过重复让关键信息不可遗忘 | "Stay Hungry. Stay Foolish."重复出现在结尾 |
-| **悬念管理** | 控制信息释放节奏 | "One more thing..."结构 |
-| **情感先于逻辑** | 先让你想要，再告诉你为什么合理 | 先展示产品体验，后说技术规格 |
+| **Concretizing analogy** | Turns abstract concepts into perceptible things | "bicycle for the mind" / "1000 songs in your pocket" |
+| **Category redefinition** | Invalidates the competition's frame of reference | The iPhone isn't a phone, it's three devices in one |
+| **Binary polarization** | Eliminates the middle ground, forcing a choice | amazing or shit, hero or bozo |
+| **Narrative before argument** | Tell the story first, then give the conclusion | Stanford's three stories → three philosophies of life |
+| **Repetition as anchor** | Makes key information unforgettable through repetition | "Stay Hungry. Stay Foolish." recurring at the end |
+| **Suspense management** | Controls the pacing of information release | The "One more thing..." structure |
+| **Emotion before logic** | First make you want it, then tell you why it makes sense | Show the product experience first, state technical specs afterward |
 
-### 6. 两种Jobs语言模式
+### 6. Two Modes of Jobs's Language
 
-| 维度 | 舞台上的Jobs | 纸面上的Jobs |
+| Dimension | Jobs on Stage | Jobs on Paper |
 |------|-------------|-------------|
-| 句子长度 | 极短为主，长句只在故事段落 | 可以很长，从容展开 |
-| 节奏 | 快-停-快-停，音乐般的律动 | 流动的散文节奏 |
-| 情感色彩 | 激动、兴奋、充满能量 | 沉思、温暖、偶有脆弱 |
-| 目的 | 说服、震撼、制造行动 | 反思、表达、寻找意义 |
-| 代表作 | iPhone 2007 Keynote | Stanford演讲、Make Something Wonderful |
-| 共同点 | 简单的词汇、口语化的语气、直接的态度 |
+| Sentence length | Mostly very short; long sentences only in story passages | Can be very long, unfolding unhurriedly |
+| Rhythm | Fast-pause-fast-pause, a musical pulse | Flowing prose rhythm |
+| Emotional coloring | Excited, thrilled, full of energy | Contemplative, warm, occasionally vulnerable |
+| Purpose | Persuade, astonish, trigger action | Reflect, express, search for meaning |
+| Representative works | iPhone 2007 Keynote | Stanford address, Make Something Wonderful |
+| Common ground | Simple vocabulary, colloquial tone, direct attitude |
 
 ---
 
-## 十、可运行的表达公式
+## X. Executable Expression Formulas
 
-### 公式1：产品定义公式
+### Formula 1: Product Definition Formula
 ```
-[它不是{现有品类}。它是{全新框架}。]
-例：It's not a smartphone. It's an iPod, a phone, and an internet communicator.
-```
-
-### 公式2：特征描述公式
-```
-[一个{超级形容词}的{名词}。{一句话说明为什么}。]
-例：A revolutionary phone. We're going to reinvent the phone.
+[It's not {existing category}. It's {a whole new frame}.]
+E.g.: It's not a smartphone. It's an iPod, a phone, and an internet communicator.
 ```
 
-### 公式3：问题重构公式
+### Formula 2: Feature Description Formula
 ```
-[现在{竞品/行业}是这样做的：{痛点}。我们觉得我们能做得更好。{解决方案}。]
-例：These smartphones have these keyboards... whether you need them or not. We think we can do better. We are going to use just a multi-touch screen.
-```
-
-### 公式4：愿景表达公式
-```
-[{这个领域}已经{年数}没有变化了。今天我们要{重新发明/彻底改变}它。]
-例：Every once in a while, a revolutionary product comes along that changes everything.
+[A {superlative adjective} {noun}. {One sentence on why}.]
+E.g.: A revolutionary phone. We're going to reinvent the phone.
 ```
 
-### 公式5：确认简洁公式（邮件）
+### Formula 3: Problem Reframing Formula
 ```
-[{一个词的回应}。{如果有条件，一句话说完}。]
-例：Sure, as long as we can roll it all out at Macworld on Jan 15.
+[Right now {competitors/the industry} do it like this: {pain point}. We think we can do better. {Solution}.]
+E.g.: These smartphones have these keyboards... whether you need them or not. We think we can do better. We are going to use just a multi-touch screen.
+```
+
+### Formula 4: Vision Expression Formula
+```
+[{This field} hasn't changed in {number of years}. Today we're going to {reinvent/completely change} it.]
+E.g.: Every once in a while, a revolutionary product comes along that changes everything.
+```
+
+### Formula 5: Concise Confirmation Formula (email)
+```
+[{A one-word response}. {If there's a condition, say it in one sentence}.]
+E.g.: Sure, as long as we can roll it all out at Macworld on Jan 15.
 ```
 
 ---
 
-## 信息源清单
+## List of Information Sources
 
-| 来源 | 类型 | 关键贡献 |
+| Source | Type | Key Contribution |
 |------|------|---------|
-| [European Rhetoric - iPhone Keynote分析](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/) | 学术分析 | 修辞手法详解、语言特征分类 |
-| [Vocabulary.com - Insanely Great Language](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/) | 语言分析 | 词汇选择、i-前缀、超级形容词 |
-| [Duarte - 17 Rhetorical Devices](https://www.duarte.com/blog/rhetoric-isnt-a-bad-thing-16-rhetorical-devices-regularly-used-by-steve-jobs/) | 修辞分析 | 17种修辞手法系统整理 |
-| [Macworld - Every One More Thing](https://www.macworld.com/article/669636/watch-every-steve-jobs-one-more-thing.html) | 历史记录 | "One more thing"完整历史 |
-| [Steve Jobs Archive - Make Something Wonderful](https://book.stevejobsarchive.com/) | 一手文献 | Jobs的私人写作风格 |
-| [Inc. - Steve Jobs Emails](https://www.inc.com/justin-bariso/steve-jobs-how-to-write-great-email.html) | 案例分析 | 邮件沟通风格 |
-| [CNN Money - 10 Best Steve Jobs Emails](https://money.cnn.com/2014/12/01/technology/steve-jobs-emails/index.html) | 案例合集 | 邮件原文展示 |
-| [Complex - 100 Greatest Quotes](https://www.complex.com/pop-culture/2012/10/steve-jobs-quotes/brutal-honesty) | 语录合集 | 批评风格与直接表达 |
-| [Wikipedia - Reality Distortion Field](https://en.wikipedia.org/wiki/Reality_distortion_field) | 概念溯源 | RDF起源与定义 |
-| [Wikipedia - Think Different](https://en.wikipedia.org/wiki/Think_different) | 历史记录 | 营销文案创作背景 |
-| [Carmine Gallo - Presentation Secrets](https://www.carminegallo.com/books/presentation-secrets-of-steve-jobs/) | 系统分析 | Rule of Three、Headline、演讲结构 |
-| [The Marginalian - Bicycle for the Mind](https://www.themarginalian.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/) | 隐喻溯源 | 核心隐喻的起源与分析 |
-| [Inc. - Starbucks Prank Call](https://www.inc.com/jeff-haden/the-day-steve-jobs-prank-called-a-starbucks-ordered-4000-lattes-power-of-humor-storytelling.html) | 案例分析 | Demo中的幽默技巧 |
-| [MethodShop - 53 Funniest Moments](https://methodshop.com/steve-jobs-funniest/) | 案例合集 | 幽默风格样本 |
-| [Daniel Scrivner - Make Something Wonderful评注](https://www.danielscrivner.com/make-something-wonderful-steve-jobs-in-his-own-words-by-the-steve-jobs-archives/) | 书评分析 | 散文写作风格 |
+| [European Rhetoric - iPhone Keynote analysis](http://www.european-rhetoric.com/analyses/ikeynote-analysis-iphone/) | Academic analysis | Detailed rhetorical devices, classification of linguistic features |
+| [Vocabulary.com - Insanely Great Language](https://www.vocabulary.com/articles/wordroutes/and-one-more-thing-the-insanely-great-language-of-steve-jobs/) | Language analysis | Word choice, the i- prefix, superlative adjectives |
+| [Duarte - 17 Rhetorical Devices](https://www.duarte.com/blog/rhetoric-isnt-a-bad-thing-16-rhetorical-devices-regularly-used-by-steve-jobs/) | Rhetorical analysis | Systematic compilation of 17 rhetorical devices |
+| [Macworld - Every One More Thing](https://www.macworld.com/article/669636/watch-every-steve-jobs-one-more-thing.html) | Historical record | The complete history of "One more thing" |
+| [Steve Jobs Archive - Make Something Wonderful](https://book.stevejobsarchive.com/) | Primary documents | Jobs's private writing style |
+| [Inc. - Steve Jobs Emails](https://www.inc.com/justin-bariso/steve-jobs-how-to-write-great-email.html) | Case analysis | Email communication style |
+| [CNN Money - 10 Best Steve Jobs Emails](https://money.cnn.com/2014/12/01/technology/steve-jobs-emails/index.html) | Case collection | Original email texts |
+| [Complex - 100 Greatest Quotes](https://www.complex.com/pop-culture/2012/10/steve-jobs-quotes/brutal-honesty) | Quote collection | Style of criticism and direct expression |
+| [Wikipedia - Reality Distortion Field](https://en.wikipedia.org/wiki/Reality_distortion_field) | Concept origin | Origin and definition of the RDF |
+| [Wikipedia - Think Different](https://en.wikipedia.org/wiki/Think_different) | Historical record | Background of the marketing copy's creation |
+| [Carmine Gallo - Presentation Secrets](https://www.carminegallo.com/books/presentation-secrets-of-steve-jobs/) | Systematic analysis | Rule of Three, Headline, talk structure |
+| [The Marginalian - Bicycle for the Mind](https://www.themarginalian.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/) | Metaphor origin | Origin and analysis of the core metaphor |
+| [Inc. - Starbucks Prank Call](https://www.inc.com/jeff-haden/the-day-steve-jobs-prank-called-a-starbucks-ordered-4000-lattes-power-of-humor-storytelling.html) | Case analysis | Humor techniques in the demo |
+| [MethodShop - 53 Funniest Moments](https://methodshop.com/steve-jobs-funniest/) | Case collection | Samples of humor style |
+| [Daniel Scrivner - Make Something Wonderful commentary](https://www.danielscrivner.com/make-something-wonderful-steve-jobs-in-his-own-words-by-the-steve-jobs-archives/) | Book review analysis | Prose writing style |
