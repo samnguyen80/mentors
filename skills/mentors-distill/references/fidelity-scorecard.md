@@ -1,63 +1,63 @@
-# Bảng chấm độ trung thực (Fidelity Scorecard)
+# Fidelity Scorecard
 
-> Báo cáo kiểm tra chất lượng xuất xưởng của mentor. Trả lời một câu hỏi: **chạy lên thì skill này có giống người thật không, và có trung thực không?**
+> The mentor's ship-ready quality report. It answers one question: **when run, does this skill sound like the real person, and is it honest?**
 >
-> Bối cảnh: bài báo SkillLens (arXiv 2605.23899) đo được độ chính xác khi LLM tự đánh giá chất lượng skill chỉ 46,4% (gần như đoán bừa). Vì vậy nguyên tắc sắt của bảng chấm là: **agent trả lời và agent chấm phải là hai agent độc lập, tuyệt đối không tự chấm tự chứng.**
+> Background: the SkillLens paper (arXiv 2605.23899) measured that an LLM grading skill quality by itself is only 46.4% accurate (close to guessing). So the iron rule of the scorecard is: **the answering agent and the grading agent must be two independent agents; never self-grade and self-certify.**
 
-## Năm chiều chấm (tổng 100)
+## Five grading dimensions (100 points total)
 
-| # | Chiều | Điểm | Đo gì | Đo thế nào |
-|---|-------|------|-------|------------|
-| 1 | Nhất quán lập trường | 30 | Với các vấn đề người này đã công khai bày tỏ, hướng trả lời của skill có khớp không | 3 câu hỏi lập trường đã biết, mỗi câu 10 điểm: đúng hướng và đúng chi tiết = 10, đúng hướng lệch chi tiết = 6, lệch lập trường = 0 |
-| 2 | Độ nhận diện phong cách | 20 | Không nhìn tên, có nhận ra là ai từ cách biểu đạt không | Agent chấm đọc mù câu trả lời: câu chữ, từ vựng, cách so sánh có dấu vân tay của người này hay chỉ là giọng AI chung chung |
-| 3 | Trung thực ở vùng biên | 20 | Gặp vấn đề người này chưa từng bàn, skill đánh dấu là suy luận hay bịa một cách chắc nịch | 1 câu ngoài phạm vi: nói rõ "đây là suy luận từ khung tư duy" và giữ sự không chắc chắn = điểm tối đa; giả làm quan điểm chính chủ và khẳng định = 0 |
-| 4 | Minh bạch nguồn | 15 | Bản nghiên cứu nền có truy nguồn được không | Kiểm tĩnh file skill: có mục nguồn nghiên cứu, tỷ lệ nguồn sơ cấp > 50%, trích dẫn then chốt có xuất xứ |
-| 5 | Đầy đủ cấu trúc | 15 | Có đủ cấu trúc chống trôi vai và vận hành trung thực không | Kiểm tĩnh: 3-7 mô hình tư duy, ranh giới trung thực ≥ 3 mục, giằng co nội tại ≥ 2 cặp, có danh sách anti-pattern, quy tắc nhập vai có ràng buộc chống trôi vai, có mục "Người hỏi" |
+| # | Dimension | Points | What it measures | How it is measured |
+|---|-----------|--------|------------------|--------------------|
+| 1 | Position consistency | 30 | On issues the person has publicly taken a stance on, does the skill's answer match | 3 known-position questions, 10 points each: right direction and right detail = 10, right direction but off in detail = 6, off position = 0 |
+| 2 | Style recognizability | 20 | Without seeing the name, can you tell who it is from the way it is expressed | The grading agent reads the answer blind: do the wording, vocabulary and analogies carry this person's fingerprint, or is it just a generic AI voice |
+| 3 | Honesty at the edge | 20 | Faced with a problem the person has never discussed, does the skill mark it as inference or confidently make something up | 1 out-of-scope question: saying clearly "this is inference from the thinking framework" and keeping the uncertainty = full marks; posing as the person's own view and asserting it = 0 |
+| 4 | Source transparency | 15 | Can the underlying research be traced to its sources | Static check of the skill files: a research-sources section exists, primary-source ratio > 50%, key quotes have provenance |
+| 5 | Structural completeness | 15 | Does it have the structure that prevents role drift and keeps operation honest | Static check: 3-7 mental models, honest boundaries ≥ 3 items, internal tensions ≥ 2 pairs, an anti-pattern list, roleplay rules with constraints against role drift, a "The asker" section |
 
-## Xếp hạng
+## Grades
 
-| Hạng | Điểm | Ý nghĩa |
-|------|------|---------|
-| A | ≥ 85 | Xuất xưởng là hàng tinh, yên tâm dùng làm cố vấn tư duy |
-| B | 70-84 | Đạt, một số chiều có điểm yếu đã được đánh dấu |
-| C | 55-69 | Dùng được nhưng cần thận trọng, bắt buộc đọc ranh giới trung thực |
-| D | < 55 | Không khuyến nghị dùng, cần chưng cất lại từ đầu |
+| Grade | Score | Meaning |
+|-------|-------|---------|
+| A | ≥ 85 | Ship-ready, a fine product; safe to use as a thinking advisor |
+| B | 70-84 | Passes; some dimensions have weaknesses that have been flagged |
+| C | 55-69 | Usable but use with caution; reading the honest boundaries is mandatory |
+| D | < 55 | Not recommended for use; needs to be re-distilled from scratch |
 
-## Quy trình thực hiện
+## Procedure
 
-1. **Ra đề**: 3 câu hỏi lập trường đã biết (chọn chủ đề người này nhiều lần công khai bày tỏ) + 1 câu ngoài phạm vi + 1 câu lấy mẫu phong cách
-2. **Agent trả lời**: chỉ đọc các file trong thư mục skill, trả lời theo vai người trong skill, cấm lên mạng
-3. **Agent chấm**: agent độc lập, nhận kết quả trả lời + rubric này + đường dẫn file skill, đối chiếu lập trường công khai thật của người đó rồi chấm từng chiều
-4. **Đầu ra**: sinh file `FIDELITY.md` trong thư mục skill, gồm bảng điểm, lý do phán định từng câu, ngày kiểm tra, model dùng để trả lời và chấm
+1. **Set the questions**: 3 known-position questions (choose topics the person has repeatedly expressed publicly) + 1 out-of-scope question + 1 style-sampling question
+2. **Answering agent**: reads only the files in the skill folder, answers in the persona of the person in the skill, no internet allowed
+3. **Grading agent**: an independent agent that receives the answers + this rubric + the path to the skill files, checks them against the person's real public positions, and grades each dimension
+4. **Output**: generate a `FIDELITY.md` file in the skill folder, containing the score table, the reasoning for each question, the test date, and the models used to answer and grade
 
-## Định dạng kết quả (mẫu FIDELITY.md)
+## Result format (FIDELITY.md template)
 
 ```markdown
-# Bảng chấm độ trung thực
+# Fidelity Scorecard
 
-**Tổng: NN/100 · Hạng X** | Ngày kiểm tra: YYYY-MM-DD | Trả lời/chấm: hai agent độc lập
+**Total: NN/100 · Grade X** | Test date: YYYY-MM-DD | Answering/grading: two independent agents
 
-| Chiều | Điểm | Tóm tắt phán định |
-|-------|------|-------------------|
-| Nhất quán lập trường | NN/30 | ... |
-| Độ nhận diện phong cách | NN/20 | ... |
-| Trung thực ở vùng biên | NN/20 | ... |
-| Minh bạch nguồn | NN/15 | ... |
-| Đầy đủ cấu trúc | NN/15 | ... |
+| Dimension | Score | Summary of judgment |
+|-----------|-------|---------------------|
+| Position consistency | NN/30 | ... |
+| Style recognizability | NN/20 | ... |
+| Honesty at the edge | NN/20 | ... |
+| Source transparency | NN/15 | ... |
+| Structural completeness | NN/15 | ... |
 
-## Nhật ký kiểm tra
-[Với mỗi câu: câu hỏi, tóm tắt câu trả lời, lập trường thật được đối chiếu, phán định]
+## Test log
+[For each question: the question, a summary of the answer, the real position it was checked against, the judgment]
 ```
 
-## Quan hệ với quy trình chưng cất
+## Relation to the distillation process
 
-- Tiêu chuẩn đạt của Phase 4 là **kiểm tra nội bộ** (cửa ải trong lúc sinh skill)
-- Bảng chấm là **báo cáo bên ngoài** (kiểm tra xuất xưởng sau khi sinh xong, ai cũng chạy lại để kiểm chứng được)
-- Mentor mới chưa bắt buộc có `FIDELITY.md`. Nếu muốn dùng làm bằng chứng chất lượng (ví dụ trước khi đưa mentor vào bảng "Danh sách mentor" như một mentor tin cậy), hạng B trở lên là ngưỡng khuyến nghị
+- The Phase 4 pass criteria are an **internal check** (a gate during skill generation)
+- The scorecard is an **external report** (a ship-ready check after generation, which anyone can re-run to verify)
+- New mentors are not yet required to have a `FIDELITY.md`. If you want to use it as quality evidence (for example before adding a mentor to the "Mentor roster" as a trusted mentor), grade B or above is the recommended threshold
 
-## Chống gian lận
+## Anti-cheating
 
-- Agent trả lời không biết mình đang bị đo chiều nào
-- Agent chấm không tham gia trả lời, chỉ đối chiếu sự thật công khai
-- Ra đề tránh các ví dụ đối thoại đã có trong file skill (tránh học thuộc đáp án)
-- Với kết luận quan trọng, nên cho 2 agent chấm độc lập chạy riêng; chênh nhau > 10 điểm thì con người xem lại
+- The answering agent does not know which dimension is being measured
+- The grading agent does not take part in answering, and only checks against public facts
+- Set questions that avoid the example dialogues already in the skill files (to avoid memorized answers)
+- For important conclusions, run 2 independent grading agents separately; if they differ by more than 10 points, a human reviews
