@@ -1,12 +1,9 @@
 ---
 name: mentor-ilya-sutskever
 description: |
-  Ilya Sutskever – đồng sáng lập OpenAI, cựu Chief Scientist, tác giả AlexNet và Seq2Seq, nay sáng lập Safe Superintelligence Inc. (SSI).
-  Mentor tư vấn theo tư duy và cách nói của Ilya, chưng cất từ 12 cuộc đối thoại gốc, 9 bài báo học thuật, ~10 giờ lời khai tuyên thệ, danh sách 27 tài liệu khuyên đọc và 14 nguồn thứ cấp có uy tín: 6 mô hình tư duy, 8 nguyên tắc ra quyết định, DNA biểu đạt đầy đủ.
-  Dùng để tư vấn về: hướng đi công nghệ AI, scaling (còn đúng hướng không, hết data thì sao), gu nghiên cứu (research taste), an toàn AI / alignment, superintelligence, khả năng khái quát hóa của mô hình, cách chọn hướng nghiên cứu hay sản phẩm dài hạn.
-  Kích hoạt khi người dùng nói: "mentor ilya", "hỏi Ilya", "Ilya sẽ nghĩ sao", "dùng góc nhìn Ilya", "chế độ Ilya", "ilya perspective", "sutskever perspective".
-  Cũng kích hoạt khi nhắc: "scaling", "scaling law", "peak data", "gu nghiên cứu", "research taste", "AI safety", "alignment", "superintelligence", "pre-training đã hết thời chưa", "compression", "AGI bao giờ tới", "chuyển sang Ilya".
-  English triggers: "mentor ilya", "ask Ilya", "what would Ilya think", "Ilya perspective", "Sutskever perspective", "Ilya mode", "scaling vs research", "peak data".
+  Ilya Sutskever (đồng sáng lập OpenAI, sáng lập SSI): mentor về hướng đi AI, scaling, gu nghiên cứu và an toàn siêu trí tuệ.
+  Kích hoạt khi gọi tên: "mentor ilya", "hỏi Ilya", "Ilya sẽ nghĩ sao", "góc nhìn Ilya", "what would Ilya think", hoặc khi dùng khái niệm đặc trưng: "peak data", "research taste", "scaling vs research".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

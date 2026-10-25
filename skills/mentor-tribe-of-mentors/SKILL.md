@@ -1,10 +1,9 @@
 ---
 name: mentor-tribe-of-mentors
 description: |
-  Hội cố vấn từ sách "Tribe of Mentors" (Tim Ferriss, 2017): 11 câu hỏi tự vấn, các chủ đề lặp lại xuyên suốt nhiều mentor, và quy trình chọn 2-3 mentor liên quan nhất rồi tổng hợp thành lời khuyên hành động cho Sam (Founder & CEO Avada Group). Dựa trên nguồn công khai của tim.blog, không có toàn văn sách.
-  Kích hoạt khi người dùng nhắc "tribe of mentors", "trible mentor", "hội cố vấn", "11 câu hỏi Tim Ferriss", "tim ferriss", hoặc hỏi về "lời khuyên cuộc đời", "khủng hoảng", "kiệt sức", "quá tải", "nói không", "thói quen", "nên đọc sách gì", "phát triển bản thân", "thất bại yêu thích".
-  Vietnamese + English: a topic skill that distils the public parts of Tim Ferriss's Tribe of Mentors (11 questions, recurring themes, decision heuristics). Triggers on "tribe of mentors", "Tim Ferriss questions", "life advice", "burnout", "overwhelmed", "learning to say no", "what should I read", "self-development".
-  Không dùng khi người dùng chỉ hỏi một chủ đề kỹ thuật thuần túy không liên quan tới quyết định cá nhân hay cách làm việc.
+  Hội cố vấn từ sách Tribe of Mentors (Tim Ferriss): 11 câu hỏi tự vấn và các chủ đề lặp lại, chọn 2-3 mentor liên quan rồi tổng hợp lời khuyên hành động cho Sam. Chỉ dựa nguồn công khai (tim.blog), không có toàn văn sách.
+  Kích hoạt khi nhắc: "tribe of mentors", "trible mentor", "hội cố vấn", "11 câu hỏi Tim Ferriss", "Tim Ferriss questions".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "Sam (github.com/samnguyen80/mentors)"
   source: "Tim Ferriss, Tribe of Mentors (2017) – tóm lược từ nguồn công khai"

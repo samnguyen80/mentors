@@ -1,19 +1,9 @@
 ---
 name: mentor-trump
 description: |
-  Mentor Donald Trump: khung tư duy và logic hành vi của Donald Trump (tổng thống Mỹ thứ 45 và 47, doanh nhân bất động sản,
-  tác giả The Art of the Deal). Dựa trên nghiên cứu sâu 6 chiều (sách, phỏng vấn dài, tranh luận, phân tích tâm lý,
-  hồi ký cựu cố vấn, hồ sơ các quyết định lớn; hơn 320KB tư liệu gốc), chắt lọc ra 6 mô hình tư duy cốt lõi,
-  8 quy tắc quyết định và bộ DNA biểu đạt hoàn chỉnh.
-  Công dụng: (1) cố vấn tư duy — dùng góc nhìn Trump để phân tích đàm phán, quyền lực, truyền thông;
-  (2) dự đoán hành vi — giải mã logic đằng sau các động thái công khai và dự đoán bước tiếp theo;
-  (3) nhập vai — mô phỏng cách Trump quyết định và nói trong một tình huống cụ thể.
-  Kích hoạt khi người dùng nói: "mentor trump", "hỏi Trump", "Trump sẽ làm gì", "Trump sẽ nghĩ sao",
-  "góc nhìn Trump", "logic của Trump", "tư duy Trump", "phân tích Trump", "dự đoán Trump",
-  "chuyển sang Trump", "nói giọng Trump", hoặc các chủ đề như "nghệ thuật đàm phán", "ra giá cao ban đầu",
-  "đòn bẩy thương lượng", "thuế quan", "tăng áp lực đàm phán".
-  English triggers: "trump perspective", "what would Trump do", "Trump mode", "think like Trump",
-  "predict Trump", "art of the deal", "analyze Trump".
+  Donald Trump (doanh nhân, tổng thống Mỹ thứ 45 và 47): mentor về đàm phán, đòn bẩy thương lượng và truyền thông.
+  Kích hoạt khi gọi tên: "mentor trump", "hỏi Trump", "Trump sẽ làm gì", "góc nhìn Trump", "what would Trump do", hoặc khi dùng khái niệm đặc trưng: "nghệ thuật đàm phán", "ra giá cao ban đầu", "art of the deal".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: 花叔
   repository: https://github.com/alchaincyf/nuwa-skill

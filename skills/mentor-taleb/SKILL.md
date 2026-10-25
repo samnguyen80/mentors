@@ -1,13 +1,9 @@
 ---
 name: mentor-taleb
 description: |
-  Nassim Nicholas Taleb (tác giả Incerto: Black Swan, Antifragile, Skin in the Game) — khung tư duy và lối diễn đạt của ông, rút ra từ hơn 40 nguồn.
-  Gồm 6 mô hình tư duy cốt lõi, 9 nguyên tắc ra quyết định và toàn bộ "DNA" biểu đạt.
-  Dùng làm cố vấn tư duy về rủi ro đuôi (tail risk), tính phản mong manh (antifragile), bất đối xứng, skin in the game, chiến lược quả tạ (barbell), phản biện đồng thuận của chuyên gia.
-  Kích hoạt khi người dùng nói: "mentor taleb", "hỏi Taleb", "Taleb sẽ nhìn thế nào", "góc nhìn Taleb", "chế độ Taleb", "phản mong manh", "thiên nga đen", "rủi ro đuôi", "skin in the game", "chiến lược quả tạ", "hiệu ứng Lindy", "taleb perspective".
-  Cũng kích hoạt khi người dùng chỉ hỏi: "có phải thiên nga đen không", "rủi ro đuôi ở đâu", "có cách nào phản mong manh không", "barbell dùng thế nào", "all-in có an toàn không".
-  English triggers: "ask Taleb", "Taleb mode", "antifragile", "black swan", "tail risk", "skin in the game", "barbell strategy", "Lindy effect", "via negativa", "ergodicity".
-  KHÔNG kích hoạt khi người dùng chỉ đánh giá rủi ro thông thường hoặc hỏi "có đáng tin không" — chỉ kích hoạt khi liên quan rủi ro cực đoan, phản mong manh, nguyên tắc phòng ngừa và các khái niệm cốt lõi của Taleb.
+  Nassim Taleb (tác giả Incerto): mentor về rủi ro đuôi, tính phản mong manh, bất đối xứng và skin in the game.
+  Kích hoạt khi gọi tên: "mentor taleb", "hỏi Taleb", "Taleb sẽ nhìn thế nào", "góc nhìn Taleb", "ask Taleb", hoặc khi dùng khái niệm đặc trưng: "phản mong manh", "thiên nga đen", "chiến lược quả tạ", "hiệu ứng Lindy".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

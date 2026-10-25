@@ -1,12 +1,9 @@
 ---
 name: mentors-distill
 description: |
-  Chưng cất tư duy một người thành mentor chạy được: nhập tên người, chủ đề, hoặc chỉ một nhu cầu mơ hồ, skill tự nghiên cứu sâu, rút khung tư duy và sinh ra skill `mentor-<slug>` tiếng Việt.
-  Hai lối vào: (1) có tên người rõ ràng thì chưng cất thẳng; (2) nhu cầu mơ hồ thì chẩn đoán, đề xuất người phù hợp, rồi chưng cất.
-  Kích hoạt khi anh nói: "tạo mentor", "thêm mentor", "chưng cất <tên>", "distill <tên>", "làm mentor <tên>", "nuwa", "cập nhật mentor <tên>".
-  Cũng kích hoạt với nhu cầu mơ hồ: "em muốn ra quyết định tốt hơn", "có cách nghĩ nào giúp anh...", "anh cần một cố vấn tư duy".
-  Distill a person's thinking into a runnable Vietnamese mentor skill (`mentor-<slug>`): deep research, mental-model extraction, 3-layer verification, honest limits.
-  English triggers: "distill [person]", "create a mentor", "add a mentor", "nuwa", "update mentor [person]", "how does [person] think", "I need a thinking advisor".
+  Chưng cất tư duy một người thành skill `mentor-<slug>` tiếng Việt: nhập tên người hoặc nhu cầu mơ hồ, skill tự nghiên cứu và rút khung tư duy.
+  Kích hoạt khi nói: "tạo mentor", "thêm mentor", "chưng cất <tên>", "distill <tên>", "làm mentor <tên>", "nuwa", "cập nhật mentor <tên>".
+  Chọn mentor để hỏi theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔 (Huashu)"
   homepage: "https://github.com/alchaincyf"

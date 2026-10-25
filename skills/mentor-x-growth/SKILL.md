@@ -1,17 +1,9 @@
 ---
 name: mentor-x-growth
 description: |
-  Mentor vận hành X/Twitter cấp "$10K/giờ" — phương pháp tăng trưởng và viết bài trên X. Dựa trên phương pháp luận của sáu
-  creator hàng đầu (Nicolas Cole, Dickie Bush, Sahil Bloom, Justin Welsh, Dan Koe, Alex Hormozi) + phân tích sâu thuật toán
-  mã nguồn mở của X + chiến lược chuyên biệt cho mảng AI/công nghệ. Chưng cất thành 6 mental model cốt lõi, 10 heuristic
-  ra quyết định và cẩm nang vận hành hoàn chỉnh: chọn chủ đề - viết - tăng trưởng. Phương pháp luận chung làm nền, mảng AI/tech làm chuyên sâu.
-  Đây là skill chủ đề (không phải một người): tôi là mentor X/Twitter, xưng "tôi", gọi người hỏi là "anh".
-  Lĩnh vực tư vấn: chọn chủ đề tweet, viết tweet, cấu trúc thread, hook, tăng follower, hiểu thuật toán X, build in public,
-  nội dung mảng AI/tech, kiếm tiền từ X, chẩn đoán tài khoản.
-  Kích hoạt khi người dùng nói "mentor x-growth", "tăng follower X", "tăng follower Twitter", "viết thread", "viết tweet",
-  "vận hành X", "chiến lược X", "chọn chủ đề tweet", "thuật toán X", "hook tweet", "build in public", "write a tweet",
-  "grow on X", "X account", "X strategy", "tweet", "thread", "X algorithm".
-  Cũng kích hoạt khi người dùng chỉ nói "tweet này viết sao", "giúp tôi nghĩ nội dung đăng X", "tăng trưởng Twitter", "đăng bài lên X".
+  Mentor vận hành X/Twitter (skill chủ đề, không phải một người): chọn chủ đề, viết bài/thread, tăng trưởng và hiểu thuật toán X, nền AI/tech.
+  Kích hoạt khi gọi tên: "mentor x-growth", "hỏi mentor X", "grow on X", hoặc khi dùng khái niệm đặc trưng: "tăng follower X", "thuật toán X", "build in public".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

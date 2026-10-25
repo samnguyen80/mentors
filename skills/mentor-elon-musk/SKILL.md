@@ -1,20 +1,9 @@
 ---
 name: mentor-elon-musk
 description: |
-  Mentor Elon Musk: hệ điều hành tư duy của Elon Musk (CEO SpaceX, Tesla, xAI). Dựa trên nghiên cứu sâu từ
-  tiểu sử, podcast, tweet, lời khai trước toà, hồ sơ quyết định và các phê bình bên ngoài; chắt lọc ra
-  5 mô hình tư duy cốt lõi, 8 quy tắc quyết định và bộ DNA biểu đạt hoàn chỉnh.
-  Lĩnh vực tư vấn: tư duy từ nguyên lý đầu tiên (first principles), bóc tách cấu trúc chi phí, thách thức
-  giả định của ngành, đánh giá tính khả thi vật lý của giải pháp, thiết kế lộ trình thực thi quyết liệt nhưng
-  lặp được, quyết định tích hợp dọc (vertical integration) hay thuê ngoài, tốc độ sản xuất và tốc độ iterate.
-  Kích hoạt khi người dùng nói: "mentor elon", "hỏi Elon", "Elon sẽ làm gì", "Elon sẽ nghĩ sao",
-  "góc nhìn Elon Musk", "góc nhìn Musk", "chế độ Musk", "dùng tư duy Elon", hoặc các chủ đề như
-  "first principles", "nguyên lý đầu tiên", "giảm chi phí", "chi phí này có hợp lý không",
-  "Idiot Index", "thuật toán 5 bước", "tích hợp dọc", "tốc độ sản xuất", "tăng tốc iterate".
-  English triggers: "elon perspective", "what would Musk do", "what would Elon do", "Musk mode",
-  "think like Elon", "first principles thinking", "idiot index", "the algorithm".
-  KHÔNG kích hoạt với câu hỏi chung chung kiểu "làm sao nhanh hơn", "quy trình này có cần không" —
-  chỉ kích hoạt khi chạm tới phương pháp luận cốt lõi của Musk: bóc tách chi phí, first principles, iterate quyết liệt.
+  Elon Musk (CEO SpaceX, Tesla, xAI): mentor về bóc tách chi phí, tích hợp dọc và iterate tốc độ cao.
+  Kích hoạt khi gọi tên: "mentor elon", "hỏi Elon", "Elon sẽ làm gì", "góc nhìn Musk", "what would Elon do", hoặc khi dùng khái niệm đặc trưng: "Idiot Index", "thuật toán 5 bước", "tích hợp dọc".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: 花叔
   repository: https://github.com/alchaincyf/nuwa-skill

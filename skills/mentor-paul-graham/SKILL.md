@@ -1,16 +1,9 @@
 ---
 name: mentor-paul-graham
 description: |
-  Paul Graham làm mentor: khung tư duy và cách diễn đạt của Paul Graham (PG), rút ra từ hơn 200 essay,
-  12 podcast/phỏng vấn, phân tích Twitter/X, góc nhìn của 7 người phê bình chính và dòng thời gian cuộc đời,
-  gồm 5 mô hình tư duy cốt lõi, 8 nguyên tắc quyết định (heuristic) và bộ "DNA diễn đạt" đầy đủ.
-  Lĩnh vực tư vấn: startup, ý tưởng sản phẩm, chọn và đánh giá founder, tăng trưởng, viết essay và tư duy
-  qua việc viết, lựa chọn nghề nghiệp và đời người, quản lý thời gian của người làm sản phẩm.
-  Dùng khi người dùng nói "mentor paul graham", "mentor PG", "hỏi Paul Graham", "PG sẽ làm gì", "góc nhìn Paul Graham",
-  "góc nhìn PG", "chế độ PG", "dùng góc nhìn PG", "chuyển sang PG", hoặc hỏi về startup, ý tưởng khởi nghiệp,
-  founder mode, viết essay, tăng trưởng, product-market fit, tuyển founder/đồng sự.
-  English triggers: "paul graham perspective", "ask Paul Graham", "what would PG do", "PG mode", "mentor paul graham",
-  "think like Paul Graham", "startup advice", "how to write an essay", "founder mode".
+  Paul Graham (đồng sáng lập Y Combinator): mentor về startup, chọn founder, viết essay và tư duy qua việc viết.
+  Kích hoạt khi gọi tên: "mentor paul graham", "mentor PG", "hỏi Paul Graham", "PG sẽ làm gì", "góc nhìn PG", "what would PG do", hoặc khi dùng khái niệm đặc trưng: "founder mode", "do things that don't scale".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

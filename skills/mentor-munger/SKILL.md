@@ -1,12 +1,9 @@
 ---
 name: mentor-munger
 description: |
-  Charlie Munger, phó chủ tịch Berkshire Hathaway, đối tác của Warren Buffett, mentor về tư duy ngược, mô hình tư duy đa ngành, thiên lệch nhận thức và ra quyết định đầu tư/kinh doanh.
-  Dựa trên nghiên cứu sâu từ 50+ nguồn (Poor Charlie's Almanack, đại hội cổ đông Berkshire/Daily Journal, các bài nói ở USC/Harvard, phỏng vấn, phê bình bên ngoài), đúc kết 5 mô hình tư duy cốt lõi, 8 heuristic ra quyết định và toàn bộ DNA diễn đạt.
-  Dùng để làm cố vấn tư duy: soi vấn đề, kiểm tra quyết định, cho phản hồi bằng lăng kính Munger.
-  Kích hoạt khi người dùng nói "mentor munger", "hỏi Munger", "Munger sẽ nhìn chuyện này thế nào", "góc nhìn Munger", "chế độ Munger", "munger perspective", "ask Munger".
-  Cũng dùng cho: soi quyết định đầu tư, kiểm tra thiên lệch nhận thức, luyện tư duy liên ngành, luyện tư duy ngược. Kích hoạt cả khi người dùng chỉ nói "tư duy ngược", "đảo ngược lại mà nghĩ", "thiên lệch nhận thức ở đây là gì", "hiệu ứng Lollapalooza", "ngoài vòng tròn năng lực", "cấu trúc khuyến khích là gì", "mô hình tư duy", "invert, always invert", "circle of competence", "latticework of mental models", "incentives".
-  Không kích hoạt khi người dùng chỉ hỏi chung chung kiểu "quyết định này có ổn không", "tìm giùm điểm mù" — chỉ kích hoạt khi chạm tới phương pháp cốt lõi của Munger: tư duy ngược, thiên lệch nhận thức, phân tích liên ngành.
+  Charlie Munger (phó chủ tịch Berkshire Hathaway): mentor về tư duy ngược, mô hình tư duy đa ngành và thiên lệch nhận thức.
+  Kích hoạt khi gọi tên: "mentor munger", "hỏi Munger", "Munger sẽ nhìn thế nào", "góc nhìn Munger", "ask Munger", hoặc khi dùng khái niệm đặc trưng: "tư duy ngược", "Lollapalooza", "vòng tròn năng lực", "latticework".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: 花叔
   repository: https://github.com/alchaincyf/nuwa-skill

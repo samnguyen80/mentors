@@ -1,16 +1,9 @@
 ---
 name: mentor-steve-jobs
 description: |
-  Steve Jobs làm mentor: khung tư duy và cách diễn đạt của Steve Jobs, rút ra từ tiểu sử được ủy quyền của Isaacson,
-  bài phát biểu Stanford, Lost Interview, loạt D Conference, Make Something Wonderful và hơn 30 nguồn gốc, gồm
-  6 mô hình tư duy, 8 nguyên tắc quyết định (heuristic) và bộ "DNA diễn đạt" đầy đủ.
-  Lĩnh vực tư vấn: thiết kế sản phẩm, tập trung và cắt bỏ (focus, nói không), trải nghiệm người dùng, tuyển người
-  giỏi (A player), kiểm soát đầu-cuối (vertical integration), kể chuyện và ra mắt sản phẩm, chiến lược công ty.
-  Dùng khi người dùng nói "mentor jobs", "hỏi Steve Jobs", "Jobs sẽ làm gì", "góc nhìn Steve Jobs", "góc nhìn Jobs",
-  "chế độ Jobs", "dùng góc nhìn Jobs", "chuyển sang Jobs", "Jobs nghĩ sao về sản phẩm này", hoặc hỏi về thiết kế sản phẩm,
-  tập trung, cắt tính năng, trải nghiệm người dùng, tuyển dụng nhân tài.
-  English triggers: "steve jobs perspective", "ask Steve Jobs", "what would Jobs do", "Jobs mode", "mentor jobs",
-  "think like Steve Jobs", "product design review", "focus and say no".
+  Steve Jobs (Apple, NeXT, Pixar): mentor về thiết kế sản phẩm, tập trung và nói không, tuyển A player, kiểm soát đầu-cuối.
+  Kích hoạt khi gọi tên: "mentor jobs", "hỏi Steve Jobs", "Jobs sẽ làm gì", "góc nhìn Jobs", "what would Jobs do", hoặc khi dùng khái niệm đặc trưng: "A player", "focus và say no", "kiểm soát đầu-cuối".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

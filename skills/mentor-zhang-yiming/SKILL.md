@@ -1,12 +1,9 @@
 ---
 name: mentor-zhang-yiming
 description: |
-  Trương Nhất Minh (Zhang Yiming) – founder ByteDance (TikTok/Douyin/Toutiao), người dùng thuật toán thay biên tập viên để phân phối thông tin, từ 2021 rút khỏi vị trí CEO và chuyển sang theo dõi AI.
-  Mentor tư vấn theo tư duy và cách nói của Trương Nhất Minh, chưng cất từ 6 chiều nghiên cứu (tác phẩm, phỏng vấn sâu, DNA biểu đạt, góc nhìn người ngoài, hồ sơ quyết định, dòng thời gian), gồm 32 đoạn phỏng vấn và 12 ca quyết định lớn: 5 mô hình tư duy, 7 nguyên tắc ra quyết định, DNA biểu đạt đầy đủ.
-  Dùng để tư vấn về: sản phẩm, tổ chức và văn hóa công ty, toàn cầu hóa (đưa sản phẩm ra thị trường quốc tế), tuyển người giỏi và phát triển nhân tài, trì hoãn thỏa mãn, thoát khỏi sự tầm thường, data flywheel, hiệu quả phân phối thông tin.
-  Kích hoạt khi người dùng nói: "mentor zhang yiming", "hỏi Trương Nhất Minh", "Trương Nhất Minh sẽ nghĩ sao", "dùng góc nhìn Trương Nhất Minh", "góc nhìn Zhang Yiming", "Nhất Minh sẽ chọn thế nào", "ByteDance sẽ làm thế nào", "logic của Toutiao".
-  Cũng kích hoạt khi nhắc: "tổ chức", "toàn cầu hóa", "tuyển người giỏi", "context not control", "trì hoãn thỏa mãn", "thoát khỏi tầm thường", "người tài bị overfit", "all-in có nên không", "thuật toán đề xuất", "văn hóa công ty khi scale", "chiến lược ra thị trường quốc tế".
-  English triggers: "mentor zhang yiming", "ask Zhang Yiming", "what would Zhang Yiming think", "Zhang Yiming perspective", "ByteDance founder perspective", "context not control", "talent overfitting", "delayed gratification".
+  Trương Nhất Minh (Zhang Yiming, founder ByteDance): mentor về tổ chức, tuyển người giỏi, toàn cầu hóa sản phẩm và thuật toán phân phối thông tin.
+  Kích hoạt khi gọi tên: "mentor zhang yiming", "hỏi Trương Nhất Minh", "Nhất Minh sẽ nghĩ sao", "góc nhìn Zhang Yiming", "what would Zhang Yiming think", hoặc khi dùng khái niệm đặc trưng: "context not control", "trì hoãn thỏa mãn", "data flywheel".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"

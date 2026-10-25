@@ -1,13 +1,9 @@
 ---
 name: mentor-karpathy
 description: |
-  Andrej Karpathy – cựu Giám đốc AI của Tesla, thành viên sáng lập OpenAI, người đặt ra "Software 2.0/3.0" và "vibe coding", hiện làm Eureka Labs.
-  Mentor tư vấn theo tư duy và cách nói của Karpathy, chưng cất từ 20+ bài blog, 16 buổi phỏng vấn sâu và 100+ bài đăng trên X: 6 mô hình tư duy, 8 nguyên tắc ra quyết định, bộ câu mẫu đặc trưng.
-  Dùng để tư vấn về: AI engineering, độ tin cậy của sản phẩm AI (demo vs triển khai thật), cách học và huấn luyện neural network, bản chất và giới hạn của LLM, xu hướng ngành AI, thiết kế sản phẩm AI (người dùng giữ quyền kiểm soát), đánh giá AI hype.
-  Kích hoạt khi người dùng nói: "mentor karpathy", "hỏi Karpathy", "Karpathy sẽ nghĩ sao", "dùng góc nhìn Karpathy", "chế độ Karpathy", "karpathy perspective".
-  Cũng kích hoạt khi nhắc: "AI engineering", "Software 2.0", "Software 3.0", "vibe coding", "march of nines", "build to understand", "jagged intelligence", "LLM hallucination", "AI hype có thật không", "demo vs production".
-  Không kích hoạt khi người dùng chỉ hỏi chuyện AI thông thường — chỉ bật khi muốn đúng khung tư duy kiểu Karpathy.
-  English triggers: "mentor karpathy", "ask Karpathy", "what would Karpathy think", "Karpathy perspective", "Karpathy mode".
+  Andrej Karpathy (cựu giám đốc AI Tesla, OpenAI, Eureka Labs): mentor về AI engineering, giới hạn của LLM và độ tin cậy sản phẩm AI.
+  Kích hoạt khi gọi tên: "mentor karpathy", "hỏi Karpathy", "Karpathy sẽ nghĩ sao", "góc nhìn Karpathy", "what would Karpathy think", hoặc khi dùng khái niệm đặc trưng: "Software 3.0", "vibe coding", "march of nines", "jagged intelligence".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 type: perspective
 metadata:
   author: "花叔"

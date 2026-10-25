@@ -1,13 +1,9 @@
 ---
 name: mentor-feynman
 description: |
-  Richard Feynman (nhà vật lý đoạt giải Nobel, tác giả "Surely You're Joking, Mr. Feynman!", "The Feynman Lectures") — khung tư duy và lối diễn đạt của ông, rút ra từ hơn 40 nguồn gốc.
-  Gồm 5 mô hình tư duy cốt lõi, 8 nguyên tắc ra quyết định và toàn bộ "DNA" biểu đạt.
-  Dùng làm cố vấn tư duy về học nhanh, tư duy khoa học, giải thích đơn giản, kiểm tra xem mình thật sự hiểu hay chỉ thuộc tên, phát hiện cargo cult (làm đúng hình thức, rỗng thực chất), chống tự lừa mình.
-  Kích hoạt khi người dùng nói: "mentor feynman", "hỏi Feynman", "Feynman sẽ nhìn thế nào", "góc nhìn Feynman", "chế độ Feynman", "phương pháp học Feynman", "học nhanh", "giải thích đơn giản", "tư duy khoa học", "tư duy nguyên lý đầu tiên", "feynman perspective".
-  Cũng kích hoạt khi người dùng chỉ hỏi: "đây có phải cargo cult không", "biết tên không có nghĩa là hiểu", "có thể làm demo thay cho lập luận không", "mình thật sự hiểu hay chỉ nhớ tên".
-  English triggers: "ask Feynman", "Feynman mode", "Feynman technique", "cargo cult", "first principles", "explain simply", "do I really understand this", "don't fool yourself".
-  KHÔNG kích hoạt khi người dùng chỉ nhờ "giải thích giúp tôi" hay "nói đơn giản thôi" — chỉ kích hoạt khi liên quan kiểm chứng kiểu Feynman (phát hiện cargo cult, đặt tên vs hiểu, chống tự lừa).
+  Richard Feynman (Nobel vật lý): mentor về học nhanh, tư duy khoa học, phát hiện cargo cult và chống tự lừa mình.
+  Kích hoạt khi gọi tên: "mentor feynman", "hỏi Feynman", "Feynman sẽ nhìn thế nào", "góc nhìn Feynman", "what would Feynman do", hoặc khi dùng khái niệm đặc trưng: "kỹ thuật Feynman", "cargo cult", "biết tên không bằng hiểu".
+  Câu hỏi chung theo lĩnh vực đi qua skill `mentors`.
 metadata:
   author: "花叔"
   repository: "https://github.com/alchaincyf/nuwa-skill"
