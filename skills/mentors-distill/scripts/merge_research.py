@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""
-合并6个Agent的调研结果，生成Phase 1.5调研Review检查点的摘要表格。
-扫描 references/research/ 目录下的01-06 md文件，统计每个维度的来源数量、
-一手/二手占比、关键发现。
+"""Gộp kết quả nghiên cứu của 6 tác nhân thành bảng tóm tắt kiểm tra Giai đoạn 1.5.
 
-用法:
-    python3 merge_research.py <skill目录路径>
+Quét các tệp Markdown 01-06 trong ``references/research/`` để thống kê số nguồn,
+tỷ lệ nguồn sơ cấp/thứ cấp và các phát hiện chính của từng khía cạnh.
 
-示例:
-    python3 merge_research.py .claude/skills/elon-musk-perspective
+Cách dùng:
+    python3 merge_research.py <đường_dẫn_thư_mục_skill>
 
-输出: 打印markdown格式的摘要表格到stdout
+Ví dụ:
+    python3 merge_research.py /Volumes/SamDisk/sources/mentors/skills/mentor-elon-musk
+
+Đầu ra: in bảng tóm tắt theo Markdown ra đầu ra chuẩn.
 """
 
 import sys
@@ -18,23 +18,23 @@ import re
 from pathlib import Path
 
 AGENTS = {
-    '01-writings': '著作',
-    '02-conversations': '对话',
-    '03-expression-dna': '表达',
-    '04-external-views': '他者',
-    '05-decisions': '决策',
-    '06-timeline': '时间线',
+    '01-writings': 'Tác phẩm',
+    '02-conversations': 'Đối thoại',
+    '03-expression-dna': 'Biểu đạt',
+    '04-external-views': 'Góc nhìn ngoài',
+    '05-decisions': 'Quyết định',
+    '06-timeline': 'Dòng thời gian',
 }
 
 
 def count_sources(content: str) -> dict:
-    """统计来源数量和一手/二手占比"""
-    # 计算URL数量作为来源数
+    """Thống kê số nguồn và tỷ lệ nguồn sơ cấp/thứ cấp."""
+    # Dùng số URL để ước lượng số nguồn.
     urls = re.findall(r'https?://[^\s\)]+', content)
 
-    # 检测一手/二手标记
-    primary_markers = len(re.findall(r'一手|primary|本人|原文|原始|直接引用', content, re.IGNORECASE))
-    secondary_markers = len(re.findall(r'二手|secondary|转述|总结|评论|分析', content, re.IGNORECASE))
+    # Phát hiện nhãn nguồn sơ cấp/thứ cấp.
+    primary_markers = len(re.findall(r'sơ cấp|primary|của chính người đó|nguyên văn|trích trực tiếp', content, re.IGNORECASE))
+    secondary_markers = len(re.findall(r'thứ cấp|secondary|trích lại|tóm tắt|bình luận|phân tích', content, re.IGNORECASE))
 
     return {
         'url_count': len(urls),
@@ -45,43 +45,43 @@ def count_sources(content: str) -> dict:
 
 
 def extract_key_findings(content: str, max_items: int = 3) -> list[str]:
-    """提取关键发现（取前几个二级标题或加粗项）"""
-    # 尝试提取##标题
+    """Lấy các phát hiện chính từ tiêu đề cấp 2 hoặc mục in đậm đầu tiên."""
+    # Thử lấy tiêu đề cấp 2.
     headings = re.findall(r'^##\s+(.+)$', content, re.MULTILINE)
     if headings:
         return headings[:max_items]
 
-    # fallback: 提取加粗项
+    # Dự phòng: lấy mục in đậm.
     bolds = re.findall(r'\*\*(.+?)\*\*', content)
     if bolds:
         return bolds[:max_items]
 
-    # fallback: 取前3个非空行
+    # Dự phòng: lấy ba dòng khác rỗng đầu tiên.
     lines = [l.strip() for l in content.split('\n') if l.strip() and not l.startswith('#')]
     return [l[:50] + '...' if len(l) > 50 else l for l in lines[:max_items]]
 
 
 def find_contradictions(files: dict[str, str]) -> list[str]:
-    """简单检测跨文件矛盾（同一关键词出现不同判断）"""
+    """Phát hiện đơn giản các điểm mâu thuẫn giữa các tệp."""
     contradictions = []
-    # 检测「但是」「然而」「相反」「矛盾」等矛盾标记
+    # Tìm các từ khóa biểu thị mâu thuẫn hoặc tranh cãi.
     for name, content in files.items():
-        matches = re.findall(r'(?:矛盾|相反|但实际上|然而.*?不同|争议).{0,100}', content)
+        matches = re.findall(r'(?:mâu thuẫn|ngược lại|nhưng thực tế|tranh cãi).{0,100}', content, re.IGNORECASE)
         for m in matches:
             contradictions.append(f"{AGENTS.get(name, name)}: {m[:80]}")
-    return contradictions[:5]  # 最多5条
+    return contradictions[:5]  # Tối đa 5 điểm.
 
 
 def main():
     if len(sys.argv) < 2:
-        print("用法: python3 merge_research.py <skill目录路径>")
+        print("Cách dùng: python3 merge_research.py <đường_dẫn_thư_mục_skill>")
         sys.exit(1)
 
     skill_dir = Path(sys.argv[1])
     research_dir = skill_dir / 'references' / 'research'
 
     if not research_dir.exists():
-        print(f"❌ 目录不存在: {research_dir}")
+        print(f"❌ Không tìm thấy thư mục: {research_dir}")
         sys.exit(1)
 
     files = {}
@@ -95,7 +95,7 @@ def main():
         md_file = research_dir / f"{key}.md"
         if not md_file.exists():
             missing.append(label)
-            rows.append(f"│ {label:<12} │ {'❌ 缺失':<8} │ {'—':<24} │")
+            rows.append(f"│ {label:<14} │ {'❌ Thiếu':<8} │ {'—':<24} │")
             continue
 
         content = md_file.read_text(encoding='utf-8')
@@ -111,39 +111,39 @@ def main():
         if len(findings_str) > 40:
             findings_str = findings_str[:37] + '...'
 
-        rows.append(f"│ {label:<12} │ {stats['unique_urls']:<8} │ {findings_str:<24} │")
+        rows.append(f"│ {label:<14} │ {stats['unique_urls']:<8} │ {findings_str:<24} │")
 
-    # 矛盾检测
+    # Phát hiện mâu thuẫn.
     contradictions = find_contradictions(files)
 
-    # 输出
-    print("┌──────────────┬──────────┬──────────────────────────┐")
-    print("│ Agent        │ 来源数量  │ 关键发现                  │")
-    print("├──────────────┼──────────┼──────────────────────────┤")
+    # In bảng tóm tắt.
+    print("┌────────────────┬──────────┬──────────────────────────┐")
+    print("│ Hạng mục       │ Số nguồn │ Phát hiện chính          │")
+    print("├────────────────┼──────────┼──────────────────────────┤")
     for row in rows:
         print(row)
-    print("├──────────────┼──────────┼──────────────────────────┤")
+    print("├────────────────┼──────────┼──────────────────────────┤")
 
-    primary_ratio = f"{total_primary}/{total_primary + total_secondary}" if (total_primary + total_secondary) > 0 else "未标记"
-    print(f"│ 总来源数      │ {total_sources:<8} │ 一手占比: {primary_ratio:<15} │")
+    primary_ratio = f"{total_primary}/{total_primary + total_secondary}" if (total_primary + total_secondary) > 0 else "Chưa gắn nhãn"
+    print(f"│ {'Tổng nguồn':<14} │ {total_sources:<8} │ {'Nguồn sơ cấp: ' + primary_ratio:<24} │")
 
     if contradictions:
-        print(f"│ 矛盾点        │ {len(contradictions)}处      │ {contradictions[0][:24]:<24} │")
+        print(f"│ {'Mâu thuẫn':<14} │ {f'{len(contradictions)} chỗ':<8} │ {contradictions[0][:24]:<24} │")
     else:
-        print(f"│ 矛盾点        │ 0处      │ {'—':<24} │")
+        print(f"│ {'Mâu thuẫn':<14} │ {'0 chỗ':<8} │ {'—':<24} │")
 
     if missing:
-        print(f"│ 信息不足维度   │ {len(missing)}个      │ {', '.join(missing):<24} │")
+        print(f"│ {'Thiếu mục':<14} │ {f'{len(missing)} mục':<8} │ {', '.join(missing):<24} │")
     else:
-        print(f"│ 信息不足维度   │ 无       │ {'—':<24} │")
+        print(f"│ {'Thiếu mục':<14} │ {'Không':<8} │ {'—':<24} │")
 
-    print("└──────────────┴──────────┴──────────────────────────┘")
+    print("└────────────────┴──────────┴──────────────────────────┘")
 
-    # 总结
+    # Tóm tắt.
     if total_sources < 10:
-        print("\n⚠️ 总来源数 <10，建议降低期望或补充调研")
+        print("\n⚠️ Tổng số nguồn <10, nên bổ sung nghiên cứu hoặc hạ kỳ vọng")
     if missing:
-        print(f"\n⚠️ 缺失维度: {', '.join(missing)}，建议补充或在诚实边界中标注")
+        print(f"\n⚠️ Thiếu hạng mục: {', '.join(missing)}; nên bổ sung hoặc nêu rõ trong ranh giới trung thực")
 
 
 if __name__ == '__main__':
