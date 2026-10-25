@@ -205,7 +205,7 @@ Key evidence:
 
 Key facts:
 - In 1978, 23-year-old Jobs refused to acknowledge paternity after his girlfriend Chrisann Brennan became pregnant
-- Even when a DNA test showed a 28% match probability (later confirmed as the father), Jobs still claimed "28% of the male population of the United States could be the father"
+- Even when a DNA test showed a 94.41% probability of paternity (he was later confirmed as the father), Jobs still claimed "28% of the male population of the United States could be the father"
 - Lisa and her mother lived on welfare while Jobs was already a millionaire
 - Jobs was ultimately compelled by the court to acknowledge paternity and pay child support
 
