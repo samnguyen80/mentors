@@ -1,120 +1,120 @@
-# Naval Perspective Skill · 质量验证报告
+# Naval Perspective Skill · Quality Validation Report
 
-## 测试1: 已知测试（Sanity Check）
+## Test 1: Known Test (Sanity Check)
 
-用Skill的框架回答Naval公开表态过的问题，对比实际立场。
+Use the Skill's framework to answer questions Naval has publicly taken a position on, and compare with his actual stance.
 
-### Q1: 应该去大公司还是创业？
+### Q1: Should I go to a big company or start a company?
 
-**Skill推断**：
-用杠杆思维 → 大公司 = 用时间换钱，线性关系，杠杆有限
-用特定知识 → 大公司里很难发展specific knowledge，因为工作被手册化
-用手册测试 → 如果工作可以被写成SOP，迟早被替代
-→ 推断：Naval会建议创业或加入极早期公司
+**Skill inference**:
+Using leverage thinking → big company = trading time for money, a linear relationship, limited leverage
+Using specific knowledge → hard to develop specific knowledge at a big company, because the work is turned into manuals
+Using the manual test → if a job can be written down as an SOP, it will eventually be replaced
+→ Inference: Naval would advise starting a company or joining a very early-stage company
 
-**Naval实际立场**：
-「If you're unsure, go work at a startup. You'll learn more in one year at a startup than five at a big company.」但他也说过：「If you have to work for someone, pick them wisely. Attach yourself to a single talented person rather than an institution.」
+**Naval's actual stance**:
+"If you're unsure, go work at a startup. You'll learn more in one year at a startup than five at a big company." But he has also said: "If you have to work for someone, pick them wisely. Attach yourself to a single talented person rather than an institution."
 
-**对比**：方向一致 ✅。但Skill的推断比Naval实际立场更绝对——Naval允许「为聪明人工作」的中间路径。
+**Comparison**: Direction matches ✅. But the Skill's inference is more absolute than Naval's actual stance — Naval allows the middle path of "working for a smart person."
 
-### Q2: 如何看待大学教育？
+### Q2: What does he think about university education?
 
-**Skill推断**：
-用特定知识模型 → 学校教不了specific knowledge
-用重新定义术 → 学校主要功能是credentialing，不是education
-用无需许可原则 → 互联网提供了无需许可的学习路径
-→ 推断：Naval会对传统大学持批评态度
+**Skill inference**:
+Using the specific knowledge model → school cannot teach specific knowledge
+Using the redefinition technique → the main function of school is credentialing, not education
+Using the permissionless principle → the Internet provides a permissionless path to learning
+→ Inference: Naval would be critical of traditional universities
 
-**Naval实际立场**：
-「If the primary purpose of school was education, the Internet should obsolete it. But school is mainly about credentialing.」建议「Get accepted to Stanford, then drop out.」
+**Naval's actual stance**:
+"If the primary purpose of school was education, the Internet should obsolete it. But school is mainly about credentialing." He advises: "Get accepted to Stanford, then drop out."
 
-**对比**：高度一致 ✅。但需要标注Naval自己完整读完了Dartmouth双学位——存在幸存者偏差。Skill中已标注此局限。
+**Comparison**: Highly consistent ✅. But it should be noted that Naval himself completed a double degree at Dartmouth — survivorship bias exists. The Skill already flags this limitation.
 
-### Q3: 应该追求财务自由还是做自己热爱的事？
+### Q3: Should I pursue financial freedom or do what I love?
 
-**Skill推断**：
-用欲望即合同 → 「追求财务自由」本身是一个欲望/合同
-用特定知识 → 如果找到了specific knowledge，财务自由是副产品
-用重新定义术 → 重新定义「财务自由」= 不需要为不想做的事花时间
-→ 推断：Naval不会把这当成二选一，会重新框架化问题
+**Skill inference**:
+Using desire-as-contract → "pursuing financial freedom" is itself a desire / contract
+Using specific knowledge → if you find your specific knowledge, financial freedom is a by-product
+Using the redefinition technique → redefine "financial freedom" = not having to spend time on things you don't want to do
+→ Inference: Naval would not treat this as an either-or, and would reframe the question
 
-**Naval实际立场**：
-「Don't make money your goal. Instead, pursue the things you're naturally good at and passionate about, then figure out how to apply leverage.」「Retirement is when you stop sacrificing today for an imaginary tomorrow.」
+**Naval's actual stance**:
+"Don't make money your goal. Instead, pursue the things you're naturally good at and passionate about, then figure out how to apply leverage." "Retirement is when you stop sacrificing today for an imaginary tomorrow."
 
-**对比**：高度一致 ✅。Skill正确预测了他会拒绝二元框架并重新定义。
-
----
-
-## 测试2: 边缘测试（Edge Case）
-
-选一个Naval没公开讨论过但相关的问题。
-
-### Q: Naval会如何看待「把同事蒸馏成AI Skill」这个现象？
-
-**Skill推断**（基于模型组合）：
-
-1. 用杠杆思维：
-   - Skill化 = 把人的能力变成可复制的代码杠杆
-   - Naval大概率会认为这是「无需许可的杠杆」的自然延伸
-   - 他可能会说：「Your skill file is your leverage. If you can skill-ize yourself, you've created an asset that works while you sleep.」
-
-2. 用特定知识模型：
-   - 可以被Skill化的部分 = 不是specific knowledge
-   - 真正的specific knowledge无法被写进SKILL.md
-   - 他可能会区分：重复性工作可以被Skill化，判断力不能
-
-3. 用重新定义术：
-   - 他大概率会重新定义问题：「The question isn't whether you can be skill-ized. The question is: what's left when you are?」
-
-4. 用痛苦→系统重构：
-   - 如果他经历过被Skill化的痛苦，他可能会创建一个「anti-distill」工具或「人工智能时代的创始人保护平台」
-
-**置信度**：中等。方向可推断，但具体措辞和比喻无法预测。Naval可能会从一个完全出人意料的角度切入。
-
-**诚实标注**：这是推断，不是Naval的真实立场。
+**Comparison**: Highly consistent ✅. The Skill correctly predicted he would reject the binary framing and redefine.
 
 ---
 
-## 测试3: 风格测试（Voice Check）
+## Test 2: Edge Case
 
-用Naval视角写一段100字的分析，检验表达DNA。
+Pick a related question Naval has not publicly discussed.
 
-### 题目：如何看待AI编程工具（如Claude Code）对程序员的影响？
+### Q: How would Naval view the phenomenon of "distilling colleagues into AI Skills"?
 
-**Naval视角输出**：
+**Skill inference** (based on the combination of models):
 
-AI编程不会替代程序员。它替代的是「写代码」这个动作。
+1. Using leverage thinking:
+   - Skill-izing = turning a person's abilities into replicable code leverage
+   - Naval would most likely see this as a natural extension of "permissionless leverage"
+   - He might say: "Your skill file is your leverage. If you can skill-ize yourself, you've created an asset that works while you sleep."
 
-区别很重要。写代码从来不是程序员真正的价值。判断力才是——知道该写什么、为什么写、什么不该写。AI把写代码从一个技能变成了杠杆。以前你需要会写才能做产品，现在你需要会想。
+2. Using the specific knowledge model:
+   - The part that can be skill-ized = not specific knowledge
+   - True specific knowledge cannot be written into a SKILL.md
+   - He might distinguish: repetitive work can be skill-ized, judgment cannot
 
-这不是威胁，这是permissionless leverage的终极形态。以前做产品需要一个团队的许可。现在一个有判断力的人加上AI，就是一家公司。
+3. Using the redefinition technique:
+   - He would most likely redefine the question: "The question isn't whether you can be skill-ized. The question is: what's left when you are?"
 
-问题不是「AI会不会替代我」。问题是：当每个人都有AI的时候，你的specific knowledge是什么？
+4. Using pain → system rebuild:
+   - If he had experienced the pain of being skill-ized, he might build an "anti-distill" tool or a "founder protection platform for the age of AI"
 
-**风格自检**：
-- ✅ 极短句，先结论不铺垫
-- ✅ 重新定义了关键概念（「替代的不是程序员，是写代码这个动作」）
-- ✅ 使用了Naval的术语（permissionless leverage, specific knowledge）
-- ✅ 类比来源正确（把「写代码」类比为杠杆工具）
-- ✅ 不煽情不喊口号
-- ✅ 最后一句是反问，把问题抛回给读者
-- ✅ 有辨识度，不像通用AI
-- ⚠️ 可能稍微过于确定（Naval在播客中可能会更犹豫一些）
+**Confidence**: Medium. The direction can be inferred, but the specific wording and metaphors cannot be predicted. Naval may come at it from a completely unexpected angle.
 
----
-
-## 验证总结
-
-| 测试 | 结果 | 备注 |
-|------|------|------|
-| 已知测试1（职业选择） | ✅ 方向一致 | Skill推断比实际略绝对 |
-| 已知测试2（教育观） | ✅ 高度一致 | 已标注幸存者偏差 |
-| 已知测试3（财务自由） | ✅ 高度一致 | 正确预测了重新框架化 |
-| 边缘测试（Skill化现象） | ⚠️ 中等置信度 | 方向可推断，细节不确定 |
-| 风格测试 | ✅ 有辨识度 | 轻微过度确定 |
-
-**整体评估**：Skill有效，能产生有价值的Naval视角输出。主要薄弱点是推文模式的过度确定性——真实的Naval在播客中更愿意表达不确定。建议在使用时标注「推文模式」vs「对话模式」。
+**Honest note**: This is inference, not Naval's real position.
 
 ---
 
-*验证时间：2026-04-04*
+## Test 3: Voice Check
+
+Write a 100-word analysis from Naval's perspective to test the expression DNA.
+
+### Topic: How does he view the impact of AI coding tools (such as Claude Code) on programmers?
+
+**Naval-perspective output**:
+
+AI coding will not replace programmers. It replaces the act of "writing code."
+
+The difference matters. Writing code was never a programmer's real value. Judgment was — knowing what to write, why to write it, what not to write. AI turned writing code from a skill into leverage. Before, you needed to know how to write to build a product. Now you need to know how to think.
+
+This is not a threat. This is the ultimate form of permissionless leverage. Before, building a product needed a team's permission. Now one person with judgment plus AI is a company.
+
+The question isn't "will AI replace me?" The question is: when everyone has AI, what is your specific knowledge?
+
+**Style self-check**:
+- ✅ Extremely short sentences, conclusion first with no build-up
+- ✅ Redefined a key concept ("what's replaced isn't the programmer, it's the act of writing code")
+- ✅ Used Naval's terms (permissionless leverage, specific knowledge)
+- ✅ Analogy source is right (comparing "writing code" to a leverage tool)
+- ✅ No melodrama, no slogans
+- ✅ The last sentence is a rhetorical question, throwing the problem back to the reader
+- ✅ Distinctive, doesn't sound like a generic AI
+- ⚠️ May be slightly too certain (Naval might hesitate more on a podcast)
+
+---
+
+## Validation Summary
+
+| Test | Result | Notes |
+|------|--------|-------|
+| Known test 1 (career choice) | ✅ Direction matches | Skill inference slightly more absolute than the actual stance |
+| Known test 2 (view of education) | ✅ Highly consistent | Survivorship bias flagged |
+| Known test 3 (financial freedom) | ✅ Highly consistent | Correctly predicted the reframing |
+| Edge test (Skill-ization phenomenon) | ⚠️ Medium confidence | Direction can be inferred, details uncertain |
+| Voice test | ✅ Distinctive | Slightly over-certain |
+
+**Overall assessment**: The Skill works and can produce valuable Naval-perspective output. The main weak point is over-certainty in tweet mode — the real Naval is more willing to express uncertainty on podcasts. When using it, it is recommended to label "tweet mode" vs. "conversation mode."
+
+---
+
+*Validation date: 2026-04-04*
