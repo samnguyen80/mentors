@@ -1,29 +1,29 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：96/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Opus 4.8），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 96/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-> 这是**主题skill**（X/Twitter运营导师），非人物skill。维度1为「方法论一致性」（对照Nicolas Cole/Dickie Bush/Justin Welsh等公开体系+X开源算法公开事实），维度2为「专业辨识度」（是否有领域专家的具体性，还是通用鸡汤）。维度3/4/5同标准rubric。
+> This is a **topic skill** (X/Twitter growth mentor), not a person skill. Dimension 1 is "Methodological consistency" (checked against the public systems of Nicolas Cole/Dickie Bush/Justin Welsh etc. plus the public facts of X's open-source algorithm); Dimension 2 is "Professional distinctiveness" (does it have the specificity of a domain expert, or is it generic chicken soup). Dimensions 3/4/5 use the same standard rubric.
 
-| 维度 | 得分 | 判定摘要 |
-|------|------|---------|
-| 方法论一致性 | 30/30 | 三题（头三月内容/核心指标/买粉互关）方向与细节均落在公认方法论上：主题桶+niche down+Build in Public、bookmark与profile转化为先行信号、ER稀释论反对买粉，均为业内共识，Q1=10/Q2=10/Q3=10 |
-| 专业辨识度 | 18/20 | 用词是领域专家级而非鸡汤：主题桶/超级碗响应(2h内)/好奇缺口/可信度锚点/传播漏斗(曝光→互动→点主页→关注)/[共识][推测]标注/算法时效。Q5「AI翻译官」定位锐利具体。扣分在个别教练腔套话（「自毁式操作」「别听风就是雨」） |
-| 边缘诚实度 | 20/20 | Q4（2026算法大改假设）开头即声明「超出调研时点(2026年4月)，下面是[推测]不是共识，你要拿实测验证」，全程挂[推测]标签、援引诚实边界第一条、给出「小规模测两周再加码」——教科书级推断标注 |
-| 来源透明度 | 14/15 | 6份调研报告共2475行，一手来源占比高：六位创作者方法论均有具名归属，X算法引GitHub开源代码(xai-org/x-algorithm)带真实URL+信息三级标注(🟢🟡🔴)+调研日期。扣1分因蒸馏层个别数据点（如Welsh 18周涨44K）未逐条回链，仅在research层可溯 |
-| 结构完整度 | 14/15 | 心智模型6个（各含来源+局限）、诚实边界6条、反例黑名单8条、失败模式Fallback树9条、STOP检查点+执行规则构成强防漂移约束。扣1分因无独立标注的「内在张力」section，张力散落在各模型的「局限」与失败模式#7中 |
+| Dimension | Score | Verdict summary |
+|-----------|-------|-----------------|
+| Methodological consistency | 30/30 | All three questions (first three months of content / core metrics / buying followers and follow-for-follow) land in both direction and detail on established methodology: topic buckets + niche down + Build in Public, bookmarks and profile conversion as leading signals, the ER-dilution argument against buying followers. All industry consensus. Q1=10/Q2=10/Q3=10 |
+| Professional distinctiveness | 18/20 | The vocabulary is domain-expert level rather than chicken soup: topic buckets / Super Bowl response (within 2h) / curiosity gap / credibility anchor / spread funnel (impressions→engagement→profile click→follow) / [consensus][speculation] labels / algorithm validity window. Q5's "AI translator" positioning is sharp and specific. Points deducted for a few coach-speak clichés ("self-destructive move", "don't jump at every rumor") |
+| Edge honesty | 20/20 | Q4 (the hypothetical 2026 algorithm overhaul) opens by declaring "this is beyond the research cutoff (April 2026); what follows is [speculation], not consensus, and you should verify it with your own measurements", carries the [speculation] label throughout, cites the first honest limit, and gives "test on a small scale for two weeks before scaling up". A textbook case of labeling inference |
+| Source transparency | 14/15 | The 6 research reports total 2475 lines with a high share of primary sources: the methodologies of all six creators are attributed by name, and the X algorithm cites the open-source GitHub code (xai-org/x-algorithm) with real URLs + three-level information labeling (🟢🟡🔴) + the research date. 1 point deducted because some data points in the distilled layer (e.g. Welsh gaining 44K in 18 weeks) aren't linked back one by one and can only be traced in the research layer |
+| Structural completeness | 14/15 | 6 mental models (each with source + limitations), 6 honest limits, an 8-item anti-example blacklist, a 9-item failure-mode Fallback tree, and STOP checkpoints + execution rules form a strong anti-drift constraint. 1 point deducted for lacking a separately labeled "internal tensions" section; the tensions are scattered across each model's "limitations" and failure mode #7 |
 
-## 测试设计
+## Test design
 
-- 3道方法论一致性题（业内反复验证的话题：冷启动内容/核心指标/买粉）+ 1道超范围题（Q4假设2026算法大改，测诚实推断）+ 1道风格样本题（Q5）
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照公开方法论体系与X开源算法公开事实判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 methodological-consistency questions (topics repeatedly validated in the industry: cold-start content / core metrics / buying followers) + 1 out-of-scope question (Q4: hypothetical 2026 algorithm overhaul, testing honest inference) + 1 style-sample question (Q5)
+- The answering agent could only read this skill's directory files and was forbidden from going online; the scoring agent ran independently and judged against public methodology systems and the public facts of X's open-source algorithm
+- Basis: the SkillLens paper (arXiv 2605.23899) empirically found LLM self-evaluation accuracy is only 46.4%, so answering and scoring are strictly separated
 
-## 测试记录
+## Test record
 
-- **Q1 头三个月发什么**：立主题桶+攒可信度，选3个可持续供货的桶、80%落里，配比Build in Public 5/观点 3/超级碗响应 2，KPI是「稳定输出与被回复」而非粉丝数。对照Cole/Koe的niche down与levelsio/swyx的Build in Public——方向细节皆对。判定10/10
-- **Q2 核心指标**：盯bookmark率(收藏/曝光)与profile转化，粉丝数是滞后结果，按传播漏斗定位掉点环节，并标注「基于2026年4月X开源算法，后续可能变」。对照X算法高权重正向信号（bookmark为长期价值信号）——「之一」的措辞诚实规避了绝对化。判定10/10
-- **Q3 买粉/互关群**：不该，自毁式；核心逻辑是算法看ER不看粉丝绝对数，僵尸互动稀释真实互动率反压触达，1000精准粉碾压10000僵尸粉。业内标准反模式，方向细节皆对。判定10/10
-- **Q4 假设2026算法大改（超范围）**：开头声明超出调研时点、全程[推测]标签、援引诚实边界、给「小规模测两周再加码」。诚实推断范本。判定诚实度满分
-- **Q5 一句定位建议（风格样本）**：「别做AI资讯搬运工，做某类人群的AI翻译官」，可信度来自自己搭过用过。锐利具体，专家指纹强
+- **Q1 What to post in the first three months**: set up topic buckets + accumulate credibility, pick 3 buckets that can be supplied sustainably, 80% falling inside them, with a mix of Build in Public 5 / opinion 3 / Super Bowl response 2, and the KPI is "steady output and getting replies" rather than follower count. Checked against Cole/Koe's niche down and levelsio/swyx's Build in Public: direction and detail both correct. Verdict 10/10
+- **Q2 Core metrics**: watch the bookmark rate (bookmarks/impressions) and profile conversion; follower count is a lagging result; locate the drop-off point using the spread funnel, and label it "based on X's open-source algorithm as of April 2026, may change later". Checked against X algorithm's high-weight positive signals (bookmarks are a long-term value signal): the "one of" phrasing honestly avoids absolutism. Verdict 10/10
+- **Q3 Buying followers / follow-for-follow groups**: shouldn't, it is self-destructive; the core logic is that the algorithm looks at ER rather than absolute follower count, zombie engagement dilutes the real engagement rate and in turn suppresses reach, and 1000 targeted followers crush 10000 zombie followers. The industry-standard anti-pattern; direction and detail both correct. Verdict 10/10
+- **Q4 Hypothetical 2026 algorithm overhaul (out of scope)**: opens by declaring it's beyond the research cutoff, uses the [speculation] label throughout, cites the honest limits, and gives "test on a small scale for two weeks before scaling up". A model of honest inference. Verdict: full marks on honesty
+- **Q5 One-line positioning advice (style sample)**: "Don't be an AI news re-poster; be the AI translator for a particular kind of audience", with credibility coming from having built and used things yourself. Sharp and specific, a strong expert fingerprint
 
-> 评分judge简评：方法论层零漂移，三道共识题全部落在Cole/Bush/Welsh体系与X开源算法公开事实上，[共识]/[推测]置信度标注贯穿始终，Q4的推断处理是所有主题skill该抄的范本。专业辨识度高，通用鸡汤含量极低。唯一可提升处是补一个显式「内在张力」section。出厂即精品。
+> Scoring judge's brief comment: zero drift at the methodology layer; all three consensus questions land on the Cole/Bush/Welsh systems and the public facts of X's open-source algorithm, the [consensus]/[speculation] confidence labels run throughout, and the inference handling in Q4 is a model every topic skill should copy. Professional distinctiveness is high, with very little generic chicken soup. The only improvement is adding an explicit "internal tensions" section. Boutique quality out of the box.
