@@ -1,6 +1,6 @@
 # Fidelity Scorecard
 
-**Total: 96/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 96/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../mentors-distill/references/fidelity-scorecard.md)
 
 > This is a **topic skill** (X/Twitter growth mentor), not a person skill. Dimension 1 is "Methodological consistency" (checked against the public systems of Nicolas Cole/Dickie Bush/Justin Welsh etc. plus the public facts of X's open-source algorithm); Dimension 2 is "Professional distinctiveness" (does it have the specificity of a domain expert, or is it generic chicken soup). Dimensions 3/4/5 use the same standard rubric.
 

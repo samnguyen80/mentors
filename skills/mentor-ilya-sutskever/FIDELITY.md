@@ -1,6 +1,6 @@
 # Fidelity Scorecard
 
-**Total: 94/100 · Grade A** | Test date: 2026-07-01 | Answering/grading: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 94/100 · Grade A** | Test date: 2026-07-01 | Answering/grading: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../mentors-distill/references/fidelity-scorecard.md)
 
 | Dimension | Score | Verdict summary |
 |------|------|---------|
