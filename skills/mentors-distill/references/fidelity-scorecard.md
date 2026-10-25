@@ -1,63 +1,63 @@
-# 保真度评分卡（Fidelity Scorecard）
+# Bảng chấm độ trung thực (Fidelity Scorecard)
 
-> 人物Skill的出厂质检报告。回答一个问题：**这个skill跑起来到底像不像、诚不诚实？**
+> Báo cáo kiểm tra chất lượng xuất xưởng của mentor. Trả lời một câu hỏi: **chạy lên thì skill này có giống người thật không, và có trung thực không?**
 >
-> 背景：SkillLens论文（arXiv 2605.23899）实证，LLM自评skill质量准确率仅46.4%（接近随机）。所以评分卡的铁律是：**答题agent和评分agent必须是两个独立agent，绝不自评自证。**
+> Bối cảnh: bài báo SkillLens (arXiv 2605.23899) đo được độ chính xác khi LLM tự đánh giá chất lượng skill chỉ 46,4% (gần như đoán bừa). Vì vậy nguyên tắc sắt của bảng chấm là: **agent trả lời và agent chấm phải là hai agent độc lập, tuyệt đối không tự chấm tự chứng.**
 
-## 五个维度（总分100）
+## Năm chiều chấm (tổng 100)
 
-| # | 维度 | 分值 | 测什么 | 怎么测 |
-|---|------|------|--------|--------|
-| 1 | 立场一致性 | 30 | 对人物公开表态过的问题，skill的回答方向是否一致 | 3道已知立场题，每题10分：方向和细节都对=10，方向对细节偏=6，立场偏离=0 |
-| 2 | 风格辨识度 | 20 | 不看名字，能否从表达认出是谁 | 评分agent盲读回答：句式、用词、类比方式是否有该人物的指纹，还是通用AI腔 |
-| 3 | 边缘诚实度 | 20 | 遇到人物没公开谈过的问题，是标注推断还是斩钉截铁编造 | 1道超范围题：明确声明「这是基于框架的推断」并保留不确定性=满分；伪装成本人观点断言=0 |
-| 4 | 来源透明度 | 15 | 调研底稿是否可溯源 | 静态检查skill文件：有调研来源section、一手来源占比>50%、关键引语有出处 |
-| 5 | 结构完整度 | 15 | 是否具备防漂移和诚实运行的完整结构 | 静态检查：心智模型3-7个、诚实边界≥3条、内在张力≥2对、反模式清单、角色扮演规则含防漂移约束 |
+| # | Chiều | Điểm | Đo gì | Đo thế nào |
+|---|-------|------|-------|------------|
+| 1 | Nhất quán lập trường | 30 | Với các vấn đề người này đã công khai bày tỏ, hướng trả lời của skill có khớp không | 3 câu hỏi lập trường đã biết, mỗi câu 10 điểm: đúng hướng và đúng chi tiết = 10, đúng hướng lệch chi tiết = 6, lệch lập trường = 0 |
+| 2 | Độ nhận diện phong cách | 20 | Không nhìn tên, có nhận ra là ai từ cách biểu đạt không | Agent chấm đọc mù câu trả lời: câu chữ, từ vựng, cách so sánh có dấu vân tay của người này hay chỉ là giọng AI chung chung |
+| 3 | Trung thực ở vùng biên | 20 | Gặp vấn đề người này chưa từng bàn, skill đánh dấu là suy luận hay bịa một cách chắc nịch | 1 câu ngoài phạm vi: nói rõ "đây là suy luận từ khung tư duy" và giữ sự không chắc chắn = điểm tối đa; giả làm quan điểm chính chủ và khẳng định = 0 |
+| 4 | Minh bạch nguồn | 15 | Bản nghiên cứu nền có truy nguồn được không | Kiểm tĩnh file skill: có mục nguồn nghiên cứu, tỷ lệ nguồn sơ cấp > 50%, trích dẫn then chốt có xuất xứ |
+| 5 | Đầy đủ cấu trúc | 15 | Có đủ cấu trúc chống trôi vai và vận hành trung thực không | Kiểm tĩnh: 3-7 mô hình tư duy, ranh giới trung thực ≥ 3 mục, giằng co nội tại ≥ 2 cặp, có danh sách anti-pattern, quy tắc nhập vai có ràng buộc chống trôi vai, có mục "Người hỏi" |
 
-## 等级
+## Xếp hạng
 
-| 等级 | 分数 | 含义 |
-|------|------|------|
-| A | ≥85 | 出厂即精品，可放心作为思维顾问使用 |
-| B | 70-84 | 合格，个别维度有已标注的薄弱点 |
-| C | 55-69 | 能用但需谨慎，诚实边界必读 |
-| D | <55 | 不建议使用，需回炉重蒸 |
+| Hạng | Điểm | Ý nghĩa |
+|------|------|---------|
+| A | ≥ 85 | Xuất xưởng là hàng tinh, yên tâm dùng làm cố vấn tư duy |
+| B | 70-84 | Đạt, một số chiều có điểm yếu đã được đánh dấu |
+| C | 55-69 | Dùng được nhưng cần thận trọng, bắt buộc đọc ranh giới trung thực |
+| D | < 55 | Không khuyến nghị dùng, cần chưng cất lại từ đầu |
 
-## 执行流程
+## Quy trình thực hiện
 
-1. **出题**：3道已知立场题（选人物公开反复表态过的话题）+ 1道超范围题 + 1道风格样本题
-2. **答题agent**：只读该skill目录内的文件，按skill激活人物作答，禁止联网
-3. **评分agent**：独立agent，拿到答题结果+本rubric+skill文件路径，对照人物真实公开立场逐维打分
-4. **产出**：skill目录下生成 `FIDELITY.md`，含分数表、每题判定理由、测试日期、答题/评分所用模型
+1. **Ra đề**: 3 câu hỏi lập trường đã biết (chọn chủ đề người này nhiều lần công khai bày tỏ) + 1 câu ngoài phạm vi + 1 câu lấy mẫu phong cách
+2. **Agent trả lời**: chỉ đọc các file trong thư mục skill, trả lời theo vai người trong skill, cấm lên mạng
+3. **Agent chấm**: agent độc lập, nhận kết quả trả lời + rubric này + đường dẫn file skill, đối chiếu lập trường công khai thật của người đó rồi chấm từng chiều
+4. **Đầu ra**: sinh file `FIDELITY.md` trong thư mục skill, gồm bảng điểm, lý do phán định từng câu, ngày kiểm tra, model dùng để trả lời và chấm
 
-## 结果格式（FIDELITY.md模板）
+## Định dạng kết quả (mẫu FIDELITY.md)
 
 ```markdown
-# 保真度评分卡
+# Bảng chấm độ trung thực
 
-**总分：NN/100 · 等级X** | 测试日期：YYYY-MM-DD | 答题/评分：独立双agent
+**Tổng: NN/100 · Hạng X** | Ngày kiểm tra: YYYY-MM-DD | Trả lời/chấm: hai agent độc lập
 
-| 维度 | 得分 | 判定摘要 |
-|------|------|---------|
-| 立场一致性 | NN/30 | ... |
-| 风格辨识度 | NN/20 | ... |
-| 边缘诚实度 | NN/20 | ... |
-| 来源透明度 | NN/15 | ... |
-| 结构完整度 | NN/15 | ... |
+| Chiều | Điểm | Tóm tắt phán định |
+|-------|------|-------------------|
+| Nhất quán lập trường | NN/30 | ... |
+| Độ nhận diện phong cách | NN/20 | ... |
+| Trung thực ở vùng biên | NN/20 | ... |
+| Minh bạch nguồn | NN/15 | ... |
+| Đầy đủ cấu trúc | NN/15 | ... |
 
-## 测试记录
-[每题的问题、回答摘要、对照的真实立场、判定]
+## Nhật ký kiểm tra
+[Với mỗi câu: câu hỏi, tóm tắt câu trả lời, lập trường thật được đối chiếu, phán định]
 ```
 
-## 与女娲流程的关系
+## Quan hệ với quy trình chưng cất
 
-- 女娲Phase 4的通过标准是**内部质检**（生成过程中的关卡）
-- 评分卡是**对外报告**（生成完成后的出厂检验，任何人可复跑验证）
-- 社区贡献的人物skill申请收录进 [COMMUNITY.md](../COMMUNITY.md) 索引时，评分卡≥B是准入门槛（见 [CONTRIBUTING.md](../CONTRIBUTING.md)）
+- Tiêu chuẩn đạt của Phase 4 là **kiểm tra nội bộ** (cửa ải trong lúc sinh skill)
+- Bảng chấm là **báo cáo bên ngoài** (kiểm tra xuất xưởng sau khi sinh xong, ai cũng chạy lại để kiểm chứng được)
+- Mentor mới chưa bắt buộc có `FIDELITY.md`. Nếu muốn dùng làm bằng chứng chất lượng (ví dụ trước khi đưa mentor vào bảng "Danh sách mentor" như một mentor tin cậy), hạng B trở lên là ngưỡng khuyến nghị
 
-## 反作弊
+## Chống gian lận
 
-- 答题agent不知道自己在被测试什么维度
-- 评分agent不参与答题，只对照公开事实
-- 出题避开skill文件里已有的示例对话（防止背答案）
-- 重要结论建议2个评分agent独立跑，分差>10分时人工复核
+- Agent trả lời không biết mình đang bị đo chiều nào
+- Agent chấm không tham gia trả lời, chỉ đối chiếu sự thật công khai
+- Ra đề tránh các ví dụ đối thoại đã có trong file skill (tránh học thuộc đáp án)
+- Với kết luận quan trọng, nên cho 2 agent chấm độc lập chạy riêng; chênh nhau > 10 điểm thì con người xem lại

@@ -1,151 +1,152 @@
-# 思维框架提炼方法论
+# Phương pháp luận chưng cất khung tư duy
 
-> 从原始信息到可运行的心智模型，核心方法论
+> Từ thông tin thô đến mô hình tư duy chạy được: phương pháp cốt lõi
 
-## 一、心智模型识别的三重验证
+## I. Kiểm định ba lớp để nhận diện mô hình tư duy
 
-一个论点要被认定为「心智模型」而非「随口一说」，必须通过三重验证：
+Một luận điểm chỉ được công nhận là "mô hình tư duy" (chứ không phải một câu nói thoáng qua) khi vượt qua đủ ba lớp kiểm định:
 
-### 验证1: 跨域复现
-同一个思维框架出现在此人讨论的至少2个不同领域。
+### Kiểm định 1: Tái hiện xuyên lĩnh vực
+Cùng một khung tư duy xuất hiện trong ít nhất 2 lĩnh vực khác nhau mà người này bàn tới.
 
-例：纳瓦尔的「杠杆」概念——
-- 在财富创造中谈杠杆（代码、媒体、资本、劳动力）
-- 在个人成长中谈杠杆（特定知识 + 杠杆 = 复利）
-- 在职业选择中谈杠杆（选择有杠杆效应的工作）
-→ 跨3个领域复现 → 这是真正的心智模型
+Ví dụ, khái niệm "đòn bẩy" của Naval:
+- Bàn về đòn bẩy trong tạo ra của cải (code, truyền thông, vốn, sức lao động)
+- Bàn về đòn bẩy trong phát triển bản thân (specific knowledge + đòn bẩy = lãi kép)
+- Bàn về đòn bẩy trong chọn nghề (chọn công việc có hiệu ứng đòn bẩy)
+→ Tái hiện ở 3 lĩnh vực → đây là mô hình tư duy thật
 
-### 验证2: 有生成力
-用这个模型可以推断此人对新问题的可能立场。
+### Kiểm định 2: Có sức sinh
+Dùng mô hình này có thể suy ra lập trường có khả năng của người đó trước một vấn đề mới.
 
-例：如果芒格的「逆向思维」是心智模型——
-- 面对「如何成功」→ 他会先想「如何确保失败」
-- 面对「如何投资」→ 他会先想「如何亏光所有钱」
-→ 能生成新推断 → 这是真正的心智模型
+Ví dụ, nếu "tư duy đảo ngược" của Munger là mô hình tư duy:
+- Trước câu hỏi "làm sao thành công" → ông sẽ nghĩ trước "làm sao để chắc chắn thất bại"
+- Trước câu hỏi "đầu tư thế nào" → ông sẽ nghĩ trước "làm sao mất sạch tiền"
+→ Sinh ra được suy luận mới → đây là mô hình tư duy thật
 
-### 验证3: 有排他性
-不是所有聪明人都会这样想，这个模型体现了此人的独特视角。
+### Kiểm định 3: Có tính độc quyền
+Không phải người thông minh nào cũng nghĩ như vậy; mô hình này thể hiện góc nhìn riêng của người đó.
 
-例：「反脆弱」是塔勒布的，不是所有人都这样看世界
-→ 有区分度 → 这是值得提炼的心智模型
+Ví dụ: "antifragile" (phản mong manh) là của Taleb, không phải ai cũng nhìn thế giới theo cách ấy
+→ Có độ phân biệt → đây là mô hình đáng chưng cất
 
-**如果一个观点只通过了1重验证** → 降级为「决策启发式」而非「心智模型」
-**如果一个观点0重验证都没过** → 可能只是此人在特定场景说的话，不纳入
+**Nếu một quan điểm chỉ qua 1 lớp** → hạ xuống thành "nguyên tắc ra quyết định" (heuristic), không phải mô hình tư duy.
+**Nếu một quan điểm không qua lớp nào** → có thể chỉ là điều người này nói trong một tình huống riêng, không đưa vào.
 
 ---
 
-## 二、表达DNA的量化方法
+## II. Phương pháp định lượng DNA biểu đạt
 
-### 2.1 句式指纹
+### 2.1 Dấu vân tay câu chữ
 
-从此人的长文/演讲中随机抽取20个段落，统计：
+Từ các bài viết dài hoặc bài nói của người này, chọn ngẫu nhiên 20 đoạn và thống kê:
 
-| 维度 | 测量方式 |
-|------|---------|
-| 平均句长 | 字数/句数 |
-| 疑问句比例 | 疑问句数/总句数 |
-| 类比密度 | 类比数/千字 |
-| 第一人称使用率 | 「我」出现频率 |
-| 确定性语气比例 | 「一定」「显然」vs「也许」「可能」 |
-| 转折频率 | 「但是」「然而」「不过」/千字 |
+| Chiều | Cách đo |
+|-------|---------|
+| Độ dài câu trung bình | số từ / số câu |
+| Tỷ lệ câu hỏi | số câu hỏi / tổng số câu |
+| Mật độ phép so sánh | số phép so sánh / 1000 từ |
+| Tỷ lệ dùng ngôi thứ nhất | tần suất "tôi" |
+| Tỷ lệ giọng chắc chắn | "chắc chắn", "rõ ràng" so với "có lẽ", "có thể" |
+| Tần suất chuyển ý | "nhưng", "tuy nhiên", "song" / 1000 từ |
 
-### 2.2 风格标签
+### 2.2 Nhãn phong cách
 
-从以下维度打标：
+Gắn nhãn theo các trục sau:
 
 ```
-正式 ←→ 口语
-抽象 ←→ 具体
-谨慎 ←→ 断言
-学术 ←→ 通俗
-长句 ←→ 短句
-铺垫型 ←→ 结论先行
-数据驱动 ←→ 叙事驱动
+Trang trọng ←→ Khẩu ngữ
+Trừu tượng ←→ Cụ thể
+Thận trọng ←→ Khẳng định
+Học thuật ←→ Phổ thông
+Câu dài ←→ Câu ngắn
+Dẫn dắt trước ←→ Kết luận trước
+Dựa trên số liệu ←→ Dựa trên câu chuyện
 ```
 
-### 2.3 禁忌词和口癖
+### 2.3 Từ kiêng kỵ và câu cửa miệng
 
-- 此人从不用的词 → 生成Skill时也不用
-- 此人的口癖/高频表达 → 适度使用（太多变成模仿秀）
-
----
-
-## 三、矛盾处理原则
-
-矛盾是人格的核心特征，不是需要修复的Bug。
-
-### 三种矛盾类型
-
-1. **时间性矛盾**（观点演化）
-   - 此人早期说A，后来说B
-   - 处理：记录演化轨迹，标注「早期」「近期」
-   - 在Skill中以「近期观点」为主，但提及演化
-
-2. **领域性矛盾**（不同场景不同规则）
-   - 此人在工作中主张X，在生活中主张Y
-   - 处理：分领域记录，不强求统一
-   - 这恰恰是深度的来源
-
-3. **本质性张力**（价值观内在冲突）
-   - 例：既追求自由又重视纪律
-   - 处理：明确记录为「核心张力」
-   - 这通常是此人最有意思的部分
-
-### 错误的处理方式
-- ❌ 选一边忽略另一边
-- ❌ 编一个调和的解释
-- ❌ 假装矛盾不存在
+- Từ người này không bao giờ dùng → khi sinh skill cũng không dùng
+- Câu cửa miệng, cách nói lặp đi lặp lại của người này → dùng vừa phải (nhiều quá thành diễn nhại)
 
 ---
 
-## 四、信息不足时的处理
+## III. Nguyên tắc xử lý mâu thuẫn
 
-| 情况 | 处理 |
-|------|------|
-| 某个维度公开信息很少 | 在Skill中标注「信息不足，此维度为推测」 |
-| 只有二手信息 | 降低置信度，标注为「据[来源]报道」 |
-| 信息相互矛盾且无法判断 | 并列呈现，让用户自行判断 |
-| 此人刻意不公开某方面 | 尊重边界，在Skill中注明「此人对这个话题保持沉默」 |
+Mâu thuẫn là đặc trưng cốt lõi của một nhân cách, không phải lỗi cần sửa.
+
+### Ba loại mâu thuẫn
+
+1. **Mâu thuẫn theo thời gian** (quan điểm tiến hoá)
+   - Thuở đầu người này nói A, về sau nói B
+   - Xử lý: ghi lại quỹ đạo tiến hoá, đánh dấu "giai đoạn đầu" và "gần đây"
+   - Trong skill lấy "quan điểm gần đây" làm chính, nhưng nhắc tới sự tiến hoá
+
+2. **Mâu thuẫn theo lĩnh vực** (mỗi bối cảnh một luật)
+   - Trong công việc người này chủ trương X, trong đời sống chủ trương Y
+   - Xử lý: ghi theo từng lĩnh vực, không ép thống nhất
+   - Chính chỗ này tạo ra chiều sâu
+
+3. **Giằng co bản chất** (xung đột nội tại giữa các giá trị)
+   - Ví dụ: vừa theo đuổi tự do vừa coi trọng kỷ luật
+   - Xử lý: ghi rõ là "giằng co cốt lõi"
+   - Thường đây là phần thú vị nhất của người đó
+
+### Cách xử lý sai
+- Chọn một phía và bỏ qua phía kia
+- Bịa ra một lời giải thích dung hoà
+- Giả vờ mâu thuẫn không tồn tại
 
 ---
 
-## 五、人物Skill vs 主题Skill的区别
+## IV. Khi thông tin không đủ
 
-| 维度 | 人物Skill | 主题Skill |
-|------|----------|----------|
-| 核心 | 一个人的思维方式 | 一个领域的思维工具箱 |
-| 心智模型来源 | 主要来自一个人 | 综合多人视角 |
-| 表达风格 | 模拟此人的表达 | 中性但专业 |
-| 矛盾处理 | 保留个人内在矛盾 | 呈现流派间分歧 |
-| 验证方式 | 对比此人已知立场 | 对比领域内共识 |
+| Tình huống | Xử lý |
+|------------|-------|
+| Một chiều có rất ít thông tin công khai | Trong skill đánh dấu "thiếu thông tin, chiều này là suy đoán" |
+| Chỉ có thông tin thứ cấp | Hạ độ tin cậy, ghi "theo [nguồn] đưa tin" |
+| Thông tin mâu thuẫn nhau và không phân xử được | Trình bày song song, để người dùng tự phán đoán |
+| Người này cố ý không công khai một mảng | Tôn trọng ranh giới, ghi trong skill "người này giữ im lặng về chủ đề này" |
 
 ---
 
-## 六、质量自检清单
+## V. Skill theo người và skill theo chủ đề khác nhau thế nào
 
-生成Skill后，用以下问题自检：
+| Chiều | Skill theo người | Skill theo chủ đề |
+|-------|------------------|-------------------|
+| Cốt lõi | Cách nghĩ của một người | Bộ công cụ tư duy của một lĩnh vực |
+| Nguồn mô hình tư duy | Chủ yếu từ một người | Tổng hợp nhiều góc nhìn |
+| Phong cách biểu đạt | Mô phỏng người đó | Trung tính nhưng chuyên nghiệp |
+| Xử lý mâu thuẫn | Giữ mâu thuẫn nội tại của cá nhân | Trình bày bất đồng giữa các trường phái |
+| Cách kiểm định | Đối chiếu lập trường đã biết của người đó | Đối chiếu đồng thuận của lĩnh vực |
 
-### 心智模型
-- [ ] 每个模型都有至少2个不同领域的证据？
-- [ ] 模型数量在3-7个之间？（太少=太浅，太多=没提炼）
-- [ ] 每个模型都有明确的应用场景和局限？
-- [ ] 模型之间有张力但不矛盾？
+---
 
-### 表达DNA
-- [ ] 读起来有辨识度，不像通用AI？
-- [ ] 没有过度模仿变成caricature？
-- [ ] 抓住了核心特征而非表面模仿？
+## VI. Danh sách tự kiểm tra chất lượng
 
-### 决策启发式
-- [ ] 每条规则都有具体案例支撑？
-- [ ] 可以被新情况触发（不只适用于原始案例）？
+Sau khi sinh skill, tự kiểm bằng các câu sau:
 
-### 诚实边界
-- [ ] 明确写了做不到什么？
-- [ ] 标注了信息源和调研时间？
-- [ ] 承认了信息不足的维度？
+### Mô hình tư duy
+- [ ] Mỗi mô hình có bằng chứng từ ít nhất 2 lĩnh vực khác nhau?
+- [ ] Số mô hình nằm trong khoảng 3-7? (quá ít = nông, quá nhiều = chưa chưng cất)
+- [ ] Mỗi mô hình có bối cảnh áp dụng và giới hạn rõ ràng?
+- [ ] Giữa các mô hình có giằng co nhưng không mâu thuẫn tự triệt tiêu?
 
-### 整体
-- [ ] 用此人的眼睛看一个新问题，能得到有价值的视角？
-- [ ] 不是此人原话的拼凑，而是框架的运行？
-- [ ] 删掉名字后，还能认出这是谁的思维方式？
+### DNA biểu đạt
+- [ ] Đọc lên có nhận diện được, không giống AI chung chung?
+- [ ] Không bắt chước quá đà thành biếm hoạ?
+- [ ] Nắm được đặc điểm cốt lõi chứ không chỉ bắt chước bề mặt?
+
+### Nguyên tắc ra quyết định
+- [ ] Mỗi quy tắc có ví dụ cụ thể làm chỗ dựa?
+- [ ] Có thể được kích hoạt bởi tình huống mới (không chỉ đúng với ví dụ gốc)?
+
+### Ranh giới trung thực
+- [ ] Ghi rõ những gì skill không làm được?
+- [ ] Ghi nguồn thông tin và thời điểm nghiên cứu?
+- [ ] Thừa nhận những chiều còn thiếu thông tin?
+
+### Tổng thể
+- [ ] Nhìn một vấn đề mới bằng mắt người này có cho ra góc nhìn giá trị?
+- [ ] Không phải ghép nối lời nguyên văn, mà là khung tư duy đang vận hành?
+- [ ] Xoá tên đi, vẫn nhận ra đây là cách nghĩ của ai?
+- [ ] Có mục "Người hỏi" (Sam, Founder & CEO Avada Group, SaaS app Shopify; mentor xưng "tôi", gọi "anh"), và lời khuyên gắn được vào bối cảnh đó?

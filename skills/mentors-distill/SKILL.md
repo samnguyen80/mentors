@@ -1,694 +1,732 @@
 ---
-name: huashu-nuwa
+name: mentors-distill
 description: |
-  女娲造人：输入人名/主题/甚至只是模糊需求，自动深度调研→思维框架提炼→生成可运行的人物Skill。
-  两种入口：(1)明确人名→直接蒸馏 (2)模糊需求→诊断推荐→再蒸馏。
-  触发词：「造skill」「蒸馏XX」「女娲」「造人」「XX的思维方式」「做个XX视角」「更新XX的skill」。
-  模糊需求也触发：「我想提升决策质量」「有没有一种思维方式能帮我...」「我需要一个思维顾问」。
-  English triggers: "distill [person]", "nuwa", "create a [person] perspective skill", "how does [person] think", "I need a thinking advisor".
+  Chưng cất tư duy một người thành mentor chạy được: nhập tên người, chủ đề, hoặc chỉ một nhu cầu mơ hồ, skill tự nghiên cứu sâu, rút khung tư duy và sinh ra skill `mentor-<slug>` tiếng Việt.
+  Hai lối vào: (1) có tên người rõ ràng thì chưng cất thẳng; (2) nhu cầu mơ hồ thì chẩn đoán, đề xuất người phù hợp, rồi chưng cất.
+  Kích hoạt khi anh nói: "tạo mentor", "thêm mentor", "chưng cất <tên>", "distill <tên>", "làm mentor <tên>", "nuwa", "cập nhật mentor <tên>".
+  Cũng kích hoạt với nhu cầu mơ hồ: "em muốn ra quyết định tốt hơn", "có cách nghĩ nào giúp anh...", "anh cần một cố vấn tư duy".
+  Distill a person's thinking into a runnable Vietnamese mentor skill (`mentor-<slug>`): deep research, mental-model extraction, 3-layer verification, honest limits.
+  English triggers: "distill [person]", "create a mentor", "add a mentor", "nuwa", "update mentor [person]", "how does [person] think", "I need a thinking advisor".
 metadata:
-  author: "花叔"
+  author: "花叔 (Huashu)"
   homepage: "https://github.com/alchaincyf"
   repository: "https://github.com/alchaincyf/nuwa-skill"
+  license: "MIT"
   version: "1.0.0"
+  adapted_by: "Sam (github.com/samnguyen80/mentors)"
 ---
 
-# 女娲 · Skill造人术
+# Mentors Distill · Thuật chưng cất mentor
 
-> 「写不进去的那部分，才是你真正的护城河。」——但写得进去的部分，已经足够强大。
+> "Phần không viết ra được mới là hào phòng thủ thật sự của anh." Nhưng phần viết ra được cũng đã đủ mạnh.
 
-## 核心理念
+Skill này chuyển thể từ Nuwa (tác giả gốc 花叔, giấy phép MIT, repo gốc ghi trong metadata). Phương pháp giữ nguyên; đầu ra đổi thành mentor tiếng Việt nằm trong repo `samnguyen80/mentors`.
 
-女娲不是复制人，是**提炼思维框架**。
+## Triết lý cốt lõi
 
-一个好的人物Skill是一套可运行的认知操作系统：
-- 他用什么**心智模型**看世界？（镜片）
-- 他用什么**决策启发式**做判断？（直觉规则）
-- 他怎么**表达**？（DNA）
-- 他**绝对不会**做什么？（反模式）
-- 什么是这个Skill**做不到的**？（诚实边界）
+Mentors-distill không sao chép một con người, mà **chưng cất khung tư duy**.
 
-**关键区分**：捕捉的是HOW they think，不是WHAT they said。
+Một mentor tốt là một hệ điều hành nhận thức chạy được:
+- Người này dùng **mô hình tư duy** nào để nhìn thế giới? (lăng kính)
+- Người này dùng **nguyên tắc ra quyết định** nào để phán đoán? (luật trực giác)
+- Người này **biểu đạt** thế nào? (DNA)
+- Người này **tuyệt đối không** làm gì? (anti-pattern)
+- Skill này **không làm được** gì? (ranh giới trung thực)
 
----
-
-## 执行流程
-
-### Phase 0: 入口分流
-
-收到用户输入后，先判断属于哪条路径：
-
-| 用户输入 | 路径 | 示例 |
-|---------|------|------|
-| 明确的人名/主题 | **直接路径** → Phase 0A | 「蒸馏芒格」「做一个费曼skill」 |
-| 模糊的需求/困惑 | **诊断路径** → Phase 0B | 「我想提升决策质量」「有没有一种思维方式能帮我看透商业本质」 |
+**Phân biệt then chốt**: nắm HOW họ nghĩ, không phải WHAT họ đã nói.
 
 ---
 
-### Phase 0A: 需求澄清（直接路径）
+## Quy trình thực hiện
 
-收到明确名字后，确认：
+### Phase 0: Phân luồng lối vào
 
-1. **这个人/主题是谁**：确保理解正确
-2. **聚焦方向**（可选）：全面画像 vs 聚焦某个维度？
-3. **用途**：思维顾问？决策参考？角色扮演？
-4. **新建 or 更新**：是否已有该人物的Skill？（检查 `.claude/skills/` 目录）
-5. **本地语料**：「你手上有没有这个人的一手素材？比如书籍PDF、演讲/访谈transcript、视频字幕、个人博客导出等。有的话直接丢给我，比网上搜的质量高得多。」
-6. **蒸馏档位**：告知用户成本量级并确认档位。完整蒸馏是多agent+多轮搜索的长任务，顶级模型单次可消耗数十美元（真实用户案例），必须在开跑前说清楚：
+Nhận đầu vào của người dùng, trước hết xác định thuộc đường nào:
 
-| 档位 | 调研规模 | 适用场景 | 成本量级 |
-|------|---------|---------|---------|
-| 快速 | 3个维度（著作+对话+表达），每维度限5个来源 | 先试试效果 / 冷门人物 / 预算敏感 | 约标准档1/3 |
-| 标准（默认） | 6个维度完整调研 | 大多数场景 | 中等；换更轻量模型可显著降低 |
-| 深度 | 6维度 + 一手素材全量下载（书籍/字幕/长文存档） | 打算开源发布的精品Skill | 最高 |
-
-用户说「就做XX」没有更多信息 → 默认全面画像 + 思维顾问 + 无本地语料（走网络搜索）+ 标准档，直接推进。
-
-**确认不阻塞交付**：凡是能给默认值的问题都给默认值；如果下一步产出（访谈提纲、执行计划等）不依赖用户的答案，先给出产出再让用户调整。不要把现成的价值卡在提问之后。
-用户提供了本地语料 → 标记为**本地语料模式**，Phase 1的采集策略会相应调整。
-
-确认后 → 跳到 Phase 0.5。
+| Đầu vào | Đường | Ví dụ |
+|---------|-------|-------|
+| Tên người / chủ đề rõ ràng | **Đường trực tiếp** → Phase 0A | "chưng cất Munger", "làm mentor Feynman" |
+| Nhu cầu / băn khoăn mơ hồ | **Đường chẩn đoán** → Phase 0B | "anh muốn ra quyết định tốt hơn", "có cách nghĩ nào giúp anh nhìn ra bản chất kinh doanh" |
 
 ---
 
-### Phase 0B: 需求诊断（模糊路径）
+### Phase 0A: Làm rõ yêu cầu (đường trực tiếp)
 
-用户不知道该蒸馏谁，只有需求或困惑。这时女娲的工作是**从需求反推最合适的蒸馏对象**。
+Nhận được tên rõ ràng thì xác nhận:
 
-#### Step 1: 需求定位
+1. **Người / chủ đề này là ai**: bảo đảm hiểu đúng
+2. **Hướng tập trung** (tuỳ chọn): chân dung toàn diện hay tập trung một chiều?
+3. **Mục đích**: cố vấn tư duy? tham chiếu ra quyết định? nhập vai?
+4. **Tạo mới hay cập nhật**: mentor này đã có chưa? (kiểm tra thư mục `/Volumes/SamDisk/sources/mentors/skills/` xem có `mentor-<slug>/` chưa)
+5. **Tư liệu local**: "Anh có sẵn tư liệu gốc về người này không? Ví dụ PDF sách, transcript bài nói / phỏng vấn, phụ đề video, blog xuất ra. Có thì đưa thẳng cho tôi, chất lượng cao hơn nhiều so với tìm trên mạng."
+6. **Mức chưng cất**: nói rõ cho người dùng mức chi phí và xác nhận mức. Chưng cất đầy đủ là tác vụ dài, nhiều agent, nhiều vòng tìm kiếm; một lần chạy với model hàng đầu có thể tiêu hàng chục USD (có ca người dùng thật). Phải nói rõ TRƯỚC khi chạy:
 
-通过1-2个追问，定位用户的核心需求维度：
+| Mức | Quy mô nghiên cứu | Khi nào dùng | Chi phí |
+|-----|-------------------|--------------|---------|
+| Nhanh | 3 chiều (tác phẩm + đối thoại + biểu đạt), mỗi chiều tối đa 5 nguồn | Muốn thử hiệu quả trước / nhân vật ít tên tuổi / ngân sách hạn chế | Khoảng 1/3 mức chuẩn |
+| Chuẩn (mặc định) | Đủ 6 chiều | Phần lớn trường hợp | Trung bình; đổi sang model nhẹ hơn thì giảm đáng kể |
+| Sâu | 6 chiều + tải toàn bộ tư liệu gốc (sách / phụ đề / bài dài lưu trữ) | Mentor tinh phẩm định dùng lâu dài | Cao nhất |
 
-| 需求维度 | 典型表达 | 思维框架方向 |
-|---------|---------|------------|
-| 决策与判断 | 「怎么做更好的决策」「总是选错」「分析瘫痪」 | 多元思维模型、逆向思考、概率思维 |
-| 表达与写作 | 「想把复杂的事说清楚」「文章没人看」「写得无聊」 | 费曼式简化、故事化思维、类比能力 |
-| 创业与商业 | 「想做独立开发」「商业模式想不通」「找不到PMF」 | 第一性原理、杠杆思维、产品克制 |
-| 教学与传播 | 「讲课没人听」「学生理解不了」「知识传递效率低」 | 从已知到未知、隐喻教学、最少必要知识 |
-| 批判思维 | 「总被忽悠」「想识别不靠谱的说法」「看不透本质」 | 证伪思维、演化论视角、认知偏差识别 |
-| 内容创作 | 「做视频没流量」「不知道拍什么」「内容没特色」 | 注意力工程、测试迭代、受众心理 |
-| 人生策略 | 「职业方向迷茫」「时间总不够」「焦虑」 | 长期主义、杠杆选择、复利思维 |
-| 风险与不确定性 | 「怎么应对黑天鹅」「投资总亏」「太保守/太冒险」 | 反脆弱、凸性策略、尾部风险管理 |
-| 设计与产品 | 「用户体验差」「产品没特色」「不知道做减法」 | 极简主义、用户心理模型、约束即创意 |
-| 幽默与表达力 | 「说话没意思」「想让内容更有趣」「太严肃了」 | 荒诞对比、预期违背、自嘲式权威 |
+Người dùng chỉ nói "làm XX" mà không có thêm thông tin → mặc định chân dung toàn diện + cố vấn tư duy + không có tư liệu local (đi tìm trên mạng) + mức chuẩn, triển khai luôn.
 
-追问原则：
-- 最多问2轮，不要变成问卷调查
-- 如果用户已经表达得足够清晰，不追问，直接推荐
-- 追问的目的是区分相似维度（比如「决策」是商业决策还是人生决策？）
+**Xác nhận không được chặn việc giao sản phẩm**: câu hỏi nào có thể đặt giá trị mặc định thì đặt giá trị mặc định; nếu sản phẩm bước tiếp theo (đề cương phỏng vấn, kế hoạch thực hiện, v.v.) không phụ thuộc câu trả lời, giao sản phẩm trước rồi để người dùng chỉnh. Đừng để giá trị có sẵn kẹt sau câu hỏi.
+Người dùng cung cấp tư liệu local → đánh dấu **chế độ tư liệu local**, chiến lược thu thập của Phase 1 sẽ điều chỉnh tương ứng.
 
-**示例对话**（展示诊断节奏）：
+Xác nhận xong → nhảy sang Phase 0.5.
 
-```
-用户：我总觉得自己做决定太慢，想来想去最后还是选错
+---
 
-女娲：你说的决策主要是哪种场景？比如商业/投资决策，还是职业/人生方向的选择？
+### Phase 0B: Chẩn đoán nhu cầu (đường mơ hồ)
 
-用户：主要是商业上的，比如要不要做某个产品、要不要接某个合作
+Người dùng chưa biết nên chưng cất ai, chỉ có nhu cầu hoặc băn khoăn. Lúc này việc của skill là **từ nhu cầu suy ngược ra đối tượng chưng cất phù hợp nhất**.
 
-女娲：明白了，你的核心需求是「在信息不完整时快速做出高质量的商业判断」。
-我推荐3个候选：
-[展示候选推荐...]
-```
+#### Bước 1: Định vị nhu cầu
 
-注意节奏：一轮追问定位场景 → 确认需求 → 直接推荐。不要第三轮还在问。
+Dùng 1-2 câu hỏi thêm để định vị chiều nhu cầu cốt lõi:
 
-#### Step 2: 候选推荐
+| Chiều nhu cầu | Cách nói điển hình | Hướng khung tư duy |
+|---------------|--------------------|--------------------|
+| Quyết định và phán đoán | "làm sao ra quyết định tốt hơn", "toàn chọn sai", "tê liệt vì phân tích" | Đa mô hình tư duy, tư duy đảo ngược, tư duy xác suất |
+| Biểu đạt và viết | "muốn nói rõ chuyện phức tạp", "bài viết không ai đọc", "viết nhạt" | Đơn giản hoá kiểu Feynman, tư duy kể chuyện, năng lực so sánh |
+| Khởi nghiệp và kinh doanh | "muốn làm indie", "không thông mô hình kinh doanh", "không tìm ra PMF" | Nguyên lý đầu tiên, tư duy đòn bẩy, kiềm chế sản phẩm |
+| Giảng dạy và truyền đạt | "giảng không ai nghe", "học trò không hiểu", "truyền tri thức kém hiệu quả" | Từ cái đã biết đến cái chưa biết, dạy bằng ẩn dụ, tri thức tối thiểu cần thiết |
+| Tư duy phản biện | "hay bị lừa", "muốn nhận ra lời nói thiếu đáng tin", "không nhìn ra bản chất" | Tư duy phản chứng, góc nhìn tiến hoá, nhận diện thiên kiến nhận thức |
+| Sáng tạo nội dung | "làm video không có traffic", "không biết quay gì", "nội dung không có nét riêng" | Kỹ thuật chú ý, thử nghiệm lặp, tâm lý khán giả |
+| Chiến lược đời sống | "mông lung hướng nghề", "luôn thiếu thời gian", "lo âu" | Chủ nghĩa dài hạn, chọn đòn bẩy, tư duy lãi kép |
+| Rủi ro và bất định | "ứng phó thiên nga đen thế nào", "đầu tư toàn lỗ", "quá bảo thủ / quá liều" | Phản mong manh, chiến lược lồi, quản trị rủi ro đuôi |
+| Thiết kế và sản phẩm | "trải nghiệm người dùng tệ", "sản phẩm không có nét riêng", "không biết bớt" | Tối giản, mô hình tâm lý người dùng, ràng buộc sinh sáng tạo |
+| Hài hước và sức biểu đạt | "nói chuyện nhạt", "muốn nội dung vui hơn", "quá nghiêm" | Đối lập phi lý, phá kỳ vọng, uy quyền kiểu tự giễu |
 
-基于需求维度，推荐2-3个候选方案。候选可以是人物，也可以是主题。
+Nguyên tắc hỏi thêm:
+- Tối đa 2 vòng, đừng biến thành bảng khảo sát
+- Nếu người dùng đã nói đủ rõ thì không hỏi thêm, đề xuất luôn
+- Mục đích hỏi thêm là phân biệt các chiều giống nhau (ví dụ "quyết định" là quyết định kinh doanh hay quyết định đời sống?)
 
-**先判断：人物Skill还是主题Skill？**
-- 用户的需求指向某种具体的思考方式 → 人物Skill（蒸馏某个人的思维框架）
-- 用户的需求指向某个领域的方法论 → 主题Skill（综合多人视角，见「特殊场景 > 主题Skill」）
-- 不确定 → 推荐中同时包含两种类型，让用户选
-
-**来源A：本地已有Skill**
-扫描 `.claude/skills/*-perspective/` 目录，读取每个SKILL.md的description，匹配用户需求。已有Skill可以即插即用，不需要重新蒸馏。如果扫描结果为空（用户还没有任何perspective skill），跳过此步，只从来源B推荐。
-
-**来源B：新蒸馏候选**
-基于需求维度表中的「思维框架方向」列，匹配最相关的人物或主题。推荐时说清楚：这个人的哪个思维框架能解决用户的具体问题。
-
-每个候选的展示格式：
+**Ví dụ hội thoại** (nhịp chẩn đoán):
 
 ```
-### 候选1: [人名/主题]  ⚡已有Skill / 🆕需要蒸馏
+Người dùng: Anh luôn thấy mình ra quyết định chậm, nghĩ tới nghĩ lui cuối cùng vẫn chọn sai
 
-**核心镜片**：[此人看世界的独特方式，一句话]
-**为什么适合你**：[直接对应用户需求，说清楚匹配逻辑]
-**局限**：[这个视角的盲区，什么问题他帮不了]
+Mentors-distill: Quyết định mà anh nói chủ yếu là tình huống nào? Quyết định kinh doanh / đầu tư, hay lựa chọn nghề nghiệp / hướng đi cuộc đời?
+
+Người dùng: Chủ yếu kinh doanh, ví dụ có làm sản phẩm này không, có nhận hợp tác này không
+
+Mentors-distill: Hiểu rồi, nhu cầu cốt lõi của anh là "khi thông tin chưa đầy đủ vẫn đưa ra phán đoán kinh doanh chất lượng cao, nhanh".
+Tôi đề xuất 3 ứng viên:
+[hiển thị ứng viên đề xuất...]
 ```
 
-推荐原则：
-- 不超过3个候选，选择困难比没选择更糟
-- 已有Skill优先展示（即插即用，零成本）
-- 候选之间要有差异性，不要推荐3个类似的人
-- 必须说清楚局限——没有万能的思维框架
-- 推荐要具体到「这个人的哪个思维模型」匹配需求，而不只是泛泛说「他很厉害」
+Chú ý nhịp: một vòng hỏi để định vị tình huống → xác nhận nhu cầu → đề xuất thẳng. Không hỏi tới vòng thứ ba.
 
-#### Step 3: 用户选择
+#### Bước 2: Đề xuất ứng viên
 
-- 选了已有Skill → 直接激活该Skill，任务完成
-- 选了新蒸馏候选 → 进入Phase 0A确认细节 → Phase 0.5开始蒸馏
-- 都不满意 → 回到Step 1继续探索，或用户自己提出新人选
+Dựa trên chiều nhu cầu, đề xuất 2-3 phương án. Ứng viên có thể là người, cũng có thể là chủ đề.
 
-### Phase 0.5: 创建Skill目录
+**Trước hết phân định: mentor theo người hay skill theo chủ đề?**
+- Nhu cầu chỉ tới một cách nghĩ cụ thể → mentor theo người (chưng cất khung tư duy của một người)
+- Nhu cầu chỉ tới phương pháp luận của một lĩnh vực → skill theo chủ đề (tổng hợp nhiều góc nhìn, xem "Tình huống đặc biệt > Skill theo chủ đề")
+- Chưa chắc → trong đề xuất đưa cả hai loại, để người dùng chọn
 
-**收到确认后立即执行**，在调研之前完成：
+**Nguồn A: mentor đã có sẵn**
+Đọc bảng "Danh sách mentor" ở `/Volumes/SamDisk/sources/mentors/SKILL.md` (và/hoặc quét `/Volumes/SamDisk/sources/mentors/skills/mentor-*/SKILL.md`, đọc description của từng skill), khớp với nhu cầu người dùng. Mentor có sẵn dùng ngay, không cần chưng cất lại. Nếu kết quả quét trống (chưa có mentor nào), bỏ bước này, chỉ đề xuất từ nguồn B.
+
+**Nguồn B: ứng viên cần chưng cất mới**
+Dựa vào cột "Hướng khung tư duy" trong bảng chiều nhu cầu, khớp với người hoặc chủ đề liên quan nhất. Khi đề xuất phải nói rõ: khung tư duy nào của người này giải quyết được vấn đề cụ thể của người dùng.
+
+Định dạng hiển thị mỗi ứng viên:
 
 ```
-.claude/skills/[person-name]-perspective/
-├── SKILL.md                          # 最终产物
-├── scripts/                          # 工具脚本（字幕下载/清洗/质量检查）
+### Ứng viên 1: [Tên người / chủ đề]  ⚡Đã có mentor / 🆕Cần chưng cất
+
+**Lăng kính cốt lõi**: [Cách nhìn thế giới riêng của người này, một câu]
+**Vì sao hợp với anh**: [Khớp thẳng với nhu cầu của người dùng, nói rõ logic khớp]
+**Giới hạn**: [Điểm mù của góc nhìn này, vấn đề nào họ không giúp được]
+```
+
+Nguyên tắc đề xuất:
+- Không quá 3 ứng viên, khó chọn còn tệ hơn không có lựa chọn
+- Mentor đã có hiển thị trước (dùng ngay, chi phí bằng không)
+- Các ứng viên phải khác nhau, đừng đề xuất 3 người giống nhau
+- Phải nói rõ giới hạn; không có khung tư duy vạn năng
+- Đề xuất phải cụ thể tới mức "mô hình tư duy nào của người này" khớp nhu cầu, không chỉ khen chung chung "ông ấy rất giỏi"
+
+#### Bước 3: Người dùng chọn
+
+- Chọn mentor đã có → kích hoạt thẳng mentor đó, xong việc
+- Chọn ứng viên chưng cất mới → vào Phase 0A xác nhận chi tiết → Phase 0.5 bắt đầu chưng cất
+- Không hài lòng → quay lại Bước 1 tiếp tục khám phá, hoặc người dùng tự đưa ra người mới
+
+### Phase 0.5: Tạo thư mục mentor
+
+**Làm ngay sau khi nhận xác nhận**, trước khi nghiên cứu. Thư mục đích của mentor nằm trong repo mentors (bản clone chính trên máy):
+
+```
+/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/
+├── SKILL.md                          # Sản phẩm cuối (tiếng Việt, có mục "Người hỏi")
 └── references/
-    ├── research/                     # 每个Agent的调研结果（必存）
-    │   ├── 01-writings.md            # 著作与系统思考
-    │   ├── 02-conversations.md       # 长对话与即兴思考
-    │   ├── 03-expression-dna.md      # 碎片表达与风格DNA
-    │   ├── 04-external-views.md      # 他者视角与批评
-    │   ├── 05-decisions.md           # 决策记录与行动
-    │   └── 06-timeline.md            # 人物时间线
-    └── sources/                      # 一手素材（用户提供 + 网络下载）
+    ├── research/                     # Kết quả nghiên cứu của từng Agent (bắt buộc lưu)
+    │   ├── 01-writings.md            # Tác phẩm và tư duy hệ thống
+    │   ├── 02-conversations.md       # Đối thoại dài và tư duy ứng khẩu
+    │   ├── 03-expression-dna.md      # Biểu đạt vụn và DNA phong cách
+    │   ├── 04-external-views.md      # Góc nhìn của người khác và phê bình
+    │   ├── 05-decisions.md           # Hồ sơ quyết định và hành động
+    │   └── 06-timeline.md            # Dòng thời gian nhân vật
+    └── sources/                      # Tư liệu gốc (người dùng đưa + tải từ mạng)
         ├── books/
         ├── transcripts/
         └── articles/
 ```
 
-**完成检查**（自动执行）：
-- [ ] 目录已创建
-- [ ] 如果是中国人物：信息源策略切换为B站原始视频/小宇宙播客/权威中文媒体优先（知乎和微信公众号始终排除，见信息源黑名单）
-- [ ] 如果是更新模式：已读取现有SKILL.md，标注哪些信息需要刷新
-- [ ] 如果用户提供了本地语料：将素材复制/移动到 `sources/` 对应子目录，标记为**本地语料模式**
+`<slug>` viết thường, nối bằng dấu gạch ngang, không dấu (ví dụ `elon-musk`, `paul-graham`). Frontmatter `name` của SKILL.md là `mentor-<slug>`.
 
-**关键规则**：
-- 每个subagent必须把调研结果写入对应的md文件。不存文件的调研等于没做。
-- **所有调研文件必须存在skill目录内部**（`references/research/`），绝对不要存到 `07-调研与分析/` 或其他外部目录。Skill必须是自包含的——复制整个skill目录就能独立使用，不依赖任何外部文件。这是为开源分发设计的核心原则。
+**Kiểm tra hoàn tất** (tự động thực hiện):
+- [ ] Đã tạo thư mục
+- [ ] Nếu là nhân vật Trung Quốc: chiến lược nguồn chuyển sang video gốc trên Bilibili / podcast Xiaoyuzhou / truyền thông Trung văn có uy tín ưu tiên (Zhihu và WeChat Official Accounts luôn bị loại, xem danh sách đen nguồn)
+- [ ] Nếu là chế độ cập nhật: đã đọc SKILL.md hiện có, đánh dấu thông tin nào cần làm mới
+- [ ] Nếu người dùng đưa tư liệu local: sao chép / di chuyển tư liệu vào thư mục con tương ứng của `sources/`, đánh dấu **chế độ tư liệu local**
 
----
-
-### Phase 1: 多源信息采集（并行Agent Swarm）
-
-#### 模式判断：本地语料 vs 网络搜索
-
-根据Phase 0A的结果，选择对应的采集策略：
-
-| 模式 | 触发条件 | 策略 |
-|------|---------|------|
-| **纯网络搜索**（默认） | 用户没有提供本地素材 | 6个Agent全部走网络搜索，完整流程 |
-| **本地语料优先** | 用户提供了PDF/transcript/字幕/文章等 | 先分析本地素材，网络搜索变为补充 |
-| **纯本地语料** | 用户明确说「只用我给的素材」或蒸馏非公众人物 | 只分析本地素材，不做网络搜索 |
-
-**本地语料优先模式的执行逻辑**：
-
-1. **先读本地素材**：将用户提供的文件按6个维度分类（一本书可能同时覆盖著作+对话+表达多个维度）
-2. **识别信息缺口**：本地素材覆盖了哪些维度？哪些维度缺失或薄弱？
-3. **定向补充搜索**：只对缺失维度启动网络搜索Agent，已有充足本地素材的维度跳过搜索
-4. **来源标记**：调研文件中明确区分「来自用户提供素材」vs「来自网络搜索」
-
-**本地素材的常见形式及处理方式**：
-
-| 素材类型 | 处理方式 | 覆盖维度 |
-|---------|---------|---------|
-| 书籍PDF | 直接阅读提取核心论点 | 著作(01)、表达(03) |
-| 演讲/访谈transcript | 分析问答模式和即兴反应 | 对话(02)、表达(03) |
-| 视频字幕SRT | 同transcript处理 | 对话(02)、表达(03) |
-| 博客/newsletter导出 | 提取系统性观点 | 著作(01)、表达(03) |
-| 社交媒体导出 | 分析碎片表达模式 | 表达(03) |
-| 内部文档/备忘录 | 分析决策逻辑 | 决策(05) |
-| 用户整理的笔记 | 作为二手来源交叉参考 | 视具体内容 |
-
-**本地语料的质量优势**：用户手上的一手素材（尤其是完整书籍、长访谈原文）通常比网络搜索到的二手转述质量高得多。在信息源优先级中，本地提供的一手素材排在最高权重。
+**Quy tắc then chốt**:
+- Mỗi subagent bắt buộc ghi kết quả nghiên cứu vào file md tương ứng. Nghiên cứu không lưu file coi như chưa làm.
+- **Mọi file nghiên cứu phải nằm bên trong thư mục skill** (`references/research/`), tuyệt đối không lưu vào thư mục phân tích bên ngoài. Skill phải tự chứa: sao chép cả thư mục skill là dùng độc lập được, không phụ thuộc file bên ngoài. Đây là nguyên tắc cốt lõi để phân phối.
 
 ---
 
-以下是6个Agent的标准任务分配（纯网络搜索模式，或本地语料模式中缺失维度的补充搜索）：
+### Phase 1: Thu thập thông tin đa nguồn (Agent Swarm song song)
 
-启动6个并行subagent，每个负责不同信息维度。
+#### Xác định chế độ: tư liệu local hay tìm trên mạng
 
-#### 6个Agent的任务分配
+Dựa vào kết quả Phase 0A, chọn chiến lược thu thập:
 
-| Agent | 搜索目标 | 提取重点 | 输出文件 |
-|-------|---------|---------|---------|
-| 1 著作 | 书、长文、论文、newsletter | 反复出现的核心论点（≥3次=真信念）、自创术语、推荐书单 | `01-writings.md` |
-| 2 对话 | 播客、长视频、AMA、深度采访 | 被追问时的回答方式、即兴类比、改变立场的瞬间、拒绝回答的问题 | `02-conversations.md` |
-| 3 表达 | Twitter/X、微博、即刻、短文 | 高频用词句式、争议立场、幽默方式、公开辩论 | `03-expression-dna.md` |
-| 4 他者 | 他人分析、书评、批评、传记 | 外部观察到的模式、批评与争议、与同行对比 | `04-external-views.md` |
-| 5 决策 | 重大决策、转折点、争议行为 | 决策背景与逻辑、事后反思、言行一致/不一致案例 | `05-decisions.md` |
-| 6 时间线 | 出生/出道到现在的完整时间线 | 关键里程碑、思想转折点、**最近12个月动态**（防过时） | `06-timeline.md` |
+| Chế độ | Điều kiện | Chiến lược |
+|--------|-----------|------------|
+| **Chỉ tìm trên mạng** (mặc định) | Người dùng không có tư liệu local | Cả 6 Agent đều tìm trên mạng, quy trình đầy đủ |
+| **Ưu tiên tư liệu local** | Người dùng cung cấp PDF / transcript / phụ đề / bài viết | Phân tích tư liệu local trước, tìm mạng chỉ để bổ sung |
+| **Chỉ tư liệu local** | Người dùng nói rõ "chỉ dùng tư liệu tôi đưa" hoặc chưng cất người không phải nhân vật công chúng | Chỉ phân tích tư liệu local, không tìm mạng |
 
-#### 每个Agent的硬性要求
-- 调研结果必须写入 `references/research/0X-xxx.md`
-- 注明信息来源和可信度（一手>二手>推测）
-- 区分「他说过的」vs「别人说他的」vs「我推断的」
-- 发现矛盾时保留矛盾，不要和稀泥
+**Logic thực hiện chế độ ưu tiên tư liệu local**:
 
-#### Agent prompt模板
+1. **Đọc tư liệu local trước**: phân loại file người dùng đưa theo 6 chiều (một cuốn sách có thể phủ nhiều chiều: tác phẩm + đối thoại + biểu đạt)
+2. **Xác định khoảng trống thông tin**: tư liệu local phủ chiều nào? chiều nào thiếu hoặc mỏng?
+3. **Tìm mạng có định hướng**: chỉ khởi động Agent tìm mạng cho các chiều còn thiếu; chiều đã đủ tư liệu local thì bỏ qua
+4. **Đánh dấu nguồn**: trong file nghiên cứu phân biệt rõ "từ tư liệu người dùng đưa" với "từ tìm kiếm trên mạng"
 
-spawn subagent时，用以下结构给任务（以Agent 1著作为例）：
+**Các dạng tư liệu local thường gặp và cách xử lý**:
+
+| Loại tư liệu | Cách xử lý | Chiều phủ |
+|--------------|------------|-----------|
+| PDF sách | Đọc thẳng, rút luận điểm cốt lõi | Tác phẩm (01), biểu đạt (03) |
+| Transcript bài nói / phỏng vấn | Phân tích kiểu hỏi đáp và phản ứng ứng khẩu | Đối thoại (02), biểu đạt (03) |
+| Phụ đề video SRT | Xử lý như transcript | Đối thoại (02), biểu đạt (03) |
+| Blog / newsletter xuất ra | Rút quan điểm có hệ thống | Tác phẩm (01), biểu đạt (03) |
+| Dữ liệu mạng xã hội xuất ra | Phân tích kiểu biểu đạt vụn | Biểu đạt (03) |
+| Tài liệu nội bộ / memo | Phân tích logic ra quyết định | Quyết định (05) |
+| Ghi chú người dùng tự chỉnh lý | Làm nguồn thứ cấp để đối chiếu | Tuỳ nội dung cụ thể |
+
+**Ưu thế chất lượng của tư liệu local**: tư liệu gốc người dùng đang có (nhất là sách nguyên bản, phỏng vấn dài nguyên văn) thường chất lượng cao hơn nhiều so với tin thứ cấp tìm trên mạng. Trong thứ tự ưu tiên nguồn, tư liệu gốc do người dùng cung cấp có trọng số cao nhất.
+
+---
+
+Dưới đây là phân công tác vụ chuẩn của 6 Agent (chế độ chỉ tìm mạng, hoặc tìm bổ sung cho chiều còn thiếu ở chế độ tư liệu local):
+
+Khởi động 6 subagent song song, mỗi cái phụ trách một chiều thông tin.
+
+#### Phân công tác vụ của 6 Agent
+
+| Agent | Mục tiêu tìm | Trọng tâm rút ra | File đầu ra |
+|-------|--------------|------------------|-------------|
+| 1 Tác phẩm | Sách, bài dài, luận văn, newsletter | Luận điểm lặp đi lặp lại (≥3 lần = niềm tin thật), thuật ngữ tự đặt, danh sách sách giới thiệu | `01-writings.md` |
+| 2 Đối thoại | Podcast, video dài, AMA, phỏng vấn sâu | Cách trả lời khi bị hỏi dồn, so sánh ứng khẩu, khoảnh khắc đổi lập trường, câu hỏi từ chối trả lời | `02-conversations.md` |
+| 3 Biểu đạt | Twitter/X, Weibo, bài ngắn | Từ và câu hay dùng, lập trường gây tranh cãi, kiểu hài hước, tranh luận công khai | `03-expression-dna.md` |
+| 4 Người khác | Phân tích của người khác, bình luận sách, phê bình, tiểu sử | Mẫu hình quan sát từ bên ngoài, phê bình và tranh cãi, so với đồng nghiệp | `04-external-views.md` |
+| 5 Quyết định | Quyết định lớn, bước ngoặt, hành vi gây tranh cãi | Bối cảnh và logic quyết định, suy ngẫm sau sự việc, ca lời nói và việc làm nhất quán / không nhất quán | `05-decisions.md` |
+| 6 Dòng thời gian | Toàn bộ dòng thời gian từ khi sinh ra / ra mắt đến nay | Cột mốc then chốt, bước ngoặt tư tưởng, **động thái 12 tháng gần nhất** (chống lỗi thời) | `06-timeline.md` |
+
+#### Yêu cầu cứng với mỗi Agent
+- Kết quả nghiên cứu bắt buộc ghi vào `references/research/0X-xxx.md`
+- Ghi rõ nguồn và độ tin cậy (sơ cấp > thứ cấp > suy đoán)
+- Phân biệt "ông ấy đã nói" vs "người khác nói về ông ấy" vs "tôi suy luận"
+- Gặp mâu thuẫn thì giữ nguyên mâu thuẫn, đừng hoà giải qua loa
+
+#### Mẫu prompt cho Agent
+
+Khi spawn subagent, giao việc theo cấu trúc sau (lấy Agent 1 Tác phẩm làm ví dụ):
 
 ```
-你的任务：调研[人名]的著作和系统性长文。
+Nhiệm vụ của bạn: nghiên cứu tác phẩm và các bài dài có hệ thống của [tên người].
 
-搜索方向：
-- 此人出版的书籍（书名、核心论点、出版年份）
-- 长篇newsletter/博客/论文
-- 反复出现≥3次的核心论点（这些是真信念）
-- 自创术语和概念
-- 推荐书单（揭示智识谱系）
+Hướng tìm:
+- Sách người này đã xuất bản (tên sách, luận điểm cốt lõi, năm xuất bản)
+- Newsletter / blog / luận văn dài
+- Luận điểm lặp lại ≥3 lần (đây là niềm tin thật)
+- Thuật ngữ và khái niệm tự đặt
+- Danh sách sách giới thiệu (lộ ra phả hệ trí tuệ)
 
-输出要求：
-- 写入 [skill目录]/references/research/01-writings.md
-- 每条信息标注来源URL和可信度
-- 区分一手（此人写的）vs 二手（别人总结的）
-- 发现矛盾直接记录，不要调和
+Yêu cầu đầu ra:
+- Ghi vào [thư mục skill]/references/research/01-writings.md
+- Mỗi thông tin ghi URL nguồn và độ tin cậy
+- Phân biệt sơ cấp (do người này viết) vs thứ cấp (người khác tóm tắt)
+- Gặp mâu thuẫn thì ghi lại luôn, không hoà giải
 
-信息源黑名单：不使用知乎、微信公众号、百度百科。
+Danh sách đen nguồn: không dùng Zhihu, WeChat Official Accounts, Baidu Baike.
 ```
 
-其他5个Agent按同样结构调整搜索方向和输出文件名即可。
+5 Agent còn lại điều chỉnh hướng tìm và tên file đầu ra theo cùng cấu trúc.
 
-#### 工具辅助（如可用）
-- 书籍：Z-Library/LibGen搜索下载 → 存入 `sources/books/`
-- 视频字幕获取（已提供脚本，直接调用）：
-  - **Step 1 下载字幕**：`bash [skill目录]/scripts/download_subtitles.sh <YouTube_URL> [输出目录]`
-    - 自动优先人工字幕 → 中文 → 英文 → 自动生成字幕
-    - 输出SRT/VTT文件到指定目录
-  - **Step 2 清洗为纯文本**：`python3 [skill目录]/scripts/srt_to_transcript.py <input.srt> [output.txt]`
-    - 去时间戳、序号、HTML标签、连续重复行
-    - 输出干净的可阅读transcript → 存入 `sources/transcripts/`
-  - 用户提供本地视频文件（无字幕）：用 gemini-video skill 转写
-- 播客：搜索transcript网站（podcastnotes.org等）
-- 调研摘要生成（Phase 1.5用）：`python3 [skill目录]/scripts/merge_research.py <skill目录>`
-  - 自动扫描 `references/research/01-06.md`，统计来源数、一手/二手占比、关键发现
-  - 输出Phase 1.5检查点的markdown表格，无需手动统计
-- 质量自检（Phase 4用）：`python3 [skill目录]/scripts/quality_check.py <SKILL.md路径>`
-  - 自动检查6项通过标准：心智模型数量、局限性、表达DNA、诚实边界、内在张力、一手来源占比
-  - 输出逐项PASS/FAIL和总结
+#### Công cụ hỗ trợ (nếu có)
 
-#### 利用已安装的信息获取Skill
+Đường dẫn script bên dưới: `<MD>` = `/Volumes/SamDisk/sources/mentors/skills/mentors-distill`.
 
-Phase 1启动前，**主动扫描 `.claude/skills/` 目录**，检查是否有可用于信息获取的skill。如果有，在调研中优先调用，比WebSearch更稳定高效：
+- Sách: tìm và tải bản người dùng có quyền sử dụng (đã mua, thư viện, tài liệu mở) → lưu vào `sources/books/`
+- Lấy phụ đề video (đã có sẵn script, gọi thẳng):
+  - **Bước 1 tải phụ đề**: `bash <MD>/scripts/download_subtitles.sh <YouTube_URL> [thư mục đầu ra]`
+    - Tự ưu tiên phụ đề do người tạo (tiếng Anh → tiếng Việt) → phụ đề tự sinh (Anh → Việt → Trung)
+    - Xuất file SRT/VTT vào thư mục chỉ định
+  - **Bước 2 làm sạch thành văn bản thuần**: `python3 <MD>/scripts/srt_to_transcript.py <input.srt> [output.txt]`
+    - Bỏ timestamp, số thứ tự, thẻ HTML, dòng lặp liên tiếp
+    - Xuất transcript sạch, đọc được → lưu vào `sources/transcripts/`
+  - Người dùng đưa file video local (không có phụ đề): dùng skill phiên âm video (ví dụ `gemini-video`) nếu máy có cài
+- Podcast: tìm các trang transcript (podcastnotes.org, v.v.)
+- Tạo bản tóm tắt nghiên cứu (dùng cho Phase 1.5): `python3 <MD>/scripts/merge_research.py <thư mục skill>`
+  - Tự quét `references/research/01-06.md`, thống kê số nguồn, tỷ lệ sơ cấp / thứ cấp, phát hiện chính
+  - Xuất bảng markdown cho điểm kiểm tra Phase 1.5, khỏi thống kê tay
+- Tự kiểm chất lượng (dùng cho Phase 4): `python3 <MD>/scripts/quality_check.py <đường dẫn SKILL.md>`
+  - Tự kiểm 6 tiêu chuẩn đạt: số mô hình tư duy, giới hạn, DNA biểu đạt, ranh giới trung thực, giằng co nội tại, tỷ lệ nguồn sơ cấp
+  - Xuất PASS/FAIL từng mục và tổng kết
 
-| 已安装Skill | 用途 | 调用场景 |
-|------------|------|---------|
-| `gemini-video` | 分析本地视频文件，提取transcript | 用户提供了视频文件但没有字幕 |
-| `web-article-reader` | 精确读取网页文章全文 | 找到重要文章URL时，精确提取而非依赖搜索摘要 |
-| `agent-reach` | 多渠道信息获取（17个平台） | 需要从X/Reddit/YouTube等平台获取信息 |
-| `huashu-research` | 结构化深度调研 | 需要对某个维度做深度调研而非广撒网 |
-| `pdf` | 读取PDF书籍/论文 | 用户提供了PDF格式的一手素材 |
+#### Tận dụng các skill lấy thông tin đã cài
 
-**执行方式**：在spawn subagent时，把可用skill的名称和用途告知agent，让agent在调研中按需调用。这比让agent自己用WebSearch摸索效率高得多。
+Trước khi Phase 1 khởi động, **chủ động quét danh sách skill đang có** (thư mục `~/.claude/skills/`) xem có skill nào dùng được cho việc lấy thông tin. Nếu có, ưu tiên gọi trong nghiên cứu, ổn định và hiệu quả hơn WebSearch:
 
-#### 信息源优先级
+| Skill đã cài | Công dụng | Tình huống gọi |
+|--------------|-----------|----------------|
+| `gemini-video` | Phân tích file video local, rút transcript | Người dùng đưa video nhưng chưa có phụ đề |
+| `web-article-reader` | Đọc chính xác toàn văn bài trên web | Tìm được URL bài quan trọng, cần rút chính xác thay vì dựa vào tóm tắt tìm kiếm |
+| `agent-reach` | Lấy thông tin đa kênh (17 nền tảng) | Cần thông tin từ X / Reddit / YouTube, v.v. |
+| skill nghiên cứu sâu có cấu trúc (ví dụ `deep-research`) | Nghiên cứu chuyên sâu có cấu trúc | Cần đào sâu một chiều thay vì rải rộng |
+| `pdf` | Đọc PDF sách / luận văn | Người dùng đưa tư liệu gốc dạng PDF |
 
-| 来源类型 | 揭示什么 | 权重 |
-|---------|---------|------|
-| **用户提供的一手素材** | 完整原文，未经二手过滤 | **最高+** |
-| 本人著作 | 系统性思考 | 最高 |
-| 长对话/访谈 | 即兴思维过程 | 最高 |
-| 实际决策记录 | 真实行为 vs 声称 | 最高 |
-| 社交媒体 | 表达风格、即时反应 | 中等 |
-| 他人评价 | 外部视角、盲点 | 中等 |
-| 二手转述 | 参考但需验证 | 低 |
+Bảng trên chỉ là gợi ý: skill nào không cài thì bỏ qua, dùng WebSearch / WebFetch.
 
-#### 信息源黑名单（永远排除）
+**Cách thực hiện**: khi spawn subagent, báo cho agent tên và công dụng các skill dùng được, để agent gọi theo nhu cầu trong lúc nghiên cứu. Cách này hiệu quả hơn nhiều so với để agent tự mày mò với WebSearch.
 
-- **知乎**：洗稿严重、信息失真率高，不作为任何维度的来源
-- **微信公众号**：封闭生态、无法验证、大量二手转述，不作为来源
-- **百度百科/百度知道**：信息陈旧且不可靠
+#### Thứ tự ưu tiên nguồn
 
-中文渠道只接受权威媒体：36氪、极客公园、晚点LatePost、财新、第一财经、虎嗅、少数派、机器之心等。人物访谈类可用播客平台（小宇宙、喜马拉雅原始音频）和B站原始视频（非搬运号）。
+| Loại nguồn | Lộ ra điều gì | Trọng số |
+|------------|---------------|----------|
+| **Tư liệu gốc người dùng cung cấp** | Nguyên văn đầy đủ, chưa qua lọc thứ cấp | **Cao nhất+** |
+| Tác phẩm của chính người đó | Tư duy có hệ thống | Cao nhất |
+| Đối thoại / phỏng vấn dài | Quá trình tư duy ứng khẩu | Cao nhất |
+| Hồ sơ quyết định thực tế | Hành vi thật vs lời tuyên bố | Cao nhất |
+| Mạng xã hội | Phong cách biểu đạt, phản ứng tức thời | Trung bình |
+| Đánh giá của người khác | Góc nhìn bên ngoài, điểm mù | Trung bình |
+| Thuật lại thứ cấp | Tham khảo nhưng cần kiểm chứng | Thấp |
 
-#### 失败模式与降级路径（if-then速查表）
+#### Danh sách đen nguồn (luôn loại trừ)
 
-蒸馏是长流程+多agent+联网任务，下表前三条都在真实用户中发生过（GitHub issue实证）。每条按「触发条件 → 一线修复 → 仍失败兜底」执行：
+- **Zhihu**: viết lại nhiều, thông tin sai lệch cao, không dùng làm nguồn cho bất kỳ chiều nào
+- **WeChat Official Accounts**: hệ sinh thái đóng, không kiểm chứng được, nhiều thuật lại thứ cấp, không dùng làm nguồn
+- **Baidu Baike / Baidu Zhidao**: thông tin cũ và không đáng tin
 
-| 触发条件 | 一线修复 | 仍失败兜底 |
-|---------|---------|-----------|
-| 运行环境不支持并行subagent/后台任务（部分runtime会在Phase 1挂起死等） | 6个调研任务降级为**串行执行**：做完一个落盘一个，禁止挂起等待后台通知 | 单agent分6轮调研，每轮只做一个维度并立即落盘 |
-| 上下文窗口不足（单次完整蒸馏可累积500k+ token，200k窗口模型跑不完） | 分Phase续跑：每个Phase结束即把状态写入 `references/research/`，新会话从文件恢复（调研文件本身就是断点） | 200k窗口模型分3段会话跑：Phase 0-1 / Phase 1.5-2.5 / Phase 3-5，每段开头先读已落盘文件 |
-| 成本失控（用户未预期到长任务的token消耗） | Phase 0A的蒸馏档位确认就是防线：开跑前报量级、让用户选档 | 用户中途喊停 → 已落盘的调研文件即为可交付中间产物，下次续跑不清零 |
-| 单个Agent超时（搜索5分钟无有价值结果） | 不等待，继续推进，Phase 2标注「信息不足」 | 诚实边界中说明该维度薄弱 |
-| WebSearch等搜索工具不可用 | 改用运行环境可用的等价工具（fetch/浏览器工具/已装的信息获取skill） | 切换为纯本地语料模式，引导用户提供素材 |
-| 信息源匮乏（<10条可用来源） | Phase 0.5就提醒用户，降低期望（心智模型减至2-3个） | 增加诚实边界篇幅，标注推测成分 |
-| Agent结果冲突 | 保留矛盾——矛盾本身是有价值的信号 | 用「内在张力」section收录 |
+Kênh Trung văn chỉ nhận truyền thông có uy tín: 36Kr, Geekpark, LatePost, Caixin, Yicai, Huxiu, Sspai, Jiqizhixin, v.v. Phỏng vấn nhân vật có thể dùng nền tảng podcast (Xiaoyuzhou, Ximalaya audio gốc) và video gốc trên Bilibili (không phải kênh đăng lại video của người khác).
 
-**关键规则**：宁可生成一个诚实标注了局限的60分Skill，也不要生成一个看起来完美但实际上在编造的90分Skill。
+#### Chế độ thất bại và đường hạ cấp (bảng if-then tra nhanh)
 
-### Phase 1.5: 调研Review检查点
+Chưng cất là tác vụ dài + nhiều agent + cần mạng, ba dòng đầu của bảng dưới đều đã xảy ra với người dùng thật (có GitHub issue chứng thực). Mỗi dòng thực hiện theo "điều kiện kích hoạt → sửa tuyến đầu → vẫn thất bại thì phương án lót":
 
-**🔴 CHECKPOINT · 所有Agent完成后，暂停展示调研质量摘要**：
+| Điều kiện kích hoạt | Sửa tuyến đầu | Vẫn thất bại thì phương án lót |
+|---------------------|---------------|-------------------------------|
+| Môi trường chạy không hỗ trợ subagent song song / tác vụ nền (một số runtime treo chờ ở Phase 1) | 6 tác vụ nghiên cứu hạ xuống **chạy tuần tự**: xong cái nào lưu ngay cái đó, cấm treo chờ thông báo nền | Một agent đơn chạy 6 vòng nghiên cứu, mỗi vòng chỉ làm một chiều và lưu ngay |
+| Cửa sổ ngữ cảnh không đủ (một lần chưng cất đầy đủ có thể tích luỹ 500k+ token, model cửa sổ 200k không chạy hết) | Chạy tiếp theo Phase: cuối mỗi Phase ghi trạng thái vào `references/research/`, phiên mới khôi phục từ file (chính các file nghiên cứu là điểm dừng) | Model cửa sổ 200k chia 3 phiên: Phase 0-1 / Phase 1.5-2.5 / Phase 3-5, đầu mỗi phiên đọc các file đã lưu |
+| Chi phí vượt kiểm soát (người dùng không lường trước tác vụ dài tiêu token) | Xác nhận mức chưng cất ở Phase 0A chính là hàng rào: trước khi chạy báo mức chi phí, để người dùng chọn mức | Người dùng dừng giữa chừng → các file nghiên cứu đã lưu là sản phẩm trung gian giao được, lần sau chạy tiếp không phải làm lại |
+| Một Agent quá thời gian (tìm 5 phút không có kết quả đáng giá) | Không chờ, đi tiếp, Phase 2 đánh dấu "thiếu thông tin" | Trong ranh giới trung thực nói rõ chiều đó yếu |
+| Công cụ tìm kiếm như WebSearch không dùng được | Đổi sang công cụ tương đương môi trường có (fetch / công cụ trình duyệt / skill lấy thông tin đã cài) | Chuyển sang chế độ chỉ tư liệu local, hướng người dùng cung cấp tư liệu |
+| Nguồn khan hiếm (<10 nguồn dùng được) | Nhắc người dùng ngay ở Phase 0.5, hạ kỳ vọng (giảm mô hình tư duy còn 2-3) | Tăng dung lượng ranh giới trung thực, đánh dấu phần suy đoán |
+| Kết quả các Agent xung đột | Giữ mâu thuẫn, bản thân mâu thuẫn là tín hiệu có giá trị | Thu vào mục "giằng co nội tại" |
+
+**Quy tắc then chốt**: thà sinh ra một skill 60 điểm ghi trung thực các giới hạn, còn hơn sinh ra một skill 90 điểm trông hoàn hảo nhưng thực chất đang bịa.
+
+### Phase 1.5: Điểm kiểm tra rà soát nghiên cứu
+
+**🔴 CHECKPOINT · Khi mọi Agent xong, dừng lại hiển thị tóm tắt chất lượng nghiên cứu**:
 
 ```
 ┌──────────────────┬──────────┬──────────────────────────┐
-│ Agent            │ 来源数量  │ 关键发现                  │
+│ Agent            │ Số nguồn │ Phát hiện chính          │
 ├──────────────────┼──────────┼──────────────────────────┤
-│ 1 著作           │ 8篇      │ 核心论点: 反脆弱、...     │
-│ 2 对话           │ 5段      │ 立场变化: 2020年后...     │
-│ 3 表达           │ 120条    │ 高频词: "skin in the..." │
-│ 4 他者           │ 6篇      │ 主要批评: ...             │
-│ 5 决策           │ 4个      │ 关键决策: ...             │
-│ 6 时间线         │ 完整      │ 最新: 2026年3月...       │
+│ 1 Tác phẩm       │ 8 bài    │ Luận điểm lõi: phản mong manh, ... │
+│ 2 Đối thoại      │ 5 đoạn   │ Đổi lập trường: sau 2020... │
+│ 3 Biểu đạt       │ 120 mục  │ Từ hay dùng: "skin in the..." │
+│ 4 Người khác     │ 6 bài    │ Phê bình chính: ...      │
+│ 5 Quyết định     │ 4 cái    │ Quyết định then chốt: ...│
+│ 6 Dòng thời gian │ Đầy đủ   │ Mới nhất: tháng 3/2026...│
 ├──────────────────┼──────────┼──────────────────────────┤
-│ 矛盾点           │ 2处      │ Agent1说X, Agent4说Y     │
-│ 信息不足维度      │ 无       │                          │
+│ Điểm mâu thuẫn   │ 2 chỗ    │ Agent1 nói X, Agent4 nói Y│
+│ Chiều thiếu tin  │ Không    │                          │
 └──────────────────┴──────────┴──────────────────────────┘
 ```
 
-用户确认调研质量OK → 进入Phase 2。
-用户觉得某维度不够 → 补充调研后再继续。
+Người dùng xác nhận chất lượng nghiên cứu ổn → vào Phase 2.
+Người dùng thấy chiều nào chưa đủ → nghiên cứu bổ sung rồi mới tiếp tục.
 
-这个检查点的意义：调研质量决定了最终Skill的上限。垃圾进垃圾出，在这里拦截比在Phase 4返工成本低得多。
-
----
-
-### Phase 2: 框架提炼（Synthesis）
-
-6个Agent的素材汇总后，执行结构化提炼。先读取 `references/extraction-framework.md` 获取心智模型的三重验证方法论（跨域复现、生成力、自创术语），确保提炼质量。
-
-#### 2.1 心智模型提取（3-7个）
-
-**操作步骤**：
-
-1. **扫描**：逐个读取 `01-writings.md` 到 `05-decisions.md`，列出所有候选论点（此人反复表达的观点、自创术语、核心主张）。通常会得到15-30个候选
-2. **三重验证筛选**：对每个候选执行（详见 `references/extraction-framework.md`）：
-   - 跨域复现：在≥2个不同领域/话题中出现？
-   - 生成力：能推断此人对新问题的立场？
-   - 排他性：不是所有聪明人都这样想？
-   - 三重通过 → 心智模型；仅1-2重 → 降级为决策启发式；0重 → 丢弃
-3. **排序取舍**：按排他性强度排序（越独特越靠前），取top 3-7个。宁少勿多——3个深刻的模型远好于10个浅薄的原则
-4. **记录格式**：每个模型记录——名称、一句话描述、来源证据（≥2个场景）、应用方式、局限性
-
-#### 2.2 决策启发式提取（5-10条）
-
-= 此人做判断时的快速规则。可表述为「如果X，则Y」，有具体案例支撑。
-
-#### 2.3 表达DNA分析
-
-| 维度 | 提取内容 |
-|------|---------|
-| 句式偏好 | 长句/短句、疑问/陈述、类比密度 |
-| 词汇特征 | 高频词、专属术语、禁忌词 |
-| 节奏感 | 先结论还是先铺垫、转折方式 |
-| 幽默方式 | 讽刺/自嘲/荒诞/冷幽默/不幽默 |
-| 确定性表达 | 「我不确定」型 还是 「很明显」型 |
-| 引用习惯 | 爱引谁、引什么类型 |
-
-#### 2.4 价值观与反模式
-
-- **价值观**：3-5条核心价值排序
-- **反模式**：此人明确反对的行为/思维方式
-- **矛盾与张力**：价值观之间的内在冲突（深度的来源）
-
-#### 2.5 智识谱系
-
-此人受谁影响 → 影响了谁 → 在思想地图上的位置
-
-#### 2.6 诚实边界
-
-必须明确写出的局限：
-- 不能预测面对全新问题的反应
-- 不能替代此人的创造力和直觉
-- 公开表达 vs 真实想法可能有差距
-- 信息截止到调研时间点
+Ý nghĩa của điểm kiểm tra này: chất lượng nghiên cứu quyết định trần của skill cuối. Rác vào rác ra, chặn ở đây rẻ hơn nhiều so với làm lại ở Phase 4.
 
 ---
 
-### Phase 2.5: 提炼确认检查点
+### Phase 2: Chưng cất khung (Synthesis)
 
-**🔴 CHECKPOINT** · Phase 2提炼完成后，暂停展示提炼摘要给用户确认：
+Gộp tư liệu của 6 Agent xong, thực hiện chưng cất có cấu trúc. Trước hết đọc `references/extraction-framework.md` để lấy phương pháp kiểm định ba lớp cho mô hình tư duy (tái hiện xuyên lĩnh vực, sức sinh, tính độc quyền), bảo đảm chất lượng chưng cất.
+
+#### 2.1 Rút mô hình tư duy (3-7 cái)
+
+**Các bước thao tác**:
+
+1. **Quét**: đọc lần lượt `01-writings.md` đến `05-decisions.md`, liệt kê mọi luận điểm ứng viên (quan điểm người này lặp lại, thuật ngữ tự đặt, chủ trương cốt lõi). Thường được 15-30 ứng viên
+2. **Lọc bằng kiểm định ba lớp**: với mỗi ứng viên thực hiện (chi tiết xem `references/extraction-framework.md`):
+   - Tái hiện xuyên lĩnh vực: xuất hiện trong ≥2 lĩnh vực / chủ đề khác nhau?
+   - Sức sinh: suy ra được lập trường của người này với vấn đề mới?
+   - Tính độc quyền: không phải mọi người thông minh đều nghĩ vậy?
+   - Qua cả ba lớp → mô hình tư duy; chỉ qua 1-2 lớp → hạ xuống nguyên tắc ra quyết định; 0 lớp → bỏ
+3. **Xếp hạng chọn lọc**: xếp theo độ mạnh của tính độc quyền (càng độc đáo càng đứng trước), lấy top 3-7. Thà ít còn hơn nhiều: 3 mô hình sâu sắc tốt hơn nhiều so với 10 nguyên tắc nông
+4. **Định dạng ghi**: mỗi mô hình ghi tên, mô tả một câu, bằng chứng nguồn (≥2 tình huống), cách ứng dụng, giới hạn
+
+#### 2.2 Rút nguyên tắc ra quyết định (5-10 điều)
+
+= Luật nhanh người này dùng khi phán đoán. Có thể diễn đạt thành "nếu X thì Y", có ví dụ cụ thể làm chỗ dựa.
+
+#### 2.3 Phân tích DNA biểu đạt
+
+| Chiều | Nội dung rút ra |
+|-------|-----------------|
+| Ưa thích câu | Câu dài / ngắn, hỏi / khẳng định, mật độ so sánh |
+| Đặc trưng từ vựng | Từ hay dùng, thuật ngữ riêng, từ kiêng kỵ |
+| Nhịp | Kết luận trước hay dẫn dắt trước, cách chuyển ý |
+| Cách hài hước | Châm biếm / tự giễu / phi lý / hài lạnh / không hài hước |
+| Biểu đạt độ chắc chắn | Kiểu "tôi không chắc" hay kiểu "rõ ràng là vậy" |
+| Thói quen trích dẫn | Hay dẫn ai, dẫn loại gì |
+
+#### 2.4 Giá trị và anti-pattern
+
+- **Giá trị**: 3-5 giá trị cốt lõi xếp thứ tự
+- **Anti-pattern**: hành vi / cách nghĩ người này phản đối rõ ràng
+- **Mâu thuẫn và giằng co**: xung đột nội tại giữa các giá trị (nguồn của chiều sâu)
+
+#### 2.5 Phả hệ trí tuệ
+
+Người này chịu ảnh hưởng của ai → ảnh hưởng ai → vị trí trên bản đồ tư tưởng
+
+#### 2.6 Ranh giới trung thực
+
+Những giới hạn bắt buộc viết rõ:
+- Không dự đoán được phản ứng khi đối diện vấn đề hoàn toàn mới
+- Không thay thế được sáng tạo và trực giác của người này
+- Biểu đạt công khai và suy nghĩ thật có thể lệch nhau
+- Thông tin chỉ tới thời điểm nghiên cứu
+
+---
+
+### Phase 2.5: Điểm kiểm tra xác nhận chưng cất
+
+**🔴 CHECKPOINT** · Phase 2 chưng cất xong, dừng lại hiển thị tóm tắt cho người dùng xác nhận:
 
 ```
-提炼结果摘要：
-- 心智模型：N个（列出名称）
-- 决策启发式：N条
-- 表达DNA：[3个关键特征]
-- 核心张力：N对
-- 诚实边界：N条
+Tóm tắt kết quả chưng cất:
+- Mô hình tư duy: N cái (liệt kê tên)
+- Nguyên tắc ra quyết định: N điều
+- DNA biểu đạt: [3 đặc điểm then chốt]
+- Giằng co cốt lõi: N cặp
+- Ranh giới trung thực: N điều
 ```
 
-用户确认OK → 进入Phase 3构建。
-用户觉得某个模型不对或缺少 → 回到Phase 2调整后再继续。
+Người dùng xác nhận OK → vào Phase 3 dựng skill.
+Người dùng thấy mô hình nào sai hoặc thiếu → quay lại Phase 2 chỉnh rồi tiếp tục.
 
-这个检查点的意义：提炼是主观判断最重的环节，确认后再构建，避免写完400行SKILL.md才发现方向不对。
+Ý nghĩa của điểm kiểm tra này: chưng cất là khâu nặng phán đoán chủ quan nhất; xác nhận xong mới dựng để tránh viết xong 400 dòng SKILL.md mới phát hiện đi sai hướng.
 
 ---
 
-### Phase 3: Skill构建
+### Phase 3: Dựng skill
 
-将Phase 2提炼结果组装为可运行的SKILL.md。
+Lắp kết quả chưng cất của Phase 2 thành SKILL.md chạy được.
 
-#### Step 1: 读取模板
-读取 `references/skill-template.md` 获取标准结构。模板定义了目标Skill的完整骨架：frontmatter、角色扮演规则、身份卡、心智模型、决策启发式、表达DNA、时间线、价值观、智识谱系、诚实边界、调研来源。
+#### Bước 1: Đọc mẫu
+Đọc `references/skill-template.md` lấy cấu trúc chuẩn. Mẫu định nghĩa bộ khung đầy đủ của mentor đích: frontmatter, mục "Người hỏi", quy tắc nhập vai, quy trình trả lời (Agentic Protocol), danh tính, mô hình tư duy, nguyên tắc ra quyết định, DNA biểu đạt, dòng thời gian, giá trị, phả hệ trí tuệ, ranh giới trung thực, nguồn nghiên cứu.
 
-#### Step 2: 填充内容
-按模板结构，将Phase 2的提炼结果逐section填入：
+#### Bước 2: Điền nội dung
+Theo cấu trúc mẫu, điền kết quả chưng cất của Phase 2 vào từng mục:
 
-| 模板Section | 填充来源 |
-|------------|---------|
-| frontmatter description | 来源数量+模型数量+触发词。**控制在约300字内，绝不超过skill-loader约1024字上限**：一句定位＋明确触发语（「用X视角」「X会怎么看」）＋一句「不在一般性问题上自动触发」防呆即可。塞长尾关键词会超限报错、每session烧token、抬高误触发率——真正负责命中的是人名和专属概念 |
-| 角色扮演规则 | 直接使用模板默认规则（含两条输出纪律：未表态主题标推断、关键引用可分辨），不需要改 |
-| **回答工作流（Agentic Protocol）** | **根据心智模型自动推导，详见下方生成指引** |
-| 身份卡 | 时间线(06) + 著作(01) → 用此人语气写50字自我介绍 |
-| 心智模型 | Phase 2.1 提取结果，每个含名称/证据/应用/局限 |
-| 决策启发式 | Phase 2.2 提取结果，每条含场景+案例 |
-| 表达DNA | Phase 2.3 分析结果 → 转为角色扮演时的风格规则 |
-| 时间线 | Agent 6 调研结果，精简为关键节点表格 |
-| 价值观与反模式 | Phase 2.4 结果 |
-| 智识谱系 | Phase 2.5 结果 |
-| 诚实边界 | Phase 2.6 结果 + 调研时间 |
-| 调研来源 | 6个Agent的引用汇总，分一手/二手 |
-| 创建者归属 | 固定内容：`> 本Skill由 [女娲 · Skill造人术](https://github.com/alchaincyf/nuwa-skill) 生成` + `> 创建者：[花叔](https://x.com/AlchainHust)` |
+| Mục trong mẫu | Nguồn điền |
+|---------------|------------|
+| frontmatter `name` | `mentor-<slug>` |
+| frontmatter description | Số lượng nguồn + số mô hình + cụm kích hoạt. **Giữ trong khoảng 300 chữ, tuyệt đối không vượt giới hạn khoảng 1024 ký tự của skill-loader**: một câu định vị + cụm kích hoạt rõ ("hỏi X", "X sẽ nghĩ sao") + một câu "không tự kích hoạt cho câu hỏi chung chung" để chống kích hoạt nhầm. Nhồi từ khoá đuôi dài sẽ vượt giới hạn báo lỗi, đốt token mỗi session, kéo cao tỷ lệ kích hoạt nhầm; thứ thực sự bảo đảm trúng là tên người và khái niệm đặc trưng |
+| **Người hỏi** | Cố định theo mẫu: Sam, Founder & CEO Avada Group, SaaS app Shopify; mentor xưng "tôi", gọi "anh". Thêm 1-2 điểm mentor này đặc biệt hợp để soi cho Sam và 1-2 điểm không hợp (rút từ mô hình tư duy và giới hạn) |
+| Quy tắc nhập vai | Dùng thẳng quy tắc mặc định của mẫu (gồm hai kỷ luật đầu ra: chủ đề chưa bày tỏ thì đánh dấu suy luận, trích dẫn then chốt phải phân biệt được), không cần sửa |
+| **Quy trình trả lời (Agentic Protocol)** | **Tự suy ra từ mô hình tư duy, xem hướng dẫn sinh bên dưới** |
+| Danh tính | Dòng thời gian (06) + tác phẩm (01) → viết 50 chữ tự giới thiệu bằng giọng người này |
+| Mô hình tư duy | Kết quả Phase 2.1, mỗi cái gồm tên / bằng chứng / ứng dụng / giới hạn |
+| Nguyên tắc ra quyết định | Kết quả Phase 2.2, mỗi điều gồm tình huống + ví dụ |
+| DNA biểu đạt | Kết quả phân tích Phase 2.3 → chuyển thành quy tắc phong cách khi nhập vai |
+| Dòng thời gian | Kết quả Agent 6, rút gọn thành bảng mốc then chốt |
+| Giá trị và anti-pattern | Kết quả Phase 2.4 |
+| Phả hệ trí tuệ | Kết quả Phase 2.5 |
+| Ranh giới trung thực | Kết quả Phase 2.6 + thời điểm nghiên cứu |
+| Nguồn nghiên cứu | Tổng hợp trích dẫn của 6 Agent, chia sơ cấp / thứ cấp |
+| Ghi nhận nguồn gốc | Nội dung cố định theo mẫu: dòng cuối nói mentor tạo bằng `mentors-distill`, chuyển thể từ Nuwa của 花叔 (MIT) |
 
-#### 回答工作流（Agentic Protocol）生成指引
+#### Hướng dẫn sinh Quy trình trả lời (Agentic Protocol)
 
-**为什么需要这个段落**：让人物不只是「说得像」，还「做得像」。没有这个段落，人物Skill遇到需要事实的问题时会凭训练语料编造，而不是像真人一样先做功课再发言。这是人物Skill从「鹦鹉学舌」升级为「可靠思维顾问」的关键。
+**Vì sao cần đoạn này**: để mentor không chỉ "nói giống" mà còn "làm giống". Thiếu đoạn này, mentor gặp câu hỏi cần dữ kiện sẽ bịa từ ngữ liệu huấn luyện, thay vì như người thật: làm bài tập trước rồi mới phát biểu. Đây là then chốt để mentor đi từ "vẹt học nói" lên "cố vấn tư duy đáng tin".
 
-**位置**：放在「角色扮演规则」之后、「示例对话」之前。
+**Vị trí**: đặt sau "Quy tắc nhập vai", trước "Ví dụ hội thoại" (nếu có) và "Danh tính".
 
-**生成规则**：
+**Quy tắc sinh**:
 
-生成的Agentic Protocol必须包含以下3个Step，其中Step 2的研究维度必须**根据蒸馏出的心智模型自动推导**，不是固定模板：
+Agentic Protocol sinh ra phải gồm đủ 3 Bước, trong đó các chiều nghiên cứu ở Bước 2 phải **tự suy ra từ mô hình tư duy đã chưng cất**, không phải khuôn cố định:
 
 ```markdown
-## 回答工作流（Agentic Protocol）
+## Quy trình trả lời (Agentic Protocol)
 
-**核心原则：[人物名]不凭感觉说话。遇到需要事实支撑的问题时，先做功课再回答。**
+**Nguyên tắc: [Tên người] không nói theo cảm tính. Gặp câu hỏi cần dữ kiện thì làm bài tập trước rồi mới trả lời.**
 
-### Step 1: 问题分类
+### Bước 1: Phân loại câu hỏi
 
-收到问题后，先判断类型：
+Nhận câu hỏi, trước hết xác định loại:
 
-| 类型 | 特征 | 行动 |
-|------|------|------|
-| **需要事实的问题** | 涉及具体公司/人物/事件/产品/市场现状 | → 先研究再回答（Step 2） |
-| **纯框架问题** | 抽象价值观、思维方式、人生建议 | → 直接用心智模型回答（跳到Step 3） |
-| **混合问题** | 用具体案例讨论抽象道理 | → 先获取案例事实，再用框架分析 |
+| Loại | Đặc điểm | Hành động |
+|------|----------|-----------|
+| **Cần dữ kiện** | Liên quan công ty / người / sự kiện / sản phẩm / hiện trạng thị trường cụ thể | → Nghiên cứu trước rồi trả lời (Bước 2) |
+| **Thuần khung tư duy** | Giá trị trừu tượng, cách nghĩ, lời khuyên cuộc sống | → Trả lời thẳng bằng mô hình tư duy (nhảy sang Bước 3) |
+| **Hỗn hợp** | Dùng ví dụ cụ thể bàn đạo lý trừu tượng | → Lấy dữ kiện ví dụ trước, rồi phân tích bằng khung |
 
-**判断原则**：如果回答质量会因为缺少最新信息而显著下降，就必须先研究。宁可多搜一次，也不要凭训练语料编造。
+**Nguyên tắc phán đoán**: nếu chất lượng câu trả lời sẽ tụt rõ vì thiếu thông tin mới nhất thì bắt buộc nghiên cứu trước. Thà tìm thêm một lần còn hơn bịa từ ngữ liệu huấn luyện.
 
-### Step 2: [人物名]式研究（按问题类型选择）
+### Bước 2: Nghiên cứu kiểu [Tên người] (chọn theo loại câu hỏi)
 
-**⚠️ 必须使用工具（WebSearch等）获取真实信息，不可跳过。**
+**⚠️ Bắt buộc dùng công cụ (WebSearch, v.v.) lấy thông tin thật, không được bỏ qua.**
 
-[根据此人的心智模型和分析偏好，生成3-5个研究维度分类，每个分类下列出4-6个具体研究点]
+[Dựa vào mô hình tư duy và thiên hướng phân tích của người này, sinh 3-5 nhóm chiều nghiên cứu, mỗi nhóm liệt kê 4-6 điểm nghiên cứu cụ thể]
 
-#### 研究输出格式
-研究完成后，先在内部整理事实摘要（不输出给用户），然后进入Step 3。
-用户看到的不是调研报告，而是[人物名]基于真实信息做出的判断。
+#### Định dạng đầu ra nghiên cứu
+Nghiên cứu xong, trước hết chỉnh lý bản tóm tắt dữ kiện bên trong (không xuất cho người dùng), rồi vào Bước 3.
+Người dùng thấy không phải báo cáo điều tra, mà là phán đoán của [Tên người] dựa trên thông tin thật.
 
-### Step 3: [人物名]式回答
+### Bước 3: Trả lời kiểu [Tên người]
 
-基于Step 2获取的事实（如有），运用心智模型和表达DNA输出回答。
+Dựa vào dữ kiện lấy ở Bước 2 (nếu có), vận dụng mô hình tư duy và DNA biểu đạt để xuất câu trả lời.
 ```
 
-**Step 2研究维度的推导方法**：
+**Phương pháp suy ra chiều nghiên cứu ở Bước 2**:
 
-从蒸馏出的心智模型反推此人分析问题时最关注什么，将其转化为具体的搜索维度。举例：
+Từ mô hình tư duy đã chưng cất, suy ngược xem người này khi phân tích vấn đề quan tâm nhất điều gì, chuyển thành các chiều tìm kiếm cụ thể. Ví dụ:
 
-| 人物 | 核心心智模型 | → 推导出的研究维度 |
-|------|------------|------------------|
-| 芒格 | 多元思维模型、逆向思考、激励机制 | → 看护城河、看管理层激励结构、看最大风险（逆向）、看历史类比 |
-| 费曼 | 第一性原理、对权威的怀疑 | → 看基本物理/数学约束、看官方说法的逻辑漏洞、看实验数据 |
-| 塔勒布 | 反脆弱、尾部风险、知识的僭妄 | → 看极端情况、看谁在承担尾部风险、看专家预测的历史记录 |
-| MrBeast | 注意力工程、测试迭代 | → 看竞品数据（播放/互动）、看标题/缩略图的A/B测试空间、看受众画像 |
+| Nhân vật | Mô hình tư duy cốt lõi | → Chiều nghiên cứu suy ra |
+|----------|------------------------|---------------------------|
+| Munger | Đa mô hình tư duy, tư duy đảo ngược, cơ chế khuyến khích | → xem hào phòng thủ, xem cấu trúc khuyến khích của ban lãnh đạo, xem rủi ro lớn nhất (đảo ngược), xem so sánh lịch sử |
+| Feynman | Nguyên lý đầu tiên, nghi ngờ quyền uy | → xem ràng buộc vật lý / toán học cơ bản, xem lỗ hổng logic của phát ngôn chính thức, xem dữ liệu thực nghiệm |
+| Taleb | Phản mong manh, rủi ro đuôi, sự tự phụ của tri thức | → xem tình huống cực đoan, xem ai đang gánh rủi ro đuôi, xem lịch sử dự đoán của chuyên gia |
+| MrBeast | Kỹ thuật chú ý, thử nghiệm lặp | → xem dữ liệu đối thủ (lượt xem / tương tác), xem không gian A/B test tiêu đề / thumbnail, xem chân dung khán giả |
 
-**关键约束**：
-- 研究维度必须来自心智模型，不能是通用的「搜索相关信息」
-- 每个维度要有具体的搜索指引（搜什么、看什么数据），不能只是抽象描述
-- 按问题类型分组（如芒格分「看公司」「看人物」「看事件」），让Skill使用者能快速定位
+**Ràng buộc then chốt**:
+- Chiều nghiên cứu phải đến từ mô hình tư duy, không được là câu "tìm thông tin liên quan" chung chung
+- Mỗi chiều phải có chỉ dẫn tìm kiếm cụ thể (tìm gì, xem dữ liệu nào), không chỉ là mô tả trừu tượng
+- Gom nhóm theo loại câu hỏi (như Munger chia "xem công ty" / "xem con người" / "xem sự kiện"), để người dùng skill định vị nhanh
 
-#### Step 3: 质量自检
-构建完成后，读取 `references/extraction-framework.md` 末尾的「质量自检清单」，逐项检查。不通过的项标注出来，回到对应Phase修复。
+#### Bước 3: Tự kiểm chất lượng
+Dựng xong, đọc "Danh sách tự kiểm tra chất lượng" ở cuối `references/extraction-framework.md`, kiểm từng mục. Mục không đạt thì đánh dấu, quay lại Phase tương ứng sửa.
 
-#### Step 4: 输出
-将完成的SKILL.md写入 `.claude/skills/[person-name]-perspective/SKILL.md`。
-
----
-
-### Phase 4: 质量验证
-
-生成Skill后，用子agent执行3项测试（独立于主agent，避免自评偏差）：
-
-#### 4.1 已知测试（Sanity Check）
-选3个此人公开表态过的问题，**spawn子agent带着新Skill回答**，对比实际立场。
-- 方向一致 → 模型有效
-- 偏离 → 回溯调整心智模型权重
-
-#### 4.2 边缘测试（Edge Case）
-选1个此人没公开讨论过但相关的问题，用Skill推断。
-- 期望结果：「基于模型X和Y的推断，可能...但不确定」
-- 不应该斩钉截铁
-
-#### 4.3 风格测试（Voice Check）
-用Skill写一段100字分析，判断：
-- 有此人的表达特征？
-- 不是通用AI味鸡汤？
-- 不是原话拼凑？
-
-#### 4.4 通过标准
-
-| 检查项 | 通过标准 | 不通过信号 |
-|--------|---------|-----------|
-| 心智模型数量 | 3-7个，每个有来源证据 | <3或>10 |
-| 每个模型的局限性 | 明确写出失效条件 | 只写优点 |
-| 表达DNA辨识度 | 读100字能认出是谁 | 像通用ChatGPT |
-| 诚实边界 | 至少3条具体局限 | 只有「不能替代本人」 |
-| 内在张力 | 至少2对矛盾 | 观点高度一致（太假） |
-| 一手来源占比 | >50% | 主要依赖二手转述 |
-
-验证通过 → 交付。不通过 → 标注薄弱环节，回到Phase 2迭代。
-**迭代上限**：Phase 2→4最多循环2次。如果2轮后仍有不通过项，在诚实边界中标注薄弱维度，交付当前最优版本而非无限打磨。
-
-**🔴 CHECKPOINT · 展示验证结果给用户确认后才算完成。**
+#### Bước 4: Xuất sản phẩm
+Ghi SKILL.md hoàn chỉnh vào `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md`. Chưa cài symlink, chưa thêm vào bảng, chưa commit ở bước này; việc đó thuộc Phase 6 sau khi đã qua kiểm định và tinh chỉnh.
 
 ---
 
-### Phase 5: 双Agent精炼（标准后置工序）
+### Phase 4: Kiểm định chất lượng
 
-Phase 4 验证通过后，自动启动双Agent精炼，进一步提升Skill可操作性：
+Sinh skill xong, dùng subagent thực hiện 3 bài kiểm tra (độc lập với agent chính, tránh thiên kiến tự chấm):
 
-**并行启动两个Agent：**
+#### 4.1 Kiểm tra đã biết (Sanity Check)
+Chọn 3 câu hỏi người này đã công khai bày tỏ, **spawn subagent mang theo skill mới để trả lời**, đối chiếu lập trường thực tế.
+- Cùng hướng → mô hình hiệu lực
+- Lệch → truy ngược chỉnh trọng số mô hình tư duy
 
-**Agent A（auto-skill-optimizer视角）**：
-- 对SKILL.md执行8维度结构评估（工作流清晰度、边界条件、检查点设计、指令具体性等）
-- 干跑3个典型测试prompt，评估效果维度
-- 输出：最弱2个维度的具体改进建议（要有改后文本示例）
+#### 4.2 Kiểm tra vùng biên (Edge Case)
+Chọn 1 câu hỏi liên quan mà người này chưa công khai bàn, dùng skill suy luận.
+- Kết quả kỳ vọng: "Suy ra từ mô hình X và Y, có thể... nhưng không chắc"
+- Không được khẳng định chắc nịch
 
-**Agent B（skill-creator视角）**：
-- 评审「激活触发条件」是否覆盖真实使用场景
-- 评审「角色扮演规则」的可操作性（有无问题路由、频率约束、失败预防）
-- 识别缺失的关键信息
-- 输出：2-3处具体文本改动建议（要有改后文本示例）
+#### 4.3 Kiểm tra phong cách (Voice Check)
+Dùng skill viết một đoạn phân tích 100 chữ, phán đoán:
+- Có đặc trưng biểu đạt của người này?
+- Không phải giọng AI chung chung kiểu "súp gà"?
+- Không phải ghép lời nguyên văn?
 
-**🔴 CHECKPOINT · 主Agent综合两份报告，应用不冲突的改进，展示变更摘要请用户确认。**
+Bảng chấm độ trung thực đầy đủ (5 chiều, 100 điểm, hai agent độc lập trả lời và chấm) nằm ở `references/fidelity-scorecard.md`; dùng khi muốn có báo cáo xuất xưởng cho mentor quan trọng.
 
-精炼标准：改动必须让skill「激活即执行」，不只是增加内容，而是让AI拿到skill后知道先做什么、碰到什么停下来。
+#### 4.4 Tiêu chuẩn đạt
 
----
+| Mục kiểm | Tiêu chuẩn đạt | Tín hiệu không đạt |
+|----------|----------------|--------------------|
+| Số mô hình tư duy | 3-7 cái, mỗi cái có bằng chứng nguồn | <3 hoặc >10 |
+| Giới hạn của mỗi mô hình | Viết rõ điều kiện mất hiệu lực | Chỉ viết ưu điểm |
+| Độ nhận diện DNA biểu đạt | Đọc 100 chữ nhận ra là ai | Giống ChatGPT chung chung |
+| Ranh giới trung thực | Ít nhất 3 giới hạn cụ thể | Chỉ có "không thay thế được bản thân" |
+| Giằng co nội tại | Ít nhất 2 cặp mâu thuẫn | Quan điểm nhất quán tuyệt đối (quá giả) |
+| Tỷ lệ nguồn sơ cấp | >50% | Chủ yếu dựa vào thuật lại thứ cấp |
+| Mục "Người hỏi" | Có, đúng bối cảnh Sam, mentor xưng "tôi" gọi "anh" | Thiếu mục, hoặc trả lời như không biết ai đang hỏi |
 
-## 更新已有Skill
+Kiểm định đạt → giao. Không đạt → đánh dấu khâu yếu, quay lại Phase 2 lặp.
+**Giới hạn lặp**: Phase 2→4 lặp tối đa 2 lần. Sau 2 vòng vẫn còn mục không đạt thì đánh dấu chiều yếu trong ranh giới trung thực, giao bản tốt nhất hiện có thay vì mài vô hạn.
 
-当用户说「更新XX的skill」「XX最近有新动态」时：
-
-1. 读取现有SKILL.md，从「诚实边界」section中找到「调研时间：[日期]」，标注距今多久
-2. 只启动Agent 2（最新对话）+ Agent 5（最新决策）+ Agent 6（时间线更新）
-3. 对比新信息与现有内容：
-   - 新信息强化现有模型 → 补充案例
-   - 新信息与现有模型矛盾 → 标注变化，更新模型
-   - 出现新的思维模式 → 考虑增加新模型
-4. 更新SKILL.md中的「最新动态」section和调研时间
-5. 不重写整个Skill，只增量更新
-
----
-
-## 品味守则（速查）
-
-遇到判断困难时回看。具体量化标准见 Phase 4 通过标准表格。
-
-| 原则 | 一句话 |
-|------|--------|
-| 长文 > 金句 | 3000字essay比50条推文更揭示思维结构 |
-| 争议 > 共识 | 最被争议的观点最能揭示独特性 |
-| 变化 > 固定 | 改变立场的地方比一直坚持的更有信息量 |
-
-### ❌ 反模式黑名单（绝不做的事）
-
-| # | 反模式 | 为什么 / 替代做法 |
-|---|--------|------------------|
-| 1 | 编造此人没说过的话 | 网上大量伪造名人语录。引语必须有出处，查不到原文的金句宁可不用 |
-| 2 | 把通用道理包装成此人的「独特见解」 | 通不过三重验证（排他性）的内容不进心智模型 |
-| 3 | 忽略负面评价和争议 | Agent 4的批评素材是防粉丝滤镜的关键，负面占比不足=调研不合格 |
-| 4 | 在信息不足时强行生成 | 宁可交付诚实标注局限的60分Skill，也不造看似完美实则编造的90分Skill |
-| 5 | 用知乎/微信公众号/百度百科做信息源 | 洗稿、失真、无法验证。任何维度都不例外 |
-| 6 | 在小上下文窗口模型上单会话硬跑全流程 | 会在Phase 1-2之间上下文爆炸。按失败降级表分段续跑 |
-| 7 | 不报成本量级直接开跑 | 完整蒸馏是重任务，用户有权先选档位再花钱 |
-| 8 | 蒸馏在世的非公众人物却不提示边界 | 涉及隐私与本人意愿。必须由用户提供素材，并提醒用户征得当事人同意 |
-| 9 | 生成的Skill不含防漂移机制 | 长对话中人物Skill容易丢人设、退回通用助手腔。模板中的角色扮演规则+表达DNA约束必须完整保留 |
-| 10 | 把确认检查点变成交付阻塞 | 检查点是让用户纠偏，不是扣住产出。能给默认值就给默认值 |
+**🔴 CHECKPOINT · Hiển thị kết quả kiểm định cho người dùng xác nhận mới tính là xong.**
 
 ---
 
-## 特殊场景
+### Phase 5: Tinh chỉnh hai Agent (công đoạn hậu kỳ chuẩn)
 
-### 活人 vs 历史人物
-- **活人**：注意时效性，标注截止日期，建议定期更新
-- **历史人物**：材料更稳定但可能有传记偏差，多源交叉验证
+Phase 4 kiểm định đạt xong, tự động khởi động tinh chỉnh hai Agent để nâng thêm tính khả thao tác của skill:
 
-### 主题Skill vs 人物Skill
+**Khởi động song song hai Agent:**
 
-输入不是人名而是主题（如「价值投资」「产品克制」「反脆弱决策」）时，各Phase变体：
+**Agent A (góc nhìn auto-skill-optimizer)**:
+- Đánh giá cấu trúc SKILL.md theo 8 chiều (độ rõ của quy trình, điều kiện biên, thiết kế điểm kiểm tra, độ cụ thể của chỉ dẫn, v.v.)
+- Chạy thử 3 prompt kiểm tra điển hình, đánh giá chiều hiệu quả
+- Đầu ra: đề xuất cải tiến cụ thể cho 2 chiều yếu nhất (kèm ví dụ văn bản sau khi sửa)
 
-| Phase | 人物Skill | 主题Skill变体 |
-|-------|----------|--------------|
-| 0A | 确认人名+聚焦方向 | 确认主题边界+目标受众（「价值投资」是格雷厄姆式还是全流派？） |
-| 0.5 | `[person]-perspective/` | `[topic]-framework/`，目录结构同 |
-| 1 | 6个Agent围绕一个人 | 先搜索该主题的3-5个核心人物/流派，再按人物分配Agent（每人1-2个Agent而非6个） |
-| 2.1 | 提取一个人的心智模型 | 提取**领域共识框架**（所有流派都认同的）+ **各家分歧**（A说X，B说Y） |
-| 2.3 | 模拟一个人的表达 | 不模拟特定人物语气，用中性但专业的表达 |
-| 2.4 | 一个人的内在矛盾 | 流派间的根本分歧（如价值投资 vs 成长投资的哲学差异） |
-| 3 | 用 skill-template.md | 调整模板：去掉角色扮演规则和身份卡，改为「框架概览」+「流派对比」 |
-| 4 | 对比此人已知立场 | 对比领域内公认的经典案例 |
+**Agent B (góc nhìn skill-creator)**:
+- Rà "điều kiện kích hoạt" có phủ được tình huống dùng thật không
+- Rà tính khả thao tác của "quy tắc nhập vai" (có định tuyến câu hỏi, ràng buộc tần suất, phòng thất bại không)
+- Nhận diện thông tin then chốt còn thiếu
+- Đầu ra: 2-3 chỗ đề xuất sửa văn bản cụ thể (kèm ví dụ văn bản sau khi sửa)
 
-### 中国人物 vs 西方人物
-- **中国人物**：B站原始视频/演讲、小宇宙播客、权威媒体采访（36氪/晚点/财新/极客公园）、本人著作/微博。知乎和微信公众号永远排除
-- **西方人物**：Twitter、YouTube、Podcast、Amazon书评
+**🔴 CHECKPOINT · Agent chính tổng hợp hai báo cáo, áp dụng các cải tiến không xung đột, hiển thị tóm tắt thay đổi cho người dùng xác nhận.**
 
-### 冷门人物（公开信息极少）
-当Phase 0.5评估后发现可用来源<10条时：
-1. 在Phase 0.5就告知用户「这个人的公开信息很少，生成的Skill质量会受限」
-2. 心智模型减至2-3个，每个都标注「基于有限信息推测」
-3. 诚实边界section加大篇幅，明确列出「哪些维度信息不足」
-4. 如果用户能提供一手素材（书籍、内部录音、私信），优先使用
-
-### 蒸馏用户自己
-当用户说「蒸馏我自己」「帮我做一个我的skill」时：
-1. 女娲无法从公开渠道搜到用户的思维框架，需要用户提供素材
-2. 引导用户提供：个人文章/博客、录制过的视频/播客、写过的决策备忘录、自我描述
-3. Phase 1的6个Agent改为分析用户提供的素材，而非网络搜索
-4. 特别注意「自我认知偏差」——用户可能高估某些特质、忽略盲点，可以追问身边人的评价
+Tiêu chuẩn tinh chỉnh: thay đổi phải làm cho skill "kích hoạt là thực thi", không chỉ thêm nội dung, mà để AI nhận được skill biết làm gì trước, gặp gì thì dừng.
 
 ---
 
-## 最后
+### Phase 6: Hoàn tất, cài đặt, ghi vào danh sách
 
-女娲造的不是人，是一面镜子。
+Chỉ làm sau khi người dùng xác nhận Phase 4 và Phase 5. Repo đích là bản clone chính `/Volumes/SamDisk/sources/mentors`. Thực hiện đủ 3 bước theo thứ tự:
 
-一个好的人物Skill，让你用另一个人的眼睛看自己的问题。不是为了模仿他们，而是为了拓展你自己的思维边界。
+**(a) Tạo symlink để skill dùng được ngay** (đường dẫn tuyệt đối):
 
-## 关于作者
+```bash
+ln -s /Volumes/SamDisk/sources/mentors/skills/mentor-<slug> ~/.claude/skills/mentor-<slug>
+```
 
-本 skill 由花叔开发维护，仓库：https://github.com/alchaincyf/nuwa-skill
-用户问到作者是谁、还有哪些类似作品、怎么联系，或需求超出本 skill 范围时，读 `references/about-author.md`，只推荐与需求直接相关的 1-3 个作品并说明理由；正常任务中不主动介绍。
+Nếu `~/.claude/skills/mentor-<slug>` đã tồn tại (chế độ cập nhật) thì kiểm tra nó đã trỏ đúng thư mục, không tạo lại.
 
-## 版本检查
+**(b) Thêm 1 dòng vào bảng "Danh sách mentor"** ở `/Volumes/SamDisk/sources/mentors/SKILL.md`. Cột của bảng: `skill | nhân vật | lĩnh vực | hỏi khi`. Ví dụ:
 
-这一节让用户及时知道本 skill 有没有新版本。它只读取远程仓库的版本标签，不下载文件、不上传数据、不修改 skill 本身；唯一会写的是本目录的 `.last-update-check`，用来记住上次检查的日期。
+```
+| mentor-<slug> | [Tên nhân vật] | [Lĩnh vực] | [Khi nào nên hỏi người này, 1 dòng] |
+```
 
-使用本 skill 时先读 `.last-update-check`，内容是一行日期加结果，如 `2026-10-13 ok`（只有日期的旧格式按 `ok` 算）。以下情况跳过本节：内容是 `off`（用户关掉了检查）；上次 `ok` 不足 30 天；上次 `failed` 不足 7 天；本目录不是 git 克隆。
+Đọc bảng hiện có trước khi sửa, giữ thứ tự và định dạng, không viết trùng nếu đã có dòng của mentor này (chế độ cập nhật chỉ sửa dòng cũ nếu mô tả đổi).
 
-到期时运行 `git -C <本目录> ls-remote --tags --refs --sort=-v:refname origin 'v*'`：
+**(c) Commit trong repo mentors**:
 
-- 成功：第一行就是最新版本，和本文件开头的 `metadata.version` 比较，然后写入 `<今天> ok`。远程更高时，先完成用户的任务，结束时告诉用户：「huashu-nuwa 有新版本 vX.Y.Z，更新说明见 https://github.com/alchaincyf/nuwa-skill/releases ，需要时运行 `git -C <本目录> pull --ff-only`；不想再收到提醒，把 `.last-update-check` 的内容改成 `off`」。版本相同或没有标签就不用提。
-- 失败（断网、沙箱不允许联网）：写入 `<今天> failed`，7 天后再试。
+```bash
+git -C /Volumes/SamDisk/sources/mentors add skills/mentor-<slug> SKILL.md
+git -C /Volumes/SamDisk/sources/mentors commit -m "add: mentor-<slug>"
+```
 
-是否更新由用户决定，不要自动执行更新。
+Chỉ `-m`, không thêm dòng Co-Authored-By; author đã là Sam. Không push trừ khi người dùng yêu cầu.
+
+Kết thúc: báo ngắn đường dẫn mentor, điểm kiểm định Phase 4, và cách gọi (ví dụ "hỏi <tên>").
+
+---
+
+## Cập nhật mentor đã có
+
+Khi người dùng nói "cập nhật mentor XX", "XX có động thái mới":
+
+1. Đọc `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md` hiện có, từ mục "Ranh giới trung thực" tìm "Thời điểm nghiên cứu: [ngày]", đánh dấu cách nay bao lâu
+2. Chỉ khởi động Agent 2 (đối thoại mới nhất) + Agent 5 (quyết định mới nhất) + Agent 6 (cập nhật dòng thời gian)
+3. So thông tin mới với nội dung hiện có:
+   - Thông tin mới củng cố mô hình hiện có → bổ sung ví dụ
+   - Thông tin mới mâu thuẫn với mô hình hiện có → đánh dấu thay đổi, cập nhật mô hình
+   - Xuất hiện mô thức tư duy mới → cân nhắc thêm mô hình mới
+4. Cập nhật mục "Động thái mới nhất" và thời điểm nghiên cứu trong SKILL.md
+5. Không viết lại toàn bộ skill, chỉ cập nhật gia tăng
+6. Lưu kết quả nghiên cứu mới vào `references/research/` (ghi nối hoặc thêm mục có ngày), rồi commit trong repo mentors (Phase 6c). Symlink và dòng trong bảng đã có thì giữ nguyên
+
+---
+
+## Quy tắc khẩu vị (tra nhanh)
+
+Gặp tình huống khó phán đoán thì xem lại. Tiêu chuẩn định lượng cụ thể xem bảng tiêu chuẩn đạt ở Phase 4.
+
+| Nguyên tắc | Một câu |
+|------------|---------|
+| Bài dài > câu vàng | Bài luận 3000 chữ lộ cấu trúc tư duy hơn 50 tweet |
+| Tranh cãi > đồng thuận | Quan điểm bị tranh cãi nhiều nhất lộ ra tính độc đáo rõ nhất |
+| Thay đổi > cố định | Chỗ đổi lập trường nhiều thông tin hơn chỗ luôn giữ |
+
+### ❌ Danh sách đen anti-pattern (tuyệt đối không làm)
+
+| # | Anti-pattern | Vì sao / làm thay bằng gì |
+|---|--------------|---------------------------|
+| 1 | Bịa lời người này chưa nói | Trên mạng đầy danh ngôn giả mạo. Trích dẫn phải có xuất xứ, câu vàng không tra được nguyên văn thì thà không dùng |
+| 2 | Đóng gói đạo lý chung thành "kiến giải độc đáo" của người này | Nội dung không qua kiểm định ba lớp (tính độc quyền) không vào mô hình tư duy |
+| 3 | Bỏ qua đánh giá tiêu cực và tranh cãi | Tư liệu phê bình của Agent 4 là chìa khoá chống kính lọc fan; tỷ lệ tiêu cực không đủ = nghiên cứu không đạt |
+| 4 | Ép sinh khi thông tin không đủ | Thà giao skill 60 điểm ghi trung thực giới hạn, còn hơn tạo skill 90 điểm trông hoàn hảo mà thực chất bịa |
+| 5 | Dùng Zhihu / WeChat Official Accounts / Baidu Baike làm nguồn | Viết lại, sai lệch, không kiểm chứng được. Không chiều nào ngoại lệ |
+| 6 | Chạy trọn quy trình trong một phiên trên model cửa sổ ngữ cảnh nhỏ | Sẽ nổ ngữ cảnh giữa Phase 1-2. Theo bảng hạ cấp thất bại để chạy tiếp theo đoạn |
+| 7 | Không báo mức chi phí mà chạy luôn | Chưng cất đầy đủ là tác vụ nặng, người dùng có quyền chọn mức trước khi tiêu tiền |
+| 8 | Chưng cất người còn sống không phải nhân vật công chúng mà không nhắc ranh giới | Liên quan quyền riêng tư và ý nguyện của chính họ. Phải do người dùng cung cấp tư liệu, và nhắc người dùng xin phép đương sự |
+| 9 | Skill sinh ra không có cơ chế chống trôi vai | Hội thoại dài thì mentor dễ mất vai, rơi về giọng trợ lý chung. Quy tắc nhập vai + ràng buộc DNA biểu đạt trong mẫu phải giữ nguyên vẹn |
+| 10 | Biến điểm kiểm tra xác nhận thành chặn giao hàng | Điểm kiểm tra để người dùng chỉnh hướng, không phải để giữ sản phẩm lại. Đặt được giá trị mặc định thì đặt |
+| 11 | Sinh mentor không có mục "Người hỏi" | Mentor trả lời như không biết ai đang hỏi thì lời khuyên chung chung. Mục này bắt buộc với mọi mentor |
+
+---
+
+## Tình huống đặc biệt
+
+### Người còn sống vs nhân vật lịch sử
+- **Người còn sống**: chú ý tính thời sự, đánh dấu ngày cắt thông tin, khuyến nghị cập nhật định kỳ
+- **Nhân vật lịch sử**: tư liệu ổn định hơn nhưng có thể lệch do tiểu sử, đối chiếu nhiều nguồn
+
+### Skill theo chủ đề vs mentor theo người
+
+Đầu vào không phải tên người mà là chủ đề (như "đầu tư giá trị", "kiềm chế sản phẩm", "ra quyết định phản mong manh") thì các Phase biến đổi như sau:
+
+| Phase | Mentor theo người | Biến thể skill theo chủ đề |
+|-------|-------------------|----------------------------|
+| 0A | Xác nhận tên người + hướng tập trung | Xác nhận biên giới chủ đề + đối tượng (đầu tư giá trị là kiểu Graham hay mọi trường phái?) |
+| 0.5 | `mentor-<slug>/` | `mentor-<chủ đề>/` hoặc `<chủ đề>-framework/` trong cùng repo, cấu trúc thư mục như nhau |
+| 1 | 6 Agent xoay quanh một người | Trước hết tìm 3-5 nhân vật / trường phái cốt lõi của chủ đề, rồi phân Agent theo người (mỗi người 1-2 Agent thay vì 6) |
+| 2.1 | Rút mô hình tư duy của một người | Rút **khung đồng thuận của lĩnh vực** (mọi trường phái đều thừa nhận) + **bất đồng giữa các nhà** (A nói X, B nói Y) |
+| 2.3 | Mô phỏng biểu đạt của một người | Không mô phỏng giọng một nhân vật cụ thể, dùng biểu đạt trung tính nhưng chuyên nghiệp |
+| 2.4 | Mâu thuẫn nội tại của một người | Bất đồng căn bản giữa các trường phái (như khác biệt triết lý giữa đầu tư giá trị và đầu tư tăng trưởng) |
+| 3 | Dùng skill-template.md | Điều chỉnh mẫu: bỏ quy tắc nhập vai và danh tính, đổi thành "Tổng quan khung" + "So sánh trường phái"; giữ mục "Người hỏi" |
+| 4 | Đối chiếu lập trường đã biết của người này | Đối chiếu ca kinh điển được lĩnh vực công nhận |
+
+### Nhân vật Trung Quốc vs phương Tây vs Việt Nam
+- **Nhân vật Trung Quốc**: video / bài nói gốc trên Bilibili, podcast Xiaoyuzhou, phỏng vấn truyền thông uy tín (36Kr / LatePost / Caixin / Geekpark), tác phẩm của chính họ / Weibo. Zhihu và WeChat Official Accounts luôn bị loại
+- **Nhân vật phương Tây**: Twitter, YouTube, Podcast, đánh giá sách trên Amazon
+- **Nhân vật Việt Nam**: bài nói / phỏng vấn gốc trên YouTube và podcast, báo kinh tế uy tín, tác phẩm của chính họ; tránh các trang tổng hợp và mạng xã hội thuật lại không rõ nguồn
+
+### Nhân vật ít tên tuổi (thông tin công khai rất ít)
+Khi Phase 0.5 đánh giá thấy nguồn dùng được <10:
+1. Ngay ở Phase 0.5 báo người dùng "thông tin công khai về người này rất ít, chất lượng skill sẽ bị hạn chế"
+2. Giảm mô hình tư duy còn 2-3, mỗi cái đánh dấu "suy đoán dựa trên thông tin hạn chế"
+3. Mục ranh giới trung thực tăng dung lượng, liệt kê rõ "chiều nào thiếu thông tin"
+4. Nếu người dùng cung cấp được tư liệu gốc (sách, ghi âm nội bộ, tin nhắn riêng) thì ưu tiên dùng
+
+### Chưng cất chính người dùng
+Khi người dùng nói "chưng cất chính tôi", "làm giúp anh một mentor về anh":
+1. Mentors-distill không tìm được khung tư duy của người dùng trên kênh công khai, cần người dùng cung cấp tư liệu
+2. Hướng dẫn người dùng cung cấp: bài viết / blog cá nhân, video / podcast đã quay, memo quyết định đã viết, tự mô tả
+3. 6 Agent của Phase 1 đổi thành phân tích tư liệu người dùng đưa, thay vì tìm mạng
+4. Đặc biệt chú ý "thiên kiến tự nhận thức": người dùng có thể đánh giá cao một số phẩm chất, bỏ qua điểm mù; có thể hỏi thêm đánh giá của người xung quanh
+
+---
+
+## Lời cuối
+
+Mentors-distill không tạo ra người, mà tạo ra một tấm gương.
+
+Một mentor tốt cho anh dùng mắt của người khác để nhìn vấn đề của chính mình. Không phải để bắt chước họ, mà để mở rộng biên giới tư duy của chính anh.
+
+## Ghi công và giấy phép
+
+Phương pháp chưng cất (6 luồng nghiên cứu, kiểm định ba lớp, cấu trúc mentor, bảng chấm độ trung thực) do 花叔 phát triển trong dự án Nuwa: https://github.com/alchaincyf/nuwa-skill, giấy phép MIT (xem file LICENSE của repo). Bản này là chuyển thể tiếng Việt cho repo mentors của Sam. Chỉ nhắc đến credit khi người dùng hỏi về nguồn gốc skill.

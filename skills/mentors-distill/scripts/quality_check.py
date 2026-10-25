@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""
-自动检查生成的SKILL.md是否通过Phase 4质量标准。
-对照通过标准表格逐项检查，输出通过/不通过和具体原因。
+"""Kiểm tra tự động SKILL.md có đạt tiêu chuẩn chất lượng Giai đoạn 4.
 
-用法:
-    python3 quality_check.py <SKILL.md路径>
+Đối chiếu từng tiêu chí, rồi in trạng thái đạt/chưa đạt cùng lý do cụ thể.
 
-示例:
-    python3 quality_check.py .claude/skills/elon-musk-perspective/SKILL.md
+Cách dùng:
+    python3 quality_check.py <đường_dẫn_SKILL.md>
+
+Ví dụ:
+    python3 quality_check.py /Volumes/SamDisk/sources/mentors/skills/mentor-elon-musk/SKILL.md
 """
 
 import sys
@@ -16,113 +16,145 @@ from pathlib import Path
 
 
 def check_mental_models(content: str) -> tuple[bool, str]:
-    """检查心智模型数量（3-7个）"""
-    # 匹配 ### 模型N: 或 ### N. 等模式
-    models = re.findall(r'^###\s+(?:模型|Model|心智模型)\s*\d', content, re.MULTILINE)
+    """Kiểm tra số lượng mô hình tư duy (3-7 mô hình)."""
+    # Khớp các tiêu đề như ### Mô hình N: hoặc ### Model N:.
+    models = re.findall(r'^###\s+(?:mô hình|model|mental model)\s*\d', content, re.MULTILINE | re.IGNORECASE)
     if not models:
-        # fallback: 数「### 」开头的行在心智模型section中
+        # Dự phòng: đếm tiêu đề cấp 3 trong phần mô hình tư duy.
         in_section = False
         count = 0
         for line in content.split('\n'):
-            if re.match(r'^##\s+.*心智模型|Mental Model', line, re.IGNORECASE):
+            if re.match(r'^##\s+.*(?:mô hình tư duy|mental model)', line, re.IGNORECASE):
                 in_section = True
                 continue
-            if in_section and re.match(r'^##\s+', line) and '心智模型' not in line:
+            if in_section and re.match(r'^##\s+', line) and 'mô hình tư duy' not in line.lower():
                 break
             if in_section and re.match(r'^###\s+', line):
                 count += 1
         if count > 0:
             passed = 3 <= count <= 7
-            return passed, f"{count}个心智模型 {'✅' if passed else '❌ (应为3-7个)'}"
+            return passed, f"{count} mô hình tư duy {'✅' if passed else '❌ (cần 3-7 mô hình)'}"
 
     count = len(models)
     if count == 0:
-        return False, "未检测到心智模型section"
+        return False, "Không tìm thấy phần mô hình tư duy"
     passed = 3 <= count <= 7
-    return passed, f"{count}个心智模型 {'✅' if passed else '❌ (应为3-7个)'}"
+    return passed, f"{count} mô hình tư duy {'✅' if passed else '❌ (cần 3-7 mô hình)'}"
 
 
 def check_limitations(content: str) -> tuple[bool, str]:
-    """检查每个模型是否有局限性"""
-    has_limitation = bool(re.search(r'局限|失效|不适用|盲区|limitation|blind spot', content, re.IGNORECASE))
-    return has_limitation, "有局限性标注 ✅" if has_limitation else "❌ 未找到局限性描述"
+    """Kiểm tra mỗi mô hình có dòng nêu giới hạn."""
+    model_sections = re.findall(
+        r'^###\s+(?:mô hình|model|mental model)\s*\d.*?(?=^###\s+|^##\s+|\Z)',
+        content,
+        re.MULTILINE | re.DOTALL | re.IGNORECASE,
+    )
+    limitation_pattern = re.compile(
+        r'^\s*(?:[-*]\s*)?\*\*(?:giới hạn|mất hiệu lực|không áp dụng|điểm mù|limitation|blind spot)\*\*\s*:',
+        re.MULTILINE | re.IGNORECASE,
+    )
+    if not model_sections:
+        return False, "❌ Không tìm thấy mô hình để kiểm tra giới hạn"
+
+    missing = sum(not limitation_pattern.search(section) for section in model_sections)
+    passed = missing == 0
+    return (
+        passed,
+        "Mỗi mô hình đều có giới hạn ✅"
+        if passed
+        else f"❌ {missing}/{len(model_sections)} mô hình chưa có dòng giới hạn",
+    )
 
 
 def check_expression_dna(content: str) -> tuple[bool, str]:
-    """检查表达DNA辨识度"""
-    dna_section = bool(re.search(r'表达DNA|Expression DNA|表达风格', content, re.IGNORECASE))
+    """Kiểm tra DNA biểu đạt có đủ dấu hiệu phong cách."""
+    dna_section = re.search(
+        r'^##\s+[^\n]*(?:DNA biểu đạt|Expression DNA|biểu đạt|expression)[^\n]*$'
+        r'(.*?)(?=\n##\s|\Z)',
+        content,
+        re.MULTILINE | re.DOTALL | re.IGNORECASE,
+    )
     if not dna_section:
-        return False, "❌ 未找到表达DNA section"
+        return False, "❌ Không tìm thấy phần DNA biểu đạt"
 
-    # 检查是否有具体的风格描述（句式、词汇等）
-    style_markers = len(re.findall(r'句式|词汇|语气|幽默|节奏|确定性|引用|口头禅', content))
+    # Đếm các loại dấu hiệu phong cách, không tính lặp lại cùng một loại.
+    markers = r'câu|từ vựng|giọng|hài hước|nhịp|độ chắc chắn|trích dẫn|câu cửa miệng'
+    style_markers = len(set(re.findall(markers, dna_section.group(1), re.IGNORECASE)))
     passed = style_markers >= 3
-    return passed, f"表达DNA特征: {style_markers}项 {'✅' if passed else '❌ (应≥3项)'}"
+    return passed, f"Dấu hiệu DNA biểu đạt: {style_markers} {'✅' if passed else '❌ (cần ≥3)'}"
 
 
 def check_honest_boundary(content: str) -> tuple[bool, str]:
-    """检查诚实边界（至少3条）"""
-    # 找诚实边界section
-    boundary_match = re.search(r'(?:##\s+.*诚实边界|## Honest Boundary)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
+    """Kiểm tra ranh giới trung thực (ít nhất 3 mục)."""
+    # Tìm phần ranh giới trung thực.
+    boundary_match = re.search(r'(?:##\s+[^\n]*ranh giới trung thực|##\s+honest boundar\w*)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
     if not boundary_match:
-        return False, "❌ 未找到诚实边界section"
+        return False, "❌ Không tìm thấy phần ranh giới trung thực"
 
     boundary_text = boundary_match.group(1)
-    # 计算列表项
+    # Đếm các mục dạng gạch đầu dòng.
     items = re.findall(r'^[-*]\s+', boundary_text, re.MULTILINE)
     count = len(items)
     passed = count >= 3
-    return passed, f"诚实边界: {count}条 {'✅' if passed else '❌ (应≥3条)'}"
+    return passed, f"Ranh giới trung thực: {count} mục {'✅' if passed else '❌ (cần ≥3 mục)'}"
 
 
 def check_tensions(content: str) -> tuple[bool, str]:
-    """检查内在张力（至少2对）"""
-    tension_markers = len(re.findall(r'张力|矛盾|tension|paradox|一方面.*另一方面|既.*又', content, re.IGNORECASE))
+    """Kiểm tra giằng co nội tại (ít nhất 2 dấu hiệu)."""
+    tension_markers = len(re.findall(
+        r'giằng co|mâu thuẫn|căng thẳng|tension|paradox|một mặt.*mặt khác|vừa.*vừa',
+        content,
+        re.IGNORECASE,
+    ))
     passed = tension_markers >= 2
-    return passed, f"内在张力: {tension_markers}处 {'✅' if passed else '❌ (应≥2处)'}"
+    return passed, f"Giằng co nội tại: {tension_markers} chỗ {'✅' if passed else '❌ (cần ≥2)'}"
 
 
 def check_primary_sources(content: str) -> tuple[bool, str]:
-    """检查一手来源占比"""
-    # 找调研来源section
-    source_section = re.search(r'(?:##\s+.*来源|## Source|## Reference)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
+    """Kiểm tra tỷ lệ nguồn sơ cấp."""
+    # Tìm phần phụ lục nguồn nghiên cứu.
+    source_section = re.search(
+        r'(?:##\s+[^\n]*phụ lục:\s*nguồn nghiên cứu|##\s+[^\n]*(?:source|reference))(.*?)(?=\n##\s|\Z)',
+        content,
+        re.DOTALL | re.IGNORECASE,
+    )
     if not source_section:
-        return True, "未找到来源section（跳过检查）"
+        return True, "Không tìm thấy phần nguồn (bỏ qua kiểm tra)"
 
     source_text = source_section.group(1)
-    primary = len(re.findall(r'一手|primary|本人著作|原始', source_text, re.IGNORECASE))
-    secondary = len(re.findall(r'二手|secondary|转述|评论', source_text, re.IGNORECASE))
+    primary = len(re.findall(r'sơ cấp|primary|tác phẩm của chính người đó|gốc', source_text, re.IGNORECASE))
+    secondary = len(re.findall(r'thứ cấp|secondary|trích lại|bình luận', source_text, re.IGNORECASE))
     total = primary + secondary
     if total == 0:
-        return True, "未标记来源类型（跳过检查）"
+        return True, "Chưa đánh dấu loại nguồn (bỏ qua kiểm tra)"
 
     ratio = primary / total
     passed = ratio > 0.5
-    return passed, f"一手来源占比: {primary}/{total} ({ratio:.0%}) {'✅' if passed else '❌ (应>50%)'}"
+    return passed, f"Tỷ lệ nguồn sơ cấp: {primary}/{total} ({ratio:.0%}) {'✅' if passed else '❌ (cần >50%)'}"
 
 
 def main():
     if len(sys.argv) < 2:
-        print("用法: python3 quality_check.py <SKILL.md路径>")
+        print("Cách dùng: python3 quality_check.py <đường_dẫn_SKILL.md>")
         sys.exit(1)
 
     skill_path = Path(sys.argv[1])
     if not skill_path.exists():
-        print(f"❌ 文件不存在: {skill_path}")
+        print(f"❌ Không tìm thấy tệp: {skill_path}")
         sys.exit(1)
 
     content = skill_path.read_text(encoding='utf-8')
 
     checks = [
-        ("心智模型数量", check_mental_models),
-        ("模型局限性", check_limitations),
-        ("表达DNA辨识度", check_expression_dna),
-        ("诚实边界", check_honest_boundary),
-        ("内在张力", check_tensions),
-        ("一手来源占比", check_primary_sources),
+        ("Số mô hình tư duy", check_mental_models),
+        ("Giới hạn mô hình", check_limitations),
+        ("DNA biểu đạt", check_expression_dna),
+        ("Ranh giới trung thực", check_honest_boundary),
+        ("Giằng co nội tại", check_tensions),
+        ("Tỷ lệ nguồn sơ cấp", check_primary_sources),
     ]
 
-    print(f"质量检查: {skill_path.name}")
+    print(f"Kiểm tra chất lượng: {skill_path.name}")
     print("=" * 50)
 
     passed_count = 0
@@ -136,14 +168,14 @@ def main():
             passed_count += 1
 
     print("=" * 50)
-    print(f"结果: {passed_count}/{total} 通过")
+    print(f"Kết quả: {passed_count}/{total} đạt")
 
     if passed_count == total:
-        print("🎉 全部通过，可以交付")
+        print("🎉 Tất cả đều đạt, có thể bàn giao")
     elif passed_count >= total - 1:
-        print("⚠️ 基本通过，建议修复不通过项后交付")
+        print("⚠️ Gần đạt, nên sửa mục chưa đạt trước khi bàn giao")
     else:
-        print("❌ 多项不通过，建议回到Phase 2迭代")
+        print("❌ Nhiều mục chưa đạt, nên quay lại Giai đoạn 2 để cải thiện")
 
     sys.exit(0 if passed_count == total else 1)
 
