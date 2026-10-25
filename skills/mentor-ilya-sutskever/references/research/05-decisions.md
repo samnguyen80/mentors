@@ -1,347 +1,347 @@
-# Ilya Sutskever: 重大决策、转折点与争议行为
+# Ilya Sutskever: Major Decisions, Turning Points, and Controversial Actions
 
-> 调研时间: 2026-04-05
-> 信息源: Wikipedia, TechCrunch, Time, Fortune, Axios, CNBC, Gizmodo, Decrypt, Dwarkesh Patel Podcast, Calcalist, EA Forum, LessWrong, The Neuron, Israel Hayom
-> 排除源: 知乎, 百度百科, 微信公众号
-
----
-
-## 1. 学术生涯决策: 师从Hinton
-
-### 背景
-Ilya Sutskever 1986年生于俄罗斯(前苏联), 5岁移民以色列, 16岁移居加拿大。在多伦多大学完成数学本科(2005)、计算机硕士(2007)、计算机博士(2013)。
-
-### 选择
-选择Geoffrey Hinton作为导师, 在深度学习仍被主流AI学界边缘化的年代押注神经网络。
-
-### 逻辑
-Sutskever很早就对神经网络的潜力有直觉。当时主流AI研究偏向符号主义和统计方法, Hinton的连接主义路线被认为是少数派。选择Hinton意味着押注一个不被看好的方向。
-
-### 结果
-2012年与Hinton、Alex Krizhevsky合作完成AlexNet, 在ImageNet竞赛中以碾压性优势获胜, 被视为深度学习革命的起点。Hinton后来说: "Ilya thought we should do it, Alex made it work, and I got the Nobel prize."
-
-### 关键细节
-- Sutskever相信神经网络性能会随数据量增长而提升(scaling intuition的最早体现)
-- ImageNet大规模数据集的出现恰好验证了这一直觉
-- 这是他后来一系列scaling押注的思想原点
-
-**事实确认度: 高** (多个一手来源交叉验证)
+> Research date: 2026-04-05
+> Sources: Wikipedia, TechCrunch, Time, Fortune, Axios, CNBC, Gizmodo, Decrypt, Dwarkesh Patel Podcast, Calcalist, EA Forum, LessWrong, The Neuron, Israel Hayom
+> Excluded sources: Zhihu, Baidu Baike, WeChat Official Accounts
 
 ---
 
-## 2. 加入Google Brain (2012-2015)
+## 1. Academic Career Decision: Studying under Hinton
 
-### 背景
-AlexNet成功后, Sutskever短暂在Stanford跟Andrew Ng做博士后(约2个月), 随后回到多伦多加入Hinton创办的DNNResearch。2013年Google收购DNNResearch, Sutskever随之加入Google Brain。
+### Background
+Ilya Sutskever was born in 1986 in Russia (the former Soviet Union), emigrated to Israel at age 5, and moved to Canada at 16. At the University of Toronto he completed his bachelor's in mathematics (2005), master's in computer science (2007), and PhD in computer science (2013).
 
-### 选择
-从学术界转向工业界, 进入Google Brain团队。
+### Choice
+Chose Geoffrey Hinton as his advisor, betting on neural networks in an era when deep learning was still marginalized by mainstream AI academia.
 
-### 逻辑
-Google提供了学术界无法比拟的算力和数据资源。DNNResearch被收购是一个package deal(Hinton、Krizhevsky、Sutskever一同加入), 不完全是个人独立决策。
+### Logic
+Sutskever had an early intuition about the potential of neural networks. Mainstream AI research at the time favored symbolism and statistical methods, and Hinton's connectionist route was considered a minority view. Choosing Hinton meant betting on a direction that was not well regarded.
 
-### 在Google的成果
-- 与Oriol Vinyals、Quoc Viet Le合作开发sequence-to-sequence学习算法(成为现代机器翻译和语言建模的核心框架)
-- 参与TensorFlow早期开发
-- 参与AlphaGo论文(作为合著者之一)
+### Outcome
+In 2012, working with Hinton and Alex Krizhevsky, he completed AlexNet, which won the ImageNet competition by a crushing margin and is regarded as the starting point of the deep learning revolution. Hinton later said: "Ilya thought we should do it, Alex made it work, and I got the Nobel prize."
 
-### 结果
-在Google期间的工作为他后来在OpenAI推动GPT系列奠定了技术基础, 尤其是sequence-to-sequence的经验。
+### Key details
+- Sutskever believed that neural network performance would improve as data volume grew (the earliest expression of his scaling intuition)
+- The arrival of the large-scale ImageNet dataset happened to validate this intuition
+- This is the intellectual origin of his later series of scaling bets
 
-**事实确认度: 高**
-
----
-
-## 3. 离开Google, 联合创立OpenAI (2015)
-
-### 背景
-2015年底, Elon Musk、Sam Altman等人筹备创建一个非营利AI实验室。Sutskever是被重点招募的对象。
-
-### 选择
-放弃Google的优厚条件(资源、算力、团队), 加入一个尚未成立的非营利AI组织。
-
-### 决策过程 [已确认]
-这不是一个轻松的决定。据Elon Musk 2023年公开描述:
-- Sutskever反复摇摆, 多次表示要加入OpenAI, 又被DeepMind的Demis Hassabis说服留下
-- 来回拉锯了好几次, 最终决定加入OpenAI
-- Musk称"Ilya joining was the linchpin for OpenAI being ultimately successful"
-
-### 逻辑
-- Sutskever自述: 他在Google享受了工作, 但想做更多(wanted to do more)
-- OpenAI的非营利结构和"benefit humanity"使命可能吸引了他
-- 作为首席科学家(而非Google大团队中的一员), 他可以主导技术方向
-
-### 结果
-- 成为OpenAI六名董事会成员之一
-- 获得首席科学家头衔, 全面主导研究方向
-- OpenAI后来的所有核心技术突破(GPT系列)都在他的科学领导下完成
-
-### 言行一致性分析
-加入时的理想主义动机(非营利、benefit humanity)与后来OpenAI转向商业化的矛盾, 成为2023年董事会危机的伏笔。
-
-**事实确认度: 高** (Musk的证词作为一手来源)
+**Confidence in facts: high** (cross-validated by multiple primary sources)
 
 ---
 
-## 4. OpenAI技术路线决策
+## 2. Joining Google Brain (2012-2015)
 
-### 4a. GPT/Transformer路线的选择
+### Background
+After AlexNet's success, Sutskever briefly did a postdoc under Andrew Ng at Stanford (about 2 months), then returned to Toronto and joined DNNResearch, founded by Hinton. In 2013 Google acquired DNNResearch, and Sutskever joined Google Brain along with it.
 
-**背景**: OpenAI早期探索了多种方法(包括强化学习、机器人等)。Sutskever推动了基于大规模无监督预训练的语言模型路线。
+### Choice
+Moved from academia to industry, joining the Google Brain team.
 
-**关键押注**: 
-- 大规模无监督文本预训练能解锁通用能力
-- Transformer架构(2017年Google "Attention is All You Need"论文提出)适合大规模scaling
-- GPT-1(2018) → GPT-2(2019) → GPT-3(2020) → GPT-4(2023)全部在Sutskever的科学领导下完成
+### Logic
+Google offered compute and data resources that academia could not match. The DNNResearch acquisition was a package deal (Hinton, Krizhevsky, and Sutskever joined together), so it was not entirely an independent personal decision.
 
-**事实确认度: 高**
+### Achievements at Google
+- Developed the sequence-to-sequence learning algorithm with Oriol Vinyals and Quoc Viet Le (it became the core framework of modern machine translation and language modeling)
+- Took part in early TensorFlow development
+- Took part in the AlphaGo paper (as one of the co-authors)
 
-### 4b. Scaling Hypothesis的押注
+### Outcome
+His work at Google laid the technical foundation for his later push of the GPT series at OpenAI, especially the experience with sequence-to-sequence.
 
-**背景**: 2020年, Sutskever领导了OpenAI的neural scaling laws研究, 建立了模型性能与规模(参数量、数据量、计算量)之间的power law关系。
-
-**选择**: 把OpenAI的核心策略押在"越大越好"上。
-
-**逻辑**: 
-- 这可以追溯到AlexNet时期的直觉: 性能随数据规模提升
-- Scaling laws提供了数学化的预测框架
-- 与Dario Amodei(后来离开创建Anthropic)等人共同推动这一方向
-
-**结果**: 
-- GPT-3和GPT-4的成功验证了scaling hypothesis
-- OpenAI一度成为全球AI领域的领导者
-
-**后来的立场转变** [重要矛盾]:
-- 2024年12月NeurIPS演讲: 宣称"pre-training as we know it will end", 提出"peak data"概念("we have but one internet")
-- 2025年11月Dwarkesh Patel采访: 明确说"2020-2025是scaling时代, 2026起进入research时代"
-- 被问100x更多scaling是否能改变一切, 回答"I don't think that's true"
-- 后续在X上澄清: scaling当前方法仍会带来改进, 但"something important will continue to be missing"
-
-**言行一致性分析**: 
-这是一个重大立场转变。Sutskever从scaling的核心推动者变成了质疑者。但这不一定是矛盾——他可能认为scaling在2020-2025确实有效, 只是现在触及天花板了。问题是: 他在SSI做的是什么? 如果不是scaling, 那他押注的新方向是什么? 他拒绝透露。
-
-**事实确认度: 高** (公开演讲和采访)
+**Confidence in facts: high**
 
 ---
 
-## 5. 2023年11月董事会事件 [最重要]
+## 3. Leaving Google, Co-founding OpenAI (2015)
 
-这是Sutskever职业生涯中最具争议的决策, 也是信息量最大的事件。
+### Background
+In late 2015, Elon Musk, Sam Altman, and others were preparing to create a nonprofit AI lab. Sutskever was a key recruitment target.
 
-### 5a. 事前准备 (至少一年)
+### Choice
+Gave up Google's generous conditions (resources, compute, team) to join a nonprofit AI organization that did not yet exist.
 
-**已确认事实** (来源: 2025年10月1日宣誓证词, 近10小时):
-- Sutskever至少花了一年时间考虑罢免Altman
-- 他等待的条件是"the majority of the board is not obviously friendly with Sam"
-- 他撰写了一份52页的备忘录, 以brief形式组织, 指控Altman:
-  - "a consistent pattern of lying" (持续撒谎的模式)
-  - "undermining his execs" (破坏高管)
-  - "pitting his execs against one another" (让高管互相对立)
-- 备忘录通过disappearing emails发送给独立董事, 以防泄露
-- CTO Mira Murati对备忘录部分内容做了截图保存
+### Decision process [confirmed]
+This was not an easy decision. According to Elon Musk's public account in 2023:
+- Sutskever wavered repeatedly, several times saying he would join OpenAI, and was talked into staying by DeepMind's Demis Hassabis
+- It went back and forth several times before he finally decided to join OpenAI
+- Musk said "Ilya joining was the linchpin for OpenAI being ultimately successful"
 
-**关键薄弱点** [需注意]:
-- Sutskever在证词中承认, 备忘录中的指控"几乎全部来自单一来源: CTO Mira Murati"
-- 他承认没有与其他高管交叉验证
-- 他承认依赖的是"secondhand knowledge"(二手信息)
-- 事后反思: "In hindsight, I realize that I didn't know it"
+### Logic
+- Sutskever's own account: he enjoyed working at Google, but wanted to do more
+- OpenAI's nonprofit structure and its mission to "benefit humanity" may have attracted him
+- As Chief Scientist (rather than a member of a large Google team), he could steer the technical direction
 
-**事实确认度: 高** (宣誓证词)
+### Outcome
+- Became one of OpenAI's six board members
+- Took the title of Chief Scientist, leading the research direction across the board
+- All of OpenAI's later core technical breakthroughs (the GPT series) were completed under his scientific leadership
 
-### 5b. 罢免行动 (2023年11月17日)
+### Word-and-deed consistency analysis
+The idealistic motives at the time of joining (nonprofit, benefit humanity) and OpenAI's later turn toward commercialization created a contradiction that foreshadowed the 2023 board crisis.
 
-**时间线**:
-- 11月17日: 董事会宣布解雇Altman
-- 11月18日(次日): 开始讨论与Anthropic合并
-- 11月20日: Sutskever公开表示"deeply regrets"自己的角色
-- 11月21日: Altman复职
-
-**Sutskever的动机** [多重信息源]:
-1. **安全担忧**: Sutskever认为Altman推动AI部署和商业化的速度太快, 风险过高
-2. **管理问题**: 备忘录中记录的撒谎和操纵行为
-3. **结构性矛盾**: 非营利使命vs商业化压力
-
-**Anthropic合并计划** [已确认]:
-- 在Altman被解雇后48小时内, 董事会讨论了与Anthropic合并
-- 董事会成员Helen Toner"the most supportive"(最支持合并)
-- Toner甚至表示"destroying OpenAI could be consistent with the mission"
-- Sutskever本人明确反对合并: "I really did not want OpenAI to merge with Anthropic. I just didn't want to."
-- Anthropic方面提出了实际操作障碍, 计划未能推进
-
-**事实确认度: 高** (宣誓证词)
-
-### 5c. 员工反扑与后悔
-
-**已确认事实**:
-- 770名员工中有738人签署请愿书要求恢复Altman
-- 多名高管立即辞职
-- Sutskever承认: "I had not expected them to feel strongly either way"(他预期员工会无所谓)
-- 他随后公开在X上发帖说"deeply regrets"参与此事
-
-**Sutskever对过程的事后评价**:
-- 承认过程"rushed"(仓促)
-- 原因是"the board was inexperienced"(董事会缺乏经验)
-
-### 5d. 言行一致性分析
-
-**矛盾点**:
-1. 花一年精心准备罢免行动, 却没有做基本的信息交叉验证(依赖单一来源Murati)
-2. 声称为安全而战, 却在行动后三天就"deeply regrets"
-3. 反对Anthropic合并(说明他不想毁掉OpenAI), 但又发动了险些毁掉OpenAI的行动
-4. 52页备忘录显示深思熟虑, 但对员工反应的预判完全失误
-
-**可能的解释**:
-- 他的核心关切(AI安全)是真实的, 但执行能力远远跟不上
-- 他是科学家而非管理者/政治家, 严重低估了组织动态
-- "deeply regrets"可能更多是策略性表态(保全自身位置), 而非真正的认知转变
-
-**事实确认度: 高** (直接证词和公开声明)
+**Confidence in facts: high** (Musk's testimony as a primary source)
 
 ---
 
-## 6. 离开OpenAI (2024年5月)
+## 4. OpenAI Technical Route Decisions
 
-### 背景
-2023年11月事件后, Sutskever在OpenAI的处境变得尴尬。他仍保留首席科学家头衔, 但实际影响力已被边缘化。
+### 4a. Choosing the GPT/Transformer route
 
-### 选择
-2024年5月14日正式宣布离开OpenAI。
+**Background**: OpenAI explored multiple approaches early on (including reinforcement learning, robotics, etc.). Sutskever pushed the language model route based on large-scale unsupervised pre-training.
 
-### 公开表态
-- X发帖: "The company's trajectory has been nothing short of miraculous, and I'm confident that OpenAI will build AGI that is both safe and beneficial under the leadership of @sama"
-- 后来在Calcalist采访中说: "Ultimately, I had a big new vision...it felt more suitable for a new company"
+**Key bets**:
+- Large-scale unsupervised text pre-training can unlock general capabilities
+- The Transformer architecture (proposed in Google's 2017 "Attention is All You Need" paper) is suited to large-scale scaling
+- GPT-1 (2018) → GPT-2 (2019) → GPT-3 (2020) → GPT-4 (2023) were all completed under Sutskever's scientific leadership
 
-### Superalignment团队的崩溃
-- Sutskever离开后数天, Superalignment团队联合负责人Jan Leike也辞职
-- Leike公开批评: OpenAI的"safety culture and processes have taken a backseat to shiny products"
-- Leike说团队被"under-resourced", 在"sailing against the wind"
-- OpenAI随后解散了整个Superalignment团队
-- 这个团队是2023年成立的, 当时承诺投入20%算力
+**Confidence in facts: high**
 
-### 言行一致性分析
-- 离开时的公开声明极为友好(称赞Altman领导), 与他此前52页指控备忘录形成鲜明对比
-- 可能原因: equity/股权协议要求他不能公开批评, 或是策略性选择
-- Jan Leike的辞职声明间接印证了Sutskever长期以来的安全担忧是真实的
+### 4b. The bet on the Scaling Hypothesis
 
-**事实确认度: 高**
+**Background**: In 2020, Sutskever led OpenAI's research on neural scaling laws, establishing the power-law relationship between model performance and scale (parameter count, data volume, compute).
 
----
+**Choice**: Bet OpenAI's core strategy on "bigger is better".
 
-## 7. 创立SSI (2024年6月至今)
+**Logic**:
+- This can be traced back to the intuition of the AlexNet period: performance improves with data scale
+- Scaling laws provided a mathematized predictive framework
+- Pushed this direction together with Dario Amodei (who later left to found Anthropic) and others
 
-### 7a. 创立决策
+**Outcome**:
+- The success of GPT-3 and GPT-4 validated the scaling hypothesis
+- OpenAI for a time became the global leader in AI
 
-**时间**: 2024年6月19日宣布
+**Later change of position** [important contradiction]:
+- December 2024 NeurIPS talk: declared "pre-training as we know it will end", and put forward the concept of "peak data" ("we have but one internet")
+- November 2025 Dwarkesh Patel interview: said explicitly "2020-2025 was the age of scaling, and from 2026 we enter the age of research"
+- Asked whether 100x more scaling would change everything, answered "I don't think that's true"
+- Later clarified on X: scaling the current approach will still bring improvements, but "something important will continue to be missing"
 
-**联合创始人**: 
-- Daniel Gross (前Apple AI负责人, Y Combinator合伙人)
-- Daniel Levy (前OpenAI研究员)
+**Word-and-deed consistency analysis**:
+This is a major change of position. Sutskever went from a core driver of scaling to a questioner of it. But this is not necessarily a contradiction — he may believe that scaling genuinely worked in 2020-2025 and has only now hit a ceiling. The question is: what is he doing at SSI? If not scaling, what is the new direction he is betting on? He declines to say.
 
-**办公地点**: Palo Alto + Tel Aviv
-
-**核心定位**: "Our first product will be the safe superintelligence, and it will not do anything else up until then"
-
-### 7b. 融资策略
-
-**时间线**:
-- 2024年9月: 筹集$10亿 (a16z, Sequoia, DST Global, SV Angel)
-- 2025年3月: 再筹$20亿, 估值达$320亿 (Greenoaks Capital $5亿领投, 加上Alphabet, NVIDIA, a16z, Lightspeed, DST Global)
-- 截至2025年: 约20名员工, 零收入, $320亿估值
-
-**融资逻辑**: 几乎完全依赖Sutskever的个人声望。没有产品, 没有收入, 没有公开的技术路线图。
-
-### 7c. 运营策略
-
-**已确认**:
-- 不做产品、不做服务, 只做一件事: safe superintelligence
-- 2025年4月与Google Cloud达成合作, 获得TPU算力
-- Sutskever拒绝透露任何技术细节
-
-**领导层变动** (2025年中):
-- Meta试图收购SSI, 被Sutskever拒绝
-- 2025年7月, 联合创始人Daniel Gross离开加入Meta Superintelligence Labs
-- Sutskever接任CEO, Daniel Levy升任总裁
-
-### 7d. 言行一致性分析
-
-**矛盾与疑问**:
-
-1. **安全vs商业**: Sutskever离开OpenAI是因为商业化压力影响安全。但SSI接受了$30亿风险投资, 投资人必然期待回报。"insulated from short-term commercial pressures"能维持多久?
-
-2. **scaling质疑者却依赖算力**: 如果scaling时代已结束, 为什么还需要Google TPU和$30亿? SSI到底在做什么?
-
-3. **时间压力悖论**: 批评OpenAI过于急躁, 但SSI自身也面临压力——不可能花20年做"patient research", 否则投资人不会容忍。
-
-4. **透明度**: 公开倡导AI安全和公众知情权, 但对SSI的技术方向完全保密。
-
-5. **联合创始人流失**: Daniel Gross在SSI成立仅一年多就被Meta挖走, 暗示团队凝聚力或方向可能存在问题。
-
-**事实确认度: 中高** (融资数据确认, 但技术方向和内部状态几乎无公开信息)
+**Confidence in facts: high** (public talks and interviews)
 
 ---
 
-## 8. 哲学立场演变 (横跨全部决策)
+## 5. The November 2023 Board Incident [most important]
 
-### 早期 (2012-2020): 纯粹的技术乐观主义
-- 相信scaling会解锁一切
-- 推动GPT系列不断增大
+This is the most controversial decision of Sutskever's career, and also the event with the most information.
 
-### 中期 (2020-2023): 安全觉醒
-- 推动成立Superalignment团队
-- 越来越担忧AI的existential risk
-- 2023年MIT Technology Review采访: 讨论人类可能与机器融合
+### 5a. Preparation beforehand (at least a year)
 
-### 后期 (2024-至今): 哲学化转向
+**Confirmed facts** (source: the October 1, 2025 sworn deposition, nearly 10 hours):
+- Sutskever spent at least a year considering removing Altman
+- The condition he was waiting for was "the majority of the board is not obviously friendly with Sam"
+- He wrote a 52-page memo, organized in brief form, accusing Altman of:
+  - "a consistent pattern of lying"
+  - "undermining his execs"
+  - "pitting his execs against one another"
+- The memo was sent to the independent directors via disappearing emails to prevent leaks
+- CTO Mira Murati took screenshots and saved parts of the memo
+
+**Key weak points** [note]:
+- Sutskever admitted in testimony that the accusations in the memo "came almost entirely from a single source: CTO Mira Murati"
+- He admitted he did not cross-verify with other executives
+- He admitted that what he relied on was "secondhand knowledge"
+- Reflecting afterward: "In hindsight, I realize that I didn't know it"
+
+**Confidence in facts: high** (sworn deposition)
+
+### 5b. The removal (November 17, 2023)
+
+**Timeline**:
+- November 17: the board announced Altman's firing
+- November 18 (the next day): discussions began about merging with Anthropic
+- November 20: Sutskever publicly said he "deeply regrets" his role
+- November 21: Altman was reinstated
+
+**Sutskever's motives** [multiple sources]:
+1. **Safety concerns**: Sutskever believed Altman was pushing AI deployment and commercialization too fast, with excessive risk
+2. **Management issues**: the lying and manipulation documented in the memo
+3. **Structural contradiction**: nonprofit mission vs commercialization pressure
+
+**The Anthropic merger plan** [confirmed]:
+- Within 48 hours of Altman being fired, the board discussed merging with Anthropic
+- Board member Helen Toner was "the most supportive" of the merger
+- Toner even said "destroying OpenAI could be consistent with the mission"
+- Sutskever himself explicitly opposed the merger: "I really did not want OpenAI to merge with Anthropic. I just didn't want to."
+- Anthropic raised practical obstacles, and the plan did not advance
+
+**Confidence in facts: high** (sworn deposition)
+
+### 5c. Employee backlash and regret
+
+**Confirmed facts**:
+- 738 of 770 employees signed a petition demanding Altman's reinstatement
+- Multiple executives resigned immediately
+- Sutskever admitted: "I had not expected them to feel strongly either way" (he had expected employees not to care)
+- He then posted publicly on X that he "deeply regrets" taking part
+
+**Sutskever's after-the-fact assessment of the process**:
+- Admitted the process was "rushed"
+- The reason was "the board was inexperienced"
+
+### 5d. Word-and-deed consistency analysis
+
+**Points of contradiction**:
+1. Spent a year carefully preparing the removal, yet did not do basic cross-verification of information (relying on a single source, Murati)
+2. Claimed to fight for safety, yet "deeply regrets" it just three days after acting
+3. Opposed the Anthropic merger (showing he did not want to destroy OpenAI), yet launched an action that nearly destroyed OpenAI
+4. The 52-page memo shows deliberation, but his prediction of the employee reaction was completely off
+
+**Possible explanations**:
+- His core concern (AI safety) is real, but his execution ability falls far short
+- He is a scientist rather than a manager/politician, and badly underestimated organizational dynamics
+- "deeply regrets" may have been more a strategic statement (to preserve his own position) than a genuine change of mind
+
+**Confidence in facts: high** (direct testimony and public statements)
+
+---
+
+## 6. Leaving OpenAI (May 2024)
+
+### Background
+After the November 2023 incident, Sutskever's position at OpenAI became awkward. He kept the title of Chief Scientist, but his actual influence had been marginalized.
+
+### Choice
+Formally announced on May 14, 2024 that he was leaving OpenAI.
+
+### Public statements
+- X post: "The company's trajectory has been nothing short of miraculous, and I'm confident that OpenAI will build AGI that is both safe and beneficial under the leadership of @sama"
+- Later said in a Calcalist interview: "Ultimately, I had a big new vision...it felt more suitable for a new company"
+
+### Collapse of the Superalignment team
+- A few days after Sutskever left, Superalignment team co-lead Jan Leike also resigned
+- Leike publicly criticized that OpenAI's "safety culture and processes have taken a backseat to shiny products"
+- Leike said the team was "under-resourced" and "sailing against the wind"
+- OpenAI then dissolved the entire Superalignment team
+- The team was formed in 2023, with a commitment of 20% of compute at the time
+
+### Word-and-deed consistency analysis
+- The public statement on leaving was extremely friendly (praising Altman's leadership), in sharp contrast to his earlier 52-page accusatory memo
+- Possible reasons: an equity agreement requiring that he not criticize publicly, or a strategic choice
+- Jan Leike's resignation statement indirectly corroborates that Sutskever's long-standing safety concerns were genuine
+
+**Confidence in facts: high**
+
+---
+
+## 7. Founding SSI (June 2024 to present)
+
+### 7a. The founding decision
+
+**Time**: announced June 19, 2024
+
+**Co-founders**:
+- Daniel Gross (former Apple AI lead, Y Combinator partner)
+- Daniel Levy (former OpenAI researcher)
+
+**Offices**: Palo Alto + Tel Aviv
+
+**Core positioning**: "Our first product will be the safe superintelligence, and it will not do anything else up until then"
+
+### 7b. Fundraising strategy
+
+**Timeline**:
+- September 2024: raised $1 billion (a16z, Sequoia, DST Global, SV Angel)
+- March 2025: raised another $2 billion at a $32 billion valuation (Greenoaks Capital led with $500 million, joined by Alphabet, NVIDIA, a16z, Lightspeed, DST Global)
+- As of 2025: about 20 employees, zero revenue, a $32 billion valuation
+
+**Fundraising logic**: almost entirely dependent on Sutskever's personal reputation. No product, no revenue, no public technical roadmap.
+
+### 7c. Operating strategy
+
+**Confirmed**:
+- No products, no services, only one thing: safe superintelligence
+- In April 2025 reached a partnership with Google Cloud, gaining TPU compute
+- Sutskever declines to disclose any technical details
+
+**Leadership changes** (mid-2025):
+- Meta tried to acquire SSI and was rejected by Sutskever
+- In July 2025, co-founder Daniel Gross left to join Meta Superintelligence Labs
+- Sutskever took over as CEO, and Daniel Levy was promoted to President
+
+### 7d. Word-and-deed consistency analysis
+
+**Contradictions and questions**:
+
+1. **Safety vs commerce**: Sutskever left OpenAI because commercialization pressure affected safety. But SSI accepted $3 billion in venture capital, and the investors surely expect returns. How long can "insulated from short-term commercial pressures" last?
+
+2. **A scaling skeptic who depends on compute**: If the scaling era is over, why does he still need Google TPUs and $3 billion? What exactly is SSI doing?
+
+3. **The time-pressure paradox**: He criticizes OpenAI for being too hasty, but SSI itself faces pressure too — it cannot spend 20 years on "patient research", or investors will not tolerate it.
+
+4. **Transparency**: Publicly advocates AI safety and the public's right to know, yet keeps SSI's technical direction completely secret.
+
+5. **Co-founder attrition**: Daniel Gross was poached by Meta just over a year after SSI's founding, suggesting there may be problems with team cohesion or direction.
+
+**Confidence in facts: medium-high** (fundraising data confirmed, but there is almost no public information on technical direction and internal state)
+
+---
+
+## 8. Evolution of Philosophical Position (across all decisions)
+
+### Early period (2012-2020): pure technological optimism
+- Believed scaling would unlock everything
+- Pushed the GPT series to keep growing
+
+### Middle period (2020-2023): safety awakening
+- Pushed for the formation of the Superalignment team
+- Increasingly worried about AI's existential risk
+- 2023 MIT Technology Review interview: discussed the possibility of humans merging with machines
+
+### Late period (2024-present): philosophical turn
 - NeurIPS 2024: "pre-training as we know it will end"
-- Dwarkesh Patel 2025采访: 
-  - AI发展5-20年可达到超越人类水平
-  - 讨论情感在认知中的必要性(引用失去情感能力的脑损伤患者案例)
-  - AI agent可能需要"intrinsic concern for sentient beings"
-  - 如果未来大多数有意识实体是AI, "caring about sentient life dilutes human primacy"
-  - 长期均衡可能是人机融合
+- Dwarkesh Patel 2025 interview:
+  - AI development could reach superhuman level in 5-20 years
+  - Discussed the necessity of emotion for cognition (citing the case of brain-damaged patients who lost the capacity for emotion)
+  - AI agents may need "intrinsic concern for sentient beings"
+  - If most conscious entities in the future are AI, "caring about sentient life dilutes human primacy"
+  - The long-term equilibrium may be human-machine merging
 
-### 外部批评
-- 安全策略依赖AI具有sentience, 这是未经验证的哲学假设
-- "safe superintelligence"在绝对意义上可能不存在
-- 从scaling的坚定推动者变成质疑者, 这种转变的深层原因不明
+### External criticism
+- The safety strategy depends on AI having sentience, an unverified philosophical assumption
+- "safe superintelligence" may not exist in an absolute sense
+- The deeper reason for the shift from a firm driver of scaling to a questioner of it is unclear
 
 ---
 
-## 9. 总结: Sutskever决策模式
+## 9. Summary: Sutskever's Decision Patterns
 
-### 一致的特征
-1. **直觉驱动**: 从AlexNet到GPT到SSI, 他的重大决策都基于强烈直觉而非充分验证
-2. **科学家思维**: 擅长技术判断, 但在组织管理和政治博弈中屡屡失算
-3. **理想主义底色**: 无论是加入OpenAI还是创立SSI, 都有真实的使命感驱动
-4. **信息茧房倾向**: 52页备忘录依赖单一来源; 对员工反应完全误判
+### Consistent traits
+1. **Intuition-driven**: from AlexNet to GPT to SSI, his major decisions were based on strong intuition rather than thorough verification
+2. **A scientist's mindset**: good at technical judgment, but repeatedly miscalculates in organizational management and political maneuvering
+3. **Idealistic undertone**: whether joining OpenAI or founding SSI, there is a genuine sense of mission driving him
+4. **A tendency toward an information cocoon**: the 52-page memo relied on a single source; completely misjudged the employee reaction
 
-### 矛盾清单
-| 领域 | 早期立场 | 后期立场/行为 | 矛盾程度 |
+### List of contradictions
+| Domain | Early position | Later position/behavior | Degree of contradiction |
 |------|----------|---------------|----------|
-| Scaling | 核心推动者 | 宣称时代已结束 | 中(可解释为认知演化) |
-| OpenAI使命 | 非营利理想主义 | 离开时称赞Altman领导 | 高(与52页指控矛盾) |
-| 安全行动 | 发动罢免 | 三天后deeply regrets | 高 |
-| 透明度 | 主张公众知情 | SSI完全保密 | 中高 |
-| 商业化 | 批评OpenAI商业化 | SSI接受$30亿VC | 中(结构不同但压力相似) |
+| Scaling | Core driver | Declared the era over | Medium (explainable as cognitive evolution) |
+| OpenAI mission | Nonprofit idealism | Praised Altman's leadership on leaving | High (in conflict with the 52-page accusation) |
+| Safety action | Launched the removal | Deeply regrets three days later | High |
+| Transparency | Advocates public right to know | SSI is entirely secret | Medium-high |
+| Commercialization | Criticized OpenAI's commercialization | SSI accepted $3 billion in VC | Medium (different structure but similar pressure) |
 
-### 待观察
-- SSI到底在研究什么? 他的"big new vision"是什么?
-- $320亿估值零收入的模式能维持多久?
-- Daniel Gross离开后, SSI的方向是否会发生变化?
-- Sutskever关于"情感对认知必要"的观点是否会体现在SSI的技术路线中?
+### To watch
+- What exactly is SSI researching? What is his "big new vision"?
+- How long can the model of a $32 billion valuation with zero revenue last?
+- After Daniel Gross's departure, will SSI's direction change?
+- Will Sutskever's view that "emotion is necessary for cognition" show up in SSI's technical route?
 
 ---
 
-## 信息源
+## Sources
 
-### 一手来源(宣誓证词/本人声明/公开演讲)
-- Ilya Sutskever宣誓证词 (2025年10月1日, Elon Musk诉OpenAI案)
-- NeurIPS 2024演讲
-- Dwarkesh Patel播客采访 (2025年11月)
-- Calcalist Tech采访
-- X/Twitter公开声明
+### Primary sources (sworn testimony / his own statements / public talks)
+- Ilya Sutskever sworn deposition (October 1, 2025, Elon Musk v. OpenAI)
+- NeurIPS 2024 talk
+- Dwarkesh Patel podcast interview (November 2025)
+- Calcalist Tech interview
+- X/Twitter public statements
 
-### 权威媒体报道
+### Authoritative media reports
 - [TechCrunch: Ilya Sutskever departs](https://techcrunch.com/2024/05/14/ilya-sutskever-openai-co-founder-and-longtime-chief-scientist-departs/)
 - [Time: Sutskever leaves OpenAI](https://time.com/6978195/ilya-sutskever-leaves-open-ai/)
 - [Fortune: Sutskever deeply regrets](https://fortune.com/2023/11/20/ilya-sutskever-openai-cofounder-deeply-regrets-resign/)

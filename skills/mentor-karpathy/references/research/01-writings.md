@@ -1,49 +1,49 @@
-# Andrej Karpathy 著作与核心论点调研
+# Andrej Karpathy: Research on Writings and Core Arguments
 
-> 调研日期：2026-04-05
-> 信息源说明：一手 = 直接引自本人文字/视频；二手 = 他人转述/摘要；推测 = 基于多处语境推断
-> 黑名单：知乎、微信公众号、百度百科——本文件中均未使用
-
----
-
-## 一、基本信息与职业轨迹
-
-**出生**：1986年10月23日，斯洛伐克布拉迪斯拉发，15岁随家人移居加拿大多伦多
-**教育**：
-- 多伦多大学：计算机科学+物理（双学位），2005-2009
-- 不列颠哥伦比亚大学：机器学习硕士，2009年
-- 斯坦福大学：博士，导师 Fei-Fei Li，2015年毕业，论文题为《Connecting Images and Natural Language》
-
-**职业轨迹（关键节点）**：
-- 2015：创建CS231n（斯坦福首门深度学习课，从150人扩展到750人）
-- 2015-2017：OpenAI联合创始成员，研究科学家
-- 2017-2022：特斯拉AI总监（汇报Elon Musk），主导Autopilot
-- 2022年7月：离开特斯拉
-- 2023年2月：重返OpenAI
-- 2024年2月：离开OpenAI
-- 2024年7月：创立 Eureka Labs（AI原生教育公司）
-- 2026年2月：发布microgpt（200行纯Python训练GPT，零依赖）
-
-来源：[Wikipedia](https://en.wikipedia.org/wiki/Andrej_Karpathy)（一手信息来源于本人官网 karpathy.ai）
+> Research date: 2026-04-05
+> Note on source types: primary = quoted directly from his own writing/video; secondary = others' paraphrase/summary; inferred = deduced from multiple contexts
+> Blacklist: Zhihu, WeChat Official Accounts, Baidu Baike — none were used in this file
 
 ---
 
-## 二、博客文章（karpathy.github.io）完整列表
+## 1. Basic Information and Career Trajectory
 
-| 日期 | 标题 | URL | 重要性 |
+**Born**: October 23, 1986, in Bratislava, Slovakia; moved with his family to Toronto, Canada at age 15
+**Education**:
+- University of Toronto: Computer Science + Physics (double major), 2005-2009
+- University of British Columbia: Master's in machine learning, 2009
+- Stanford University: PhD, advisor Fei-Fei Li, graduated 2015, thesis titled *Connecting Images and Natural Language*
+
+**Career trajectory (key points)**:
+- 2015: Created CS231n (Stanford's first deep learning course, grew from 150 to 750 students)
+- 2015-2017: Founding member and research scientist at OpenAI
+- 2017-2022: Tesla's Director of AI (reporting to Elon Musk), led Autopilot
+- July 2022: Left Tesla
+- February 2023: Returned to OpenAI
+- February 2024: Left OpenAI
+- July 2024: Founded Eureka Labs (an AI-native education company)
+- February 2026: Released microgpt (training a GPT in 200 lines of pure Python, zero dependencies)
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Andrej_Karpathy) (the primary information comes from his own website karpathy.ai)
+
+---
+
+## 2. Complete List of Blog Posts (karpathy.github.io)
+
+| Date | Title | URL | Importance |
 |------|------|-----|--------|
-| 2026-02-12 | microgpt | karpathy.github.io/2026/02/12/microgpt/ | ⭐⭐⭐⭐⭐ 最新力作 |
+| 2026-02-12 | microgpt | karpathy.github.io/2026/02/12/microgpt/ | ⭐⭐⭐⭐⭐ latest major work |
 | 2022-03-14 | Deep Neural Nets: 33 years ago and 33 years from now | karpathy.github.io/2022/03/14/lecun1989/ | ⭐⭐⭐⭐ |
 | 2021-06-21 | A from-scratch tour of Bitcoin in Python | karpathy.github.io/2021/06/21/blockchain/ | ⭐⭐⭐ |
 | 2021-03-27 | Short Story on AI: Forward Pass | karpathy.github.io/2021/03/27/forward-pass/ | ⭐⭐ |
 | 2020-06-11 | Biohacking Lite | karpathy.github.io/2020/06/11/biohacking-lite/ | ⭐ |
-| 2019-04-25 | A Recipe for Training Neural Networks | karpathy.github.io/2019/04/25/recipe/ | ⭐⭐⭐⭐⭐ 实践圣经 |
-| 2018-01-20 | (started posting on Medium instead) | — | 转型节点 |
+| 2019-04-25 | A Recipe for Training Neural Networks | karpathy.github.io/2019/04/25/recipe/ | ⭐⭐⭐⭐⭐ practitioner's bible |
+| 2018-01-20 | (started posting on Medium instead) | — | turning point |
 | 2016-09-07 | A Survival Guide to a PhD | karpathy.github.io/2016/09/07/phd/ | ⭐⭐⭐⭐ |
 | 2016-05-31 | Deep Reinforcement Learning: Pong from Pixels | karpathy.github.io/2016/05/31/rl/ | ⭐⭐⭐ |
 | 2015-11-14 | Short Story on AI: A Cognitive Discontinuity | karpathy.github.io/2015/11/14/ai/ | ⭐⭐ |
 | 2015-10-25 | What a Deep Neural Network thinks about your #selfie | karpathy.github.io/2015/10/25/selfie/ | ⭐⭐ |
-| 2015-05-21 | The Unreasonable Effectiveness of Recurrent Neural Networks | karpathy.github.io/2015/05/21/rnn-effectiveness/ | ⭐⭐⭐⭐⭐ 经典之作 |
+| 2015-05-21 | The Unreasonable Effectiveness of Recurrent Neural Networks | karpathy.github.io/2015/05/21/rnn-effectiveness/ | ⭐⭐⭐⭐⭐ classic |
 | 2015-03-30 | Breaking Linear Classifiers on ImageNet | karpathy.github.io/2015/03/30/breaking-convnets/ | ⭐⭐ |
 | 2014-09-02 | What I learned from competing against a ConvNet on ImageNet | karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/ | ⭐⭐⭐ |
 | 2014-08-03 | Quantifying Productivity | karpathy.github.io/2014/08/03/quantifying-productivity/ | ⭐ |
@@ -51,428 +51,428 @@
 | 2012-10-22 | The state of Computer Vision and AI: we are really, really far away | karpathy.github.io/2012/10/22/state-of-computer-vision/ | ⭐⭐⭐ |
 | 2011-04-27 | Lessons learned from manually classifying CIFAR-10 | karpathy.github.io/2011/04/27/manually-classifying-cifar10/ | ⭐⭐ |
 
-**Medium博客**：https://karpathy.medium.com/
-核心文章：
-- [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35)（2017，最广泛引用的文章）
+**Medium blog**: https://karpathy.medium.com/
+Core article:
+- [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35) (2017, his most widely cited article)
 
-来源：直接爬取博客索引页（一手）
-
----
-
-## 三、核心博文深度解析
-
-### 3.1 Software 2.0（2017，Medium）
-**来源**：https://karpathy.medium.com/software-2-0-a64152b37c35（一手）
-
-**核心论点**：
-> "Software 1.0 是人类用Python/C++等语言手写的指令集；Software 2.0 是神经网络的权重——由优化算法从数据中生成的程序。"
-
-**Software 1.0 vs 2.0 对比**：
-- SW1.0：程序员识别问题空间中的"期望行为点"，手写显式规则
-- SW2.0：给定输入-输出对，优化算法在"程序空间"中搜索最优程序（网络权重）
-
-**SW2.0 的优势**（Karpathy原文论述）：
-1. 计算同质性：所有运算都是矩阵乘法，对硬件加速极度友好
-2. 可以学习人类无法明确表述的知识
-3. 性能随数据和算力持续提升（可预期的规模效应）
-
-**SW2.0 的劣势/风险**（Karpathy承认）：
-- 结果难以解释
-- 会静默失败（silent failure）
-- 可能编码数据中的偏见
-
-**SW2.0 将吃掉的领域**：视觉识别、语音处理、图像翻译、图像描述、游戏AI、数据库查询
-
-**特斯拉案例**：随着Autopilot进化，C++代码被持续删除，由神经网络权重替代——这是SW2.0"吃掉"SW1.0的实体案例。
+Source: crawled directly from the blog index page (primary)
 
 ---
 
-### 3.2 The Unreasonable Effectiveness of RNNs（2015）
-**来源**：karpathy.github.io/2015/05/21/rnn-effectiveness/（一手）
+## 3. In-Depth Analysis of the Core Blog Posts
 
-**核心论点**：
-> "如果训练普通神经网络是在函数空间上的优化，那么训练循环网络就是在程序空间上的优化。"
+### 3.1 Software 2.0 (2017, Medium)
+**Source**: https://karpathy.medium.com/software-2-0-a64152b37c35 (primary)
 
-**关键实验**（展示RNN生成能力）：
-- Paul Graham essays：生成有结构的创业智慧文字
-- 莎士比亚：学会对话结构、说话者名称、复杂句法
-- Wikipedia markdown：自动发现wiki链接格式
-- LaTeX数学：生成几乎可编译的数学证明
-- Linux内核C代码：生成有正确括号嵌套和变量声明的函数
+**Core argument**:
+> "Software 1.0 is the set of instructions humans write by hand in languages like Python/C++; Software 2.0 is the weights of a neural network — a program generated from data by an optimization algorithm."
 
-**技术洞察**：约5%的RNN神经元自发习得可解释算法（引号检测、URL边界、括号计数）——无需显式指导。
+**Software 1.0 vs 2.0 comparison**:
+- SW1.0: the programmer identifies "desired-behavior points" in the problem space and hand-writes explicit rules
+- SW2.0: given input-output pairs, an optimization algorithm searches "program space" for the best program (the network weights)
 
----
+**Advantages of SW2.0** (Karpathy's own argument):
+1. Computational homogeneity: every operation is a matrix multiplication, extremely friendly to hardware acceleration
+2. Can learn knowledge that humans cannot articulate explicitly
+3. Performance keeps improving with data and compute (predictable scaling effects)
 
-### 3.3 A Recipe for Training Neural Networks（2019）
-**来源**：karpathy.github.io/2019/04/25/recipe/（一手）
+**Disadvantages/risks of SW2.0** (Karpathy admits):
+- Results are hard to interpret
+- Fails silently (silent failure)
+- May encode biases in the data
 
-**核心前提**（两个关键观察）：
-1. 神经网络训练是"有漏洞的抽象"（leaky abstraction）——不能当插件用，需要深入理解
-2. 失败是静默的——网络会训练但表现差，没有明显错误提示
+**Domains SW2.0 will eat**: visual recognition, speech processing, image translation, image captioning, game AI, database queries
 
-**六阶段流程**：
-
-**阶段1：成为数据的一部分**
-- 花几小时检视数千条样本
-- 理解分布、模式、不平衡、标注噪声
-
-**阶段2：端到端骨架+基准测试**
-- 固定随机种子
-- 关闭数据增强
-- 验证初始化时的loss是否符合预期
-- 建立人类基准
-- 单批次过拟合验证架构可行性
-
-**阶段3：过拟合**
-- "不要当英雄"：复制已验证的架构，不要自创
-- Adam + lr=3e-4 是容错性最强的起点
-
-**阶段4：正则化（按有效性排序）**
-1. 获取更多真实数据（最有效）
-2. 数据增强
-3. 预训练
-4. Dropout（ConvNet用spatial dropout）
-5. weight decay、early stopping
-
-**阶段5：调参**
-- 随机搜索优于网格搜索（更好地捕捉各参数间的敏感性差异）
-
-**阶段6：最后压榨**
-- 模型集成（guaranteed ~2%提升）
-- 比直觉判断训练更长的时间
-
-**元原则**：
-> "fast and furious的训练方式行不通。成功与耐心和细心的程度正相关。"
+**Tesla case**: as Autopilot evolved, C++ code was continually deleted and replaced by neural network weights — a concrete example of SW2.0 "eating" SW1.0.
 
 ---
 
-### 3.4 Deep Neural Nets: 33 years ago and 33 years from now（2022）
-**来源**：karpathy.github.io/2022/03/14/lecun1989/（一手）
+### 3.2 The Unreasonable Effectiveness of RNNs (2015)
+**Source**: karpathy.github.io/2015/05/21/rnn-effectiveness/ (primary)
 
-**核心论点**：深度学习33年来宏观上几乎没有变化——仍是可微神经网络 + 反向传播的端到端优化。变化的是规模。
+**Core argument**:
+> "If training vanilla neural nets is optimization over functions, training recurrent nets is optimization over programs."
 
-**数量级对比**：
-- 参数量：约1,000,000倍
-- 处理像素数据量：约100,000,000倍
-- 训练速度：消费级硬件提升3,000倍（GPU可再提升100倍）
+**Key experiments** (demonstrating the generative ability of RNNs):
+- Paul Graham essays: generating structured startup wisdom text
+- Shakespeare: learning dialogue structure, speaker names, and complex syntax
+- Wikipedia markdown: automatically discovering the wiki link format
+- LaTeX math: generating nearly compilable mathematical proofs
+- Linux kernel C code: generating functions with correct bracket nesting and variable declarations
 
-**性能提升来源**：
-- 现代优化技巧（Adam、dropout、数据增强）：~60%误差下降
-- 更大数据集：中等贡献
-- 规模：需要更多算力
-
-**2055年预测**：
-> 未来的从业者不会从头训练模型，而是用自然语言与巨型基础模型交流，告诉"10,000,000倍的神经网络超级大脑"要做什么。
+**Technical insight**: about 5% of the RNN neurons spontaneously acquire interpretable algorithms (quote detection, URL boundaries, bracket counting) — with no explicit guidance.
 
 ---
 
-### 3.5 microgpt（2026年2月）
-**来源**：karpathy.github.io/2026/02/12/microgpt/，GitHub Gist（一手）
+### 3.3 A Recipe for Training Neural Networks (2019)
+**Source**: karpathy.github.io/2019/04/25/recipe/ (primary)
 
-**核心主张**：用200行纯Python（零依赖、无PyTorch、无NumPy、无GPU加速）实现完整GPT训练和推理——这是他"十年迷恋：将LLM简化到最基本要素"的集大成之作。
+**Core premises** (two key observations):
+1. Neural network training is a "leaky abstraction" — it cannot be used as a plug-in; it requires deep understanding
+2. Failure is silent — the network will train but perform poorly, with no obvious error message
 
-**包含内容**：文档数据集、分词器、自动微分引擎、类GPT-2架构、Adam优化器、训练循环、推理循环。
+**Six-stage process**:
 
-**信念表达**：
-> "Everything else is just efficiency."（其他所有东西只是效率问题。）
+**Stage 1: Become one with the data**
+- Spend hours inspecting thousands of samples
+- Understand distributions, patterns, imbalances, labeling noise
 
-这是他"If I can't build it, I don't understand it"信念的最新实践。
+**Stage 2: End-to-end skeleton + baselines**
+- Fix the random seed
+- Turn off data augmentation
+- Verify that the loss at initialization matches expectations
+- Establish a human baseline
+- Overfit a single batch to verify that the architecture is feasible
+
+**Stage 3: Overfit**
+- "Don't be a hero": copy a validated architecture, do not invent your own
+- Adam + lr=3e-4 is the most forgiving starting point
+
+**Stage 4: Regularize (ordered by effectiveness)**
+1. Get more real data (the most effective)
+2. Data augmentation
+3. Pretraining
+4. Dropout (spatial dropout for ConvNets)
+5. weight decay, early stopping
+
+**Stage 5: Tune**
+- Random search beats grid search (it better captures differences in sensitivity across parameters)
+
+**Stage 6: Squeeze out the juice**
+- Model ensembles (a guaranteed ~2% improvement)
+- Train longer than intuition suggests
+
+**Meta-principle**:
+> "A 'fast and furious' approach to training neural networks does not work. Success is correlated with patience and attention to detail."
 
 ---
 
-## 四、YouTube教学视频系列
+### 3.4 Deep Neural Nets: 33 years ago and 33 years from now (2022)
+**Source**: karpathy.github.io/2022/03/14/lecun1989/ (primary)
 
-### Zero to Hero 系列（Neural Networks: Zero to Hero）
-**主页**：https://karpathy.ai/zero-to-hero.html（一手）
-**GitHub仓库**：https://github.com/karpathy/nn-zero-to-hero
-**开始时间**：2022年8月
-**理念**：语言模型是学习深度学习的最佳入口——即使目标是计算机视觉，所学都能迁移。
+**Core argument**: At the macro level deep learning has barely changed in 33 years — it is still end-to-end optimization of differentiable neural networks with backpropagation. What has changed is scale.
 
-| # | 标题 | 时长 | 核心内容 |
+**Orders-of-magnitude comparison**:
+- Parameter count: about 1,000,000x
+- Volume of pixel data processed: about 100,000,000x
+- Training speed: 3,000x faster on consumer hardware (GPUs can add another 100x)
+
+**Sources of the performance gain**:
+- Modern optimization tricks (Adam, dropout, data augmentation): ~60% error reduction
+- Larger datasets: moderate contribution
+- Scale: requires more compute
+
+**The 2055 prediction**:
+> Future practitioners will not train models from scratch, but will talk in natural language to giant foundation models, telling the "10,000,000x neural network super-brain" what to do.
+
+---
+
+### 3.5 microgpt (February 2026)
+**Source**: karpathy.github.io/2026/02/12/microgpt/, GitHub Gist (primary)
+
+**Core claim**: Implement complete GPT training and inference in 200 lines of pure Python (zero dependencies, no PyTorch, no NumPy, no GPU acceleration) — the culmination of his "decade-long obsession with simplifying LLMs to their bare essentials".
+
+**Contents**: a document dataset, tokenizer, autograd engine, GPT-2-like architecture, Adam optimizer, training loop, inference loop.
+
+**Expression of belief**:
+> "Everything else is just efficiency."
+
+This is the latest practice of his "If I can't build it, I don't understand it" belief.
+
+---
+
+## 4. YouTube Teaching Video Series
+
+### The Zero to Hero series (Neural Networks: Zero to Hero)
+**Home page**: https://karpathy.ai/zero-to-hero.html (primary)
+**GitHub repo**: https://github.com/karpathy/nn-zero-to-hero
+**Started**: August 2022
+**Philosophy**: language models are the best entry point for learning deep learning — even if the goal is computer vision, everything learned transfers.
+
+| # | Title | Length | Core content |
 |---|------|------|---------|
-| 1 | The Spelled-Out Intro to Neural Networks and Backpropagation: Building Micrograd | 2h25m | 从零实现反向传播，只需高中微积分基础 |
-| 2 | The Spelled-Out Intro to Language Modeling: Building Makemore | 1h57m | bigram字符级语言模型，PyTorch入门 |
-| 3 | Building Makemore Part 2: MLP | 1h15m | 多层感知机，过拟合/欠拟合概念 |
-| 4 | Building Makemore Part 3: Activations & Gradients, BatchNorm | 1h55m | 梯度流分析，批归一化 |
-| 5 | Building Makemore Part 4: Becoming a Backprop Ninja | 1h56m | 手动反向传播，不用autograd |
-| 6 | Building Makemore Part 5: Building a WaveNet | 56m | 层级卷积网络架构 |
-| 7 | Let's Build GPT: From Scratch, in Code, Spelled Out | 1h56m | 从零构建GPT，遵循"Attention is All You Need" |
-| 8 | Let's Build the GPT Tokenizer | 2h13m | BPE分词器从零实现，分词对LLM行为的影响 |
+| 1 | The Spelled-Out Intro to Neural Networks and Backpropagation: Building Micrograd | 2h25m | Implement backpropagation from scratch, requiring only high-school calculus |
+| 2 | The Spelled-Out Intro to Language Modeling: Building Makemore | 1h57m | A bigram character-level language model, an introduction to PyTorch |
+| 3 | Building Makemore Part 2: MLP | 1h15m | Multilayer perceptron, the concepts of overfitting/underfitting |
+| 4 | Building Makemore Part 3: Activations & Gradients, BatchNorm | 1h55m | Gradient flow analysis, batch normalization |
+| 5 | Building Makemore Part 4: Becoming a Backprop Ninja | 1h56m | Manual backpropagation without autograd |
+| 6 | Building Makemore Part 5: Building a WaveNet | 56m | Hierarchical convolutional network architecture |
+| 7 | Let's Build GPT: From Scratch, in Code, Spelled Out | 1h56m | Build GPT from scratch, following "Attention is All You Need" |
+| 8 | Let's Build the GPT Tokenizer | 2h13m | Implement a BPE tokenizer from scratch, how tokenization affects LLM behavior |
 
-### 其他重要视频
-- **[1hr Talk] Intro to Large Language Models**（2023年11月）：面向普通受众，涵盖LLM训练、LLM OS比喻、安全（jailbreak/prompt injection）
-- **Deep Dive into LLMs like ChatGPT**（2025年2月，3h31m）：完整训练栈深度解析，心智模型建立
-- **Let's reproduce GPT-2**：从头复现GPT-2
+### Other important videos
+- **[1hr Talk] Intro to Large Language Models** (November 2023): aimed at a general audience, covering LLM training, the LLM OS analogy, and safety (jailbreak/prompt injection)
+- **Deep Dive into LLMs like ChatGPT** (February 2025, 3h31m): an in-depth walk through the full training stack, building a mental model
+- **Let's reproduce GPT-2**: reproducing GPT-2 from scratch
 
 ---
 
-## 五、学术论文（按引用量/重要性）
+## 5. Academic Papers (by citations/importance)
 
-来源：dblp.org + Google Scholar条目（二手，引用数为搜索时近似值）
+Source: dblp.org + Google Scholar entries (secondary; citation counts are approximate values at the time of search)
 
-| 年份 | 标题 | 发表场合 | 合作者 | 核心贡献 |
+| Year | Title | Venue | Collaborators | Core contribution |
 |------|------|---------|--------|---------|
-| 2017 | Deep Visual-Semantic Alignments for Generating Image Descriptions | IEEE TPAMI | Li Fei-Fei | 多模态对齐（图像→自然语言描述） |
-| 2016 | **DenseCap**: Fully Convolutional Localization Networks for Dense Captioning | CVPR | Justin Johnson, Li Fei-Fei | 密集图像描述任务 |
-| 2016 | Connecting Images and Natural Language（PhD论文） | Stanford | — | 博士论文总结 |
-| 2017 | PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture | ICLR | Tim Salimans等 | 生成模型改进 |
-| 2017 | World of Bits: An Open-Domain Platform for Web-Based Agents | ICML | Tianlin Shi等 | 网页代理基准（早期agent研究） |
-| 2015 | ImageNet Large Scale Visual Recognition Challenge | IJCV | Russakovsky, Deng, Fei-Fei等 | ImageNet基准定义 |
-| 2015 | Visualizing and Understanding Recurrent Networks | CoRR | Justin Johnson, Li Fei-Fei | RNN可视化与解释 |
-| 2015 | Deep visual-semantic alignments for generating image descriptions | CVPR | Li Fei-Fei | 图像描述早期版本 |
-| 2014 | Grounded Compositional Semantics for Finding and Describing Images | TACL | Socher, Le, Manning, Ng | 图文组合语义 |
-| 2014 | Large-Scale Video Classification with ConvNets | CVPR | Toderici, Li Fei-Fei等 | 视频理解 |
-| 2014 | Deep Fragment Embeddings for Bidirectional Image Sentence Mapping | NIPS | Joulin, Li Fei-Fei | 双向图文嵌入 |
+| 2017 | Deep Visual-Semantic Alignments for Generating Image Descriptions | IEEE TPAMI | Li Fei-Fei | Multimodal alignment (image → natural-language description) |
+| 2016 | **DenseCap**: Fully Convolutional Localization Networks for Dense Captioning | CVPR | Justin Johnson, Li Fei-Fei | The dense image captioning task |
+| 2016 | Connecting Images and Natural Language (PhD thesis) | Stanford | — | PhD thesis summary |
+| 2017 | PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture | ICLR | Tim Salimans et al. | Generative model improvements |
+| 2017 | World of Bits: An Open-Domain Platform for Web-Based Agents | ICML | Tianlin Shi et al. | A web-agent benchmark (early agent research) |
+| 2015 | ImageNet Large Scale Visual Recognition Challenge | IJCV | Russakovsky, Deng, Fei-Fei et al. | Defined the ImageNet benchmark |
+| 2015 | Visualizing and Understanding Recurrent Networks | CoRR | Justin Johnson, Li Fei-Fei | RNN visualization and interpretation |
+| 2015 | Deep visual-semantic alignments for generating image descriptions | CVPR | Li Fei-Fei | Early version of image captioning |
+| 2014 | Grounded Compositional Semantics for Finding and Describing Images | TACL | Socher, Le, Manning, Ng | Compositional image-text semantics |
+| 2014 | Large-Scale Video Classification with ConvNets | CVPR | Toderici, Li Fei-Fei et al. | Video understanding |
+| 2014 | Deep Fragment Embeddings for Bidirectional Image Sentence Mapping | NIPS | Joulin, Li Fei-Fei | Bidirectional image-text embeddings |
 
-**注**：VGGNet（Very Deep ConvNets for Large-Scale Image Recognition）是Simonyan & Zisserman的工作，Karpathy参与的是ImageNet挑战赛论文，不是VGGNet的作者。（纠正常见误传）
+**Note**: VGGNet (Very Deep ConvNets for Large-Scale Image Recognition) is the work of Simonyan & Zisserman; what Karpathy took part in was the ImageNet challenge paper, and he is not an author of VGGNet. (Correcting a common misattribution)
 
-**CS231n课程**：2015年创立，是斯坦福首门深度学习课，视频在线免费，累计超过800,000次观看（TIME杂志数据）。
+**The CS231n course**: created in 2015, Stanford's first deep learning course; the videos are free online, with over 800,000 total views (TIME magazine data).
 
 ---
 
-## 六、Software 1.0 / 2.0 / 3.0 完整框架
+## 6. The Complete Software 1.0 / 2.0 / 3.0 Framework
 
-**来源**：2017年Medium文章 + 2025年YC AI Startup School演讲（结合使用，均为一手）
+**Sources**: the 2017 Medium article + the 2025 YC AI Startup School talk (used together, both primary)
 
-Karpathy在2025年YC AI Startup School演讲中将框架扩展为三代：
+In the 2025 YC AI Startup School talk Karpathy extended the framework to three generations:
 
-| 代际 | 定义 | 编程方式 | 代表平台 |
+| Generation | Definition | Programming method | Representative platform |
 |------|------|---------|---------|
-| Software 1.0 | 人类用传统语言写的显式指令 | 程序员写代码 | GitHub |
-| Software 2.0 | 神经网络的权重，由优化器从数据生成 | 调数据集 + 跑优化器 | Hugging Face |
-| Software 3.0 | LLM，用自然语言Prompt来编程 | 用英语写Prompt | — |
+| Software 1.0 | Explicit instructions humans write in traditional languages | Programmers write code | GitHub |
+| Software 2.0 | The weights of a neural network, generated from data by an optimizer | Tune the dataset + run the optimizer | Hugging Face |
+| Software 3.0 | LLMs, programmed with natural-language prompts | Write prompts in English | — |
 
-关键论断：
-> "Prompts are now programs that program the LLM."（Prompt现在是程序，它们对LLM编程。）
-> "Software 3.0 is eating 1.0/2.0." 
+Key assertions:
+> "Prompts are now programs that program the LLM."
+> "Software 3.0 is eating 1.0/2.0."
 > "A huge amount of software will be rewritten."
 
-**特斯拉佐证**：Autopilot进化过程中，神经网络持续扩张，C++代码持续被删除——这是SW2.0吃掉SW1.0的真实案例。
+**Tesla corroboration**: as Autopilot evolved, the neural network kept expanding and the C++ code kept being deleted — a real case of SW2.0 eating SW1.0.
 
 ---
 
-## 七、LLM OS 概念
+## 7. The LLM OS Concept
 
-**来源**：
-- X推文，2023年9月（一手）：https://x.com/karpathy/status/1707437820045062561
-- X推文，2023年11月（一手）：https://x.com/karpathy/status/1723140519554105733
-- 1hr Talk Intro to LLMs（2023年11月视频）（一手）
+**Sources**:
+- X post, September 2023 (primary): https://x.com/karpathy/status/1707437820045062561
+- X post, November 2023 (primary): https://x.com/karpathy/status/1723140519554105733
+- 1hr Talk Intro to LLMs (November 2023 video) (primary)
 
-**核心类比**：LLM不是聊天机器人，而是新操作系统的内核进程（kernel process）。
+**Core analogy**: an LLM is not a chatbot but the kernel process of a new operating system.
 
-| 传统OS | LLM OS |
+| Traditional OS | LLM OS |
 |--------|--------|
-| CPU | LLM（处理器） |
-| RAM | 上下文窗口（工作记忆） |
-| 文件系统 | 嵌入数据库（向量检索） |
-| 系统调用 | 工具调用/API调用 |
-| 长期运行程序 | Agents |
-| I/O设备 | 多模态输入输出（视觉、音频） |
+| CPU | LLM (the processor) |
+| RAM | Context window (working memory) |
+| File system | Embedding database (vector retrieval) |
+| System calls | Tool calls/API calls |
+| Long-running programs | Agents |
+| I/O devices | Multimodal input/output (vision, audio) |
 
 ---
 
-## 八、关键术语与概念发明
+## 8. Key Terms and Coined Concepts
 
-### 8.1 Vibe Coding（2025年2月）
-**来源**：https://x.com/karpathy/status/1886192184808149383（一手）
+### 8.1 Vibe Coding (February 2025)
+**Source**: https://x.com/karpathy/status/1886192184808149383 (primary)
 
 > "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."
 
-**背景**：2025年2月6日发布，内容提到用Cursor Composer + Sonnet + SuperWhisper用声音指令编码。
+**Background**: posted February 6, 2025, mentioning coding by voice commands with Cursor Composer + Sonnet + SuperWhisper.
 
-**影响力**：被视为4.5百万次浏览，Merriam-Webster在2025年3月将其列为"俚语与流行词"；Collins英语词典将其评为2025年度词汇。
+**Impact**: reported at 4.5 million views; Merriam-Webster listed it under "Slang & Trending" in March 2025; Collins English Dictionary named it its Word of the Year for 2025.
 
-### 8.2 Jagged Intelligence（锯齿形智能）
-**来源**：https://x.com/karpathy/status/1882518317585650084（一手）+ 2025 LLM Year in Review（一手）
+### 8.2 Jagged Intelligence
+**Source**: https://x.com/karpathy/status/1882518317585650084 (primary) + 2025 LLM Year in Review (primary)
 
 > "LLMs exhibit amusingly jagged performance characteristics: simultaneously a genius polymath and a confused and cognitively challenged grade schooler, seconds away from getting tricked by a jailbreak."
 
-这不是训练缺陷，而是RLVR优化机制的结构性后果：能力在RLVR训练的特定领域急剧上升，形成不均匀的能力地形。
+This is not a training defect but a structural consequence of the RLVR optimization mechanism: capability rises sharply in the specific domains RLVR trains on, forming an uneven capability terrain.
 
-### 8.3 LLMs as "Summoned Ghosts"（被召唤的幽灵）
-**来源**：2025 LLM Year in Review（一手）
+### 8.3 LLMs as "Summoned Ghosts"
+**Source**: 2025 LLM Year in Review (primary)
 
 > "LLMs are not evolved animals but summoned ghosts—entities optimized under entirely different constraints than biological intelligence."
 
-论证：LLM的神经架构、训练数据、训练算法、优化压力与生物智能完全不同，不应用"动物进化"的视角理解它们，而是作为"智能空间中全新类型的实体"。
+The argument: an LLM's neural architecture, training data, training algorithm, and optimization pressure are entirely different from biological intelligence, so they should not be understood from an "animal evolution" perspective, but as "a brand-new type of entity in the space of intelligence".
 
-### 8.4 LLMs的"Anterograde Amnesia"（前向遗忘症）
-**来源**：YC AI Startup School 2025演讲（一手）
+### 8.4 LLMs' "Anterograde Amnesia"
+**Source**: YC AI Startup School 2025 talk (primary)
 
-将LLM比作电影《Memento》主角：缺乏长期记忆整合能力，只依赖上下文窗口。
+Compares the LLM to the protagonist of the film *Memento*: lacking the ability to consolidate long-term memory, relying only on the context window.
 
 ---
 
-## 九、Eureka Labs 使命宣言
+## 9. The Eureka Labs Mission Statement
 
-**来源**：https://eurekalabs.ai/（一手），2024年7月16日发布
+**Source**: https://eurekalabs.ai/ (primary), published July 16, 2024
 
-**使命**：构建一种AI原生的新型学校。
+**Mission**: build a new kind of AI-native school.
 
-**核心信念**：
+**Core belief**:
 > "Subject matter experts who are deeply passionate, great at teaching, infinitely patient and fluent in all languages are very scarce and cannot personally tutor all 8 billion people on demand."
 
-**解决方案**：Teacher + AI Teaching Assistant 的协作模式——教师设计课程，AI助手被优化为引导学生完成学习的工具，支持、杠杆化、规模化教师的能力。
+**Solution**: a collaborative Teacher + AI Teaching Assistant model — the teacher designs the course, and the AI assistant is optimized as a tool to guide students through their learning, supporting, leveraging, and scaling the teacher's abilities.
 
-**愿景**：
+**Vision**:
 > "If we are successful, it will be easy for anyone to learn anything, expanding education in both reach (a large number of people learning something) and extent (any one person learning a large amount of subjects, beyond what may be possible today unassisted)."
 
-**首款产品**：LLM101n: Let's Build A Storyteller（本科级课程，学生训练自己的AI）
+**First product**: LLM101n: Let's Build A Storyteller (an undergraduate-level course in which students train their own AI)
 
 ---
 
-## 十、学习哲学
+## 10. Learning Philosophy
 
-来源：Twitter/X推文 + Stanford建议页（一手）
+Sources: Twitter/X posts + the Stanford advice page (primary)
 
-### 核心信条1：Learning should not be fun（学习不应该是娱乐）
+### Core tenet 1: Learning should not be fun
 > "Learning is not supposed to be fun. It doesn't have to be actively not fun either, but the primary feeling should be that of effort."
 
-### 核心信条2：反"碎片化学习"（shortification of learning）
-**来源**：https://x.com/karpathy/status/1756380066580455557（一手，2024年2月）
+### Core tenet 2: Against the "shortification of learning"
+**Source**: https://x.com/karpathy/status/1756380066580455557 (primary, February 2024)
 
 > "There are a lot of videos on YouTube/TikTok etc. that give the appearance of education, but if you look closely they are really just entertainment."
 
-处方：关掉那些快速博文的标签页，"seek the meal"——教科书、文档、论文、手册、长文。分配4小时窗口，阅读、记笔记、重读、重述、处理、操弄材料。
+The prescription: close those quick-take tabs and "seek the meal" — textbooks, documentation, papers, manuals, long-form pieces. Allocate a 4-hour window to read, take notes, reread, restate, process, and manipulate the material.
 
-### 核心信条3：Build to understand（构建即理解）
+### Core tenet 3: Build to understand
 > "If I can't build it, I don't understand it."
 
-这一信条贯穿：micrograd、makemore、nanoGPT、microgpt——每次都是"从零手造"来证明真正理解。
+This tenet runs through micrograd, makemore, nanoGPT, and microgpt — each time "building by hand from scratch" to prove real understanding.
 
-### 核心信条4：读一手文献（Read primary sources）
-推荐他的LLM阅读列表包括直接读原始论文（Attention is All You Need、GPT-2、InstructGPT等），而非二手解读。
+### Core tenet 4: Read primary sources
+His recommended LLM reading list includes reading the original papers directly (Attention is All You Need, GPT-2, InstructGPT, etc.) rather than secondhand interpretations.
 
 ---
 
-## 十一、Dwarkesh Patel 播客核心观点
+## 11. Core Views from the Dwarkesh Patel Podcast
 
-**来源**：https://www.dwarkesh.com/p/andrej-karpathy（二手整理，一手为原播客）
+**Source**: https://www.dwarkesh.com/p/andrej-karpathy (secondary compilation; the primary is the original podcast)
 
-**AGI时间线**：还需10年（不是近在眼前），问题可解决但仍然困难。
+**AGI timeline**: still 10 years away (not imminent); the problems are solvable but still hard.
 
-**对强化学习的批评**（反常观点！）：
+**Critique of reinforcement learning** (a counterintuitive view!):
 > "Reinforcement learning is terrible."
 
-论据：基于结果的奖励是"从吸管里吸取监督信号"——把大量轨迹信息压缩成单个奖励信号，在整个学习过程中传播噪声。人类并不主要用RL学习，而是用反思、合成数据生成（思考）、睡眠中的蒸馏。
+The argument: outcome-based reward is "sucking supervision through a straw" — compressing a lot of trajectory information into a single reward signal and propagating noise through the entire learning process. Humans do not mainly learn through RL, but through reflection, synthetic data generation (thinking), and distillation during sleep.
 
-**模型崩溃（Model Collapse）问题**：合成数据生成会失败，因为模型产出"坍缩"的分布，反复自我采样会危险地缩窄多样性。训练模型生成内容会降低性能，维持熵需要外部熵源（人类交互、多样化经验）。
+**The model collapse problem**: synthetic data generation fails because the model produces a "collapsed" distribution, and repeated self-sampling dangerously narrows diversity. Training a model on content it generated lowers performance, and maintaining entropy requires an external source of entropy (human interaction, diverse experience).
 
-**认知核心（Cognitive Core）愿景**：未来系统将分离知识与认知——约10亿参数的"认知核心"，去掉百科全书式的记忆但保留推理算法，像人类一样需要知识时再查找。
+**The Cognitive Core vision**: future systems will separate knowledge from cognition — a "cognitive core" of about 1 billion parameters, stripped of encyclopedic memory but keeping the reasoning algorithm, looking things up when knowledge is needed, like a human.
 
-**计算连续性观点**：Karpathy拒绝"AI与普通计算机科学"的截然区分。他认为进步是演化性的："我们在非常、非常缓慢地抽象自己"，类似编译器取代汇编。AGI可能表现为连续性改进，而非不连续跃迁。
+**The computing-continuity view**: Karpathy rejects a sharp distinction between "AI and ordinary computer science". He believes progress is evolutionary: "we are abstracting ourselves away very, very slowly", like compilers replacing assembly. AGI may appear as continuous improvement rather than a discontinuous leap.
 
 ---
 
-## 十二、反复出现的核心论点（≥3次出现的真信念）
+## 12. Recurring Core Arguments (true beliefs appearing ≥3 times)
 
-以下是跨多个场合反复表达的核心立场，按确认次数排序：
+The following are core positions expressed repeatedly across multiple settings, ordered by number of confirmations:
 
-### 论点1：从零构建是理解的唯一路径 ★★★★★
-**出现场合**：micrograd（视频+代码）、makemore系列、nanoGPT、microgpt博文、LLM101n课程设计哲学、PhD建议
-**标志性表达**：
+### Argument 1: Building from scratch is the only path to understanding ★★★★★
+**Where it appears**: micrograd (video + code), the makemore series, nanoGPT, the microgpt post, the design philosophy of the LLM101n course, PhD advice
+**Signature expression**:
 > "If I can't build it, I don't understand it."
 
-### 论点2：神经网络训练会"静默失败"，需要极度谨慎和可视化 ★★★★★
-**出现场合**：Recipe for Training NNs（2019）、Zero to Hero课程、CS231n材料
-**标志性表达**：
-> "Neural net training is a leaky abstraction." 
+### Argument 2: Neural network training "fails silently", demanding extreme caution and visualization ★★★★★
+**Where it appears**: Recipe for Training NNs (2019), the Zero to Hero course, CS231n materials
+**Signature expression**:
+> "Neural net training is a leaky abstraction."
 > "A 'fast and furious' approach does not work."
 
-### 论点3：软件正在经历根本性范式转变（SW1.0→2.0→3.0） ★★★★★
-**出现场合**：Software 2.0（2017）、1hr Intro to LLMs（2023）、YC Startup School（2025）、X推文（多条）
-**标志性表达**：
+### Argument 3: Software is undergoing a fundamental paradigm shift (SW1.0→2.0→3.0) ★★★★★
+**Where it appears**: Software 2.0 (2017), 1hr Intro to LLMs (2023), YC Startup School (2025), X posts (multiple)
+**Signature expression**:
 > "Software 2.0 will eat through Software 1.0."
 > "A huge amount of software will be rewritten."
 
-### 论点4：LLM是新型计算基础设施，不是工具 ★★★★
-**出现场合**：LLM OS推文（2023）、1hr Talk（2023）、YC演讲（2025）、2025 LLM Year in Review
-**标志性表达**：LLM是操作系统内核；上下文窗口是RAM；Memento类比。
+### Argument 4: LLMs are a new kind of computing infrastructure, not a tool ★★★★
+**Where it appears**: the LLM OS posts (2023), the 1hr Talk (2023), the YC talk (2025), 2025 LLM Year in Review
+**Signature expression**: the LLM is the OS kernel; the context window is RAM; the Memento analogy.
 
-### 论点5：LLM是全新类型的实体，不能用生物/人类框架理解 ★★★★
-**出现场合**：2025 LLM Year in Review、"summoned ghosts"推文（多条）、短故事文章
-**标志性表达**：
+### Argument 5: LLMs are an entirely new kind of entity that cannot be understood through biological/human frameworks ★★★★
+**Where it appears**: 2025 LLM Year in Review, the "summoned ghosts" posts (multiple), short-story articles
+**Signature expression**:
 > "LLMs are not evolved animals but summoned ghosts."
-> "Jagged Intelligence" 
+> "Jagged Intelligence"
 
-### 论点6：AI教育需要民主化，任何人都应能学到最优质内容 ★★★★
-**出现场合**：CS231n免费开放、Zero to Hero系列（免费）、Eureka Labs使命宣言、LLM101n开源
-**标志性表达**：
+### Argument 6: AI education needs to be democratized — anyone should be able to learn from the best content ★★★★
+**Where it appears**: CS231n open and free, the Zero to Hero series (free), the Eureka Labs mission statement, LLM101n open-sourced
+**Signature expression**:
 > "If we are successful, it will be easy for anyone to learn anything."
 
-### 论点7：深度学习的本质33年未变，变化的只是规模 ★★★
-**出现场合**：33 years ago and 33 years from now（2022）、Lex Fridman播客、多处采访
-**标志性表达**：
+### Argument 7: The essence of deep learning has not changed in 33 years; only scale has changed ★★★
+**Where it appears**: 33 years ago and 33 years from now (2022), the Lex Fridman podcast, multiple interviews
+**Signature expression**:
 > "Not much has changed in 33 years on the macro level."
 
-### 论点8：数据质量和数量是SW2.0的核心竞争力（超越架构创新） ★★★
-**出现场合**：Tesla Data Engine描述、Recipe for Training NNs（"获取更多真实数据是最有效的正则化"）、Zero to Hero课程
-**标志性表达**：在正则化方法中，"Get more real data"排名第一。
+### Argument 8: Data quality and quantity are SW2.0's core competitive advantage (beyond architectural innovation) ★★★
+**Where it appears**: descriptions of the Tesla Data Engine, Recipe for Training NNs ("get more real data is the most effective regularizer"), the Zero to Hero course
+**Signature expression**: among regularization methods, "Get more real data" ranks first.
 
 ---
 
-## 十三、推荐阅读/资源（揭示智识谱系）
+## 13. Recommended Reading/Resources (revealing the intellectual lineage)
 
-### 必读论文（Karpathy推荐的LLM入门清单）
-来源：karpathy.ai LLM reading list（一手）
+### Must-read papers (Karpathy's recommended LLM starter list)
+Source: karpathy.ai LLM reading list (primary)
 
-1. Attention is All You Need（Transformer原论文）
-2. Language Models are Unsupervised Multitask Learners（GPT-2论文）
-3. Training Language Models to Follow Instructions（InstructGPT）
+1. Attention is All You Need (the original Transformer paper)
+2. Language Models are Unsupervised Multitask Learners (the GPT-2 paper)
+3. Training Language Models to Follow Instructions (InstructGPT)
 4. Llama 2: Open Foundation and Fine-Tuned Chat Models
 5. RLAIF: Scaling Reinforcement Learning from Human Feedback with AI
-6. Training Compute Optimal Language Models（Chinchilla）
+6. Training Compute Optimal Language Models (Chinchilla)
 7. Sparks of Artificial General Intelligence: Early Experiments with GPT-4
 
-### 推荐学习资源
-- CS231n笔记（他自己写的）
-- 《Deep Learning》教科书（Goodfellow等）
-- 《Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow》（入门推荐）
-- 直接读原始论文，不要只看二手解读
+### Recommended learning resources
+- The CS231n notes (written by him)
+- The *Deep Learning* textbook (Goodfellow et al.)
+- *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow* (recommended for beginners)
+- Read the original papers directly; don't rely only on secondhand interpretations
 
-**智识谱系推断（推测）**：
-- 对费曼式教学法的认同（"从零构建"="如果你能教会别人，说明你理解了"）
-- 对LeCun工作的深度了解（33 years ago博文直接复现1989年LeCun论文）
-- 对Bahdanau（注意力机制发明者）的个人通信（发布了私人邮件对话，征得同意）
-
----
-
-## 十四、已知矛盾与张力（不调和，直接记录）
-
-**矛盾1：对RL的批评 vs. RLVR的赞扬**
-- Dwarkesh播客中：称"Reinforcement learning is terrible"，批评基于结果的奖励
-- 2025 LLM Year in Review中：将RLVR（Reinforcement Learning from Verifiable Rewards）称为2025年最重要的训练范式转变，高度赞扬
-
-可能的调和：他批评的是稀疏奖励的传统RL（如策略梯度），赞扬的是有可验证奖励的RLVR。但这一区分在原文中并不总是清晰。
-
-**矛盾2：谦逊预测 vs. 大胆愿景**
-- "AGI still a decade away"（谦逊的10年时间线）
-- 同时描述未来"任何人都可以学到任何东西"的教育革命、"大量软件将被重写"
-
-这不一定是矛盾，但存在张力：他的预测相对保守，但他的行动（创立Eureka Labs、押注SW3.0）假设变革即将发生。
-
-**矛盾3：反对"shortification of learning"（碎片化学习） vs. 自己制作大量解释性视频**
-他批评YouTube上给人学习感觉但实际是娱乐的内容，但他自己的Zero to Hero系列本身也是YouTube视频。
-可能的区分：他的视频要求大量认知投入（2小时+，要求动手做），是他定义中"需要努力"的类型。
+**Inferred intellectual lineage (inferred)**:
+- Identification with Feynman-style teaching ("build from scratch" = "if you can teach it to someone else, you understand it")
+- Deep familiarity with LeCun's work (the 33-years-ago post directly reproduces LeCun's 1989 paper)
+- Personal correspondence with Bahdanau (inventor of the attention mechanism) (he published the private email exchange, with consent)
 
 ---
 
-## 十五、来源索引
+## 14. Known Contradictions and Tensions (not reconciled, recorded directly)
 
-| 来源 | URL | 可信度 |
+**Contradiction 1: Criticism of RL vs. praise of RLVR**
+- On the Dwarkesh podcast: said "Reinforcement learning is terrible", criticizing outcome-based reward
+- In 2025 LLM Year in Review: called RLVR (Reinforcement Learning from Verifiable Rewards) the most important training-paradigm shift of 2025, praising it highly
+
+Possible reconciliation: what he criticizes is traditional RL with sparse reward (such as policy gradient), and what he praises is RLVR with verifiable rewards. But the distinction is not always clear in the original text.
+
+**Contradiction 2: Modest prediction vs. bold vision**
+- "AGI still a decade away" (a modest 10-year timeline)
+- Yet also describes a future education revolution where "anyone can learn anything" and "a huge amount of software will be rewritten"
+
+This is not necessarily a contradiction, but there is tension: his predictions are relatively conservative, yet his actions (founding Eureka Labs, betting on SW3.0) assume that transformation is imminent.
+
+**Contradiction 3: Opposing the "shortification of learning" vs. producing lots of explanatory videos himself**
+He criticizes content on YouTube that gives the feeling of learning but is really entertainment, yet his own Zero to Hero series is itself YouTube video.
+A possible distinction: his videos demand a great deal of cognitive investment (2+ hours, requiring hands-on work), the kind that "requires effort" in his definition.
+
+---
+
+## 15. Source Index
+
+| Source | URL | Credibility |
 |------|-----|--------|
-| 个人博客（karpathy.github.io） | http://karpathy.github.io/ | 一手 |
-| Medium博客 | https://karpathy.medium.com/ | 一手 |
-| 个人官网 | https://karpathy.ai/ | 一手 |
-| Zero to Hero课程页面 | https://karpathy.ai/zero-to-hero.html | 一手 |
-| X账号 | https://x.com/karpathy | 一手 |
-| Eureka Labs官网 | https://eurekalabs.ai/ | 一手 |
-| bearblog年度回顾 | https://karpathy.bearblog.dev/ | 一手 |
-| dblp论文列表 | https://dblp.org/pid/04/9925.html | 一手（文献数据库） |
-| Google Scholar | https://scholar.google.com/citations?user=l8WuQJgAAAAJ | 一手（文献数据库） |
-| YC Startup School演讲摘要 | https://www.latent.space/p/s3 | 二手（有完整transcript） |
-| Dwarkesh播客 | https://www.dwarkesh.com/p/andrej-karpathy | 二手（有完整对话） |
-| Wikipedia传记 | https://en.wikipedia.org/wiki/Andrej_Karpathy | 二手（综合可信） |
-| Stanford个人页面 | https://cs.stanford.edu/people/karpathy/ | 一手 |
-| vibe coding维基 | https://en.wikipedia.org/wiki/Vibe_coding | 二手（辅助确认） |
+| Personal blog (karpathy.github.io) | http://karpathy.github.io/ | Primary |
+| Medium blog | https://karpathy.medium.com/ | Primary |
+| Personal website | https://karpathy.ai/ | Primary |
+| Zero to Hero course page | https://karpathy.ai/zero-to-hero.html | Primary |
+| X account | https://x.com/karpathy | Primary |
+| Eureka Labs website | https://eurekalabs.ai/ | Primary |
+| bearblog annual review | https://karpathy.bearblog.dev/ | Primary |
+| dblp paper list | https://dblp.org/pid/04/9925.html | Primary (bibliographic database) |
+| Google Scholar | https://scholar.google.com/citations?user=l8WuQJgAAAAJ | Primary (bibliographic database) |
+| YC Startup School talk summary | https://www.latent.space/p/s3 | Secondary (with full transcript) |
+| Dwarkesh podcast | https://www.dwarkesh.com/p/andrej-karpathy | Secondary (with full conversation) |
+| Wikipedia biography | https://en.wikipedia.org/wiki/Andrej_Karpathy | Secondary (comprehensively credible) |
+| Stanford personal page | https://cs.stanford.edu/people/karpathy/ | Primary |
+| vibe coding wiki | https://en.wikipedia.org/wiki/Vibe_coding | Secondary (supplementary confirmation) |
