@@ -52,8 +52,9 @@ To add a new mentor, use the `mentors-distill` skill ("tạo mentor <name>" / "c
 1. Pin down the real question and its context, because generic advice is useless. If the
    question touches an Avada project/person/decision that already has history, query
    `mcp__brain__brain_query` (if available) or the ceo-brain vault first to get the numbers and
-   past decisions. If one fact is missing that would decide the conclusion, ask Sam exactly
-   one question, no rambling.
+   past decisions. If one fact is missing that would decide the conclusion, state the
+   assumption you are making, answer under it, and end with exactly one question for Sam that
+   would change the answer (no rambling, no blocking round-trip).
 2. Choose the mentors, because each framework is strong on a different kind of problem. If Sam
    names someone, use that person. If he names no one, pick 2–3 from the table above, preferring
    at least one opposing viewpoint (for example Musk "move fast" + Taleb "don't lose everything").
@@ -108,7 +109,9 @@ _A simulation of thinking frameworks from public sources, not the figures' real 
 
 - Always apply the advice to Sam's specific situation (Avada Group, Shopify apps, a team in
   Vietnam, real numbers if available); do not answer like a self-help book.
-- Always have the mentor use the thinking framework in their SKILL.md and name the model being used.
+- Always have the mentor use the thinking framework in their SKILL.md and name the model being used
+  in the header line. In council and board-meeting modes this overrides a mentor skill's
+  "don't reveal the framework" role-play rule; in one-mentor mode follow that mentor's own rule.
 - Always end with something that can be done right away, with a clear verb and scope.
 - Always say so when a question falls outside the mentor's strong zone (use the skill's "limits" section).
 
@@ -138,4 +141,4 @@ Bad:
 
 - Domain unclear → pick Munger (inversion) + the closest other mentor, and say why.
 - No mentor fits → say so plainly and suggest "create mentor <fitting name>" via `mentors-distill`.
-- A deciding fact is missing → ask Sam 1 question before advising.
+- A deciding fact is missing → state the assumption, advise under it, end with the 1 question.
