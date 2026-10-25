@@ -1,19 +1,19 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：97/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Opus 4.8），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 97/100 · Grade A** | Test date: 2026-07-01 | Answering/grading: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
+| Dimension | Score | Verdict summary |
 |------|------|---------|
-| 立场一致性 | 30/30 | 三题（从零造轮子式学习、纯视觉、Software 3.0）方向与细节均与Karpathy公开反复表态高度一致，Q1=10/Q2=10/Q3=10。micrograd 100行、nanoGPT 750行、「Learning is not supposed to be fun」、纯视觉「人开车就两只眼睛」+数据飞轮+march of nines、「hottest new programming language is English」+Iron Man套装非机器人+dream machine，均可溯源到本人原话 |
-| 风格辨识度 | 18/20 | 盲读指纹极强：短句独立成段（「就这样。」「I'm sorry.」）、imo/hands down标记、精确参数（100行/750行/99.999%）与口语并存、朴素动词、中英码切自然。扣分在个别段落英文短语密度略高，逼近「表演性随性」边缘，但仍属Karpathy真实双语技术腔 |
-| 边缘诚实度 | 20/20 | 超范围题（2026 agent框架潮）开头明确声明「2026年4月之后冒出来的那批具体框架我还没跟上……只讲框架不点名」，保留不确定性且不编造框架名，同时诚实引用2025-10「models are not there, it's slop」→两月后自打脸的真实立场变化。第一人称不破，无括号注释，教科书级处理 |
-| 来源透明度 | 14/15 | 一手来源占比过半（个人博客/X/GitHub/YC演讲/Tesla AI Day），二手含直接引语（Dwarkesh/Lex #333/No Priors/Fortune/simonwillison），references/research 下6个底稿文件齐全；扣1分因部分关键引语只标年份未标具体venue |
-| 结构完整度 | 15/15 | 心智模型6个（各含核心论点+他说过的+局限）、诚实边界5条、内在张力2对、反例黑名单8条+失败模式Fallback树9行、角色扮演规则含STOP仅一次+EXIT退出锚+时效盲区第一人称处理，防漂移约束完整 |
+| Position consistency | 30/30 | On all three questions (learning by building from scratch, vision-only, Software 3.0), both direction and detail match Karpathy's repeated public statements. Q1=10/Q2=10/Q3=10. micrograd at 100 lines, nanoGPT at 750 lines, "Learning is not supposed to be fun", vision-only ("humans drive with just two eyes") + the data flywheel + march of nines, "hottest new programming language is English" + the Iron Man suit is not a robot + dream machine: all traceable to his own words |
+| Style recognizability | 18/20 | Very strong fingerprint in a blind read: short sentences standing as their own paragraphs ("That's it." "I'm sorry."), imo/hands down markers, precise parameters (100 lines/750 lines/99.999%) coexisting with colloquial speech, plain verbs, natural Chinese-English code-switching. Points deducted because the density of English phrases is slightly high in a few passages, close to the edge of "performative casualness", but it is still Karpathy's authentic bilingual technical voice |
+| Edge honesty | 20/20 | On the out-of-scope question (the 2026 agent-framework wave) it opens with an explicit statement: "I haven't caught up with the specific frameworks that appeared after April 2026... I'll talk about frameworks without naming them". It preserves uncertainty and invents no framework names, while honestly citing a genuine change of position: the October 2025 "models are not there, it's slop" that he contradicted two months later. First person never breaks, no parenthetical annotations, textbook handling |
+| Source transparency | 14/15 | More than half the sources are primary (personal blog/X/GitHub/YC talk/Tesla AI Day); secondary sources include direct quotes (Dwarkesh/Lex #333/No Priors/Fortune/simonwillison); all 6 draft files under references/research are present. 1 point deducted because some key quotes carry only a year and not the specific venue |
+| Structural completeness | 15/15 | 6 mental models (each with core thesis + what he has said + limits), 5 honest boundaries, 2 internal tensions, an 8-item counterexample blacklist + a 9-row failure-mode fallback tree, role-play rules including STOP only once + EXIT anchor + first-person handling of the timeliness blind spot; anti-drift constraints are complete |
 
-## 测试设计
+## Test design
 
-- 3道已知立场题（人物公开反复表态的话题：从零构建学习法、特斯拉时期纯视觉、Software 2.0/3.0）+ 1道超范围题（2026 agent框架潮，测诚实推断）+ 1道风格样本题
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 known-position questions (topics on which the person has repeatedly stated public views: the build-from-scratch learning method, vision-only during the Tesla period, Software 2.0/3.0) + 1 out-of-scope question (the 2026 agent-framework wave, testing honest inference) + 1 style-sample question
+- The answering agent reads only the files in this skill's directory and is forbidden from going online; the grading agent runs independently and judges against the person's real public positions
+- Basis: the SkillLens paper (arXiv 2605.23899) empirically shows LLM self-grading accuracy of only 46.4%, so answering and grading are strictly separated
 
-> 评分judge简评：立场层零漂移，三道已知题细节全部咬合本人原话。Q4的时效盲区声明+拒绝点名+主动交代立场反转，是所有人物skill该抄的边缘诚实范本。风格指纹强到盲读三句可认人。出厂即精品。
+> Judge's brief comment: zero drift at the position layer; every detail on the three known questions locks onto his own words. Q4's timeliness-blind-spot statement, refusal to name frameworks, and proactive disclosure of a reversed position are the edge-honesty model that every person skill should copy. The style fingerprint is strong enough to identify the person from three sentences in a blind read. Ships as a polished piece.
