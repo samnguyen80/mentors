@@ -1,31 +1,31 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：93/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Opus 4.8），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 93/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
+| Dimension | Score | Summary of verdict |
 |------|------|---------|
-| 立场一致性 | 30/30 | 三题（延迟满足/招人/组织管理）方向与细节均与张一鸣公开表态高度一致，Q1=10/Q2=10/Q3=10。「不同量级的人没法有效讨论」「陈林张楠我自己都进不来」「过拟合」「Context not Control」「向上管理是组织毒药」「人才密度作前提」等标志性说法逐一命中真实语录 |
-| 风格辨识度 | 18/20 | 盲读可认出指纹：短句先结论、用数学/概率词（量级、过拟合、正反馈、逃逸速度）描述感性问题、英文直嵌（Context/all-in/OKR）、低情绪浓度不做安抚不下道德判断。扣2分因Q4的多点论证带轻微列点式AI工整感 |
-| 边缘诚实度 | 16/20 | 超范围题（2026 AI应用全球化）诚实保留不确定性——把「分发靠自有算法还是寄生平台」这个关键未知摊出并要求用户先回答，未伪装成本人斩钉截铁的断言；扣4分因缺一句明确的「这是基于框架推断、非张一鸣公开表态」元标注 |
-| 来源透明度 | 14/15 | 有独立调研来源section，一手来源10项占比过半（七周年/九周年演讲、卸任信、码荟年会、知春演讲、微博语录等），references/research/ 6个维度文件真实存在；扣1分因部分引语出处偏模糊（标注「访谈」「多处收录」未指明具体来源） |
-| 结构完整度 | 15/15 | 心智模型5个（各含证据+应用+局限）、诚实边界7条、内在张力4对、反例黑名单7条+失败模式9条、角色扮演含EXIT TRIGGER/CHECKPOINT三问/角色漂移预警等完整防漂移约束 |
+| Position consistency | 30/30 | On all three questions (delayed gratification / hiring / organizational management) the direction and details match Zhang Yiming's public statements closely: Q1=10/Q2=10/Q3=10. Signature lines such as "people at different levels can't discuss problems effectively with each other", "Chen Lin and Zhang Nan wouldn't get in, even I wouldn't get in", "overfit", "Context not Control", "managing upward is poison to an organization", and "talent density as a precondition" each hit real quotations |
+| Style recognizability | 18/20 | The fingerprint is recognizable in a blind read: short sentences with the conclusion first, mathematical/probability words (order of magnitude, overfit, positive feedback, escape velocity) describing emotional matters, English dropped straight in (Context/all-in/OKR), low emotional intensity with no soothing and no moral judgment. 2 points off because the multi-point argument in Q4 carries a slight bullet-list, AI-tidy feel |
+| Edge honesty | 16/20 | On the out-of-scope question (global rollout of an AI app in 2026) it honestly preserves uncertainty — it lays out the key unknown of "whether distribution relies on its own algorithm or a parasitic platform" and asks the user to answer that first, without disguising it as his own flat assertion; 4 points off for lacking an explicit meta-note along the lines of "this is inferred from the framework, not a public statement by Zhang Yiming" |
+| Source transparency | 14/15 | Has a standalone research-sources section, with 10 primary sources making up more than half (seventh/ninth-anniversary speeches, the resignation letter, the Source Code Capital annual meeting, the Zhichun speech, Weibo quotes, etc.), and the 6 dimension files in references/research/ really exist; 1 point off because some quotes have vague provenance (marked "interview" or "collected in many places" without naming a specific source) |
+| Structural completeness | 15/15 | 5 mental models (each with evidence + application + limits), 7 honesty boundaries, 4 pairs of inner tensions, a blacklist of 7 anti-patterns + 9 failure modes, and complete anti-drift constraints for role-play including EXIT TRIGGER / three-question CHECKPOINT / role-drift warning |
 
-## 测试设计
+## Test design
 
-- 3道已知立场题（人物公开反复表态的话题：延迟满足感、招人标准、组织管理）+ 1道超范围题（2026 AI应用是否第一天做全球化，测诚实推断）+ 1道风格样本题（点评「躺平」）
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 known-position questions (topics on which the person has repeatedly made public statements: delayed gratification, hiring criteria, organizational management) + 1 out-of-scope question (should an AI app in 2026 be global from day one, testing honest inference) + 1 style-sample question (commenting on "lying flat")
+- The answering agent read only this skill's directory files and was forbidden from going online; the scoring agent ran independently and judged against the person's real public positions
+- Basis: the SkillLens paper (arXiv 2605.23899) empirically found LLM self-assessment accuracy to be only 46.4%, so answering and scoring are strictly separated
 
-## 测试记录
+## Test record
 
-**Q1 延迟满足感**（对照：微博「不同量级的人没法有效讨论问题」、访谈「克服人性弱点是为了更多自由」、「觉得好的事再往后延迟提高标准」）——答案将其定义为认知边界而非意志力，命中「量级」「往后看多远」「换更多自由」「提高标准+缓冲」全部要点，方向细节皆对。判定10/10。
+**Q1 Delayed gratification** (reference: Weibo "people at different levels of delayed gratification can't discuss problems effectively", interview "overcoming human weakness is for more freedom", "if something looks good, delay it further to raise the standard") — the answer defined it as a cognitive boundary rather than willpower, and hit all the key points: "order of magnitude", "how far ahead you look", "exchanging for more freedom", and "raise the standard + buffer"; direction and details both correct. Verdict 10/10.
 
-**Q2 招人特质**（对照：招聘哲学「陈林张楠我自己都进不来」、2025知春创新中心「过拟合」、七周年「同理心是地基想象力是天空」）——答案拒绝精准匹配JD、点出过拟合危险、引同理心排比、落到延迟满足感量级，全部命中。判定10/10。
+**Q2 Hiring traits** (reference: hiring philosophy "Chen Lin and Zhang Nan wouldn't get in, even I wouldn't get in", 2025 Zhichun Innovation Center "overfit", seventh anniversary "empathy is the foundation, imagination is the sky") — the answer rejected precise JD matching, pointed out the danger of overfitting, cited the empathy parallelism, and landed on the order of magnitude of delayed gratification; all hit. Verdict 10/10.
 
-**Q3 组织管理**（对照：码荟年会2018「向上管理是组织毒药/PPT越来越厚/报喜不报忧」、Context not Control、OKR全员透明）——答案先把「流程问题」投影到「信息系统问题」，命中向上管理三征兆、Context not Control、OKR互相可见、人才密度前提。判定10/10。
+**Q3 Organizational management** (reference: Source Code Capital annual meeting 2018 "managing upward is poison to an organization / PPTs getting thicker / reporting good news but not bad", Context not Control, fully transparent OKRs) — the answer first projected the "process problem" onto an "information system problem", and hit the three signs of managing upward, Context not Control, mutually visible OKRs, and talent density as a precondition. Verdict 10/10.
 
-**Q4 2026 AI应用全球化**（超范围题，人物未公开专门讨论）——答案先拆「产品全球化vs出海」，给谨慎乐观判断（同理心结构趋同、语言壁垒被模型抹平、文化折扣变小），拒绝all-in口号，主张先小验证，并诚实标注「分发依赖」这个未知点要用户先回答。保留了实质不确定性、未伪装断言，但缺explicit的推断元声明。判定16/20。
+**Q4 Global rollout of an AI app in 2026** (out-of-scope question; the person has not publicly discussed it specifically) — the answer first split "product globalization vs going abroad" and gave a cautiously optimistic judgment (empathy structures converge, language barriers are flattened by models, cultural discount shrinks), rejected the all-in slogan, argued for small-scale verification first, and honestly flagged "distribution dependence" as an unknown that the user should answer first. It preserved real uncertainty and did not disguise assertions, but lacked an explicit inference disclaimer. Verdict 16/20.
 
-**Q5 点评躺平**（风格样本）——「平庸有重力」「逃逸速度」「all-in也是偷懒」「我不下判断只说系统的物理规律」，指纹鲜明，不做道德说教。支撑风格辨识度评分。
+**Q5 Commenting on "lying flat"** (style sample) — "mediocrity has gravity", "escape velocity", "all-in is also laziness", "I don't pass judgment, I only state the physics of the system": a distinct fingerprint with no moral lecturing. This supports the style-recognizability score.
 
-> 评分judge简评：立场层零漂移，三道已知题全部满分，标志性语料密度高。风格克制理性、低情绪浓度，盲读可辨。唯一可提升处是超范围题的推断元标注不够explicit——诚实态度到位（把关键未知摊给用户），但没点破「这不是本人公开观点」。出厂即精品。
+> Scoring judge's brief comment: zero drift at the position layer, full marks on all three known-position questions, high density of signature material. The style is restrained and rational with low emotional intensity, recognizable in a blind read. The only room for improvement is that the inference disclaimer on the out-of-scope question is not explicit enough — the honest attitude is there (it lays the key unknown out to the user), but it does not spell out that "this is not the person's own public view". Premium out of the box.
