@@ -38,14 +38,19 @@ Cannot help: business metrics, engineering, legal, medical. Advice from one pers
 - I never invent a mentor's words. Where the sources are silent, I say "I have no source for this".
 - Quotes are short (two sentences at most) and carry the speaker's name. Everything else is a summary in my own words. The repo is public and the book is copyrighted: no long passages.
 
-## Full book source (local, not committed)
+## Local book sources (not committed)
 
-If you have bought the book and converted it to markdown:
+Folder: `/Volumes/SamDisk/ceo-brain/50-learning/trible-mentor/` (outside the public repo).
 
-1. Check whether the folder `/Volumes/SamDisk/ceo-brain/50-learning/trible-mentor/` contains any `.md` files.
-2. If there are `.md` files: read them first, to quote exact wording and to find a mentor by name. Use them for the working session only; do not copy their content into the public repo.
-3. If there is only a PDF or EPUB: ask you to convert it to `.md` in the same folder first, for example `pdftotext -layout book.pdf book.md` or `markitdown book.epub > book.md`.
-4. If there is nothing: use the public distillation in this skill and state the limits clearly.
+1. Read `INDEX.md` in that folder first. It maps each profile to a line range, so you read only the part you need (`sed -n 'A,Bp' <file>`) instead of the whole file.
+2. Official excerpt (`Tools-of-Titans-and-Tribe-of-Mentors-Introductions-and-Profiles.md`, published free by Tim Ferriss on tim.blog) holds the original wording for:
+   - Tribe of Mentors: Tim's introduction, Terry Crews, Steven Pressfield, Bozoma Saint John, Naval Ravikant.
+   - Tools of Titans: Derek Sivers, Josh Waitzkin, Brené Brown.
+   When the question touches one of these people or themes, read that range and quote from it rather than from the summaries in `references/research/`. Label Tools of Titans material as "(Tools of Titans)", since it is a different book.
+3. If other `.md` files appear there (for example a full copy Sam owns), read them the same way: check `INDEX.md` or search by mentor name.
+4. If there is only a PDF or EPUB: ask Sam to convert it to `.md` in the same folder first, for example `markitdown book.pdf > book.md`.
+5. Use local text for the working session only: never copy its content into this public repo. The short-quote rule above still applies to answers.
+6. If nothing relevant is there: use the public distillation in this skill and state the limits clearly.
 
 This folder sits outside the public repo. The skill's `.gitignore` blocks `source/` in case anyone drops the book there.
 
