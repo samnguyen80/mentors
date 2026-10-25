@@ -1,438 +1,438 @@
-# 孙宇晨（Justin Sun）对话、采访与AMA调研
+# Research on Justin Sun's Conversations, Interviews and AMAs
 
-> 调研时间：2026-04-07
-> 目的：蒸馏孙宇晨思维框架，重点关注面对质疑时的话术模式和场景切换
+> Research date: 2026-04-07
+> Purpose: distill Justin Sun's thinking framework, focusing on his rhetorical patterns when challenged and how he switches between scenarios
 
 ---
 
-## 一、核心播客与长对话
+## I. Core Podcasts and Long-Form Conversations
 
-### 1. Bad Crypto Podcast #410 — No-Holds Barred（2020-05-24）
-- **类型**：一手，深度播客
-- **时长**：约60分钟
-- **URL**：https://badcryptopodcast.com/2020/05/25/justin-sun-410/
-- **可信度**：高（直接对话录音）
-- **关键内容**：
-  - 主持人直接追问Steem接管争议、与Vitalik的冲突、TRON未来
-  - 这是Sun在Steem事件后最早接受的深度质询之一
-  - 值得关注：他如何将「hostile takeover」重新框架为「保护网络安全」
-- **话术模式**：面对敌意问题时，先承认「理解社区的担忧」，然后迅速转向技术叙事（「我们是在防止恶意攻击者」）
+### 1. Bad Crypto Podcast #410 — No-Holds Barred (2020-05-24)
+- **Type**: primary source, in-depth podcast
+- **Length**: about 60 minutes
+- **URL**: https://badcryptopodcast.com/2020/05/25/justin-sun-410/
+- **Credibility**: high (direct audio recording of the conversation)
+- **Key content**:
+  - The host pressed him directly on the Steem takeover controversy, the conflict with Vitalik, and the future of TRON
+  - One of the earliest in-depth interrogations Sun accepted after the Steem incident
+  - Worth noting: how he reframed the "hostile takeover" as "protecting network security"
+- **Rhetorical pattern**: when facing hostile questions, he first acknowledges "I understand the community's concerns," then quickly pivots to a technical narrative ("we were preventing malicious attackers")
 
-### 2. Bad Crypto Podcast #212（2018-11-28）
-- **类型**：一手，早期采访
-- **URL**：https://badcryptopodcast.com/2018/11/28/justin-sun-tron-212/
-- **可信度**：高
-- **关键内容**：早期TRON愿景叙述，「去中心化互联网」的标准话术尚在形成期
-- **对比价值**：与后期采访对比，可以看到叙事框架的演变
+### 2. Bad Crypto Podcast #212 (2018-11-28)
+- **Type**: primary source, early interview
+- **URL**: https://badcryptopodcast.com/2018/11/28/justin-sun-tron-212/
+- **Credibility**: high
+- **Key content**: an early statement of the TRON vision; the standard "decentralized internet" pitch was still taking shape
+- **Comparative value**: set against later interviews, it shows how the narrative framework evolved
 
-### 3. Empire Podcast (Blockworks) — Tron's Vision, Liquidity Mining & Binance（2023-05-09）
-- **类型**：一手，行业播客
-- **URL**：https://blockworks.co/podcast/empire/496cf85c-eac0-11ed-bf57-2f490e5653be
-- **Spotify**：https://open.spotify.com/episode/0tOpLyNNAydWtOPX7BuFvf
-- **可信度**：高
-- **关键内容**：
-  - TRON作为稳定币网络的定位
-  - USDT市场份额下降的威胁
-  - Huobi与Binance的竞争
-  - 潜在收购DCG资产
-- **话术模式**：面对商业质疑时，用数据堆叠建立权威感（「TRON处理了全球XX%的USDT交易」）
+### 3. Empire Podcast (Blockworks) — Tron's Vision, Liquidity Mining & Binance (2023-05-09)
+- **Type**: primary source, industry podcast
+- **URL**: https://blockworks.co/podcast/empire/496cf85c-eac0-11ed-bf57-2f490e5653be
+- **Spotify**: https://open.spotify.com/episode/0tOpLyNNAydWtOPX7BuFvf
+- **Credibility**: high
+- **Key content**:
+  - TRON's positioning as a stablecoin network
+  - The threat of USDT market share declining
+  - Huobi's competition with Binance
+  - A potential acquisition of DCG assets
+- **Rhetorical pattern**: when facing business doubts, he stacks data to build a sense of authority ("TRON handles XX% of global USDT transactions")
 
 ### 4. Token Terminal Fundamentals Ep.64 — TRON, Stablecoins & Emerging Markets
-- **类型**：一手，数据导向播客
-- **URL**：https://tokenterminal.com/resources/interview/tron-justin-sun-interview
-- **可信度**：高
-- **关键内容**：
-  - TRON在新兴市场的用户活跃度数据
-  - 区块链估值应该从结算层视角看
-  - TRON的核心价值主张和优化方向
-- **话术模式**：技术布道者模式——用基础设施类比（「我们是加密世界的支付轨道」）
+- **Type**: primary source, data-oriented podcast
+- **URL**: https://tokenterminal.com/resources/interview/tron-justin-sun-interview
+- **Credibility**: high
+- **Key content**:
+  - User activity data for TRON in emerging markets
+  - Blockchains should be valued from the settlement-layer perspective
+  - TRON's core value proposition and optimization direction
+- **Rhetorical pattern**: technology-evangelist mode, using infrastructure analogies ("we are the payment rails of the crypto world")
 
-### 5. Bitcoin.com Podcast — Playing the Crypto Game at the Highest Level（2024）
-- **类型**：一手，深度播客
-- **URL**：https://podcast.bitcoin.com/episode/5KAK3fBL5bpOai3QQHizcl/
-- **可信度**：高
-- **关键内容**：
-  - 如何将TRON打造为领先区块链
-  - Bitcoin与DeFi的互操作性
-  - 稳定币的全球影响
-  - 监管导航策略
-- **话术模式**：「playing the game at the highest level」——将一切框架为战略博弈
+### 5. Bitcoin.com Podcast — Playing the Crypto Game at the Highest Level (2024)
+- **Type**: primary source, in-depth podcast
+- **URL**: https://podcast.bitcoin.com/episode/5KAK3fBL5bpOai3QQHizcl/
+- **Credibility**: high
+- **Key content**:
+  - How to build TRON into a leading blockchain
+  - Interoperability between Bitcoin and DeFi
+  - The global impact of stablecoins
+  - Regulatory navigation strategy
+- **Rhetorical pattern**: "playing the game at the highest level" — frames everything as strategic gameplay
 
-### 6. Bitcoin.com Interview — Future of Decentralized Exchanges（2024-01）
-- **类型**：一手，行业采访
-- **URL**：https://news.bitcoin.com/in-the-future-all-crypto-exchanges-will-become-decentralized-justin-sun-founder-of-tron-and-advisor-to-htx/
-- **可信度**：高
-- **关键内容**：
-  - 中心化vs去中心化交易所的辩论
-  - 透明度和去中心化在加密平台中的作用
-  - 宣称「未来所有加密交易所都会去中心化」
-
----
-
-## 二、电视/主流媒体采访
-
-### 7. CNBC Squawk on the Street — Full Interview（2021-05-28）
-- **类型**：一手，主流财经媒体
-- **URL**：https://www.cnbc.com/video/2021/05/28/watch-cnbcs-full-interview-with-tron-foundation-founder-justin-sun.html
-- **可信度**：高
-- **关键内容**：
-  - 加密货币波动性讨论
-  - 可持续性问题
-- **话术模式**：面对主流媒体时切换为「温和技术企业家」人设，语速放慢，用词更保守
-
-### 8. Bloomberg Dawn: Asia — Annabelle Droulers采访（2025-02）
-- **类型**：一手，主流财经媒体
-- **URL**：https://www.odaily.news/en/post/5185016（转述）
-- **可信度**：中高（有直接引述但非完整录音链接）
-- **关键内容**：
-  - TRON的AI+区块链整合战略
-  - Huobi的中国策略
-- **话术模式**：穿西装、用传统金融语言——他自己说过「We need to learn from traditional finance」
+### 6. Bitcoin.com Interview — Future of Decentralized Exchanges (2024-01)
+- **Type**: primary source, industry interview
+- **URL**: https://news.bitcoin.com/in-the-future-all-crypto-exchanges-will-become-decentralized-justin-sun-founder-of-tron-and-advisor-to-htx/
+- **Credibility**: high
+- **Key content**:
+  - The debate between centralized and decentralized exchanges
+  - The role of transparency and decentralization in crypto platforms
+  - Declared that "in the future all crypto exchanges will become decentralized"
 
 ---
 
-## 三、行业峰会与Panel
+## II. TV / Mainstream Media Interviews
 
-### 9. Milken Institute Asia Summit 2023（2023-09-14，新加坡）
-- **类型**：一手，顶级金融峰会
-- **URL**：https://milkeninstitute.org/content-hub/event-panels/conversation-founder-tron-justin-sun
-- **对话方**：Kirk Wagar（前美国驻新加坡大使）
-- **可信度**：高
-- **关键内容**：
-  - 稳定币作为真实用例被低估
-  - 透明度和去中心化是应对市场担忧的关键
-  - 亚洲在加密领域的崛起
-- **话术模式**：外交官模式——与前大使对话时，展现「政策理解者」人设
+### 7. CNBC Squawk on the Street — Full Interview (2021-05-28)
+- **Type**: primary source, mainstream financial media
+- **URL**: https://www.cnbc.com/video/2021/05/28/watch-cnbcs-full-interview-with-tron-foundation-founder-justin-sun.html
+- **Credibility**: high
+- **Key content**:
+  - Discussion of crypto volatility
+  - Sustainability questions
+- **Rhetorical pattern**: with mainstream media he switches to a "mild-mannered tech entrepreneur" persona, slows his speech, and uses more conservative wording
 
-### 10. Consensus Hong Kong 2025（2025-02-19）
-- **类型**：一手，行业最大会议之一
-- **URL**：https://consensus-hongkong2025.coindesk.com/agenda/event/-tron-a-year-of-momentum-20
-- **Panel**：Unlocking DeFi for the Masses: A Conversation with WLFI and TRON
-- **同台**：Zak Folkman（World Liberty Financial联合创始人）
-- **可信度**：高
-- **关键内容**：
-  - 「AI和区块链的结合将是极其强大的组合」
-  - TRON上的Tether供应每月增加10-20亿美元
-  - TRON已成为基础的稳定币支付网络
-  - 新稳定币市值2亿美元，目标翻倍，利率20%
-- **话术模式**：与Trump阵营同台时，完全进入「合作伙伴/投资者」模式，不提任何争议
+### 8. Bloomberg Dawn: Asia — interview by Annabelle Droulers (2025-02)
+- **Type**: primary source, mainstream financial media
+- **URL**: https://www.odaily.news/en/post/5185016 (relayed account)
+- **Credibility**: medium-high (direct quotes, but no link to the full recording)
+- **Key content**:
+  - TRON's AI + blockchain integration strategy
+  - Huobi's China strategy
+- **Rhetorical pattern**: wears a suit and uses traditional-finance language — he himself has said "We need to learn from traditional finance"
+
+---
+
+## III. Industry Summits and Panels
+
+### 9. Milken Institute Asia Summit 2023 (2023-09-14, Singapore)
+- **Type**: primary source, top-tier financial summit
+- **URL**: https://milkeninstitute.org/content-hub/event-panels/conversation-founder-tron-justin-sun
+- **Interlocutor**: Kirk Wagar (former US Ambassador to Singapore)
+- **Credibility**: high
+- **Key content**:
+  - Stablecoins are an underrated real-world use case
+  - Transparency and decentralization are the key to addressing market concerns
+  - The rise of Asia in crypto
+- **Rhetorical pattern**: diplomat mode — in conversation with a former ambassador, he presents the persona of a "policy-literate" figure
+
+### 10. Consensus Hong Kong 2025 (2025-02-19)
+- **Type**: primary source, one of the industry's largest conferences
+- **URL**: https://consensus-hongkong2025.coindesk.com/agenda/event/-tron-a-year-of-momentum-20
+- **Panel**: Unlocking DeFi for the Masses: A Conversation with WLFI and TRON
+- **Shared stage with**: Zak Folkman (co-founder of World Liberty Financial)
+- **Credibility**: high
+- **Key content**:
+  - "The combination of AI and blockchain will be an extremely powerful pairing"
+  - Tether supply on TRON grows by $1–2 billion per month
+  - TRON has become the foundational stablecoin payment network
+  - A new stablecoin with a $200 million market cap, a goal of doubling it, and a 20% interest rate
+- **Rhetorical pattern**: on stage with the Trump camp, he goes fully into "partner/investor" mode and mentions no controversy
 
 ### 11. DC Blockchain Summit 2025 — Opening Panel
-- **类型**：一手，政策峰会
-- **URL**：https://cryptobriefing.com/tron-blockchain-leadership-dc-summit/
-- **同台**：Paolo Ardoino（Tether CEO）、Ari Redbord（TRM Labs）
-- **可信度**：高
-- **关键内容**：讨论打击加密金融犯罪、Bybit黑客事件中冻结900万美元
-- **话术模式**：「执法合作者」人设——强调TRON在打击犯罪中的角色
+- **Type**: primary source, policy summit
+- **URL**: https://cryptobriefing.com/tron-blockchain-leadership-dc-summit/
+- **Shared stage with**: Paolo Ardoino (Tether CEO), Ari Redbord (TRM Labs)
+- **Credibility**: high
+- **Key content**: discussed combating crypto financial crime and the $9 million frozen in the Bybit hack
+- **Rhetorical pattern**: "law-enforcement collaborator" persona — emphasizes TRON's role in fighting crime
 
-### 12. DC Blockchain Summit 2026 — Keynote（2026-03-17）
-- **类型**：一手，钻石赞助商
-- **URL**：https://www.newsfilecorp.com/release/289405/
-- **可信度**：高
-- **关键内容**：
-  - Keynote标题「Building the Rails for a Unified Financial System」
-  - 「在美国这样金融基础设施已经很强的市场，区块链和AI可以帮助将该系统扩展为更开放、可编程的数字环境」
-- **话术模式**：完全的「基础设施建设者」人设，零争议，纯政策语言
+### 12. DC Blockchain Summit 2026 — Keynote (2026-03-17)
+- **Type**: primary source, diamond sponsor
+- **URL**: https://www.newsfilecorp.com/release/289405/
+- **Credibility**: high
+- **Key content**:
+  - Keynote titled "Building the Rails for a Unified Financial System"
+  - "In a market like the US where financial infrastructure is already strong, blockchain and AI can help extend that system into a more open, programmable digital environment"
+- **Rhetorical pattern**: a complete "infrastructure builder" persona — zero controversy, pure policy language
 
 ### 13. Paris Blockchain Week 2022 — Speech
-- **类型**：一手，行业大会
-- **URL**：https://en.cryptonomist.ch/2022/09/16/paris-blockchain-week-justin-speech/
-- **可信度**：高
-- **关键内容**：穿西装演讲，说「We need to learn from traditional finance」
-- **话术模式**：形象转型的标志性时刻——从T恤拖鞋换成正装
+- **Type**: primary source, industry conference
+- **URL**: https://en.cryptonomist.ch/2022/09/16/paris-blockchain-week-justin-speech/
+- **Credibility**: high
+- **Key content**: spoke in a suit and said "We need to learn from traditional finance"
+- **Rhetorical pattern**: the landmark moment of his image makeover — from T-shirt and slippers to formal wear
 
 ### 14. Bitcoin MENA 2024 — Debate with Marty Bent
-- **类型**：一手，辩论
-- **可信度**：中高
-- **关键内容**：将加密行业比作「ideas的博物馆」——有创新但缺乏统一方法应对经济挑战
-- **话术模式**：罕见的自我批评时刻，可能是面对Bitcoin maximalist时的策略性谦虚
+- **Type**: primary source, debate
+- **Credibility**: medium-high
+- **Key content**: compared the crypto industry to a "museum of ideas" — innovative, but lacking a unified approach to economic challenges
+- **Rhetorical pattern**: a rare moment of self-criticism, possibly strategic humility when facing a Bitcoin maximalist
 
 ---
 
-## 四、深度调查报道与Sun的回应
+## IV. In-Depth Investigative Reporting and Sun's Responses
 
-### 15. The Verge 深度调查 — 犯罪指控
-- **类型**：二手调查+一手回应
-- **调查URL**：The Verge原文（需查找具体链接）
-- **回应URL**：https://u.today/justin-sun-denies-facing-criminal-charges-in-response-to-the-verge-article
-- **可信度**：高（The Verge为权威媒体，Sun的回应为一手）
-- **关键内容**：
-  - The Verge指控：电汇欺诈、洗钱、诈骗、协助犯罪
-  - Poloniex收购后实施虚假KYC系统
-  - FBI主导调查，部分员工可能在配合当局
-  - **Sun的回应**：称文章为「blatant defamation」，威胁「pursue legal remedies」，为Poloniex辩护称其有「sterling reputation」
-- **话术模式**：「法律威胁+否认+反指控」三连击
+### 15. The Verge in-depth investigation — criminal allegations
+- **Type**: secondary investigation + primary-source response
+- **Investigation URL**: the original Verge article (specific link still to be located)
+- **Response URL**: https://u.today/justin-sun-denies-facing-criminal-charges-in-response-to-the-verge-article
+- **Credibility**: high (The Verge is an authoritative outlet; Sun's response is primary)
+- **Key content**:
+  - The Verge alleges: wire fraud, money laundering, scams, aiding crime
+  - After acquiring Poloniex, a fake KYC system was implemented
+  - An FBI-led investigation, with some employees possibly cooperating with the authorities
+  - **Sun's response**: called the article "blatant defamation," threatened to "pursue legal remedies," and defended Poloniex as having a "sterling reputation"
+- **Rhetorical pattern**: a three-hit combo of "legal threat + denial + counter-accusation"
 
-### 16. Slate 深度Profile — The Nefarious Truth（2024-12）
-- **类型**：二手深度报道
-- **URL**：https://slate.com/technology/2024/12/justin-sun-banana-art-crypto-billionaire-criminal-comedian-maurizio-cattelan.html
-- **可信度**：高（Slate为知名媒体）
-- **关键内容**：将香蕉艺术品购买放在Sun整个争议历史的背景下分析
+### 16. Slate in-depth profile — The Nefarious Truth (2024-12)
+- **Type**: secondary in-depth reporting
+- **URL**: https://slate.com/technology/2024/12/justin-sun-banana-art-crypto-billionaire-criminal-comedian-maurizio-cattelan.html
+- **Credibility**: high (Slate is a well-known outlet)
+- **Key content**: analyzes the banana artwork purchase against the backdrop of Sun's entire history of controversy
 
 ### 17. Citation Needed (Molly White) — Justin Sun Fights to Control His Story
-- **类型**：二手深度分析
-- **URL**：https://www.citationneeded.news/justin-sun-bloomberg-lawsuit/
-- **可信度**：高（Molly White是加密领域知名批评者）
-- **关键内容**：
-  - Sun起诉Bloomberg的策略分析
-  - 这只是Sun用法律威胁控制媒体叙事的最新案例
-  - Sun主动向Bloomberg提供财富数据以进入亿万富翁指数，但当Bloomberg要发布资产细节时起诉
-  - 核心矛盾：63%的TRX由Sun持有——这个事实他不想公开
-- **话术模式**：「先主动曝光→发现不利信息→起诉封口」
+- **Type**: secondary in-depth analysis
+- **URL**: https://www.citationneeded.news/justin-sun-bloomberg-lawsuit/
+- **Credibility**: high (Molly White is a well-known critic in the crypto space)
+- **Key content**:
+  - Analysis of the strategy behind Sun suing Bloomberg
+  - This is only the latest example of Sun using legal threats to control the media narrative
+  - Sun voluntarily gave Bloomberg wealth data to get onto the billionaires index, but sued when Bloomberg was about to publish asset details
+  - The core contradiction: 63% of TRX is held by Sun — a fact he does not want made public
+- **Rhetorical pattern**: "volunteer exposure first → discover unfavorable information → sue to silence"
 
 ### 18. CCN — How Crypto's Most Controversial Mogul Rebranded in Trump's America
-- **类型**：二手分析
-- **URL**：https://www.ccn.com/news/crypto/how-cryptos-most-controversial-mogul-justin-sun-rebranded-in-trumps-america-today/
-- **可信度**：中高
-- **关键内容**：Sun如何通过投资Trump的加密项目完成形象重塑
+- **Type**: secondary analysis
+- **URL**: https://www.ccn.com/news/crypto/how-cryptos-most-controversial-mogul-justin-sun-rebranded-in-trumps-america-today/
+- **Credibility**: medium-high
+- **Key content**: how Sun completed his image reinvention by investing in Trump's crypto projects
 
 ### 19. NBC News — Meet the Man Who Won the Crypto Contest to Have Dinner with the President
-- **类型**：二手（但有一手信息）
-- **URL**：https://www.nbcnews.com/business/business-news/trump-coin-crypto-dinner-who-is-top-holder-justin-sun-rcna207983
-- **可信度**：高（NBC为主流媒体）
-- **关键内容**：SEC曾起诉Sun，但在Trump任命的人掌控SEC后案件暂停
+- **Type**: secondary (but with primary-source information)
+- **URL**: https://www.nbcnews.com/business/business-news/trump-coin-crypto-dinner-who-is-top-holder-justin-sun-rcna207983
+- **Credibility**: high (NBC is mainstream media)
+- **Key content**: the SEC once sued Sun, but the case was paused after Trump appointees took control of the SEC
 
 ---
 
-## 五、关键争议事件与公开回应
+## V. Key Controversies and Public Responses
 
-### 20. 巴菲特午餐事件（2019-2020）
+### 20. The Buffett lunch incident (2019-2020)
 
-#### 时间线：
-1. **2019-06**：以457万美元拍下巴菲特午餐，高调宣传
-2. **2019-07**：突然取消，声称「肾结石发作」
-3. **2019-07**：财新报道Sun被中国当局扣留（非法集资、赌博、洗钱指控）
-4. **2019-07**：Sun在微博发长文道歉，赞美「中国特色社会主义」，随后删除
-5. **2020-01-23**：午餐终于在奥马哈私人乡村俱乐部进行
+#### Timeline:
+1. **2019-06**: won the Buffett lunch with a $4.57 million bid, promoted loudly
+2. **2019-07**: abruptly canceled, claiming a "kidney stone attack"
+3. **2019-07**: Caixin reported that Sun had been detained by Chinese authorities (allegations of illegal fundraising, gambling and money laundering)
+4. **2019-07**: Sun posted a long apology on Weibo praising "socialism with Chinese characteristics," then deleted it
+5. **2020-01-23**: the lunch finally took place at a private country club in Omaha
 
-#### 一手来源：
-- **微博道歉信**（已删除，有截图流传）：「我有幸伴随着中国特色社会主义的发展而成长...没有监管部门的关怀和指导，区块链行业不会像今天这样蓬勃发展」
-  - URL：https://qz.com/1674509/crypto-entrepreneur-justin-sun-apologizes-for-overpromoting-tron
-  - **可信度**：高（多家媒体保存了截图）
-- **China Daily英文报道**：http://global.chinadaily.com.cn/a/201907/25/WS5d397617a310d83056401049.html
+#### Primary sources:
+- **Weibo apology letter** (deleted; screenshots circulated): "I am fortunate to have grown up alongside the development of socialism with Chinese characteristics... without the care and guidance of the regulators, the blockchain industry would not be flourishing as it is today"
+  - URL: https://qz.com/1674509/crypto-entrepreneur-justin-sun-apologizes-for-overpromoting-tron
+  - **Credibility**: high (multiple outlets preserved screenshots)
+- **China Daily English report**: http://global.chinadaily.com.cn/a/201907/25/WS5d397617a310d83056401049.html
 
-#### 二手来源：
-- CoinDesk报道午餐最终完成：https://www.coindesk.com/markets/2020/02/06/trons-justin-sun-finally-gets-45m-dinner-with-warren-buffett
-- CryptoSlate五大要点：https://cryptoslate.com/justin-sun-lunch-with-warren-buffett/
-- Fortune分析取消原因：https://fortune.com/2019/07/23/warren-buffett-lunch-tron-justin-sun-cryptocurrency/
+#### Secondary sources:
+- CoinDesk on the lunch finally taking place: https://www.coindesk.com/markets/2020/02/06/trons-justin-sun-finally-gets-45m-dinner-with-warren-buffett
+- CryptoSlate's five key takeaways: https://cryptoslate.com/justin-sun-lunch-with-warren-buffett/
+- Fortune's analysis of the reasons for the cancellation: https://fortune.com/2019/07/23/warren-buffett-lunch-tron-justin-sun-cryptocurrency/
 
-#### 话术模式分析：
-- **面对中国监管**：立刻切换为「爱国青年」模式，赞美社会主义，承认过度营销
-- **面对西方媒体**：坚持「肾结石」说法，否认被调查
-- **午餐完成后**：将其重新包装为「跨界对话」而非自我营销
-- **关键特征**：道歉信发了又删——试探监管态度，发现不够就加码
+#### Rhetorical pattern analysis:
+- **Facing Chinese regulators**: instantly switches to "patriotic young man" mode, praises socialism, admits to over-marketing
+- **Facing Western media**: sticks to the "kidney stone" story and denies being investigated
+- **After the lunch took place**: repackaged it as a "cross-boundary dialogue" rather than self-promotion
+- **Key trait**: the apology letter was posted and then deleted — testing the regulators' attitude, and escalating when it proved insufficient
 
-### 21. Steem/Hive 敌意收购（2020-03）
+### 21. Steem/Hive hostile takeover (2020-03)
 
-#### 事件概要：
-- Sun通过TRON收购Steemit Inc.
-- 利用Binance、Huobi、Poloniex的客户代币进行投票，夺取网络控制权
-- 社区hard fork创建Hive，随后Steem没收反对者500万美元代币
+#### Summary of the event:
+- Sun acquired Steemit Inc. through TRON
+- Used customer tokens held at Binance, Huobi and Poloniex to vote and seize control of the network
+- The community hard-forked to create Hive, after which Steem confiscated $5 million of opponents' tokens
 
-#### 一手来源：
-- Bad Crypto Podcast #410（Sun的辩护）：https://badcryptopodcast.com/2020/05/25/justin-sun-410/
-- Vitalik Buterin的批评和Sun的回击：https://cryptopotato.com/vitalik-v-justin-sun-ethereum-co-founder-slams-5-million-steem-seizure/
+#### Primary sources:
+- Bad Crypto Podcast #410 (Sun's defense): https://badcryptopodcast.com/2020/05/25/justin-sun-410/
+- Vitalik Buterin's criticism and Sun's retort: https://cryptopotato.com/vitalik-v-justin-sun-ethereum-co-founder-slams-5-million-steem-seizure/
 
-#### 二手来源：
-- CoinDesk分析：https://www.coindesk.com/tech/2020/03/02/why-crypto-should-care-about-justin-suns-steem-drama/
-- Cointelegraph：https://cointelegraph.com/magazine/2020/03/07/justin-suns-epic-fail-steem-community-nailed-it
-- Decrypt长文：https://decrypt.co/38050/steem-steemit-tron-justin-sun-cryptocurrency-war
+#### Secondary sources:
+- CoinDesk analysis: https://www.coindesk.com/tech/2020/03/02/why-crypto-should-care-about-justin-suns-steem-drama/
+- Cointelegraph: https://cointelegraph.com/magazine/2020/03/07/justin-suns-epic-fail-steem-community-nailed-it
+- Decrypt long read: https://decrypt.co/38050/steem-steemit-tron-justin-sun-cryptocurrency-war
 
-#### 话术模式分析：
-- **Sun的框架**：将社区的防御性soft fork称为「恶意黑客攻击」，将自己的接管称为「保护网络」
-- **面对Vitalik批评**：不正面回应论点，而是反击——「希望ETC能超过ETH，因为去中心化和不可篡改性才是真正重要的」
-- **关键特征**：经典的「重新定义攻守」——把进攻说成防守，把防守说成攻击
+#### Rhetorical pattern analysis:
+- **Sun's framing**: called the community's defensive soft fork a "malicious hack" and his own takeover "protecting the network"
+- **Facing Vitalik's criticism**: did not answer the argument head-on but counterattacked — "I hope ETC overtakes ETH, because decentralization and immutability are what really matter"
+- **Key trait**: the classic "redefine offense and defense" — describing attack as defense and defense as attack
 
-### 22. SEC起诉与和解（2023-2026）
+### 22. SEC lawsuit and settlement (2023-2026)
 
-#### 时间线：
-1. **2023-03**：SEC起诉Sun，指控未注册证券销售（TRX、BTT）和wash trading
-2. **2025-02**：Trump任命的SEC同意60天暂停诉讼
-3. **2025-12**（约）：SEC撤销对Sun和Tron Foundation的指控
-4. **Rainberry（BitTorrent开发商）支付1000万美元罚款**
+#### Timeline:
+1. **2023-03**: the SEC sued Sun, alleging unregistered securities sales (TRX, BTT) and wash trading
+2. **2025-02**: the Trump-appointed SEC agreed to a 60-day stay of the lawsuit
+3. **2025-12** (approx.): the SEC dropped its charges against Sun and the Tron Foundation
+4. **Rainberry (BitTorrent's developer) paid a $10 million fine**
 
-#### 一手来源：
-- Sun称对和解「非常满意」：https://cryptopotato.com/justin-sun-very-pleased-with-10-million-sec-settlement/
-- SEC撤诉报道：https://www.theblock.co/post/392509/sec-dismisses-claims-against-justin-sun-and-tron-foundation-bittorrent-developer-rainberry-agrees-to-pay-10m-fine
+#### Primary sources:
+- Sun said he was "very pleased" with the settlement: https://cryptopotato.com/justin-sun-very-pleased-with-10-million-sec-settlement/
+- Report on the SEC dismissal: https://www.theblock.co/post/392509/sec-dismisses-claims-against-justin-sun-and-tron-foundation-bittorrent-developer-rainberry-agrees-to-pay-10m-fine
 
-#### 二手来源：
-- CNN分析：https://www.cnn.com/2025/02/28/business/crypto-mogul-trump-coins-civil-fraud-charges/
-- Gizmodo批评：https://gizmodo.com/sec-drops-charges-against-chinese-billionaire-after-he-pumps-30-million-into-trumps-crypto-scheme-2000569966
-- 国会议员致SEC信函：https://casten.house.gov/imo/media/doc/letter_to_sec_on_justin_sun_september_2025.pdf
+#### Secondary sources:
+- CNN analysis: https://www.cnn.com/2025/02/28/business/crypto-mogul-trump-coins-civil-fraud-charges/
+- Gizmodo criticism: https://gizmodo.com/sec-drops-charges-against-chinese-billionaire-after-he-pumps-30-million-into-trumps-crypto-scheme-2000569966
+- Congressional letter to the SEC: https://casten.house.gov/imo/media/doc/letter_to_sec_on_justin_sun_september_2025.pdf
 
-#### 话术模式分析：
-- **法律防御**：律师提交文件称SEC指控的wash trading只占交易量的极小比例，「不可能产生指控的效果」
-- **公关策略**：不承认也不否认任何过错（标准法律操作）
-- **政治操作**：在SEC起诉期间投资$30M到Trump的World Liberty Financial——时间线高度重合
-- **关键特征**：用金钱购买政治保护，SEC在Trump掌权后撤案
+#### Rhetorical pattern analysis:
+- **Legal defense**: his lawyers filed papers arguing that the wash trading the SEC alleged was only a tiny share of trading volume and "could not have produced the alleged effect"
+- **PR strategy**: neither admits nor denies any wrongdoing (standard legal practice)
+- **Political maneuvering**: invested $30M in Trump's World Liberty Financial while the SEC suit was pending — the timelines overlap heavily
+- **Key trait**: using money to buy political protection; the SEC dropped the case after Trump took power
 
-### 23. 格林纳达外交官身份（2021-2023）
+### 23. Grenada diplomat status (2021-2023)
 
-#### 一手来源：
-- Sun声称仍是WTO大使（附截图）：https://www.theblock.co/post/224253/justin-sun-claims-he-remains-wto-ambassador-for-grenada-shares-screenshots
-- Fortune报道身份终止：https://fortune.com/crypto/2023/03/31/his-excellency-sec-lawsuit-justin-sun-grenada-diplomat-wto/
+#### Primary sources:
+- Sun claimed he was still WTO ambassador (with screenshots): https://www.theblock.co/post/224253/justin-sun-claims-he-remains-wto-ambassador-for-grenada-shares-screenshots
+- Fortune on the termination of the status: https://fortune.com/crypto/2023/03/31/his-excellency-sec-lawsuit-justin-sun-grenada-diplomat-wto/
 
-#### 二手来源：
-- Protos调查：Sun虚假声称外交豁免权：https://protos.com/scoop-justin-sun-falsely-claimed-diplomatic-immunity-in-lawsuit/
-- Protos分析：外交豁免仅限瑞士领土：https://protos.com/sun-grenada-his-excellency-justin-crypto-tron-diplomatic-immunity-switzerland/
+#### Secondary sources:
+- Protos investigation: Sun falsely claimed diplomatic immunity in a lawsuit: https://protos.com/scoop-justin-sun-falsely-claimed-diplomatic-immunity-in-lawsuit/
+- Protos analysis: diplomatic immunity is limited to Swiss territory: https://protos.com/sun-grenada-his-excellency-justin-crypto-tron-diplomatic-immunity-switzerland/
 
-#### 话术模式分析：
-- 投资15-35万美元获得格林纳达外交官任命
-- Wall Street Journal报道动机是获得外交豁免权以规避美国DOJ调查
-- 外交豁免实际上只在瑞士有效，在格林纳达本土无效，与美国有引渡协议
-- **身份操作**：让员工称呼自己为「His Excellency」，所有社交账号改为「H.E. Justin Sun」
-- **关键特征**：花小钱买大身份，用头衔制造权威感
+#### Rhetorical pattern analysis:
+- Invested $150,000–350,000 to obtain a Grenadian diplomatic appointment
+- The Wall Street Journal reported the motive was to gain diplomatic immunity to evade a US DOJ investigation
+- Diplomatic immunity in fact only works in Switzerland, not in Grenada itself, which has an extradition treaty with the US
+- **Identity manipulation**: had employees address him as "His Excellency" and changed all his social accounts to "H.E. Justin Sun"
+- **Key trait**: spends little to buy a big identity, using titles to manufacture authority
 
-### 24. Bloomberg起诉事件（2025）
+### 24. Bloomberg lawsuit (2025)
 
-#### 一手来源：
-- Citation Needed深度分析：https://www.citationneeded.news/justin-sun-bloomberg-lawsuit/
+#### Primary sources:
+- Citation Needed in-depth analysis: https://www.citationneeded.news/justin-sun-bloomberg-lawsuit/
 
-#### 二手来源：
-- Decrypt报道：https://decrypt.co/335165/justin-sun-sues-bloomberg-plans-publish-confidential-crypto-holdings
-- Yahoo Finance：https://finance.yahoo.com/news/justin-sun-sues-bloomberg-over-063110417.html
+#### Secondary sources:
+- Decrypt report: https://decrypt.co/335165/justin-sun-sues-bloomberg-plans-publish-confidential-crypto-holdings
+- Yahoo Finance: https://finance.yahoo.com/news/justin-sun-sues-bloomberg-over-063110417.html
 
-#### 话术模式分析：
-- Sun主动提交财产信息给Bloomberg以进入亿万富翁指数（追求名声）
-- 发现Bloomberg要发布资产细节后起诉（害怕透明）
-- 法院驳回Sun的封口请求
-- **核心矛盾**：他持有63%流通中的TRX——这暴露了「去中心化」叙事的虚伪
-- **关键特征**：「要名声不要透明」——只想要对自己有利的曝光
+#### Rhetorical pattern analysis:
+- Sun voluntarily submitted asset information to Bloomberg to get onto the billionaires index (pursuing fame)
+- Sued after discovering Bloomberg was going to publish asset details (fear of transparency)
+- The court rejected Sun's request to gag the publication
+- **Core contradiction**: he holds 63% of circulating TRX — which exposes the hypocrisy of the "decentralization" narrative
+- **Key trait**: "wants fame but not transparency" — only wants exposure that benefits him
 
-### 25. 香蕉艺术品事件（2024-11）
+### 25. The banana artwork incident (2024-11)
 
-#### 一手来源：
-- ARTnews报道吃香蕉：https://www.artnews.com/art-news/news/justin-sun-eats-maurizio-cattelan-banana-comedian-eaten-1234725313/
-- Sun将概念艺术类比区块链和NFT
+#### Primary sources:
+- ARTnews report on eating the banana: https://www.artnews.com/art-news/news/justin-sun-eats-maurizio-cattelan-banana-comedian-eaten-1234725313/
+- Sun likened conceptual art to blockchain and NFTs
 
-#### 二手来源：
-- ARTnews报道Sun施压CoinDesk撤稿：https://www.artnews.com/art-news/news/justin-sun-banana-article-retracted-maurizio-cattelan-1234729239/
-- Slate深度分析：https://slate.com/technology/2024/12/justin-sun-banana-art-crypto-billionaire-criminal-comedian-maurizio-cattelan.html
+#### Secondary sources:
+- ARTnews report on Sun pressuring CoinDesk to retract an article: https://www.artnews.com/art-news/news/justin-sun-banana-article-retracted-maurizio-cattelan-1234729239/
+- Slate in-depth analysis: https://slate.com/technology/2024/12/justin-sun-banana-art-crypto-billionaire-criminal-comedian-maurizio-cattelan.html
 
-#### 话术模式分析：
-- 620万美元买香蕉+吃掉 = 病毒式营销
-- 将「概念艺术」类比为区块链技术（「大部分概念艺术作为IP存在于互联网上，而非物理世界」）
-- 当CoinDesk发表批评文章时，施压撤稿
-- **关键特征**：花大钱制造话题→引导叙事→压制批评声音
+#### Rhetorical pattern analysis:
+- Paying $6.2 million for a banana and eating it = viral marketing
+- Likened "conceptual art" to blockchain technology ("most conceptual art exists as IP on the internet, not in the physical world")
+- When CoinDesk published a critical article, he pressured it to retract
+- **Key trait**: spend big to manufacture a topic → steer the narrative → suppress critical voices
 
-### 26. Trump关系与World Liberty Financial（2025）
+### 26. Relationship with Trump and World Liberty Financial (2025)
 
-#### 一手来源：
-- Sun确认自己是$TRUMP最大持有者：https://www.cbsnews.com/news/crypto-billionaire-justin-sun-trump-meme-coin/
-- Consensus HK 2025与WLFI联合创始人同台
+#### Primary sources:
+- Sun confirmed he is the largest holder of $TRUMP: https://www.cbsnews.com/news/crypto-billionaire-justin-sun-trump-meme-coin/
+- Shared the stage with WLFI's co-founder at Consensus HK 2025
 
-#### 二手来源：
-- Fortune报道WLFI冻结Sun 1.07亿美元代币：https://fortune.com/crypto/2025/09/05/justin-sun-donald-trump-world-liberty-financial-blacklisted-crypto-address-wlfi/
-- Axios报道Trump家族与Sun断裂：https://www.axios.com/2025/09/05/trump-justin-sun-world-liberty-financial
+#### Secondary sources:
+- Fortune on WLFI freezing $107 million of Sun's tokens: https://fortune.com/crypto/2025/09/05/justin-sun-donald-trump-world-liberty-financial-blacklisted-crypto-address-wlfi/
+- Axios on the rift between the Trump family and Sun: https://www.axios.com/2025/09/05/trump-justin-sun-world-liberty-financial
 
-#### 话术模式分析：
-- 购买$75M World Liberty Financial代币（其中75%即$56M直接流向Trump家族）
-- 成为$TRUMP最大持有者以获得与总统共进晚餐的机会
-- 结果：SEC在Trump任期内撤案
-- 后续反转：WLFI冻结了Sun的$107M代币，关系破裂
-- **关键特征**：用金钱购买政治关系和法律保护——但「盟友」也会翻脸
+#### Rhetorical pattern analysis:
+- Bought $75M of World Liberty Financial tokens (75% of it, i.e. $56M, flowed directly to the Trump family)
+- Became the largest $TRUMP holder to win the chance of a dinner with the president
+- Outcome: the SEC dropped the case during Trump's term
+- Later reversal: WLFI froze Sun's $107M of tokens and the relationship broke down
+- **Key trait**: using money to buy political relationships and legal protection — but "allies" can also turn on you
 
 ---
 
-## 六、话术模式总结
+## VI. Summary of Rhetorical Patterns
 
-### A. 场景切换矩阵
+### A. Scenario-Switching Matrix
 
-| 场景 | 人设 | 语言风格 | 着装 | 典型话术 |
+| Scenario | Persona | Language style | Attire | Typical lines |
 |------|------|----------|------|----------|
-| 面对中国监管 | 爱国青年 | 自我批评，赞美社会主义 | — | 「没有监管部门的关怀和指导...」 |
-| 面对西方主流媒体（CNBC/Bloomberg）| 温和技术企业家 | 保守、数据驱动 | 西装 | 「We need to learn from traditional finance」|
-| 面对行业播客 | 愿景布道者 | 宏大叙事、技术术语 | 休闲 | 「去中心化互联网」「支付轨道」 |
-| 面对政策峰会（DC/Milken）| 外交官/政策理解者 | 政策语言、合规叙事 | 正装 | 「Building the rails for unified financial system」|
-| 面对Trump阵营 | 投资者/合作伙伴 | 商业互捧 | 正装 | 「AI+blockchain is powerful combination」|
-| 面对敌意质疑 | 受害者/反击者 | 法律威胁、否认 | — | 「blatant defamation」「pursue legal remedies」|
-| 面对社区/Twitter | 鲸鱼老大 | 轻松、meme化 | — | Emoji、banana主题、astronaut |
+| Facing Chinese regulators | Patriotic young man | Self-criticism, praise of socialism | — | "Without the care and guidance of the regulators..." |
+| Facing Western mainstream media (CNBC/Bloomberg) | Mild-mannered tech entrepreneur | Conservative, data-driven | Suit | "We need to learn from traditional finance" |
+| Facing industry podcasts | Vision evangelist | Grand narrative, technical jargon | Casual | "Decentralized internet", "payment rails" |
+| Facing policy summits (DC/Milken) | Diplomat / policy-literate figure | Policy language, compliance narrative | Formal wear | "Building the rails for a unified financial system" |
+| Facing the Trump camp | Investor / partner | Mutual business flattery | Formal wear | "AI + blockchain is a powerful combination" |
+| Facing hostile challenges | Victim / counter-attacker | Legal threats, denial | — | "blatant defamation", "pursue legal remedies" |
+| Facing the community / Twitter | Whale boss | Relaxed, meme-ified | — | Emoji, banana theme, astronaut |
 
-### B. 质疑应对策略库
+### B. Playbook for Handling Challenges
 
-1. **重新框架（Reframing）**
-   - Steem接管 → 「保护网络安全」
-   - 被质疑wash trading → 「占比极小，不可能有影响」
-   - 香蕉事件 → 「概念艺术=区块链哲学」
+1. **Reframing**
+   - Steem takeover → "protecting network security"
+   - Questioned over wash trading → "the share is tiny, it could not have had an impact"
+   - Banana incident → "conceptual art = blockchain philosophy"
 
-2. **法律威胁（Legal Intimidation）**
-   - 对The Verge：威胁法律追诉
-   - 对Bloomberg：直接起诉
-   - 对CoinDesk：施压撤稿
+2. **Legal Intimidation**
+   - Toward The Verge: threatened legal action
+   - Toward Bloomberg: sued directly
+   - Toward CoinDesk: pressured it to retract
 
-3. **金钱外交（Financial Diplomacy）**
-   - 巴菲特午餐：$4.57M买合法性
-   - 格林纳达外交官：$15-35万买豁免权
-   - Trump WLFI：$75M买政治保护
-   - $TRUMP代币：成为最大持有者买总统晚餐
+3. **Financial Diplomacy**
+   - Buffett lunch: $4.57M to buy legitimacy
+   - Grenada diplomat: $150–350K to buy immunity
+   - Trump WLFI: $75M to buy political protection
+   - $TRUMP token: became the largest holder to buy a dinner with the president
 
-4. **否认+转移（Deny & Deflect）**
-   - 肾结石 vs 被中国当局扣留
-   - 「FUD」回应前女友指控
-   - 「不承认也不否认」SEC和解
+4. **Deny & Deflect**
+   - Kidney stones vs. being detained by Chinese authorities
+   - "FUD" as the response to his ex-girlfriend's accusations
+   - "Neither admit nor deny" in the SEC settlement
 
-5. **先发后删（Post & Delete）**
-   - 微博道歉信：发布→删除→截图已流传
-   - 试探水温的策略
+5. **Post & Delete**
+   - Weibo apology letter: posted → deleted → screenshots already circulating
+   - A strategy of testing the water
 
-6. **反击式防守（Counter-Attack Defense）**
-   - 面对Vitalik批评Steem → 反击「希望ETC超过ETH」
-   - 面对First Digital Trust争议 → 反指控对方「fabricating documents」
-   - 面对Bloomberg → 起诉对方泄露隐私
+6. **Counter-Attack Defense**
+   - Facing Vitalik's criticism of Steem → counterattacked with "I hope ETC overtakes ETH"
+   - Facing the First Digital Trust controversy → countercharged that the other side was "fabricating documents"
+   - Facing Bloomberg → sued the other side for leaking private information
 
-### C. 即兴类比和金句
+### C. Improvised Analogies and Quotable Lines
 
-- 「加密行业是ideas的博物馆」（Bitcoin MENA 2024辩论）
-- 「我们这代人的特征是韧性、冒险意愿和坚定信念」（Artnet NFT采访 2022）
-- 将概念艺术类比为区块链：「大部分存在于互联网上而非物理世界」（香蕉事件 2024）
-- 「未来所有加密交易所都会去中心化」（Bitcoin.com 2024）
-- 「In markets like the US, where financial infrastructure is already strong...blockchain and AI can help expand that system」（DC Summit 2026）
+- "The crypto industry is a museum of ideas" (Bitcoin MENA 2024 debate)
+- "The defining traits of our generation are resilience, willingness to take risks, and firm conviction" (Artnet NFT interview, 2022)
+- Likening conceptual art to blockchain: "most of it exists on the internet rather than in the physical world" (banana incident, 2024)
+- "In the future all crypto exchanges will become decentralized" (Bitcoin.com, 2024)
+- "In markets like the US, where financial infrastructure is already strong...blockchain and AI can help expand that system" (DC Summit 2026)
 
-### D. 回避/拒绝回答的问题
+### D. Questions He Avoids / Refuses to Answer
 
-- **63%TRX持有量**：起诉Bloomberg以阻止公开
-- **中国当局调查细节**：只说肾结石，从不正面回应财新报道
-- **FBI调查**：完全不回应The Verge的具体指控
-- **wash trading具体数据**：通过律师用技术性论证回避
-- **WLFI投资与SEC撤案的因果关系**：从不公开讨论
+- **The 63% TRX holding**: sued Bloomberg to prevent its publication
+- **Details of the Chinese authorities' investigation**: only says kidney stones, never responds directly to Caixin's report
+- **The FBI investigation**: does not respond at all to The Verge's specific allegations
+- **Specific wash trading figures**: sidestepped through lawyers with technical arguments
+- **The causal link between the WLFI investment and the SEC dropping the case**: never discussed publicly
 
 ---
 
-## 七、深度访谈文本来源
+## VII. Sources for In-Depth Interview Texts
 
-### 完整访谈/对话（推荐精读）
+### Full interviews / conversations (recommended close reading)
 
-| 来源 | 类型 | URL | 重点 |
+| Source | Type | URL | Focus |
 |------|------|-----|------|
-| Thought Economics | 长文采访 | https://thoughteconomics.com/justin-sun-tron-bittorrent/ | 去中心化网络愿景、BitTorrent、数字身份 |
-| Beluga Exclusive | 深度采访 | https://heybeluga.com/articles/interview-justin-sun-tron/ | TRON创业故事和早期愿景 |
-| Coinspeaker Exclusive | 深度采访 | https://www.coinspeaker.com/exclusive-interview-tron-justin-sun/ | 「We Return Power Back to Users」|
-| HackerNoon | 采访 | https://hackernoon.com/justin-sun-on-the-future-of-crypto | 加密未来展望 |
-| KBW 2023 Exclusive | 行业采访 | https://hejustinsun.com/interviews/33 | KBW大会后专访 |
-| Hotcoin Insider | 人物Profile | https://insider.hotcoin.com/personal-story/justin-sun-crypto-diplomacy-and-beyond/ | 加密外交与个人故事 |
+| Thought Economics | Long-form interview | https://thoughteconomics.com/justin-sun-tron-bittorrent/ | Vision of a decentralized network, BitTorrent, digital identity |
+| Beluga Exclusive | In-depth interview | https://heybeluga.com/articles/interview-justin-sun-tron/ | TRON's founding story and early vision |
+| Coinspeaker Exclusive | In-depth interview | https://www.coinspeaker.com/exclusive-interview-tron-justin-sun/ | "We Return Power Back to Users" |
+| HackerNoon | Interview | https://hackernoon.com/justin-sun-on-the-future-of-crypto | Outlook on the future of crypto |
+| KBW 2023 Exclusive | Industry interview | https://hejustinsun.com/interviews/33 | Post-KBW conference interview |
+| Hotcoin Insider | Personal profile | https://insider.hotcoin.com/personal-story/justin-sun-crypto-diplomacy-and-beyond/ | Crypto diplomacy and personal story |
 
-### 背景Profile（理解人物必读）
+### Background profiles (essential for understanding the person)
 
-| 来源 | 类型 | URL | 重点 |
+| Source | Type | URL | Focus |
 |------|------|-----|------|
-| Wikipedia | 百科 | https://en.wikipedia.org/wiki/Justin_Sun | 完整时间线和事实框架 |
-| SCMP | Profile | https://www.scmp.com/magazines/style/news-trends/article/3014813/ | 5件必知的事 |
-| Global Times Singapore | 深度分析 | https://medium.com/@GlobalTimesSingapore/justin-sun-wants-to-control-the-future-of-crypto | 控制欲分析 |
-| incrypted | 完整传记 | https://incrypted.com/en/justin-sun/ | 传记+丑闻+项目 |
+| Wikipedia | Encyclopedia | https://en.wikipedia.org/wiki/Justin_Sun | Full timeline and factual framework |
+| SCMP | Profile | https://www.scmp.com/magazines/style/news-trends/article/3014813/ | 5 things to know |
+| Global Times Singapore | In-depth analysis | https://medium.com/@GlobalTimesSingapore/justin-sun-wants-to-control-the-future-of-crypto | Analysis of his desire for control |
+| incrypted | Full biography | https://incrypted.com/en/justin-sun/ | Biography + scandals + projects |
 
 ---
 
-## 八、人物背景速查
+## VIII. Quick Background Reference
 
-- **出生**：1990年，中国
-- **教育**：北京大学历史学学士（2011）→ 宾夕法尼亚大学政治经济学硕士（2013）→ 湖畔大学（Jack Ma创办，2016-2019，首位90后毕业生）
-- **早期经历**：Ripple大中华区首席代表（2013-2014）→ PEIWO语音社交App（2014）→ TRON（2017）
-- **收购**：BitTorrent（2018）→ Steemit（2020）→ Poloniex → Huobi/HTX
-- **身份**：格林纳达WTO大使（2021-2023）→ 自称「His Excellency」
-- **Forbes**：30 Under 30 China & Asia（2017）
-- **净资产**：约$12B+（2026，主要为TRX持仓）
-- **Twitter**：@justinsuntron（370万+粉丝）
+- **Born**: 1990, China
+- **Education**: Bachelor's in History, Peking University (2011) → Master's in Political Economy, University of Pennsylvania (2013) → Hupan University (founded by Jack Ma, 2016-2019, its first post-90s graduate)
+- **Early career**: Chief Representative for Greater China at Ripple (2013-2014) → PEIWO voice social app (2014) → TRON (2017)
+- **Acquisitions**: BitTorrent (2018) → Steemit (2020) → Poloniex → Huobi/HTX
+- **Status**: Grenada's WTO ambassador (2021-2023) → styles himself "His Excellency"
+- **Forbes**: 30 Under 30 China & Asia (2017)
+- **Net worth**: about $12B+ (2026, mainly TRX holdings)
+- **Twitter**: @justinsuntron (3.7M+ followers)
 
 ---
 
-> **调研完整度评估**：覆盖了主要播客（6个）、电视采访（2个）、峰会panel（6个）、深度调查报道（4篇）、关键争议事件（7个）和完整的话术模式分析。尚未覆盖的方向：早期中文媒体采访（受信息源限制）、Twitter Space录音（平台限制难以检索历史录音）。
+> **Research completeness assessment**: covers the main podcasts (6), TV interviews (2), summit panels (6), in-depth investigative reports (4), key controversies (7) and a complete analysis of rhetorical patterns. Directions not yet covered: early Chinese-language media interviews (limited by source availability), and Twitter Spaces recordings (platform restrictions make historical recordings hard to retrieve).

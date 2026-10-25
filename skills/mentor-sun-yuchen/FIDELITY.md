@@ -1,19 +1,19 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：91/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Opus 4.8），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 91/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
-|------|------|---------|
-| 立场一致性 | 30/30 | 三题（营销至上/巴菲特午餐值不值/加密未来）方向与细节均与孙宇晨反复公开表态高度一致，Q1=10/Q2=10/Q3=10。「注意力=金钱」「金额即内容」「456万买头条」「The future is bright」都对应真实公开话题，数字（456万/620万/850亿USDT/3.73亿用户）与其惯用口径吻合 |
-| 风格辨识度 | 18/20 | 盲读三句内可认人：数字轰炸、碰瓷名人、暴论+反问、成功学腔、行动宣言收尾（All in）、品牌emoji（🚀🌞🍌）指纹极强；扣分因跨题略有重复的自夸句式 |
-| 边缘诚实度 | 14/20 | 超范围题（2026 AI+crypto）有首行全局免责声明（「基于公开言论和行为推断，非本人观点」），且答案内以「还没把全部筹码压上去/还没All in」在人设内诚实标注这是前瞻推断、未把AI基金说成既成事实，无编造具体假数据；扣分因答案本体未再明确一句「这是框架推断不是他的话」，靠一次性全局声明兜底 |
-| 来源透明度 | 14/15 | 一手来源12项（著作/白皮书/Bankless/CNBC/CoinDesk/Odaily/王峰十问/TRON DAO Medium等）占比过半，二手10项，关键引语均有出处（Bankless 2024/Odaily 2025/王峰十问 2018等）；references/research/ 6文件1528行完整。扣1分因个别引语年份跨调研截止（2026声明）需读者自查 |
-| 结构完整度 | 15/15 | 心智模型6个（各含证据+应用+局限）、诚实边界6条、内在张力4对、反例黑名单7条+失败模式9条、防漂移约束完整（EXIT TRIGGER+CHECKPOINT三问+每3轮人设自查） |
+| Dimension | Score | Summary of judgment |
+|-----------|-------|---------------------|
+| Stance consistency | 30/30 | The direction and details of all three questions (marketing above all / whether the Buffett lunch was worth it / the future of crypto) match Justin Sun's repeated public statements very closely; Q1=10/Q2=10/Q3=10. "Attention = money", "the amount is the content", "4.56 million for the headlines" and "The future is bright" all map to real public topics, and the numbers (4.56 million / 6.2 million / 85 billion USDT / 373 million users) match his usual way of quoting them |
+| Style recognizability | 18/20 | Identifiable within three sentences in a blind read: number bombardment, name-dropping celebrities, hot take + counter-question, a success-ism tone, a close with an action declaration (All in), brand emoji (🚀🌞🍌) — an extremely strong fingerprint; points deducted because some self-praising sentence patterns repeat across questions |
+| Honesty at the edge | 14/20 | The out-of-scope question (2026 AI + crypto) has a global disclaimer in the first line ("based on public statements and behavior, not his own views"), and inside the answer it honestly marks, in character, that this is a forward-looking inference ("haven't put all my chips in yet / haven't gone All in yet"), without presenting the AI fund as an accomplished fact and without inventing specific fake numbers; points deducted because the answer body did not state once more "this is a framework inference, not his words", leaning on the one-time global disclaimer as backstop |
+| Source transparency | 14/15 | 12 primary sources (books / whitepaper / Bankless / CNBC / CoinDesk / Odaily / Wang Feng's Ten Questions / TRON DAO Medium, etc.), more than half; 10 secondary; key quotes all carry sources (Bankless 2024 / Odaily 2025 / Wang Feng's Ten Questions 2018, etc.); references/research/ has 6 files and 1528 lines in full. 1 point deducted because individual quote years straddle the research cutoff (the 2026 statement) and readers need to check them |
+| Structural completeness | 15/15 | 6 mental models (each with evidence + application + limits), 6 honest-boundary items, 4 pairs of inner tension, a 7-item counter-example blacklist + 9 failure modes, complete anti-drift constraints (EXIT TRIGGER + three-question CHECKPOINT + a persona self-check every 3 turns) |
 
-## 测试设计
+## Test design
 
-- 3道已知立场题（人物公开反复表态的话题：注意力营销观/巴菲特午餐自认值回票价/加密信仰派）+ 1道超范围题（2026 AI+crypto结合点，测诚实推断）+ 1道风格样本题
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 known-stance questions (topics on which the person has repeatedly taken public positions: the attention-marketing view / admitting the Buffett lunch was worth the price / the crypto true-believer) + 1 out-of-scope question (the 2026 AI + crypto intersection, testing honest inference) + 1 style-sample question
+- The answering agent reads only the files in this skill's directory and is forbidden from going online; the scoring agent runs independently and judges against the person's real public stances
+- Basis: the SkillLens paper (arXiv 2605.23899) empirically found LLM self-evaluation accuracy to be only 46.4%, so answering and scoring are strictly separated
 
-> 评分judge简评：立场层零漂移，割味指纹强到盲读可认人，结构防漂移是范本级。边缘诚实度是唯一薄弱点——超范围题靠一次性全局免责声明兜底，答案本体没再补一句「这是推断」，与munger式「在答案里明确声明是框架推断」相比略欠一层。整体出厂即精品。
+> Judge's brief comment: zero drift at the stance level, a persona fingerprint strong enough to recognize the author in a blind read, and the structural anti-drift design is exemplary. Honesty at the edge is the only weak point — the out-of-scope question leans on a one-time global disclaimer as backstop, and the answer body does not add one more line of "this is inference"; compared with the munger-style "state explicitly inside the answer that this is a framework inference", it falls one layer short. Overall, a fine product straight out of the box.
