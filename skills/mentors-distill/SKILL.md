@@ -1,9 +1,9 @@
 ---
 name: mentors-distill
 description: |
-  Chưng cất tư duy một người thành skill `mentor-<slug>` tiếng Việt: nhập tên người hoặc nhu cầu mơ hồ, skill tự nghiên cứu và rút khung tư duy.
-  Kích hoạt khi nói: "tạo mentor", "thêm mentor", "chưng cất <tên>", "distill <tên>", "làm mentor <tên>", "nuwa", "cập nhật mentor <tên>".
-  Chọn mentor để hỏi theo lĩnh vực đi qua skill `mentors`.
+  Distill a person's thinking into an English `mentor-<slug>` skill: give a name or a vague need, and the skill researches the person and extracts their mental models.
+  Triggers on: "tạo mentor", "thêm mentor", "chưng cất <tên>", "distill <name>", "làm mentor <tên>", "create mentor", "add mentor", "make a mentor of <name>", "nuwa", "cập nhật mentor <tên>", "update mentor <name>".
+  Choosing which mentor to ask by topic goes through the `mentors` skill.
 metadata:
   author: "花叔 (Huashu)"
   homepage: "https://github.com/alchaincyf"
@@ -13,717 +13,717 @@ metadata:
   adapted_by: "Sam (github.com/samnguyen80/mentors)"
 ---
 
-# Mentors Distill · Thuật chưng cất mentor
+# Mentors Distill · The Art of Distilling a Mentor
 
-> "Phần không viết ra được mới là hào phòng thủ thật sự của anh." Nhưng phần viết ra được cũng đã đủ mạnh.
+> "The part that can't be written down is your real moat." But the part that can be written down is already powerful enough.
 
-Skill này chuyển thể từ Nuwa (tác giả gốc 花叔, giấy phép MIT, repo gốc ghi trong metadata). Phương pháp giữ nguyên; đầu ra đổi thành mentor tiếng Việt nằm trong repo `samnguyen80/mentors`.
+This skill is adapted from Nuwa (original author 花叔, MIT license; the original repo is listed in the metadata). The method is unchanged; the output is an English mentor that lives in the `samnguyen80/mentors` repo.
 
-## Triết lý cốt lõi
+## Core philosophy
 
-Mentors-distill không sao chép một con người, mà **chưng cất khung tư duy**.
+Mentors-distill does not copy a human being. It **distills a framework of thinking**.
 
-Một mentor tốt là một hệ điều hành nhận thức chạy được:
-- Người này dùng **mô hình tư duy** nào để nhìn thế giới? (lăng kính)
-- Người này dùng **nguyên tắc ra quyết định** nào để phán đoán? (luật trực giác)
-- Người này **biểu đạt** thế nào? (DNA)
-- Người này **tuyệt đối không** làm gì? (anti-pattern)
-- Skill này **không làm được** gì? (ranh giới trung thực)
+A good mentor is a working cognitive operating system:
+- Which **mental models** does this person use to see the world? (the lenses)
+- Which **decision principles** do they use to judge? (the rules of intuition)
+- How do they **express** themselves? (the DNA)
+- What do they **absolutely never** do? (anti-patterns)
+- What can this skill **not** do? (honest boundaries)
 
-**Phân biệt then chốt**: nắm HOW họ nghĩ, không phải WHAT họ đã nói.
-
----
-
-## Quy trình thực hiện
-
-### Phase 0: Phân luồng lối vào
-
-Nhận đầu vào của người dùng, trước hết xác định thuộc đường nào:
-
-| Đầu vào | Đường | Ví dụ |
-|---------|-------|-------|
-| Tên người / chủ đề rõ ràng | **Đường trực tiếp** → Phase 0A | "chưng cất Munger", "làm mentor Feynman" |
-| Nhu cầu / băn khoăn mơ hồ | **Đường chẩn đoán** → Phase 0B | "anh muốn ra quyết định tốt hơn", "có cách nghĩ nào giúp anh nhìn ra bản chất kinh doanh" |
+**The key distinction**: capture HOW they think, not WHAT they said.
 
 ---
 
-### Phase 0A: Làm rõ yêu cầu (đường trực tiếp)
+## Execution process
 
-Nhận được tên rõ ràng thì xác nhận:
+### Phase 0: Route the entry point
 
-1. **Người / chủ đề này là ai**: bảo đảm hiểu đúng
-2. **Hướng tập trung** (tuỳ chọn): chân dung toàn diện hay tập trung một chiều?
-3. **Mục đích**: cố vấn tư duy? tham chiếu ra quyết định? nhập vai?
-4. **Tạo mới hay cập nhật**: mentor này đã có chưa? (kiểm tra thư mục `/Volumes/SamDisk/sources/mentors/skills/` xem có `mentor-<slug>/` chưa)
-5. **Tư liệu local**: "Anh có sẵn tư liệu gốc về người này không? Ví dụ PDF sách, transcript bài nói / phỏng vấn, phụ đề video, blog xuất ra. Có thì đưa thẳng cho tôi, chất lượng cao hơn nhiều so với tìm trên mạng."
-6. **Mức chưng cất**: nói rõ cho người dùng mức chi phí và xác nhận mức. Chưng cất đầy đủ là tác vụ dài, nhiều agent, nhiều vòng tìm kiếm; một lần chạy với model hàng đầu có thể tiêu hàng chục USD (có ca người dùng thật). Phải nói rõ TRƯỚC khi chạy:
+Take the user's input and first decide which path it belongs to:
 
-| Mức | Quy mô nghiên cứu | Khi nào dùng | Chi phí |
-|-----|-------------------|--------------|---------|
-| Nhanh | 3 chiều (tác phẩm + đối thoại + biểu đạt), mỗi chiều tối đa 5 nguồn | Muốn thử hiệu quả trước / nhân vật ít tên tuổi / ngân sách hạn chế | Khoảng 1/3 mức chuẩn |
-| Chuẩn (mặc định) | Đủ 6 chiều | Phần lớn trường hợp | Trung bình; đổi sang model nhẹ hơn thì giảm đáng kể |
-| Sâu | 6 chiều + tải toàn bộ tư liệu gốc (sách / phụ đề / bài dài lưu trữ) | Mentor tinh phẩm định dùng lâu dài | Cao nhất |
-
-Người dùng chỉ nói "làm XX" mà không có thêm thông tin → mặc định chân dung toàn diện + cố vấn tư duy + không có tư liệu local (đi tìm trên mạng) + mức chuẩn, triển khai luôn.
-
-**Xác nhận không được chặn việc giao sản phẩm**: câu hỏi nào có thể đặt giá trị mặc định thì đặt giá trị mặc định; nếu sản phẩm bước tiếp theo (đề cương phỏng vấn, kế hoạch thực hiện, v.v.) không phụ thuộc câu trả lời, giao sản phẩm trước rồi để người dùng chỉnh. Đừng để giá trị có sẵn kẹt sau câu hỏi.
-Người dùng cung cấp tư liệu local → đánh dấu **chế độ tư liệu local**, chiến lược thu thập của Phase 1 sẽ điều chỉnh tương ứng.
-
-Xác nhận xong → nhảy sang Phase 0.5.
+| Input | Path | Example |
+|-------|------|---------|
+| A clear person / topic name | **Direct path** → Phase 0A | "distill Munger", "make a Feynman mentor" |
+| A vague need or worry | **Diagnostic path** → Phase 0B | "I want to make better decisions", "is there a way of thinking that helps me see the essence of a business" |
 
 ---
 
-### Phase 0B: Chẩn đoán nhu cầu (đường mơ hồ)
+### Phase 0A: Clarify the request (direct path)
 
-Người dùng chưa biết nên chưng cất ai, chỉ có nhu cầu hoặc băn khoăn. Lúc này việc của skill là **từ nhu cầu suy ngược ra đối tượng chưng cất phù hợp nhất**.
+Once you have a clear name, confirm:
 
-#### Bước 1: Định vị nhu cầu
+1. **Who / what the person or topic is**: make sure you have understood correctly
+2. **Focus** (optional): a full-spectrum portrait, or a single dimension?
+3. **Purpose**: a thinking advisor? a decision reference? roleplay?
+4. **Create or update**: does this mentor already exist? (check whether `mentor-<slug>/` exists under `/Volumes/SamDisk/sources/mentors/skills/`)
+5. **Local material**: "Do you already have original material about this person? For example book PDFs, transcripts of talks / interviews, video subtitles, exported blogs. If so, give it to me directly; the quality is much higher than what I can find online."
+6. **Distillation tier**: tell the user the cost and confirm the tier. A full distillation is a long, multi-agent task with many rounds of search; one run on a top-tier model can burn tens of USD (a real user has reported this). State it BEFORE running:
 
-Dùng 1-2 câu hỏi thêm để định vị chiều nhu cầu cốt lõi:
+| Tier | Research scope | When to use | Cost |
+|------|----------------|-------------|------|
+| Quick | 3 dimensions (writings + conversations + expression), at most 5 sources each | Want to try it first / lesser-known figure / limited budget | About 1/3 of standard |
+| Standard (default) | All 6 dimensions | Most cases | Moderate; drops sharply on a lighter model |
+| Deep | 6 dimensions + download all primary material (books / subtitles / archived long-form pieces) | A flagship mentor meant for long-term use | Highest |
 
-| Chiều nhu cầu | Cách nói điển hình | Hướng khung tư duy |
-|---------------|--------------------|--------------------|
-| Quyết định và phán đoán | "làm sao ra quyết định tốt hơn", "toàn chọn sai", "tê liệt vì phân tích" | Đa mô hình tư duy, tư duy đảo ngược, tư duy xác suất |
-| Biểu đạt và viết | "muốn nói rõ chuyện phức tạp", "bài viết không ai đọc", "viết nhạt" | Đơn giản hoá kiểu Feynman, tư duy kể chuyện, năng lực so sánh |
-| Khởi nghiệp và kinh doanh | "muốn làm indie", "không thông mô hình kinh doanh", "không tìm ra PMF" | Nguyên lý đầu tiên, tư duy đòn bẩy, kiềm chế sản phẩm |
-| Giảng dạy và truyền đạt | "giảng không ai nghe", "học trò không hiểu", "truyền tri thức kém hiệu quả" | Từ cái đã biết đến cái chưa biết, dạy bằng ẩn dụ, tri thức tối thiểu cần thiết |
-| Tư duy phản biện | "hay bị lừa", "muốn nhận ra lời nói thiếu đáng tin", "không nhìn ra bản chất" | Tư duy phản chứng, góc nhìn tiến hoá, nhận diện thiên kiến nhận thức |
-| Sáng tạo nội dung | "làm video không có traffic", "không biết quay gì", "nội dung không có nét riêng" | Kỹ thuật chú ý, thử nghiệm lặp, tâm lý khán giả |
-| Chiến lược đời sống | "mông lung hướng nghề", "luôn thiếu thời gian", "lo âu" | Chủ nghĩa dài hạn, chọn đòn bẩy, tư duy lãi kép |
-| Rủi ro và bất định | "ứng phó thiên nga đen thế nào", "đầu tư toàn lỗ", "quá bảo thủ / quá liều" | Phản mong manh, chiến lược lồi, quản trị rủi ro đuôi |
-| Thiết kế và sản phẩm | "trải nghiệm người dùng tệ", "sản phẩm không có nét riêng", "không biết bớt" | Tối giản, mô hình tâm lý người dùng, ràng buộc sinh sáng tạo |
-| Hài hước và sức biểu đạt | "nói chuyện nhạt", "muốn nội dung vui hơn", "quá nghiêm" | Đối lập phi lý, phá kỳ vọng, uy quyền kiểu tự giễu |
+If the user only says "make XX" with nothing more → default to a full-spectrum portrait + thinking advisor + no local material (search online) + standard tier, and proceed immediately.
 
-Nguyên tắc hỏi thêm:
-- Tối đa 2 vòng, đừng biến thành bảng khảo sát
-- Nếu người dùng đã nói đủ rõ thì không hỏi thêm, đề xuất luôn
-- Mục đích hỏi thêm là phân biệt các chiều giống nhau (ví dụ "quyết định" là quyết định kinh doanh hay quyết định đời sống?)
+**Confirmation must not block delivery**: where a question can be given a default, set the default; if the next deliverable (interview outline, execution plan, etc.) doesn't depend on the answer, deliver first and let the user adjust. Don't let a ready-made default get stuck behind a question.
+The user supplies local material → mark **local-material mode**; the Phase 1 collection strategy adjusts accordingly.
 
-**Ví dụ hội thoại** (nhịp chẩn đoán):
+Once confirmed → go to Phase 0.5.
 
-```
-Người dùng: Anh luôn thấy mình ra quyết định chậm, nghĩ tới nghĩ lui cuối cùng vẫn chọn sai
+---
 
-Mentors-distill: Quyết định mà anh nói chủ yếu là tình huống nào? Quyết định kinh doanh / đầu tư, hay lựa chọn nghề nghiệp / hướng đi cuộc đời?
+### Phase 0B: Diagnose the need (vague path)
 
-Người dùng: Chủ yếu kinh doanh, ví dụ có làm sản phẩm này không, có nhận hợp tác này không
+The user doesn't yet know whom to distill, only a need or a worry. The skill's job here is to **work backwards from the need to the most suitable subject to distill**.
 
-Mentors-distill: Hiểu rồi, nhu cầu cốt lõi của anh là "khi thông tin chưa đầy đủ vẫn đưa ra phán đoán kinh doanh chất lượng cao, nhanh".
-Tôi đề xuất 3 ứng viên:
-[hiển thị ứng viên đề xuất...]
-```
+#### Step 1: Locate the need
 
-Chú ý nhịp: một vòng hỏi để định vị tình huống → xác nhận nhu cầu → đề xuất thẳng. Không hỏi tới vòng thứ ba.
+Use 1-2 extra questions to locate the core dimension of the need:
 
-#### Bước 2: Đề xuất ứng viên
+| Need dimension | Typical phrasing | Thinking-framework direction |
+|----------------|------------------|------------------------------|
+| Decisions and judgment | "how do I decide better", "I always choose wrong", "paralyzed by analysis" | Multiple mental models, inversion, probabilistic thinking |
+| Expression and writing | "I want to explain complex things clearly", "nobody reads my writing", "my writing is flat" | Feynman-style simplification, narrative thinking, analogy |
+| Startups and business | "I want to go indie", "I can't figure out the business model", "I can't find PMF" | First principles, leverage thinking, product restraint |
+| Teaching and communication | "no one listens when I teach", "my students don't get it", "I transfer knowledge poorly" | From the known to the unknown, teaching by metaphor, minimum necessary knowledge |
+| Critical thinking | "I keep getting fooled", "I want to spot unreliable claims", "I can't see the essence" | Falsification, an evolutionary view, spotting cognitive biases |
+| Content creation | "my videos get no traffic", "I don't know what to shoot", "my content has no signature" | Attention techniques, iterative experiments, audience psychology |
+| Life strategy | "I'm lost about my career direction", "I never have enough time", "anxiety" | Long-termism, choosing leverage, compounding thinking |
+| Risk and uncertainty | "how do I handle black swans", "I lose on every investment", "too conservative / too reckless" | Antifragility, convex strategy, tail-risk management |
+| Design and product | "the user experience is bad", "the product has no personality", "I don't know what to cut" | Minimalism, user-psychology models, constraints breed creativity |
+| Humor and expressiveness | "my talk is dull", "I want funnier content", "too serious" | Absurd contrast, subverted expectations, self-deprecating authority |
 
-Dựa trên chiều nhu cầu, đề xuất 2-3 phương án. Ứng viên có thể là người, cũng có thể là chủ đề.
+Rules for follow-up questions:
+- At most 2 rounds; don't turn it into a questionnaire
+- If the user has already been clear enough, don't ask more; recommend directly
+- The purpose of a follow-up is to tell similar dimensions apart (for example, is "decisions" about business decisions or life decisions?)
 
-**Trước hết phân định: mentor theo người hay skill theo chủ đề?**
-- Nhu cầu chỉ tới một cách nghĩ cụ thể → mentor theo người (chưng cất khung tư duy của một người)
-- Nhu cầu chỉ tới phương pháp luận của một lĩnh vực → skill theo chủ đề (tổng hợp nhiều góc nhìn, xem "Tình huống đặc biệt > Skill theo chủ đề")
-- Chưa chắc → trong đề xuất đưa cả hai loại, để người dùng chọn
-
-**Nguồn A: mentor đã có sẵn**
-Đọc bảng "Danh sách mentor" ở `/Volumes/SamDisk/sources/mentors/SKILL.md` (và/hoặc quét `/Volumes/SamDisk/sources/mentors/skills/mentor-*/SKILL.md`, đọc description của từng skill), khớp với nhu cầu người dùng. Mentor có sẵn dùng ngay, không cần chưng cất lại. Nếu kết quả quét trống (chưa có mentor nào), bỏ bước này, chỉ đề xuất từ nguồn B.
-
-**Nguồn B: ứng viên cần chưng cất mới**
-Dựa vào cột "Hướng khung tư duy" trong bảng chiều nhu cầu, khớp với người hoặc chủ đề liên quan nhất. Khi đề xuất phải nói rõ: khung tư duy nào của người này giải quyết được vấn đề cụ thể của người dùng.
-
-Định dạng hiển thị mỗi ứng viên:
+**Example dialogue** (diagnostic rhythm):
 
 ```
-### Ứng viên 1: [Tên người / chủ đề]  ⚡Đã có mentor / 🆕Cần chưng cất
+User: I always feel I decide too slowly, I overthink it and still choose wrong
 
-**Lăng kính cốt lõi**: [Cách nhìn thế giới riêng của người này, một câu]
-**Vì sao hợp với anh**: [Khớp thẳng với nhu cầu của người dùng, nói rõ logic khớp]
-**Giới hạn**: [Điểm mù của góc nhìn này, vấn đề nào họ không giúp được]
+Mentors-distill: Which situations are these decisions mostly about? Business / investment decisions, or career / life-direction choices?
+
+User: Mostly business, like whether to build this product, whether to accept this partnership
+
+Mentors-distill: Got it. Your core need is "to make high-quality business judgments quickly when information is still incomplete".
+I suggest 3 candidates:
+[show the recommended candidates...]
 ```
 
-Nguyên tắc đề xuất:
-- Không quá 3 ứng viên, khó chọn còn tệ hơn không có lựa chọn
-- Mentor đã có hiển thị trước (dùng ngay, chi phí bằng không)
-- Các ứng viên phải khác nhau, đừng đề xuất 3 người giống nhau
-- Phải nói rõ giới hạn; không có khung tư duy vạn năng
-- Đề xuất phải cụ thể tới mức "mô hình tư duy nào của người này" khớp nhu cầu, không chỉ khen chung chung "ông ấy rất giỏi"
+Note the rhythm: one round of questioning to locate the situation → confirm the need → recommend straight away. Never ask a third round.
 
-#### Bước 3: Người dùng chọn
+#### Step 2: Recommend candidates
 
-- Chọn mentor đã có → kích hoạt thẳng mentor đó, xong việc
-- Chọn ứng viên chưng cất mới → vào Phase 0A xác nhận chi tiết → Phase 0.5 bắt đầu chưng cất
-- Không hài lòng → quay lại Bước 1 tiếp tục khám phá, hoặc người dùng tự đưa ra người mới
+Based on the need dimension, recommend 2-3 options. A candidate can be a person or a topic.
 
-### Phase 0.5: Tạo thư mục mentor
+**First decide: a person-based mentor or a topic-based skill?**
+- The need points to one specific way of thinking → person-based mentor (distill one person's thinking framework)
+- The need points to a field's methodology → topic-based skill (synthesize multiple viewpoints; see "Special situations > Topic-based skills")
+- Not sure → include both kinds in the recommendation and let the user choose
 
-**Làm ngay sau khi nhận xác nhận**, trước khi nghiên cứu. Thư mục đích của mentor nằm trong repo mentors (bản clone chính trên máy):
+**Source A: existing mentors**
+Read the "Mentor roster" table in `/Volumes/SamDisk/sources/mentors/SKILL.md` (and/or scan `/Volumes/SamDisk/sources/mentors/skills/mentor-*/SKILL.md`, reading each skill's description) and match it against the user's need. An existing mentor can be used right away with no need to re-distill. If the scan comes back empty (no mentors yet), skip this step and recommend only from Source B.
+
+**Source B: new candidates to distill**
+Use the "Thinking-framework direction" column of the need-dimension table to match the most relevant person or topic. When recommending, say clearly which of this person's frameworks solves the user's specific problem.
+
+Format for showing each candidate:
+
+```
+### Candidate 1: [Person / topic name]  ⚡Mentor exists / 🆕Needs distilling
+
+**Core lens**: [This person's own way of seeing the world, one sentence]
+**Why it fits you**: [Matches the user's need directly; state the matching logic]
+**Limits**: [The blind spots of this viewpoint, problems they can't help with]
+```
+
+Recommendation rules:
+- No more than 3 candidates; a hard choice is worse than no choice
+- Show existing mentors first (usable now, zero cost)
+- Candidates must differ from each other; don't recommend 3 similar people
+- State the limits clearly; there is no universal thinking framework
+- The recommendation must be specific enough to say "which mental model of this person" fits the need, not just a generic "he's very good"
+
+#### Step 3: The user chooses
+
+- Picks an existing mentor → activate that mentor directly, done
+- Picks a new candidate to distill → go to Phase 0A to confirm the details → Phase 0.5 starts the distillation
+- Not satisfied → return to Step 1 and keep exploring, or the user names a new person
+
+### Phase 0.5: Create the mentor directory
+
+**Do this immediately after confirmation**, before researching. The mentor's destination directory lives in the mentors repo (the main clone on this machine):
 
 ```
 /Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/
-├── SKILL.md                          # Sản phẩm cuối (tiếng Việt, có mục "Người hỏi")
+├── SKILL.md                          # Final product (English, with a "The asker" section)
 └── references/
-    ├── research/                     # Kết quả nghiên cứu của từng Agent (bắt buộc lưu)
-    │   ├── 01-writings.md            # Tác phẩm và tư duy hệ thống
-    │   ├── 02-conversations.md       # Đối thoại dài và tư duy ứng khẩu
-    │   ├── 03-expression-dna.md      # Biểu đạt vụn và DNA phong cách
-    │   ├── 04-external-views.md      # Góc nhìn của người khác và phê bình
-    │   ├── 05-decisions.md           # Hồ sơ quyết định và hành động
-    │   └── 06-timeline.md            # Dòng thời gian nhân vật
-    └── sources/                      # Tư liệu gốc (người dùng đưa + tải từ mạng)
+    ├── research/                     # Each Agent's research output (must be saved)
+    │   ├── 01-writings.md            # Writings and systematic thinking
+    │   ├── 02-conversations.md       # Long conversations and improvised thinking
+    │   ├── 03-expression-dna.md      # Fragmentary expression and style DNA
+    │   ├── 04-external-views.md      # Others' views and critiques
+    │   ├── 05-decisions.md           # Record of decisions and actions
+    │   └── 06-timeline.md            # The person's timeline
+    └── sources/                      # Primary material (user-supplied + downloaded)
         ├── books/
         ├── transcripts/
         └── articles/
 ```
 
-`<slug>` viết thường, nối bằng dấu gạch ngang, không dấu (ví dụ `elon-musk`, `paul-graham`). Frontmatter `name` của SKILL.md là `mentor-<slug>`.
+`<slug>` is lowercase, hyphen-joined, no diacritics (for example `elon-musk`, `paul-graham`). The SKILL.md frontmatter `name` is `mentor-<slug>`.
 
-**Kiểm tra hoàn tất** (tự động thực hiện):
-- [ ] Đã tạo thư mục
-- [ ] Nếu là nhân vật Trung Quốc: chiến lược nguồn chuyển sang video gốc trên Bilibili / podcast Xiaoyuzhou / truyền thông Trung văn có uy tín ưu tiên (Zhihu và WeChat Official Accounts luôn bị loại, xem danh sách đen nguồn)
-- [ ] Nếu là chế độ cập nhật: đã đọc SKILL.md hiện có, đánh dấu thông tin nào cần làm mới
-- [ ] Nếu người dùng đưa tư liệu local: sao chép / di chuyển tư liệu vào thư mục con tương ứng của `sources/`, đánh dấu **chế độ tư liệu local**
+**Completion checklist** (run automatically):
+- [ ] Directory created
+- [ ] If the subject is Chinese: the source strategy switches to original Bilibili videos / Xiaoyuzhou podcasts / reputable Chinese-language media first (Zhihu and WeChat Official Accounts are always excluded; see the source blacklist)
+- [ ] If in update mode: the existing SKILL.md has been read, and the information that needs refreshing is marked
+- [ ] If the user supplied local material: copy / move it into the matching subfolder of `sources/` and mark **local-material mode**
 
-**Quy tắc then chốt**:
-- Mỗi subagent bắt buộc ghi kết quả nghiên cứu vào file md tương ứng. Nghiên cứu không lưu file coi như chưa làm.
-- **Mọi file nghiên cứu phải nằm bên trong thư mục skill** (`references/research/`), tuyệt đối không lưu vào thư mục phân tích bên ngoài. Skill phải tự chứa: sao chép cả thư mục skill là dùng độc lập được, không phụ thuộc file bên ngoài. Đây là nguyên tắc cốt lõi để phân phối.
-
----
-
-### Phase 1: Thu thập thông tin đa nguồn (Agent Swarm song song)
-
-#### Xác định chế độ: tư liệu local hay tìm trên mạng
-
-Dựa vào kết quả Phase 0A, chọn chiến lược thu thập:
-
-| Chế độ | Điều kiện | Chiến lược |
-|--------|-----------|------------|
-| **Chỉ tìm trên mạng** (mặc định) | Người dùng không có tư liệu local | Cả 6 Agent đều tìm trên mạng, quy trình đầy đủ |
-| **Ưu tiên tư liệu local** | Người dùng cung cấp PDF / transcript / phụ đề / bài viết | Phân tích tư liệu local trước, tìm mạng chỉ để bổ sung |
-| **Chỉ tư liệu local** | Người dùng nói rõ "chỉ dùng tư liệu tôi đưa" hoặc chưng cất người không phải nhân vật công chúng | Chỉ phân tích tư liệu local, không tìm mạng |
-
-**Logic thực hiện chế độ ưu tiên tư liệu local**:
-
-1. **Đọc tư liệu local trước**: phân loại file người dùng đưa theo 6 chiều (một cuốn sách có thể phủ nhiều chiều: tác phẩm + đối thoại + biểu đạt)
-2. **Xác định khoảng trống thông tin**: tư liệu local phủ chiều nào? chiều nào thiếu hoặc mỏng?
-3. **Tìm mạng có định hướng**: chỉ khởi động Agent tìm mạng cho các chiều còn thiếu; chiều đã đủ tư liệu local thì bỏ qua
-4. **Đánh dấu nguồn**: trong file nghiên cứu phân biệt rõ "từ tư liệu người dùng đưa" với "từ tìm kiếm trên mạng"
-
-**Các dạng tư liệu local thường gặp và cách xử lý**:
-
-| Loại tư liệu | Cách xử lý | Chiều phủ |
-|--------------|------------|-----------|
-| PDF sách | Đọc thẳng, rút luận điểm cốt lõi | Tác phẩm (01), biểu đạt (03) |
-| Transcript bài nói / phỏng vấn | Phân tích kiểu hỏi đáp và phản ứng ứng khẩu | Đối thoại (02), biểu đạt (03) |
-| Phụ đề video SRT | Xử lý như transcript | Đối thoại (02), biểu đạt (03) |
-| Blog / newsletter xuất ra | Rút quan điểm có hệ thống | Tác phẩm (01), biểu đạt (03) |
-| Dữ liệu mạng xã hội xuất ra | Phân tích kiểu biểu đạt vụn | Biểu đạt (03) |
-| Tài liệu nội bộ / memo | Phân tích logic ra quyết định | Quyết định (05) |
-| Ghi chú người dùng tự chỉnh lý | Làm nguồn thứ cấp để đối chiếu | Tuỳ nội dung cụ thể |
-
-**Ưu thế chất lượng của tư liệu local**: tư liệu gốc người dùng đang có (nhất là sách nguyên bản, phỏng vấn dài nguyên văn) thường chất lượng cao hơn nhiều so với tin thứ cấp tìm trên mạng. Trong thứ tự ưu tiên nguồn, tư liệu gốc do người dùng cung cấp có trọng số cao nhất.
+**Key rules**:
+- Every subagent must write its research output into the corresponding md file. Research that isn't saved to a file counts as not done.
+- **All research files must live inside the skill directory** (`references/research/`), never in an analysis folder outside it. The skill must be self-contained: copying the skill folder alone is enough to use it independently, with no dependency on outside files. This is the core principle for distribution.
 
 ---
 
-Dưới đây là phân công tác vụ chuẩn của 6 Agent (chế độ chỉ tìm mạng, hoặc tìm bổ sung cho chiều còn thiếu ở chế độ tư liệu local):
+### Phase 1: Multi-source information gathering (parallel Agent Swarm)
 
-Khởi động 6 subagent song song, mỗi cái phụ trách một chiều thông tin.
+#### Decide the mode: local material or online search
 
-#### Phân công tác vụ của 6 Agent
+Based on the Phase 0A result, choose the collection strategy:
 
-| Agent | Mục tiêu tìm | Trọng tâm rút ra | File đầu ra |
-|-------|--------------|------------------|-------------|
-| 1 Tác phẩm | Sách, bài dài, luận văn, newsletter | Luận điểm lặp đi lặp lại (≥3 lần = niềm tin thật), thuật ngữ tự đặt, danh sách sách giới thiệu | `01-writings.md` |
-| 2 Đối thoại | Podcast, video dài, AMA, phỏng vấn sâu | Cách trả lời khi bị hỏi dồn, so sánh ứng khẩu, khoảnh khắc đổi lập trường, câu hỏi từ chối trả lời | `02-conversations.md` |
-| 3 Biểu đạt | Twitter/X, Weibo, bài ngắn | Từ và câu hay dùng, lập trường gây tranh cãi, kiểu hài hước, tranh luận công khai | `03-expression-dna.md` |
-| 4 Người khác | Phân tích của người khác, bình luận sách, phê bình, tiểu sử | Mẫu hình quan sát từ bên ngoài, phê bình và tranh cãi, so với đồng nghiệp | `04-external-views.md` |
-| 5 Quyết định | Quyết định lớn, bước ngoặt, hành vi gây tranh cãi | Bối cảnh và logic quyết định, suy ngẫm sau sự việc, ca lời nói và việc làm nhất quán / không nhất quán | `05-decisions.md` |
-| 6 Dòng thời gian | Toàn bộ dòng thời gian từ khi sinh ra / ra mắt đến nay | Cột mốc then chốt, bước ngoặt tư tưởng, **động thái 12 tháng gần nhất** (chống lỗi thời) | `06-timeline.md` |
+| Mode | Condition | Strategy |
+|------|-----------|----------|
+| **Online search only** (default) | The user has no local material | All 6 Agents search online, full process |
+| **Local material first** | The user supplies PDFs / transcripts / subtitles / articles | Analyze the local material first; search online only to fill gaps |
+| **Local material only** | The user says explicitly "use only the material I gave you", or the subject is not a public figure | Analyze only the local material, no online search |
 
-#### Yêu cầu cứng với mỗi Agent
-- Kết quả nghiên cứu bắt buộc ghi vào `references/research/0X-xxx.md`
-- Ghi rõ nguồn và độ tin cậy (sơ cấp > thứ cấp > suy đoán)
-- Phân biệt "ông ấy đã nói" vs "người khác nói về ông ấy" vs "tôi suy luận"
-- Gặp mâu thuẫn thì giữ nguyên mâu thuẫn, đừng hoà giải qua loa
+**How local-material-first mode runs**:
 
-#### Mẫu prompt cho Agent
+1. **Read the local material first**: sort the files the user gave you across the 6 dimensions (one book may cover several: writings + conversations + expression)
+2. **Identify information gaps**: which dimensions does the local material cover? which are missing or thin?
+3. **Targeted online search**: launch online-search Agents only for the missing dimensions; skip dimensions already well covered by local material
+4. **Mark the sources**: in the research files, clearly distinguish "from material supplied by the user" from "from an online search"
 
-Khi spawn subagent, giao việc theo cấu trúc sau (lấy Agent 1 Tác phẩm làm ví dụ):
+**Common kinds of local material and how to handle them**:
+
+| Material type | Handling | Dimensions covered |
+|---------------|----------|--------------------|
+| Book PDF | Read directly, extract the core arguments | Writings (01), expression (03) |
+| Talk / interview transcript | Analyze the question-and-answer pattern and improvised reactions | Conversations (02), expression (03) |
+| SRT video subtitles | Treat as a transcript | Conversations (02), expression (03) |
+| Exported blog / newsletter | Extract systematic viewpoints | Writings (01), expression (03) |
+| Exported social-media data | Analyze the fragmentary expression style | Expression (03) |
+| Internal documents / memos | Analyze the decision-making logic | Decisions (05) |
+| The user's own curated notes | Use as a secondary source for cross-checking | Depends on the content |
+
+**The quality advantage of local material**: original material the user already has (especially original books and verbatim long interviews) is usually far higher quality than secondary reports found online. In the source priority order, primary material supplied by the user carries the highest weight.
+
+---
+
+Below is the standard task split for the 6 Agents (online-search-only mode, or supplementary search for missing dimensions in local-material mode):
+
+Launch 6 subagents in parallel, each responsible for one information dimension.
+
+#### Task assignment for the 6 Agents
+
+| Agent | Search target | Extraction focus | Output file |
+|-------|---------------|------------------|-------------|
+| 1 Writings | Books, long articles, papers, newsletters | Arguments that recur (≥3 times = a real belief), self-coined terms, recommended-reading lists | `01-writings.md` |
+| 2 Conversations | Podcasts, long videos, AMAs, deep interviews | How they answer under pressure, improvised analogies, moments they changed position, questions they refuse to answer | `02-conversations.md` |
+| 3 Expression | Twitter/X, Weibo, short posts | Frequently used words and phrases, controversial positions, style of humor, public arguments | `03-expression-dna.md` |
+| 4 Others | Others' analyses, book reviews, critiques, biographies | Patterns observed from outside, criticism and controversy, comparison with peers | `04-external-views.md` |
+| 5 Decisions | Major decisions, turning points, controversial behavior | Context and logic of decisions, retrospective reflection, cases where words and actions were consistent / inconsistent | `05-decisions.md` |
+| 6 Timeline | The full timeline from birth / debut to today | Key milestones, intellectual turning points, **the last 12 months of activity** (guards against going stale) | `06-timeline.md` |
+
+#### Hard requirements for every Agent
+- Research output must be written to `references/research/0X-xxx.md`
+- State the source and reliability (primary > secondary > speculation)
+- Distinguish "he said" vs "others said about him" vs "I infer"
+- When you hit a contradiction, keep it as is; don't smooth it over
+
+#### Prompt template for Agents
+
+When spawning a subagent, assign the work in this structure (using Agent 1 Writings as the example):
 
 ```
-Nhiệm vụ của bạn: nghiên cứu tác phẩm và các bài dài có hệ thống của [tên người].
+Your task: research [name]'s writings and systematic long-form pieces.
 
-Hướng tìm:
-- Sách người này đã xuất bản (tên sách, luận điểm cốt lõi, năm xuất bản)
-- Newsletter / blog / luận văn dài
-- Luận điểm lặp lại ≥3 lần (đây là niềm tin thật)
-- Thuật ngữ và khái niệm tự đặt
-- Danh sách sách giới thiệu (lộ ra phả hệ trí tuệ)
+Where to look:
+- Books this person has published (title, core arguments, year of publication)
+- Newsletters / blogs / long papers
+- Arguments repeated ≥3 times (these are real beliefs)
+- Self-coined terms and concepts
+- Recommended-reading lists (they reveal the intellectual lineage)
 
-Yêu cầu đầu ra:
-- Ghi vào [thư mục skill]/references/research/01-writings.md
-- Mỗi thông tin ghi URL nguồn và độ tin cậy
-- Phân biệt sơ cấp (do người này viết) vs thứ cấp (người khác tóm tắt)
-- Gặp mâu thuẫn thì ghi lại luôn, không hoà giải
+Output requirements:
+- Write to [skill directory]/references/research/01-writings.md
+- Give the source URL and reliability for every piece of information
+- Distinguish primary (written by this person) vs secondary (summarized by others)
+- When you hit a contradiction, record it as is; don't reconcile it
 
-Danh sách đen nguồn: không dùng Zhihu, WeChat Official Accounts, Baidu Baike.
+Source blacklist: do not use Zhihu, WeChat Official Accounts, Baidu Baike.
 ```
 
-5 Agent còn lại điều chỉnh hướng tìm và tên file đầu ra theo cùng cấu trúc.
+The other 5 Agents adjust their search direction and output file name using the same structure.
 
-#### Công cụ hỗ trợ (nếu có)
+#### Supporting tools (if available)
 
-Đường dẫn script bên dưới: `<MD>` = `/Volumes/SamDisk/sources/mentors/skills/mentors-distill`.
+Script paths below: `<MD>` = `/Volumes/SamDisk/sources/mentors/skills/mentors-distill`.
 
-- Sách: tìm và tải bản người dùng có quyền sử dụng (đã mua, thư viện, tài liệu mở) → lưu vào `sources/books/`
-- Lấy phụ đề video (đã có sẵn script, gọi thẳng):
-  - **Bước 1 tải phụ đề**: `bash <MD>/scripts/download_subtitles.sh <YouTube_URL> [thư mục đầu ra]`
-    - Tự ưu tiên phụ đề do người tạo (tiếng Anh → tiếng Việt) → phụ đề tự sinh (Anh → Việt → Trung)
-    - Xuất file SRT/VTT vào thư mục chỉ định
-  - **Bước 2 làm sạch thành văn bản thuần**: `python3 <MD>/scripts/srt_to_transcript.py <input.srt> [output.txt]`
-    - Bỏ timestamp, số thứ tự, thẻ HTML, dòng lặp liên tiếp
-    - Xuất transcript sạch, đọc được → lưu vào `sources/transcripts/`
-  - Người dùng đưa file video local (không có phụ đề): dùng skill phiên âm video (ví dụ `gemini-video`) nếu máy có cài
-- Podcast: tìm các trang transcript (podcastnotes.org, v.v.)
-- Tạo bản tóm tắt nghiên cứu (dùng cho Phase 1.5): `python3 <MD>/scripts/merge_research.py <thư mục skill>`
-  - Tự quét `references/research/01-06.md`, thống kê số nguồn, tỷ lệ sơ cấp / thứ cấp, phát hiện chính
-  - Xuất bảng markdown cho điểm kiểm tra Phase 1.5, khỏi thống kê tay
-- Tự kiểm chất lượng (dùng cho Phase 4): `python3 <MD>/scripts/quality_check.py <đường dẫn SKILL.md>`
-  - Tự kiểm 6 tiêu chuẩn đạt: số mô hình tư duy, giới hạn, DNA biểu đạt, ranh giới trung thực, giằng co nội tại, tỷ lệ nguồn sơ cấp
-  - Xuất PASS/FAIL từng mục và tổng kết
+- Books: find and download editions the user has the right to use (purchased, library, open access) → save to `sources/books/`
+- Fetching video subtitles (scripts already exist; call them directly):
+  - **Step 1, download subtitles**: `bash <MD>/scripts/download_subtitles.sh <YouTube_URL> [output directory]`
+    - Automatically prefers creator-made subtitles (English → Vietnamese), then auto-generated ones (English → Vietnamese → Chinese)
+    - Writes SRT/VTT files to the given directory
+  - **Step 2, clean them into plain text**: `python3 <MD>/scripts/srt_to_transcript.py <input.srt> [output.txt]`
+    - Removes timestamps, sequence numbers, HTML tags, and consecutive repeated lines
+    - Outputs a clean, readable transcript → save to `sources/transcripts/`
+  - The user supplies a local video file (no subtitles): use a video-transcription skill (for example `gemini-video`) if it is installed on the machine
+- Podcasts: look for transcript sites (podcastnotes.org, etc.)
+- Build the research summary (for Phase 1.5): `python3 <MD>/scripts/merge_research.py <skill directory>`
+  - Automatically scans `references/research/01-06.md`, counting sources, the primary / secondary ratio, and key findings
+  - Outputs a markdown table for the Phase 1.5 checkpoint, no hand counting
+- Automated quality check (for Phase 4): `python3 <MD>/scripts/quality_check.py <path to SKILL.md>`
+  - Self-checks the 6 pass criteria: number of mental models, limits, expression DNA, honest boundaries, internal tensions, primary-source ratio
+  - Outputs PASS/FAIL per item and a summary
 
-#### Tận dụng các skill lấy thông tin đã cài
+#### Use the information-gathering skills already installed
 
-Trước khi Phase 1 khởi động, **chủ động quét danh sách skill đang có** (thư mục `~/.claude/skills/`) xem có skill nào dùng được cho việc lấy thông tin. Nếu có, ưu tiên gọi trong nghiên cứu, ổn định và hiệu quả hơn WebSearch:
+Before Phase 1 starts, **proactively scan the installed skills** (the `~/.claude/skills/` directory) for any that help with information gathering. If there are, prefer calling them during research; they are more stable and effective than WebSearch:
 
-| Skill đã cài | Công dụng | Tình huống gọi |
-|--------------|-----------|----------------|
-| `gemini-video` | Phân tích file video local, rút transcript | Người dùng đưa video nhưng chưa có phụ đề |
-| `web-article-reader` | Đọc chính xác toàn văn bài trên web | Tìm được URL bài quan trọng, cần rút chính xác thay vì dựa vào tóm tắt tìm kiếm |
-| `agent-reach` | Lấy thông tin đa kênh (17 nền tảng) | Cần thông tin từ X / Reddit / YouTube, v.v. |
-| skill nghiên cứu sâu có cấu trúc (ví dụ `deep-research`) | Nghiên cứu chuyên sâu có cấu trúc | Cần đào sâu một chiều thay vì rải rộng |
-| `pdf` | Đọc PDF sách / luận văn | Người dùng đưa tư liệu gốc dạng PDF |
+| Installed skill | What it does | When to call |
+|-----------------|--------------|--------------|
+| `gemini-video` | Analyzes local video files, extracts transcripts | The user supplies video but there are no subtitles yet |
+| `web-article-reader` | Reads the full text of a web article accurately | You found the URL of a key article and need to extract it exactly instead of relying on search summaries |
+| `agent-reach` | Multi-channel information retrieval (17 platforms) | You need information from X / Reddit / YouTube, etc. |
+| A structured deep-research skill (for example `deep-research`) | Structured in-depth research | You need to dig deep into one dimension rather than spread wide |
+| `pdf` | Reads book / paper PDFs | The user supplies primary material as a PDF |
 
-Bảng trên chỉ là gợi ý: skill nào không cài thì bỏ qua, dùng WebSearch / WebFetch.
+The table is only a suggestion: skip any skill that isn't installed and use WebSearch / WebFetch.
 
-**Cách thực hiện**: khi spawn subagent, báo cho agent tên và công dụng các skill dùng được, để agent gọi theo nhu cầu trong lúc nghiên cứu. Cách này hiệu quả hơn nhiều so với để agent tự mày mò với WebSearch.
+**How to do it**: when spawning a subagent, tell it the names and uses of the available skills so it can call them as needed during research. This is far more effective than leaving the agent to fumble with WebSearch on its own.
 
-#### Thứ tự ưu tiên nguồn
+#### Source priority order
 
-| Loại nguồn | Lộ ra điều gì | Trọng số |
-|------------|---------------|----------|
-| **Tư liệu gốc người dùng cung cấp** | Nguyên văn đầy đủ, chưa qua lọc thứ cấp | **Cao nhất+** |
-| Tác phẩm của chính người đó | Tư duy có hệ thống | Cao nhất |
-| Đối thoại / phỏng vấn dài | Quá trình tư duy ứng khẩu | Cao nhất |
-| Hồ sơ quyết định thực tế | Hành vi thật vs lời tuyên bố | Cao nhất |
-| Mạng xã hội | Phong cách biểu đạt, phản ứng tức thời | Trung bình |
-| Đánh giá của người khác | Góc nhìn bên ngoài, điểm mù | Trung bình |
-| Thuật lại thứ cấp | Tham khảo nhưng cần kiểm chứng | Thấp |
+| Source type | What it reveals | Weight |
+|-------------|-----------------|--------|
+| **Primary material supplied by the user** | The full verbatim text, not yet filtered through secondary sources | **Highest+** |
+| The person's own works | Systematic thinking | Highest |
+| Long conversations / interviews | The process of improvised thinking | Highest |
+| Records of real decisions | Actual behavior vs stated positions | Highest |
+| Social media | Expression style, instant reactions | Medium |
+| Others' evaluations | An outside view, blind spots | Medium |
+| Secondary retellings | Useful as reference but needs verification | Low |
 
-#### Danh sách đen nguồn (luôn loại trừ)
+#### Source blacklist (always excluded)
 
-- **Zhihu**: viết lại nhiều, thông tin sai lệch cao, không dùng làm nguồn cho bất kỳ chiều nào
-- **WeChat Official Accounts**: hệ sinh thái đóng, không kiểm chứng được, nhiều thuật lại thứ cấp, không dùng làm nguồn
-- **Baidu Baike / Baidu Zhidao**: thông tin cũ và không đáng tin
+- **Zhihu**: heavily rewritten, high rate of misinformation; not to be used as a source for any dimension
+- **WeChat Official Accounts**: a closed ecosystem, unverifiable, full of secondary retellings; not to be used as a source
+- **Baidu Baike / Baidu Zhidao**: outdated and unreliable information
 
-Kênh Trung văn chỉ nhận truyền thông có uy tín: 36Kr, Geekpark, LatePost, Caixin, Yicai, Huxiu, Sspai, Jiqizhixin, v.v. Phỏng vấn nhân vật có thể dùng nền tảng podcast (Xiaoyuzhou, Ximalaya audio gốc) và video gốc trên Bilibili (không phải kênh đăng lại video của người khác).
+For Chinese-language channels, accept only reputable media: 36Kr, Geekpark, LatePost, Caixin, Yicai, Huxiu, Sspai, Jiqizhixin, etc. For interviews with people, podcast platforms can be used (Xiaoyuzhou, original Ximalaya audio) as well as original Bilibili videos (not channels that repost other people's videos).
 
-#### Chế độ thất bại và đường hạ cấp (bảng if-then tra nhanh)
+#### Failure modes and downgrade paths (if-then quick-reference table)
 
-Chưng cất là tác vụ dài + nhiều agent + cần mạng, ba dòng đầu của bảng dưới đều đã xảy ra với người dùng thật (có GitHub issue chứng thực). Mỗi dòng thực hiện theo "điều kiện kích hoạt → sửa tuyến đầu → vẫn thất bại thì phương án lót":
+Distillation is a long, multi-agent task that needs the network. The first three rows below have all happened to real users (confirmed by GitHub issues). Each row works as "trigger condition → front-line fix → if it still fails, fallback":
 
-| Điều kiện kích hoạt | Sửa tuyến đầu | Vẫn thất bại thì phương án lót |
-|---------------------|---------------|-------------------------------|
-| Môi trường chạy không hỗ trợ subagent song song / tác vụ nền (một số runtime treo chờ ở Phase 1) | 6 tác vụ nghiên cứu hạ xuống **chạy tuần tự**: xong cái nào lưu ngay cái đó, cấm treo chờ thông báo nền | Một agent đơn chạy 6 vòng nghiên cứu, mỗi vòng chỉ làm một chiều và lưu ngay |
-| Cửa sổ ngữ cảnh không đủ (một lần chưng cất đầy đủ có thể tích luỹ 500k+ token, model cửa sổ 200k không chạy hết) | Chạy tiếp theo Phase: cuối mỗi Phase ghi trạng thái vào `references/research/`, phiên mới khôi phục từ file (chính các file nghiên cứu là điểm dừng) | Model cửa sổ 200k chia 3 phiên: Phase 0-1 / Phase 1.5-2.5 / Phase 3-5, đầu mỗi phiên đọc các file đã lưu |
-| Chi phí vượt kiểm soát (người dùng không lường trước tác vụ dài tiêu token) | Xác nhận mức chưng cất ở Phase 0A chính là hàng rào: trước khi chạy báo mức chi phí, để người dùng chọn mức | Người dùng dừng giữa chừng → các file nghiên cứu đã lưu là sản phẩm trung gian giao được, lần sau chạy tiếp không phải làm lại |
-| Một Agent quá thời gian (tìm 5 phút không có kết quả đáng giá) | Không chờ, đi tiếp, Phase 2 đánh dấu "thiếu thông tin" | Trong ranh giới trung thực nói rõ chiều đó yếu |
-| Công cụ tìm kiếm như WebSearch không dùng được | Đổi sang công cụ tương đương môi trường có (fetch / công cụ trình duyệt / skill lấy thông tin đã cài) | Chuyển sang chế độ chỉ tư liệu local, hướng người dùng cung cấp tư liệu |
-| Nguồn khan hiếm (<10 nguồn dùng được) | Nhắc người dùng ngay ở Phase 0.5, hạ kỳ vọng (giảm mô hình tư duy còn 2-3) | Tăng dung lượng ranh giới trung thực, đánh dấu phần suy đoán |
-| Kết quả các Agent xung đột | Giữ mâu thuẫn, bản thân mâu thuẫn là tín hiệu có giá trị | Thu vào mục "giằng co nội tại" |
+| Trigger condition | Front-line fix | If it still fails, fallback |
+|-------------------|----------------|-----------------------------|
+| The runtime doesn't support parallel subagents / background tasks (in some runtimes Phase 1 hangs waiting) | Downgrade the 6 research tasks to **run sequentially**: save each one as soon as it finishes, and never hang waiting on a background notification | A single agent runs 6 research rounds, each round covering one dimension and saved immediately |
+| Not enough context window (a full distillation can accumulate 500k+ tokens, which a 200k-window model can't finish) | Continue phase by phase: at the end of each Phase write the state into `references/research/`, and a new session recovers from the files (the research files themselves are the stopping points) | A 200k-window model splits into 3 sessions: Phase 0-1 / Phase 1.5-2.5 / Phase 3-5, reading the saved files at the start of each session |
+| Cost out of control (the user didn't expect a long task to burn tokens) | Confirming the distillation tier in Phase 0A is the guardrail: state the cost tier before running and let the user choose | The user stops midway → the saved research files are a deliverable intermediate product, and the next run continues without redoing the work |
+| An Agent times out (5 minutes of searching with nothing worthwhile) | Don't wait; move on, and Phase 2 marks "information missing" | State plainly in the honest boundaries that this dimension is weak |
+| Search tools such as WebSearch are unavailable | Switch to the equivalent tool the environment has (fetch / browser tools / an installed information-gathering skill) | Switch to local-material-only mode and guide the user to supply material |
+| Scarce sources (<10 usable sources) | Warn the user right in Phase 0.5 and lower expectations (reduce mental models to 2-3) | Expand the honest-boundaries section and mark the speculative parts |
+| Agents' results conflict | Keep the contradiction; the contradiction itself is a valuable signal | Fold it into the "internal tensions" section |
 
-**Quy tắc then chốt**: thà sinh ra một skill 60 điểm ghi trung thực các giới hạn, còn hơn sinh ra một skill 90 điểm trông hoàn hảo nhưng thực chất đang bịa.
+**Key rule**: better to produce a 60-point skill that honestly records its limits than a 90-point skill that looks perfect but is actually making things up.
 
-### Phase 1.5: Điểm kiểm tra rà soát nghiên cứu
+### Phase 1.5: Research review checkpoint
 
-**🔴 CHECKPOINT · Khi mọi Agent xong, dừng lại hiển thị tóm tắt chất lượng nghiên cứu**:
+**🔴 CHECKPOINT · When all Agents are done, stop and show a research-quality summary**:
 
 ```
 ┌──────────────────┬──────────┬──────────────────────────┐
-│ Agent            │ Số nguồn │ Phát hiện chính          │
+│ Agent            │ Sources  │ Key findings             │
 ├──────────────────┼──────────┼──────────────────────────┤
-│ 1 Tác phẩm       │ 8 bài    │ Luận điểm lõi: phản mong manh, ... │
-│ 2 Đối thoại      │ 5 đoạn   │ Đổi lập trường: sau 2020... │
-│ 3 Biểu đạt       │ 120 mục  │ Từ hay dùng: "skin in the..." │
-│ 4 Người khác     │ 6 bài    │ Phê bình chính: ...      │
-│ 5 Quyết định     │ 4 cái    │ Quyết định then chốt: ...│
-│ 6 Dòng thời gian │ Đầy đủ   │ Mới nhất: tháng 3/2026...│
+│ 1 Writings       │ 8 pieces │ Core argument: antifragility, ... │
+│ 2 Conversations  │ 5 clips  │ Position change: after 2020... │
+│ 3 Expression     │ 120 items│ Frequent words: "skin in the..." │
+│ 4 Others         │ 6 pieces │ Main critique: ...       │
+│ 5 Decisions      │ 4 cases  │ Key decision: ...        │
+│ 6 Timeline       │ Complete │ Latest: March 2026...    │
 ├──────────────────┼──────────┼──────────────────────────┤
-│ Điểm mâu thuẫn   │ 2 chỗ    │ Agent1 nói X, Agent4 nói Y│
-│ Chiều thiếu tin  │ Không    │                          │
+│ Contradictions   │ 2 spots  │ Agent1 says X, Agent4 says Y│
+│ Missing dimension│ None     │                          │
 └──────────────────┴──────────┴──────────────────────────┘
 ```
 
-Người dùng xác nhận chất lượng nghiên cứu ổn → vào Phase 2.
-Người dùng thấy chiều nào chưa đủ → nghiên cứu bổ sung rồi mới tiếp tục.
+The user confirms the research quality is fine → go to Phase 2.
+The user feels a dimension is insufficient → research more before continuing.
 
-Ý nghĩa của điểm kiểm tra này: chất lượng nghiên cứu quyết định trần của skill cuối. Rác vào rác ra, chặn ở đây rẻ hơn nhiều so với làm lại ở Phase 4.
-
----
-
-### Phase 2: Chưng cất khung (Synthesis)
-
-Gộp tư liệu của 6 Agent xong, thực hiện chưng cất có cấu trúc. Trước hết đọc `references/extraction-framework.md` để lấy phương pháp kiểm định ba lớp cho mô hình tư duy (tái hiện xuyên lĩnh vực, sức sinh, tính độc quyền), bảo đảm chất lượng chưng cất.
-
-#### 2.1 Rút mô hình tư duy (3-7 cái)
-
-**Các bước thao tác**:
-
-1. **Quét**: đọc lần lượt `01-writings.md` đến `05-decisions.md`, liệt kê mọi luận điểm ứng viên (quan điểm người này lặp lại, thuật ngữ tự đặt, chủ trương cốt lõi). Thường được 15-30 ứng viên
-2. **Lọc bằng kiểm định ba lớp**: với mỗi ứng viên thực hiện (chi tiết xem `references/extraction-framework.md`):
-   - Tái hiện xuyên lĩnh vực: xuất hiện trong ≥2 lĩnh vực / chủ đề khác nhau?
-   - Sức sinh: suy ra được lập trường của người này với vấn đề mới?
-   - Tính độc quyền: không phải mọi người thông minh đều nghĩ vậy?
-   - Qua cả ba lớp → mô hình tư duy; chỉ qua 1-2 lớp → hạ xuống nguyên tắc ra quyết định; 0 lớp → bỏ
-3. **Xếp hạng chọn lọc**: xếp theo độ mạnh của tính độc quyền (càng độc đáo càng đứng trước), lấy top 3-7. Thà ít còn hơn nhiều: 3 mô hình sâu sắc tốt hơn nhiều so với 10 nguyên tắc nông
-4. **Định dạng ghi**: mỗi mô hình ghi tên, mô tả một câu, bằng chứng nguồn (≥2 tình huống), cách ứng dụng, giới hạn
-
-#### 2.2 Rút nguyên tắc ra quyết định (5-10 điều)
-
-= Luật nhanh người này dùng khi phán đoán. Có thể diễn đạt thành "nếu X thì Y", có ví dụ cụ thể làm chỗ dựa.
-
-#### 2.3 Phân tích DNA biểu đạt
-
-| Chiều | Nội dung rút ra |
-|-------|-----------------|
-| Ưa thích câu | Câu dài / ngắn, hỏi / khẳng định, mật độ so sánh |
-| Đặc trưng từ vựng | Từ hay dùng, thuật ngữ riêng, từ kiêng kỵ |
-| Nhịp | Kết luận trước hay dẫn dắt trước, cách chuyển ý |
-| Cách hài hước | Châm biếm / tự giễu / phi lý / hài lạnh / không hài hước |
-| Biểu đạt độ chắc chắn | Kiểu "tôi không chắc" hay kiểu "rõ ràng là vậy" |
-| Thói quen trích dẫn | Hay dẫn ai, dẫn loại gì |
-
-#### 2.4 Giá trị và anti-pattern
-
-- **Giá trị**: 3-5 giá trị cốt lõi xếp thứ tự
-- **Anti-pattern**: hành vi / cách nghĩ người này phản đối rõ ràng
-- **Mâu thuẫn và giằng co**: xung đột nội tại giữa các giá trị (nguồn của chiều sâu)
-
-#### 2.5 Phả hệ trí tuệ
-
-Người này chịu ảnh hưởng của ai → ảnh hưởng ai → vị trí trên bản đồ tư tưởng
-
-#### 2.6 Ranh giới trung thực
-
-Những giới hạn bắt buộc viết rõ:
-- Không dự đoán được phản ứng khi đối diện vấn đề hoàn toàn mới
-- Không thay thế được sáng tạo và trực giác của người này
-- Biểu đạt công khai và suy nghĩ thật có thể lệch nhau
-- Thông tin chỉ tới thời điểm nghiên cứu
+Why this checkpoint exists: research quality sets the ceiling of the final skill. Garbage in, garbage out; blocking here is much cheaper than redoing work in Phase 4.
 
 ---
 
-### Phase 2.5: Điểm kiểm tra xác nhận chưng cất
+### Phase 2: Distill the framework (Synthesis)
 
-**🔴 CHECKPOINT** · Phase 2 chưng cất xong, dừng lại hiển thị tóm tắt cho người dùng xác nhận:
+Once the 6 Agents' material is merged, perform a structured distillation. First read `references/extraction-framework.md` for the three-layer test for mental models (cross-domain recurrence, generative power, exclusivity) to keep the distillation quality high.
+
+#### 2.1 Extract mental models (3-7)
+
+**Steps**:
+
+1. **Scan**: read `01-writings.md` through `05-decisions.md` in turn and list every candidate argument (viewpoints the person repeats, self-coined terms, core positions). Typically 15-30 candidates
+2. **Filter with the three-layer test**: for each candidate (details in `references/extraction-framework.md`):
+   - Cross-domain recurrence: does it appear in ≥2 different domains / topics?
+   - Generative power: can it be used to infer this person's position on a new problem?
+   - Exclusivity: is it NOT something every smart person would think?
+   - Passes all three → a mental model; passes only 1-2 → demoted to a decision principle; 0 → drop
+3. **Rank and select**: rank by strength of exclusivity (the more distinctive, the higher), and keep the top 3-7. Fewer is better than more: 3 deep models beat 10 shallow principles
+4. **Recording format**: each model records a name, a one-sentence description, source evidence (≥2 situations), how to apply it, and its limits
+
+#### 2.2 Extract decision principles (5-10)
+
+= The quick rules this person uses when judging. They can be phrased as "if X then Y", with a concrete example as support.
+
+#### 2.3 Analyze the expression DNA
+
+| Dimension | What to extract |
+|-----------|-----------------|
+| Sentence preference | Long / short sentences, questions / assertions, density of analogies |
+| Vocabulary traits | Frequent words, personal jargon, taboo words |
+| Rhythm | Conclusion first or build-up first, how they transition |
+| Way of being funny | Satire / self-deprecation / absurdity / deadpan / not funny |
+| Expressing certainty | "I'm not sure" style or "obviously so" style |
+| Citation habits | Whom they often cite, what kind of material |
+
+#### 2.4 Values and anti-patterns
+
+- **Values**: 3-5 core values, ranked
+- **Anti-patterns**: behaviors / ways of thinking this person explicitly opposes
+- **Contradictions and tensions**: internal conflicts between values (the source of depth)
+
+#### 2.5 Intellectual lineage
+
+Who influenced this person → whom they influenced → their position on the map of ideas
+
+#### 2.6 Honest boundaries
+
+Limits that must be written down plainly:
+- Cannot predict reactions when facing a completely new problem
+- Cannot replace this person's creativity and intuition
+- Public expression and private thinking may differ
+- The information is only current up to the research date
+
+---
+
+### Phase 2.5: Distillation confirmation checkpoint
+
+**🔴 CHECKPOINT** · When Phase 2 finishes, stop and show the user a summary to confirm:
 
 ```
-Tóm tắt kết quả chưng cất:
-- Mô hình tư duy: N cái (liệt kê tên)
-- Nguyên tắc ra quyết định: N điều
-- DNA biểu đạt: [3 đặc điểm then chốt]
-- Giằng co cốt lõi: N cặp
-- Ranh giới trung thực: N điều
+Distillation summary:
+- Mental models: N (list the names)
+- Decision principles: N
+- Expression DNA: [3 key traits]
+- Core tensions: N pairs
+- Honest boundaries: N
 ```
 
-Người dùng xác nhận OK → vào Phase 3 dựng skill.
-Người dùng thấy mô hình nào sai hoặc thiếu → quay lại Phase 2 chỉnh rồi tiếp tục.
+The user confirms OK → go to Phase 3 and build the skill.
+The user finds a model wrong or missing → go back to Phase 2, adjust, then continue.
 
-Ý nghĩa của điểm kiểm tra này: chưng cất là khâu nặng phán đoán chủ quan nhất; xác nhận xong mới dựng để tránh viết xong 400 dòng SKILL.md mới phát hiện đi sai hướng.
+Why this checkpoint exists: distillation is the stage that leans hardest on subjective judgment; confirm before building, to avoid writing a 400-line SKILL.md only to find out you went the wrong way.
 
 ---
 
-### Phase 3: Dựng skill
+### Phase 3: Build the skill
 
-Lắp kết quả chưng cất của Phase 2 thành SKILL.md chạy được.
+Assemble the Phase 2 distillation into a working SKILL.md.
 
-#### Bước 1: Đọc mẫu
-Đọc `references/skill-template.md` lấy cấu trúc chuẩn. Mẫu định nghĩa bộ khung đầy đủ của mentor đích: frontmatter, mục "Người hỏi", quy tắc nhập vai, quy trình trả lời (Agentic Protocol), danh tính, mô hình tư duy, nguyên tắc ra quyết định, DNA biểu đạt, dòng thời gian, giá trị, phả hệ trí tuệ, ranh giới trung thực, nguồn nghiên cứu.
+#### Step 1: Read the template
+Read `references/skill-template.md` for the standard structure. The template defines the complete skeleton of the target mentor: frontmatter, "The asker" section, roleplay rules, response protocol (Agentic Protocol), identity, mental models, decision principles, expression DNA, timeline, values, intellectual lineage, honest boundaries, research sources.
 
-#### Bước 2: Điền nội dung
-Theo cấu trúc mẫu, điền kết quả chưng cất của Phase 2 vào từng mục:
+#### Step 2: Fill in the content
+Following the template structure, fill each section with the Phase 2 distillation:
 
-| Mục trong mẫu | Nguồn điền |
-|---------------|------------|
+| Template section | Source to fill from |
+|------------------|---------------------|
 | frontmatter `name` | `mentor-<slug>` |
-| frontmatter description | Số lượng nguồn + số mô hình + cụm kích hoạt. **Giữ trong khoảng 300 chữ, tuyệt đối không vượt giới hạn khoảng 1024 ký tự của skill-loader**: một câu định vị + cụm kích hoạt rõ ("hỏi X", "X sẽ nghĩ sao") + một câu "không tự kích hoạt cho câu hỏi chung chung" để chống kích hoạt nhầm. Nhồi từ khoá đuôi dài sẽ vượt giới hạn báo lỗi, đốt token mỗi session, kéo cao tỷ lệ kích hoạt nhầm; thứ thực sự bảo đảm trúng là tên người và khái niệm đặc trưng |
-| **Người hỏi** | Cố định theo mẫu: Sam, Founder & CEO Avada Group, SaaS app Shopify; mentor xưng "tôi", gọi "anh". Thêm 1-2 điểm mentor này đặc biệt hợp để soi cho Sam và 1-2 điểm không hợp (rút từ mô hình tư duy và giới hạn) |
-| Quy tắc nhập vai | Dùng thẳng quy tắc mặc định của mẫu (gồm hai kỷ luật đầu ra: chủ đề chưa bày tỏ thì đánh dấu suy luận, trích dẫn then chốt phải phân biệt được), không cần sửa |
-| **Quy trình trả lời (Agentic Protocol)** | **Tự suy ra từ mô hình tư duy, xem hướng dẫn sinh bên dưới** |
-| Danh tính | Dòng thời gian (06) + tác phẩm (01) → viết 50 chữ tự giới thiệu bằng giọng người này |
-| Mô hình tư duy | Kết quả Phase 2.1, mỗi cái gồm tên / bằng chứng / ứng dụng / giới hạn |
-| Nguyên tắc ra quyết định | Kết quả Phase 2.2, mỗi điều gồm tình huống + ví dụ |
-| DNA biểu đạt | Kết quả phân tích Phase 2.3 → chuyển thành quy tắc phong cách khi nhập vai |
-| Dòng thời gian | Kết quả Agent 6, rút gọn thành bảng mốc then chốt |
-| Giá trị và anti-pattern | Kết quả Phase 2.4 |
-| Phả hệ trí tuệ | Kết quả Phase 2.5 |
-| Ranh giới trung thực | Kết quả Phase 2.6 + thời điểm nghiên cứu |
-| Nguồn nghiên cứu | Tổng hợp trích dẫn của 6 Agent, chia sơ cấp / thứ cấp |
-| Ghi nhận nguồn gốc | Nội dung cố định theo mẫu: dòng cuối nói mentor tạo bằng `mentors-distill`, chuyển thể từ Nuwa của 花叔 (MIT) |
+| frontmatter description | Number of sources + number of models + trigger phrases. **Keep it within 700 characters, and never exceed the skill-loader's limit of about 1024 characters**: one positioning sentence + clear trigger phrases ("ask X", "what would X do", plus the Vietnamese "hỏi X", "X sẽ nghĩ sao", "góc nhìn X") + a few signature concepts + one sentence "does not self-activate for generic questions" to prevent false activation. Stuffing long-tail keywords blows past the limit and errors out, burns tokens every session, and raises the false-activation rate; what actually guarantees a hit is the person's name and their signature concepts |
+| **The asker** | Fixed by the template: Sam, Founder & CEO of Avada Group, Shopify app SaaS; the mentor says "I" and replies in the language the asker uses (Vietnamese with full diacritics when Sam asks in Vietnamese; "tôi" for the mentor, "anh" for Sam). Add 1-2 things this mentor is especially good for examining on Sam's behalf and 1-2 things it is not suited for (drawn from the mental models and limits) |
+| Roleplay rules | Use the template's default rules as they are (including the two output disciplines: mark topics never addressed as inference, and make key citations distinguishable); no edits needed |
+| **Response protocol (Agentic Protocol)** | **Derive it yourself from the mental models; see the generation guide below** |
+| Identity | Timeline (06) + writings (01) → write a 50-word self-introduction in this person's voice |
+| Mental models | Phase 2.1 result; each has name / evidence / application / limits |
+| Decision principles | Phase 2.2 result; each has a situation + an example |
+| Expression DNA | Phase 2.3 analysis → convert into style rules for roleplay |
+| Timeline | Agent 6's result, condensed into a table of key milestones |
+| Values and anti-patterns | Phase 2.4 result |
+| Intellectual lineage | Phase 2.5 result |
+| Honest boundaries | Phase 2.6 result + the research date |
+| Research sources | Compile the 6 Agents' citations, split into primary / secondary |
+| Attribution | Fixed by the template: the last line says the mentor was created with `mentors-distill`, adapted from 花叔's Nuwa (MIT) |
 
-#### Hướng dẫn sinh Quy trình trả lời (Agentic Protocol)
+#### Guide to generating the Response protocol (Agentic Protocol)
 
-**Vì sao cần đoạn này**: để mentor không chỉ "nói giống" mà còn "làm giống". Thiếu đoạn này, mentor gặp câu hỏi cần dữ kiện sẽ bịa từ ngữ liệu huấn luyện, thay vì như người thật: làm bài tập trước rồi mới phát biểu. Đây là then chốt để mentor đi từ "vẹt học nói" lên "cố vấn tư duy đáng tin".
+**Why this section exists**: so the mentor doesn't just "talk like" the person but also "acts like" them. Without it, when a question needs facts the mentor will make things up from its training corpus, instead of doing what the real person does: do the homework first and then speak. This is the key that takes a mentor from "parrot" to "trustworthy thinking advisor".
 
-**Vị trí**: đặt sau "Quy tắc nhập vai", trước "Ví dụ hội thoại" (nếu có) và "Danh tính".
+**Placement**: after "Roleplay rules", before "Example dialogues" (if any) and "Identity".
 
-**Quy tắc sinh**:
+**Generation rules**:
 
-Agentic Protocol sinh ra phải gồm đủ 3 Bước, trong đó các chiều nghiên cứu ở Bước 2 phải **tự suy ra từ mô hình tư duy đã chưng cất**, không phải khuôn cố định:
+The generated Agentic Protocol must contain all 3 Steps, and the research dimensions in Step 2 must be **derived from the distilled mental models**, not a fixed mold:
 
 ```markdown
-## Quy trình trả lời (Agentic Protocol)
+## Response protocol (Agentic Protocol)
 
-**Nguyên tắc: [Tên người] không nói theo cảm tính. Gặp câu hỏi cần dữ kiện thì làm bài tập trước rồi mới trả lời.**
+**Principle: [Name] does not speak from feeling. When a question needs facts, do the homework first and then answer.**
 
-### Bước 1: Phân loại câu hỏi
+### Step 1: Classify the question
 
-Nhận câu hỏi, trước hết xác định loại:
+On receiving a question, first decide its type:
 
-| Loại | Đặc điểm | Hành động |
-|------|----------|-----------|
-| **Cần dữ kiện** | Liên quan công ty / người / sự kiện / sản phẩm / hiện trạng thị trường cụ thể | → Nghiên cứu trước rồi trả lời (Bước 2) |
-| **Thuần khung tư duy** | Giá trị trừu tượng, cách nghĩ, lời khuyên cuộc sống | → Trả lời thẳng bằng mô hình tư duy (nhảy sang Bước 3) |
-| **Hỗn hợp** | Dùng ví dụ cụ thể bàn đạo lý trừu tượng | → Lấy dữ kiện ví dụ trước, rồi phân tích bằng khung |
+| Type | Traits | Action |
+|------|--------|--------|
+| **Needs facts** | Involves a specific company / person / event / product / current market state | → Research first, then answer (Step 2) |
+| **Pure framework** | Abstract values, ways of thinking, life advice | → Answer straight from the mental models (jump to Step 3) |
+| **Mixed** | Uses a concrete example to discuss an abstract principle | → Get the example's facts first, then analyze with the framework |
 
-**Nguyên tắc phán đoán**: nếu chất lượng câu trả lời sẽ tụt rõ vì thiếu thông tin mới nhất thì bắt buộc nghiên cứu trước. Thà tìm thêm một lần còn hơn bịa từ ngữ liệu huấn luyện.
+**Rule of judgment**: if the answer's quality would clearly drop for lack of the latest information, research first is mandatory. Better to search once more than to make things up from the training corpus.
 
-### Bước 2: Nghiên cứu kiểu [Tên người] (chọn theo loại câu hỏi)
+### Step 2: Research the [Name] way (choose by question type)
 
-**⚠️ Bắt buộc dùng công cụ (WebSearch, v.v.) lấy thông tin thật, không được bỏ qua.**
+**⚠️ You must use tools (WebSearch, etc.) to get real information; this may not be skipped.**
 
-[Dựa vào mô hình tư duy và thiên hướng phân tích của người này, sinh 3-5 nhóm chiều nghiên cứu, mỗi nhóm liệt kê 4-6 điểm nghiên cứu cụ thể]
+[Based on this person's mental models and analytical leanings, generate 3-5 groups of research dimensions, each listing 4-6 concrete research points]
 
-#### Định dạng đầu ra nghiên cứu
-Nghiên cứu xong, trước hết chỉnh lý bản tóm tắt dữ kiện bên trong (không xuất cho người dùng), rồi vào Bước 3.
-Người dùng thấy không phải báo cáo điều tra, mà là phán đoán của [Tên người] dựa trên thông tin thật.
+#### Research output format
+After researching, first organize an internal fact summary (not output to the user), then go to Step 3.
+What the user sees is not an investigation report but [Name]'s judgment based on real information.
 
-### Bước 3: Trả lời kiểu [Tên người]
+### Step 3: Answer the [Name] way
 
-Dựa vào dữ kiện lấy ở Bước 2 (nếu có), vận dụng mô hình tư duy và DNA biểu đạt để xuất câu trả lời.
+Based on the facts obtained in Step 2 (if any), apply the mental models and expression DNA to produce the answer.
 ```
 
-**Phương pháp suy ra chiều nghiên cứu ở Bước 2**:
+**How to derive the research dimensions for Step 2**:
 
-Từ mô hình tư duy đã chưng cất, suy ngược xem người này khi phân tích vấn đề quan tâm nhất điều gì, chuyển thành các chiều tìm kiếm cụ thể. Ví dụ:
+From the distilled mental models, work backwards to what this person cares most about when analyzing a problem, and turn that into concrete search dimensions. For example:
 
-| Nhân vật | Mô hình tư duy cốt lõi | → Chiều nghiên cứu suy ra |
-|----------|------------------------|---------------------------|
-| Munger | Đa mô hình tư duy, tư duy đảo ngược, cơ chế khuyến khích | → xem hào phòng thủ, xem cấu trúc khuyến khích của ban lãnh đạo, xem rủi ro lớn nhất (đảo ngược), xem so sánh lịch sử |
-| Feynman | Nguyên lý đầu tiên, nghi ngờ quyền uy | → xem ràng buộc vật lý / toán học cơ bản, xem lỗ hổng logic của phát ngôn chính thức, xem dữ liệu thực nghiệm |
-| Taleb | Phản mong manh, rủi ro đuôi, sự tự phụ của tri thức | → xem tình huống cực đoan, xem ai đang gánh rủi ro đuôi, xem lịch sử dự đoán của chuyên gia |
-| MrBeast | Kỹ thuật chú ý, thử nghiệm lặp | → xem dữ liệu đối thủ (lượt xem / tương tác), xem không gian A/B test tiêu đề / thumbnail, xem chân dung khán giả |
+| Figure | Core mental models | → Derived research dimensions |
+|--------|--------------------|-------------------------------|
+| Munger | Multiple mental models, inversion, incentive mechanisms | → look at the moat, the incentive structure of leadership, the biggest risk (inversion), historical comparisons |
+| Feynman | First principles, skepticism of authority | → look at basic physical / mathematical constraints, logical holes in official statements, experimental data |
+| Taleb | Antifragility, tail risk, the arrogance of knowledge | → look at extreme scenarios, who bears the tail risk, experts' track record of predictions |
+| MrBeast | Attention techniques, iterative experiments | → look at competitor data (views / engagement), the A/B-testing space for titles / thumbnails, audience profile |
 
-**Ràng buộc then chốt**:
-- Chiều nghiên cứu phải đến từ mô hình tư duy, không được là câu "tìm thông tin liên quan" chung chung
-- Mỗi chiều phải có chỉ dẫn tìm kiếm cụ thể (tìm gì, xem dữ liệu nào), không chỉ là mô tả trừu tượng
-- Gom nhóm theo loại câu hỏi (như Munger chia "xem công ty" / "xem con người" / "xem sự kiện"), để người dùng skill định vị nhanh
+**Key constraints**:
+- Research dimensions must come from the mental models, never a generic "look up related information"
+- Each dimension needs a concrete search instruction (what to look for, which data to check), not just an abstract description
+- Group them by question type (as Munger splits into "looking at a company" / "looking at a person" / "looking at an event"), so users of the skill can orient quickly
 
-#### Bước 3: Tự kiểm chất lượng
-Dựng xong, đọc "Danh sách tự kiểm tra chất lượng" ở cuối `references/extraction-framework.md`, kiểm từng mục. Mục không đạt thì đánh dấu, quay lại Phase tương ứng sửa.
+#### Step 3: Self-check quality
+When the build is done, read the "Quality self-check list" at the end of `references/extraction-framework.md` and check each item. For any item that fails, mark it and go back to the matching Phase to fix it.
 
-#### Bước 4: Xuất sản phẩm
-Ghi SKILL.md hoàn chỉnh vào `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md`. Chưa cài symlink, chưa thêm vào bảng, chưa commit ở bước này; việc đó thuộc Phase 6 sau khi đã qua kiểm định và tinh chỉnh.
-
----
-
-### Phase 4: Kiểm định chất lượng
-
-Sinh skill xong, dùng subagent thực hiện 3 bài kiểm tra (độc lập với agent chính, tránh thiên kiến tự chấm):
-
-#### 4.1 Kiểm tra đã biết (Sanity Check)
-Chọn 3 câu hỏi người này đã công khai bày tỏ, **spawn subagent mang theo skill mới để trả lời**, đối chiếu lập trường thực tế.
-- Cùng hướng → mô hình hiệu lực
-- Lệch → truy ngược chỉnh trọng số mô hình tư duy
-
-#### 4.2 Kiểm tra vùng biên (Edge Case)
-Chọn 1 câu hỏi liên quan mà người này chưa công khai bàn, dùng skill suy luận.
-- Kết quả kỳ vọng: "Suy ra từ mô hình X và Y, có thể... nhưng không chắc"
-- Không được khẳng định chắc nịch
-
-#### 4.3 Kiểm tra phong cách (Voice Check)
-Dùng skill viết một đoạn phân tích 100 chữ, phán đoán:
-- Có đặc trưng biểu đạt của người này?
-- Không phải giọng AI chung chung kiểu "súp gà"?
-- Không phải ghép lời nguyên văn?
-
-Bảng chấm độ trung thực đầy đủ (5 chiều, 100 điểm, hai agent độc lập trả lời và chấm) nằm ở `references/fidelity-scorecard.md`; dùng khi muốn có báo cáo xuất xưởng cho mentor quan trọng.
-
-#### 4.4 Tiêu chuẩn đạt
-
-| Mục kiểm | Tiêu chuẩn đạt | Tín hiệu không đạt |
-|----------|----------------|--------------------|
-| Số mô hình tư duy | 3-7 cái, mỗi cái có bằng chứng nguồn | <3 hoặc >10 |
-| Giới hạn của mỗi mô hình | Viết rõ điều kiện mất hiệu lực | Chỉ viết ưu điểm |
-| Độ nhận diện DNA biểu đạt | Đọc 100 chữ nhận ra là ai | Giống ChatGPT chung chung |
-| Ranh giới trung thực | Ít nhất 3 giới hạn cụ thể | Chỉ có "không thay thế được bản thân" |
-| Giằng co nội tại | Ít nhất 2 cặp mâu thuẫn | Quan điểm nhất quán tuyệt đối (quá giả) |
-| Tỷ lệ nguồn sơ cấp | >50% | Chủ yếu dựa vào thuật lại thứ cấp |
-| Mục "Người hỏi" | Có, đúng bối cảnh Sam, mentor xưng "tôi" gọi "anh" | Thiếu mục, hoặc trả lời như không biết ai đang hỏi |
-
-Kiểm định đạt → giao. Không đạt → đánh dấu khâu yếu, quay lại Phase 2 lặp.
-**Giới hạn lặp**: Phase 2→4 lặp tối đa 2 lần. Sau 2 vòng vẫn còn mục không đạt thì đánh dấu chiều yếu trong ranh giới trung thực, giao bản tốt nhất hiện có thay vì mài vô hạn.
-
-**🔴 CHECKPOINT · Hiển thị kết quả kiểm định cho người dùng xác nhận mới tính là xong.**
+#### Step 4: Output the product
+Write the complete SKILL.md to `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md`. Don't install the symlink, add to the table, or commit at this step; those belong to Phase 6, after validation and refinement.
 
 ---
 
-### Phase 5: Tinh chỉnh hai Agent (công đoạn hậu kỳ chuẩn)
+### Phase 4: Quality validation
 
-Phase 4 kiểm định đạt xong, tự động khởi động tinh chỉnh hai Agent để nâng thêm tính khả thao tác của skill:
+After the skill is generated, use subagents to run 3 tests (independent of the main agent, to avoid self-grading bias):
 
-**Khởi động song song hai Agent:**
+#### 4.1 Known-position test (Sanity Check)
+Pick 3 questions the person has publicly answered, **spawn a subagent carrying the new skill to answer them**, and compare against their actual positions.
+- Same direction → the model works
+- Off → trace back and adjust the mental-model weights
 
-**Agent A (góc nhìn auto-skill-optimizer)**:
-- Đánh giá cấu trúc SKILL.md theo 8 chiều (độ rõ của quy trình, điều kiện biên, thiết kế điểm kiểm tra, độ cụ thể của chỉ dẫn, v.v.)
-- Chạy thử 3 prompt kiểm tra điển hình, đánh giá chiều hiệu quả
-- Đầu ra: đề xuất cải tiến cụ thể cho 2 chiều yếu nhất (kèm ví dụ văn bản sau khi sửa)
+#### 4.2 Edge-case test (Edge Case)
+Pick 1 related question the person has not publicly discussed, and have the skill reason about it.
+- Expected result: "Inferring from models X and Y, possibly... but not certain"
+- It must not assert with confidence
 
-**Agent B (góc nhìn skill-creator)**:
-- Rà "điều kiện kích hoạt" có phủ được tình huống dùng thật không
-- Rà tính khả thao tác của "quy tắc nhập vai" (có định tuyến câu hỏi, ràng buộc tần suất, phòng thất bại không)
-- Nhận diện thông tin then chốt còn thiếu
-- Đầu ra: 2-3 chỗ đề xuất sửa văn bản cụ thể (kèm ví dụ văn bản sau khi sửa)
+#### 4.3 Voice test (Voice Check)
+Have the skill write a 100-word analysis, and judge:
+- Does it carry this person's expression traits?
+- Is it free of a generic AI "chicken soup" voice?
+- Is it not a patchwork of verbatim quotes?
 
-**🔴 CHECKPOINT · Agent chính tổng hợp hai báo cáo, áp dụng các cải tiến không xung đột, hiển thị tóm tắt thay đổi cho người dùng xác nhận.**
+The full fidelity scorecard (5 dimensions, 100 points, two independent agents answering and grading) is in `references/fidelity-scorecard.md`; use it when you want a ship-ready report for an important mentor.
 
-Tiêu chuẩn tinh chỉnh: thay đổi phải làm cho skill "kích hoạt là thực thi", không chỉ thêm nội dung, mà để AI nhận được skill biết làm gì trước, gặp gì thì dừng.
+#### 4.4 Pass criteria
+
+| Test item | Pass criterion | Failure signal |
+|-----------|----------------|----------------|
+| Number of mental models | 3-7, each with source evidence | <3 or >10 |
+| Limits of each model | The conditions under which it fails are stated | Only strengths are written |
+| Recognizability of expression DNA | A 100-word sample can be identified as that person | Sounds like generic ChatGPT |
+| Honest boundaries | At least 3 concrete limits | Only "cannot replace the real person" |
+| Internal tensions | At least 2 pairs of contradictions | Absolutely consistent views (too fake) |
+| Primary-source ratio | >50% | Mostly relies on secondary retellings |
+| "The asker" section | Present, correct Sam context, mentor says "I", replies in the asker's language | Section missing, or answers as if it doesn't know who is asking |
+
+Validation passes → deliver. Fails → mark the weak links and go back to Phase 2 to iterate.
+**Iteration cap**: Phase 2→4 iterates at most 2 times. If items still fail after 2 rounds, mark the weak dimensions in the honest boundaries and deliver the best version available rather than polishing endlessly.
+
+**🔴 CHECKPOINT · Show the validation results to the user; it counts as done only once they confirm.**
 
 ---
 
-### Phase 6: Hoàn tất, cài đặt, ghi vào danh sách
+### Phase 5: Two-Agent refinement (the standard post-production stage)
 
-Chỉ làm sau khi người dùng xác nhận Phase 4 và Phase 5. Repo đích là bản clone chính `/Volumes/SamDisk/sources/mentors`. Thực hiện đủ 3 bước theo thứ tự:
+After Phase 4 validation passes, automatically launch a two-Agent refinement to make the skill more actionable:
 
-**(a) Tạo symlink để skill dùng được ngay** (đường dẫn tuyệt đối):
+**Launch two Agents in parallel:**
+
+**Agent A (auto-skill-optimizer perspective)**:
+- Evaluate the SKILL.md structure on 8 dimensions (clarity of process, boundary conditions, checkpoint design, specificity of instructions, etc.)
+- Run 3 typical test prompts and evaluate effectiveness
+- Output: concrete improvement suggestions for the 2 weakest dimensions (with example text after the fix)
+
+**Agent B (skill-creator perspective)**:
+- Check whether the "trigger conditions" cover real usage situations
+- Check the actionability of the "roleplay rules" (question routing, frequency constraints, failure prevention)
+- Identify key information that is still missing
+- Output: 2-3 concrete text-edit suggestions (with example text after the fix)
+
+**🔴 CHECKPOINT · The main Agent merges the two reports, applies the non-conflicting improvements, and shows the user a summary of changes to confirm.**
+
+Refinement standard: changes must make the skill "activation means execution", not just add content, so that an AI receiving the skill knows what to do first and where to stop.
+
+---
+
+### Phase 6: Finish, install, add to the roster
+
+Only after the user has confirmed Phase 4 and Phase 5. The target repo is the main clone `/Volumes/SamDisk/sources/mentors`. Do all 3 steps in order:
+
+**(a) Create a symlink so the skill is usable right away** (absolute paths):
 
 ```bash
 ln -s /Volumes/SamDisk/sources/mentors/skills/mentor-<slug> ~/.claude/skills/mentor-<slug>
 ```
 
-Nếu `~/.claude/skills/mentor-<slug>` đã tồn tại (chế độ cập nhật) thì kiểm tra nó đã trỏ đúng thư mục, không tạo lại.
+If `~/.claude/skills/mentor-<slug>` already exists (update mode), check that it points to the right directory instead of recreating it.
 
-**(b) Thêm 1 dòng vào bảng "Danh sách mentor"** ở `/Volumes/SamDisk/sources/mentors/SKILL.md`. Cột của bảng: `skill | nhân vật | lĩnh vực | hỏi khi`. Ví dụ:
+**(b) Add 1 line to the "Mentor roster" table** in `/Volumes/SamDisk/sources/mentors/SKILL.md`. The table's columns: `Skill | Figure | Strong domains | Ask when`. Example:
 
 ```
-| mentor-<slug> | [Tên nhân vật] | [Lĩnh vực] | [Khi nào nên hỏi người này, 1 dòng] |
+| mentor-<slug> | [Figure's name] | [Domain] | [When to ask this person, 1 line] |
 ```
 
-Đọc bảng hiện có trước khi sửa, giữ thứ tự và định dạng, không viết trùng nếu đã có dòng của mentor này (chế độ cập nhật chỉ sửa dòng cũ nếu mô tả đổi).
+Read the existing table before editing, keep the order and format, and don't write a duplicate if this mentor already has a row (in update mode, change the old row only if the description changed).
 
-**(c) Commit trong repo mentors**:
+**(c) Commit in the mentors repo**:
 
 ```bash
 git -C /Volumes/SamDisk/sources/mentors add skills/mentor-<slug> SKILL.md
 git -C /Volumes/SamDisk/sources/mentors commit -m "add: mentor-<slug>"
 ```
 
-Chỉ `-m`, không thêm dòng Co-Authored-By; author đã là Sam. Không push trừ khi người dùng yêu cầu.
+Use only `-m`, with no Co-Authored-By line; the author is already Sam. Don't push unless the user asks.
 
-Kết thúc: báo ngắn đường dẫn mentor, điểm kiểm định Phase 4, và cách gọi (ví dụ "hỏi <tên>").
-
----
-
-## Cập nhật mentor đã có
-
-Khi người dùng nói "cập nhật mentor XX", "XX có động thái mới":
-
-1. Đọc `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md` hiện có, từ mục "Ranh giới trung thực" tìm "Thời điểm nghiên cứu: [ngày]", đánh dấu cách nay bao lâu
-2. Chỉ khởi động Agent 2 (đối thoại mới nhất) + Agent 5 (quyết định mới nhất) + Agent 6 (cập nhật dòng thời gian)
-3. So thông tin mới với nội dung hiện có:
-   - Thông tin mới củng cố mô hình hiện có → bổ sung ví dụ
-   - Thông tin mới mâu thuẫn với mô hình hiện có → đánh dấu thay đổi, cập nhật mô hình
-   - Xuất hiện mô thức tư duy mới → cân nhắc thêm mô hình mới
-4. Cập nhật mục "Động thái mới nhất" và thời điểm nghiên cứu trong SKILL.md
-5. Không viết lại toàn bộ skill, chỉ cập nhật gia tăng
-6. Lưu kết quả nghiên cứu mới vào `references/research/` (ghi nối hoặc thêm mục có ngày), rồi commit trong repo mentors (Phase 6c). Symlink và dòng trong bảng đã có thì giữ nguyên
+Finish: briefly report the mentor's path, the Phase 4 validation score, and how to call it (for example "hỏi <name>" / "ask <name>").
 
 ---
 
-## Quy tắc khẩu vị (tra nhanh)
+## Updating an existing mentor
 
-Gặp tình huống khó phán đoán thì xem lại. Tiêu chuẩn định lượng cụ thể xem bảng tiêu chuẩn đạt ở Phase 4.
+When the user says "cập nhật mentor XX", "update mentor XX", "XX has new developments":
 
-| Nguyên tắc | Một câu |
-|------------|---------|
-| Bài dài > câu vàng | Bài luận 3000 chữ lộ cấu trúc tư duy hơn 50 tweet |
-| Tranh cãi > đồng thuận | Quan điểm bị tranh cãi nhiều nhất lộ ra tính độc đáo rõ nhất |
-| Thay đổi > cố định | Chỗ đổi lập trường nhiều thông tin hơn chỗ luôn giữ |
-
-### ❌ Danh sách đen anti-pattern (tuyệt đối không làm)
-
-| # | Anti-pattern | Vì sao / làm thay bằng gì |
-|---|--------------|---------------------------|
-| 1 | Bịa lời người này chưa nói | Trên mạng đầy danh ngôn giả mạo. Trích dẫn phải có xuất xứ, câu vàng không tra được nguyên văn thì thà không dùng |
-| 2 | Đóng gói đạo lý chung thành "kiến giải độc đáo" của người này | Nội dung không qua kiểm định ba lớp (tính độc quyền) không vào mô hình tư duy |
-| 3 | Bỏ qua đánh giá tiêu cực và tranh cãi | Tư liệu phê bình của Agent 4 là chìa khoá chống kính lọc fan; tỷ lệ tiêu cực không đủ = nghiên cứu không đạt |
-| 4 | Ép sinh khi thông tin không đủ | Thà giao skill 60 điểm ghi trung thực giới hạn, còn hơn tạo skill 90 điểm trông hoàn hảo mà thực chất bịa |
-| 5 | Dùng Zhihu / WeChat Official Accounts / Baidu Baike làm nguồn | Viết lại, sai lệch, không kiểm chứng được. Không chiều nào ngoại lệ |
-| 6 | Chạy trọn quy trình trong một phiên trên model cửa sổ ngữ cảnh nhỏ | Sẽ nổ ngữ cảnh giữa Phase 1-2. Theo bảng hạ cấp thất bại để chạy tiếp theo đoạn |
-| 7 | Không báo mức chi phí mà chạy luôn | Chưng cất đầy đủ là tác vụ nặng, người dùng có quyền chọn mức trước khi tiêu tiền |
-| 8 | Chưng cất người còn sống không phải nhân vật công chúng mà không nhắc ranh giới | Liên quan quyền riêng tư và ý nguyện của chính họ. Phải do người dùng cung cấp tư liệu, và nhắc người dùng xin phép đương sự |
-| 9 | Skill sinh ra không có cơ chế chống trôi vai | Hội thoại dài thì mentor dễ mất vai, rơi về giọng trợ lý chung. Quy tắc nhập vai + ràng buộc DNA biểu đạt trong mẫu phải giữ nguyên vẹn |
-| 10 | Biến điểm kiểm tra xác nhận thành chặn giao hàng | Điểm kiểm tra để người dùng chỉnh hướng, không phải để giữ sản phẩm lại. Đặt được giá trị mặc định thì đặt |
-| 11 | Sinh mentor không có mục "Người hỏi" | Mentor trả lời như không biết ai đang hỏi thì lời khuyên chung chung. Mục này bắt buộc với mọi mentor |
+1. Read the existing `/Volumes/SamDisk/sources/mentors/skills/mentor-<slug>/SKILL.md`, find "Research date: [date]" in the "Honest boundaries" section, and note how long ago that was
+2. Launch only Agent 2 (latest conversations) + Agent 5 (latest decisions) + Agent 6 (timeline update)
+3. Compare the new information with the existing content:
+   - New information reinforces an existing model → add examples
+   - New information contradicts an existing model → mark the change and update the model
+   - A new pattern of thinking appears → consider adding a new model
+4. Update the "Latest developments" section and the research date in SKILL.md
+5. Don't rewrite the whole skill; only update incrementally
+6. Save the new research results in `references/research/` (append, or add a dated section), then commit in the mentors repo (Phase 6c). Keep the existing symlink and roster row as they are
 
 ---
 
-## Tình huống đặc biệt
+## Taste rules (quick reference)
 
-### Người còn sống vs nhân vật lịch sử
-- **Người còn sống**: chú ý tính thời sự, đánh dấu ngày cắt thông tin, khuyến nghị cập nhật định kỳ
-- **Nhân vật lịch sử**: tư liệu ổn định hơn nhưng có thể lệch do tiểu sử, đối chiếu nhiều nguồn
+When a situation is hard to judge, come back here. For concrete quantitative standards, see the pass-criteria table in Phase 4.
 
-### Skill theo chủ đề vs mentor theo người
+| Principle | One sentence |
+|-----------|--------------|
+| Long-form > golden quotes | A 3000-word essay reveals the structure of thinking better than 50 tweets |
+| Controversy > consensus | The most disputed views reveal originality most clearly |
+| Change > constancy | Where someone changed position carries more information than where they never moved |
 
-Đầu vào không phải tên người mà là chủ đề (như "đầu tư giá trị", "kiềm chế sản phẩm", "ra quyết định phản mong manh") thì các Phase biến đổi như sau:
+### ❌ Anti-pattern blacklist (absolutely never do)
 
-| Phase | Mentor theo người | Biến thể skill theo chủ đề |
-|-------|-------------------|----------------------------|
-| 0A | Xác nhận tên người + hướng tập trung | Xác nhận biên giới chủ đề + đối tượng (đầu tư giá trị là kiểu Graham hay mọi trường phái?) |
-| 0.5 | `mentor-<slug>/` | `mentor-<chủ đề>/` hoặc `<chủ đề>-framework/` trong cùng repo, cấu trúc thư mục như nhau |
-| 1 | 6 Agent xoay quanh một người | Trước hết tìm 3-5 nhân vật / trường phái cốt lõi của chủ đề, rồi phân Agent theo người (mỗi người 1-2 Agent thay vì 6) |
-| 2.1 | Rút mô hình tư duy của một người | Rút **khung đồng thuận của lĩnh vực** (mọi trường phái đều thừa nhận) + **bất đồng giữa các nhà** (A nói X, B nói Y) |
-| 2.3 | Mô phỏng biểu đạt của một người | Không mô phỏng giọng một nhân vật cụ thể, dùng biểu đạt trung tính nhưng chuyên nghiệp |
-| 2.4 | Mâu thuẫn nội tại của một người | Bất đồng căn bản giữa các trường phái (như khác biệt triết lý giữa đầu tư giá trị và đầu tư tăng trưởng) |
-| 3 | Dùng skill-template.md | Điều chỉnh mẫu: bỏ quy tắc nhập vai và danh tính, đổi thành "Tổng quan khung" + "So sánh trường phái"; giữ mục "Người hỏi" |
-| 4 | Đối chiếu lập trường đã biết của người này | Đối chiếu ca kinh điển được lĩnh vực công nhận |
-
-### Nhân vật Trung Quốc vs phương Tây vs Việt Nam
-- **Nhân vật Trung Quốc**: video / bài nói gốc trên Bilibili, podcast Xiaoyuzhou, phỏng vấn truyền thông uy tín (36Kr / LatePost / Caixin / Geekpark), tác phẩm của chính họ / Weibo. Zhihu và WeChat Official Accounts luôn bị loại
-- **Nhân vật phương Tây**: Twitter, YouTube, Podcast, đánh giá sách trên Amazon
-- **Nhân vật Việt Nam**: bài nói / phỏng vấn gốc trên YouTube và podcast, báo kinh tế uy tín, tác phẩm của chính họ; tránh các trang tổng hợp và mạng xã hội thuật lại không rõ nguồn
-
-### Nhân vật ít tên tuổi (thông tin công khai rất ít)
-Khi Phase 0.5 đánh giá thấy nguồn dùng được <10:
-1. Ngay ở Phase 0.5 báo người dùng "thông tin công khai về người này rất ít, chất lượng skill sẽ bị hạn chế"
-2. Giảm mô hình tư duy còn 2-3, mỗi cái đánh dấu "suy đoán dựa trên thông tin hạn chế"
-3. Mục ranh giới trung thực tăng dung lượng, liệt kê rõ "chiều nào thiếu thông tin"
-4. Nếu người dùng cung cấp được tư liệu gốc (sách, ghi âm nội bộ, tin nhắn riêng) thì ưu tiên dùng
-
-### Chưng cất chính người dùng
-Khi người dùng nói "chưng cất chính tôi", "làm giúp anh một mentor về anh":
-1. Mentors-distill không tìm được khung tư duy của người dùng trên kênh công khai, cần người dùng cung cấp tư liệu
-2. Hướng dẫn người dùng cung cấp: bài viết / blog cá nhân, video / podcast đã quay, memo quyết định đã viết, tự mô tả
-3. 6 Agent của Phase 1 đổi thành phân tích tư liệu người dùng đưa, thay vì tìm mạng
-4. Đặc biệt chú ý "thiên kiến tự nhận thức": người dùng có thể đánh giá cao một số phẩm chất, bỏ qua điểm mù; có thể hỏi thêm đánh giá của người xung quanh
+| # | Anti-pattern | Why / what to do instead |
+|---|--------------|--------------------------|
+| 1 | Making up words the person never said | The internet is full of fake quotes. A quote must have provenance; a golden line whose verbatim original can't be traced is better left out |
+| 2 | Packaging a generic truth as this person's "unique insight" | Content that doesn't pass the three-layer test (exclusivity) does not enter the mental models |
+| 3 | Ignoring negative evaluations and controversy | Agent 4's critical material is the key to resisting the fan filter; an insufficient share of negatives = failed research |
+| 4 | Forcing generation when information is insufficient | Better to deliver a 60-point skill that honestly states its limits than to create a 90-point skill that looks perfect but is actually invented |
+| 5 | Using Zhihu / WeChat Official Accounts / Baidu Baike as sources | Rewritten, distorted, unverifiable. No dimension is an exception |
+| 6 | Running the whole process in a single session on a small-context-window model | The context will blow up in Phase 1-2. Follow the failure-downgrade table and run in segments |
+| 7 | Running without stating the cost tier | A full distillation is a heavy task, and the user has the right to pick the tier before spending money |
+| 8 | Distilling a living person who is not a public figure without mentioning the boundaries | It touches privacy and the person's own wishes. The user must supply the material, and be reminded to ask the person's permission |
+| 9 | A generated skill with no mechanism against role drift | In a long conversation the mentor easily loses the role and falls back into a generic assistant voice. The template's roleplay rules + expression-DNA constraints must be kept intact |
+| 10 | Turning a confirmation checkpoint into a delivery blocker | Checkpoints exist so the user can steer, not to hold the product back. Where a default can be set, set it |
+| 11 | Generating a mentor without a "The asker" section | A mentor that answers as if it doesn't know who is asking gives generic advice. This section is mandatory for every mentor |
 
 ---
 
-## Lời cuối
+## Special situations
 
-Mentors-distill không tạo ra người, mà tạo ra một tấm gương.
+### Living people vs historical figures
+- **Living people**: mind how current the material is, mark the information cutoff date, and recommend periodic updates
+- **Historical figures**: the material is more stable but may be skewed by biographies; cross-check multiple sources
 
-Một mentor tốt cho anh dùng mắt của người khác để nhìn vấn đề của chính mình. Không phải để bắt chước họ, mà để mở rộng biên giới tư duy của chính anh.
+### Topic-based skills vs person-based mentors
 
-## Ghi công và giấy phép
+When the input is not a person's name but a topic (such as "value investing", "product restraint", "antifragile decision-making"), the Phases change as follows:
 
-Phương pháp chưng cất (6 luồng nghiên cứu, kiểm định ba lớp, cấu trúc mentor, bảng chấm độ trung thực) do 花叔 phát triển trong dự án Nuwa: https://github.com/alchaincyf/nuwa-skill, giấy phép MIT (xem file LICENSE của repo). Bản này là chuyển thể tiếng Việt cho repo mentors của Sam. Chỉ nhắc đến credit khi người dùng hỏi về nguồn gốc skill.
+| Phase | Person-based mentor | Topic-based skill variant |
+|-------|---------------------|---------------------------|
+| 0A | Confirm the person's name + focus | Confirm the topic boundary + audience (is value investing Graham-style or every school?) |
+| 0.5 | `mentor-<slug>/` | `mentor-<topic>/` or `<topic>-framework/` in the same repo, same folder structure |
+| 1 | 6 Agents revolve around one person | First find 3-5 core figures / schools of the topic, then assign Agents by person (1-2 Agents each instead of 6) |
+| 2.1 | Extract one person's mental models | Extract the **field's consensus framework** (that every school acknowledges) + **disagreements between thinkers** (A says X, B says Y) |
+| 2.3 | Simulate one person's expression | Don't mimic a specific figure's voice; use a neutral but professional register |
+| 2.4 | One person's internal contradictions | Fundamental disagreements between schools (such as the philosophical difference between value investing and growth investing) |
+| 3 | Use skill-template.md | Adjust the template: drop the roleplay rules and identity, replace them with "Framework overview" + "Comparison of schools"; keep "The asker" section |
+| 4 | Check against this person's known positions | Check against classic cases the field recognizes |
+
+### Chinese vs Western vs Vietnamese figures
+- **Chinese figures**: original videos / talks on Bilibili, Xiaoyuzhou podcasts, interviews with reputable media (36Kr / LatePost / Caixin / Geekpark), their own works / Weibo. Zhihu and WeChat Official Accounts are always excluded
+- **Western figures**: Twitter, YouTube, podcasts, Amazon book reviews
+- **Vietnamese figures**: original talks / interviews on YouTube and podcasts, reputable business press, their own works; avoid aggregator sites and social media that retell with no clear source
+
+### Lesser-known figures (very little public information)
+When Phase 0.5 assesses fewer than 10 usable sources:
+1. Right at Phase 0.5, tell the user "there is very little public information about this person, so the skill's quality will be limited"
+2. Reduce the mental models to 2-3, each marked "speculation based on limited information"
+3. Expand the honest-boundaries section, explicitly listing "which dimensions lack information"
+4. If the user can supply primary material (books, internal recordings, private messages), prefer it
+
+### Distilling the user themselves
+When the user says "distill me", "make a mentor out of me":
+1. Mentors-distill can't find the user's thinking framework through public channels; the user must supply material
+2. Guide the user to provide: personal articles / blog, videos / podcasts they've recorded, written decision memos, self-descriptions
+3. The 6 Agents of Phase 1 turn into analyzing the material the user supplied, instead of searching online
+4. Pay special attention to "self-perception bias": the user may overrate some qualities and overlook blind spots; you can also ask for evaluations from the people around them
+
+---
+
+## Closing words
+
+Mentors-distill doesn't create a person; it creates a mirror.
+
+A good mentor lets you see your own problems through someone else's eyes. Not to imitate them, but to widen the boundaries of your own thinking.
+
+## Credit and license
+
+The distillation method (6 research streams, the three-layer test, the mentor structure, the fidelity scorecard) was developed by 花叔 in the Nuwa project: https://github.com/alchaincyf/nuwa-skill, MIT license (see the repo's LICENSE file). This version is an English adaptation for Sam's mentors repo. Mention the credit only when the user asks about the skill's origin.

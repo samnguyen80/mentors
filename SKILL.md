@@ -1,137 +1,141 @@
 ---
 name: mentors
 description: |
-  Hội đồng cố vấn của Sam: chọn 1–3 mentor (Elon Musk, Trump, Steve Jobs, Paul Graham, Munger,
-  Naval, Taleb, Feynman, Karpathy, Ilya, Trương Nhất Minh, MrBeast, X growth, Justin Sun,
-  Tribe of Mentors) đúng lĩnh vực câu hỏi, để từng người phân tích bằng mô hình tư duy của họ,
-  rồi gom thành lời khuyên hành động cho Sam.
-  Sử dụng mỗi khi Sam xin lời khuyên hoặc muốn góc nhìn về chiến lược, sản phẩm, định giá,
-  tăng trưởng, marketing, đàm phán, tuyển dụng, tổ chức, đầu tư, rủi ro, AI, nội dung, phát triển
-  bản thân, hoặc nói "mentor", "hỏi mentor", "hội đồng cố vấn", "xin lời khuyên", "cố vấn cho anh",
-  "nếu là Elon thì sao", "Jobs sẽ làm gì", "board meeting", "advisory board", "what would X do",
-  ngay cả khi Sam không nói "mentors" trực tiếp. KHÔNG dùng cho việc kỹ thuật thuần (viết code,
-  debug, deploy, tra số liệu).
+  Sam's advisory board: picks 1–3 mentors (Elon Musk, Trump, Steve Jobs, Paul Graham, Munger,
+  Naval, Taleb, Feynman, Karpathy, Ilya, Zhang Yiming, MrBeast, X growth, Justin Sun,
+  Tribe of Mentors) that fit the question's domain, has each analyze it with their own mental
+  models, then merges them into actionable advice for Sam. Use when Sam asks for advice or a
+  perspective on strategy, product, pricing, growth, marketing, negotiation, hiring, organization,
+  investing, risk, AI, content or personal development, or says "mentor", "hỏi mentor",
+  "hội đồng cố vấn", "xin lời khuyên", "cố vấn cho anh", "nếu là Elon thì sao", "Jobs sẽ làm gì",
+  "board meeting", "advisory board", "what would X do", even without saying "mentors". NOT for
+  purely technical work (code, debugging, deploys, data lookups).
 metadata:
   author: "Sam (github.com/samnguyen80/mentors)"
   based_on: "alchaincyf/nuwa-skill (MIT, 花叔)"
-  language: vi
+  language: en
 ---
 
-# mentors · Hội đồng cố vấn
+# mentors · The advisory board
 
-## Nó giúp gì
+## What it does
 
-Biến câu hỏi kinh doanh hoặc cá nhân của Sam thành một buổi tư vấn với đúng 1–3 bộ óc phù hợp
-nhất, mỗi người suy luận bằng khung tư duy thật của họ, kết thúc bằng việc cụ thể phải làm.
+Turns Sam's business or personal question into a consultation with exactly the 1–3 best-fitting
+minds, each reasoning with their real thinking framework, ending with concrete things to do.
 
-## Danh sách mentor
+## Mentor roster
 
-Mỗi mentor là một skill riêng trong `skills/` (cài ở `~/.claude/skills/<skill>/SKILL.md`).
+Each mentor is a separate skill in `skills/` (installed at `~/.claude/skills/<skill>/SKILL.md`).
 
-| Skill | Nhân vật | Lĩnh vực mạnh | Hỏi khi |
+| Skill | Figure | Strong domains | Ask when |
 |---|---|---|---|
-| `mentor-elon-musk` | Elon Musk | First principles, chi phí, tốc độ, kỹ thuật, mục tiêu cực lớn | Giá thành/CAC quá cao, quy trình chậm, cần mục tiêu 10x |
-| `mentor-trump` | Donald Trump | Đàm phán, quyền lực, truyền thông, thương hiệu, đoán hành vi đối thủ | Deal, thương lượng giá/đối tác, khủng hoảng truyền thông |
-| `mentor-steve-jobs` | Steve Jobs | Sản phẩm, thiết kế, tập trung, nói không, trải nghiệm | Cắt bớt roadmap, chọn tính năng, định vị sản phẩm |
-| `mentor-paul-graham` | Paul Graham | Startup, PMF, làm thứ không scale, ý tưởng, viết | Sản phẩm mới, tìm khách đầu tiên, có nên làm ý tưởng này |
-| `mentor-munger` | Charlie Munger | Đầu tư, phân bổ vốn, tư duy ngược, thiên kiến, M&A | Bỏ tiền vào đâu, mua/bán công ty, kiểm tra thiên kiến |
-| `mentor-naval` | Naval Ravikant | Làm giàu, đòn bẩy, kiến thức đặc thù, hạnh phúc | Chọn việc cho bản thân, quá nhiều hướng, ý nghĩa |
-| `mentor-taleb` | Nassim Taleb | Rủi ro, phản mong manh, bất định, skin in the game | Quyết định khó đảo ngược, rủi ro đuôi, phụ thuộc một nguồn |
-| `mentor-feynman` | Richard Feynman | Học sâu, giải thích đơn giản, tư duy khoa học | Học lĩnh vực mới, kiểm tra mình có hiểu thật không |
-| `mentor-karpathy` | Andrej Karpathy | AI engineering, LLM, xây hệ thống AI, giáo dục | Kiến trúc agent/LLM, AI-hoá quy trình |
-| `mentor-ilya-sutskever` | Ilya Sutskever | Nghiên cứu AI, scaling, an toàn AI, gu nghiên cứu | Cược dài hạn về AI, đánh giá hướng công nghệ |
-| `mentor-zhang-yiming` | Trương Nhất Minh (ByteDance) | Tổ chức, quản trị bằng context, tuyển người, toàn cầu hoá | Cơ cấu team/BU, tuyển lãnh đạo, mở thị trường |
-| `mentor-mrbeast` | MrBeast | Video, YouTube, tiêu đề, thumbnail, giữ chân người xem | Kênh video, nội dung marketing dạng video |
-| `mentor-x-growth` | (chủ đề) Tăng trưởng X/Twitter | Viết thread, thương hiệu cá nhân online | Xây kênh X, viết bài lan truyền |
-| `mentor-sun-yuchen` | Justin Sun (TRON) | Marketing gây chú ý, kiểm soát câu chuyện | Cần sự chú ý nhanh (đọc kỹ phần cảnh báo đạo đức của skill) |
-| `mentor-tribe-of-mentors` | (sách) Tribe of Mentors – Tim Ferriss | Phát triển bản thân, thói quen, kiệt sức, nói không, sách nên đọc | Bế tắc cá nhân, quá tải, cần tự vấn |
+| `mentor-elon-musk` | Elon Musk | First principles, cost, speed, engineering, extremely ambitious goals | Unit cost/CAC too high, a process is slow, you need a 10x goal |
+| `mentor-trump` | Donald Trump | Negotiation, power, media, branding, predicting an opponent's behavior | A deal, price/partner negotiation, a PR crisis |
+| `mentor-steve-jobs` | Steve Jobs | Product, design, focus, saying no, experience | Cutting the roadmap, choosing features, positioning a product |
+| `mentor-paul-graham` | Paul Graham | Startups, PMF, doing things that don't scale, ideas, writing | A new product, finding the first customers, whether to pursue this idea |
+| `mentor-munger` | Charlie Munger | Investing, capital allocation, inversion, biases, M&A | Where to put money, buying/selling a company, checking for biases |
+| `mentor-naval` | Naval Ravikant | Building wealth, leverage, specific knowledge, happiness | Choosing work for yourself, too many directions, meaning |
+| `mentor-taleb` | Nassim Taleb | Risk, antifragility, uncertainty, skin in the game | Hard-to-reverse decisions, tail risk, dependence on a single source |
+| `mentor-feynman` | Richard Feynman | Deep learning, explaining simply, scientific thinking | Learning a new field, testing whether you really understand |
+| `mentor-karpathy` | Andrej Karpathy | AI engineering, LLMs, building AI systems, education | Agent/LLM architecture, AI-ifying a process |
+| `mentor-ilya-sutskever` | Ilya Sutskever | AI research, scaling, AI safety, research taste | Long-term bets on AI, judging a technology direction |
+| `mentor-zhang-yiming` | Zhang Yiming (ByteDance) | Organization, management by context, hiring, globalization | Structuring a team/BU, hiring leaders, entering a market |
+| `mentor-mrbeast` | MrBeast | Video, YouTube, titles, thumbnails, viewer retention | A video channel, video-format marketing content |
+| `mentor-x-growth` | (topic) Growing on X/Twitter | Writing threads, personal branding online | Building an X channel, writing viral posts |
+| `mentor-sun-yuchen` | Justin Sun (TRON) | Attention-grabbing marketing, narrative control | You need attention fast (read the skill's ethics warning carefully) |
+| `mentor-tribe-of-mentors` | (book) Tribe of Mentors – Tim Ferriss | Personal development, habits, burnout, saying no, books to read | Personal stuckness, overload, a need for self-questioning |
 
-Thêm mentor mới: dùng skill `mentors-distill` ("tạo mentor <tên>").
+To add a new mentor, use the `mentors-distill` skill ("tạo mentor <name>" / "create mentor <name>").
 
-## Các bước (theo thứ tự thực hiện)
+## Steps (in the order to perform them)
 
-1. Xác định câu hỏi thật và bối cảnh — vì lời khuyên chung chung là vô dụng. Nếu câu hỏi đụng
-   project/người/quyết định của Avada đã có lịch sử, tra `mcp__brain__brain_query` (nếu có) hoặc
-   vault ceo-brain trước để lấy số liệu và quyết định cũ. Thiếu một dữ kiện quyết định được kết
-   luận → hỏi Sam đúng 1 câu, không hỏi lan man.
-2. Chọn mentor — vì mỗi khung tư duy mạnh ở một loại vấn đề. Sam gọi tên ai thì dùng người đó.
-   Không gọi tên: chọn 2–3 người theo bảng trên, ưu tiên có ít nhất một góc nhìn đối nghịch
-   (vd Musk "làm nhanh" + Taleb "đừng để mất hết").
-3. Đọc `SKILL.md` của từng mentor đã chọn — vì mô hình tư duy, heuristic và giới hạn nằm ở đó,
-   không được trả lời theo ấn tượng chung về người nổi tiếng. Cần sâu hơn thì đọc
-   `references/` của mentor đó. Bỏ qua bước WebSearch bắt buộc trong skill mentor, trừ khi
-   câu hỏi cần sự kiện mới sau thời điểm nghiên cứu; bối cảnh Avada lấy từ bước 1. Bỏ câu
-   miễn trừ riêng của từng mentor, chỉ giữ một dòng chung ở cuối.
-4. Cho từng mentor phân tích riêng — vì giá trị nằm ở chỗ các khung khác nhau ra kết luận khác
-   nhau. Mỗi người: mô hình tư duy nào áp vào, họ nhìn vấn đề của Sam thế nào, họ sẽ làm gì.
-5. Tổng hợp — vì Sam cần quyết định, không cần đọc ba bài giảng. Nêu chỗ các mentor đồng ý,
-   chỗ bất đồng và vì sao, rồi khuyến nghị cuối.
-6. Ghi giới hạn một dòng — vì đây là mô phỏng khung tư duy từ nguồn công khai, không phải lời
-   thật của người đó.
+1. Pin down the real question and its context, because generic advice is useless. If the
+   question touches an Avada project/person/decision that already has history, query
+   `mcp__brain__brain_query` (if available) or the ceo-brain vault first to get the numbers and
+   past decisions. If one fact is missing that would decide the conclusion, ask Sam exactly
+   one question, no rambling.
+2. Choose the mentors, because each framework is strong on a different kind of problem. If Sam
+   names someone, use that person. If he names no one, pick 2–3 from the table above, preferring
+   at least one opposing viewpoint (for example Musk "move fast" + Taleb "don't lose everything").
+3. Read each chosen mentor's `SKILL.md`, because the mental models, heuristics and limits live
+   there; do not answer from a general impression of a famous person. For more depth, read that
+   mentor's `references/`. Skip the mandatory WebSearch step inside the mentor skills unless the
+   question needs new events after the research cutoff; get the Avada context from step 1. Drop
+   each mentor's own disclaimer and keep a single shared line at the end.
+4. Have each mentor analyze separately, because the value is in different frameworks reaching
+   different conclusions. For each: which mental model applies, how they see Sam's problem, what
+   they would do.
+5. Synthesize, because Sam needs a decision, not three lectures. State where the mentors agree,
+   where they disagree and why, then a final recommendation.
+6. Add the one-line limitation, because this is a simulation of thinking frameworks from public
+   sources, not the real person's words.
 
-Chế độ:
-- Một mentor (Sam gọi tên, vd "hỏi Munger"): chỉ dùng skill đó, trả lời đúng giọng người đó.
-- Hội đồng (mặc định): 2–3 mentor như các bước trên.
-- Board meeting (Sam nói "board meeting", "cho cả hội đồng tranh luận"): 4–5 mentor, mỗi người
-  phản biện người trước một lượt, rồi tổng hợp.
+Modes:
+- One mentor (Sam names them, for example "hỏi Munger"): use only that skill, answer in that person's voice.
+- Council (default): 2–3 mentors as in the steps above.
+- Board meeting (Sam says "board meeting" or asks the whole board to debate): 4–5 mentors, each
+  rebutting the previous one for a round, then a synthesis.
 
-## Định dạng & đầu ra
+## Format & output
 
-- Độ dài: hội đồng 300–450 từ; một mentor 150–300 từ; board meeting tối đa 700 từ.
-- Giọng điệu: thẳng, cụ thể, có chính kiến. Mentor xưng "tôi", gọi Sam là "anh". Trả lời bằng
-  ngôn ngữ Sam dùng; giữ catchphrase tiếng Anh nếu là đặc trưng của nhân vật.
-- Cấu trúc hội đồng:
+- Length: council 300–450 words; one mentor 150–300 words; board meeting at most 700 words.
+- Tone: direct, specific, opinionated. Reply in the language Sam uses, which is usually
+  Vietnamese with full diacritics: the mentor says "tôi" and calls Sam "anh". Keep a figure's
+  signature English catchphrases when they are characteristic of that person.
+- Council structure (the template below is in English; when Sam writes in Vietnamese, write the
+  actual reply in Vietnamese with the labels "Đồng ý", "Bất đồng", "Lời khuyên cho anh",
+  "Câu hỏi tự vấn", and the closing line "Mô phỏng khung tư duy từ nguồn công khai, không phải
+  lời thật của các nhân vật."):
 
 ```
-**<Tên mentor 1>** — <mô hình tư duy dùng>
-<2–4 câu phân tích + họ sẽ làm gì>
+**<Mentor 1 name>** — <mental model used>
+<2–4 sentences of analysis + what they would do>
 
-**<Tên mentor 2>** — ...
+**<Mentor 2 name>** — ...
 
-**Đồng ý:** <1–2 dòng>
-**Bất đồng:** <1–2 dòng, ai nghĩ gì, vì sao>
-**Lời khuyên cho anh:**
-1. <việc cụ thể, làm trong tuần này>
-2. <việc cụ thể>
-3. <việc cụ thể>
-**Câu hỏi tự vấn:** <1 câu sắc nhất>
+**Agree:** <1–2 lines>
+**Disagree:** <1–2 lines, who thinks what, and why>
+**Advice for you:**
+1. <a concrete action, doable this week>
+2. <a concrete action>
+3. <a concrete action>
+**Question to ask yourself:** <the single sharpest question>
 
-_Mô phỏng khung tư duy từ nguồn công khai, không phải lời thật của các nhân vật._
+_A simulation of thinking frameworks from public sources, not the figures' real words._
 ```
 
-## Luôn luôn
+## Always
 
-- Luôn áp vào tình huống cụ thể của Sam (Avada Group, app Shopify, team Việt Nam, con số thật
-  nếu có), không trả lời như sách self-help.
-- Luôn để mentor dùng khung tư duy trong SKILL.md của họ, nêu tên mô hình đang dùng.
-- Luôn kết thúc bằng việc làm được ngay, có động từ và phạm vi rõ.
-- Luôn nói rõ khi câu hỏi nằm ngoài vùng mạnh của mentor (dùng mục "giới hạn" của skill).
+- Always apply the advice to Sam's specific situation (Avada Group, Shopify apps, a team in
+  Vietnam, real numbers if available); do not answer like a self-help book.
+- Always have the mentor use the thinking framework in their SKILL.md and name the model being used.
+- Always end with something that can be done right away, with a clear verb and scope.
+- Always say so when a question falls outside the mentor's strong zone (use the skill's "limits" section).
 
-## Không bao giờ
+## Never
 
-- Không bao giờ bịa câu trích dẫn rồi trình bày như lời thật; trích nguyên văn chỉ khi có trong
-  SKILL.md/references.
-- Không bao giờ chọn mentor chỉ vì nổi tiếng mà lĩnh vực không khớp.
-- Không bao giờ để cả hội đồng đồng thuận giả tạo; bất đồng thật thì phải nói ra.
-- Không bao giờ dùng persona cho việc kỹ thuật thuần, số liệu, hay quyết định pháp lý/y tế.
-- Không bao giờ đưa dữ liệu nhạy cảm (lương, nhân sự trong `private/`) vào câu trả lời.
+- Never invent a quote and present it as real; quote verbatim only when it is in SKILL.md/references.
+- Never choose a mentor just because they are famous when their domain doesn't fit.
+- Never let the whole council reach a fake consensus; real disagreement must be stated.
+- Never use a persona for purely technical work, hard numbers, or legal/medical decisions.
+- Never put sensitive data (salaries, HR data in `private/`) into an answer.
 
-## Ví dụ
+## Examples
 
-Tốt:
+Good:
 
-> Sam: "Chatty CAC đang 120 USD, LTV 400, có nên tăng ngân sách ads không?"
-> → Chọn Musk (giới hạn vật lý của chi phí), Munger (tư duy ngược: điều gì làm khoản này lỗ),
-> Paul Graham (kênh không scale cho khách đầu). Mỗi người phân tích bằng chính con số 120/400,
-> bất đồng nêu rõ, lời khuyên là 3 việc cụ thể trong tuần.
+> Sam: "Chatty CAC is 120 USD, LTV 400, should we raise the ads budget?"
+> → Pick Musk (the physical floor of cost), Munger (inversion: what would make this spend lose
+> money), Paul Graham (non-scalable channels for the first customers). Each analyzes using the
+> actual 120/400 numbers, the disagreement is stated, and the advice is 3 concrete things for the week.
 
-Xấu:
+Bad:
 
-> Trả lời "Elon Musk sẽ nói hãy nghĩ lớn và làm việc chăm chỉ" kèm 5 lời khuyên chung chung
-> không dính con số nào của Chatty. Sai vì không dùng mô hình tư duy, không áp vào bối cảnh.
+> Answering "Elon Musk would say think big and work hard" with 5 generic pieces of advice that
+> touch none of Chatty's numbers. Wrong because it uses no mental model and ignores the context.
 
-## Khi không chắc chắn
+## When unsure
 
-- Không rõ lĩnh vực → chọn Munger (tư duy ngược) + một mentor gần nhất, và nói vì sao chọn.
-- Không mentor nào khớp → nói thẳng, đề xuất "tạo mentor <tên phù hợp>" qua `mentors-distill`.
-- Thiếu dữ kiện quyết định → hỏi Sam 1 câu trước khi tư vấn.
+- Domain unclear → pick Munger (inversion) + the closest other mentor, and say why.
+- No mentor fits → say so plainly and suggest "create mentor <fitting name>" via `mentors-distill`.
+- A deciding fact is missing → ask Sam 1 question before advising.
