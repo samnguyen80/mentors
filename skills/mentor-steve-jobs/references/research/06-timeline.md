@@ -1,279 +1,279 @@
-# Steve Jobs 完整人生时间线（1955-2011）
+# Steve Jobs's Complete Life Timeline (1955-2011)
 
-> 调研日期：2026-04-05
-> 信息来源：Wikipedia英文版、Britannica、CNN、NPR、ABC News、Biography.com、Macworld、FastCompany、Library of Congress等
-
----
-
-## 第一章：早年（1955-1976）
-
-### 出生与领养
-
-- **1955年2月24日**：Steven Paul Jobs出生于加州旧金山。生父Abdulfattah "John" Jandali（叙利亚裔政治学研究生），生母Joanne Schieble（威斯康星大学研究生）。两人未婚，Schieble的父亲反对她嫁给阿拉伯人，因此将孩子送养
-- **1955年**：被Paul Jobs（机械师/二手车商）和Clara Jobs（会计）领养，定居加州Mountain View
-- Jobs后来得知自己是被领养的，这成为他一生的重要心理背景。Paul Jobs向他保证：「你是被特别选中的」
-
-### 成长环境
-
-- 成长于硅谷腹地——Mountain View和Los Altos，邻居多为惠普工程师
-- Paul Jobs的车库成为Steve最初的「实验室」，父亲教他拆装电子设备和汽车零件
-- **对工艺的执念**源于养父：Paul Jobs翻修家具时坚持背面也要做到完美——「即使别人看不到」
-
-### 学校与早期兴趣
-
-- **1968年（13岁）**：给惠普CEO Bill Hewlett打电话索要零件，不仅得到零件，还获得暑期实习机会
-- **约1969-1970年**：在Homestead High School认识Steve Wozniak（当时Woz 18岁，Jobs 13岁），两人因对电子学的共同热情成为朋友
-- **1971年**：与Wozniak合作制造「Blue Box」（蓝盒子），一种可以免费打长途电话的非法设备。Jobs负责销售，Woz负责技术。这是两人首次合作的商业冒险
-- **1972年**：从Homestead High School毕业
-
-### Reed College与精神探索
-
-- **1972年秋**：进入俄勒冈州波特兰的Reed College
-- **1972年底/1973年初**：一个学期后退学——觉得父母花积蓄供他读书却不知道想干什么是一种浪费。但继续在校园旁听课程长达18个月
-- **旁听书法课**：Robert Palladino教授的课让他对字体和排版产生深刻兴趣，十年后直接影响了Macintosh的字体设计。这是他后来「connecting the dots」哲学的核心例证
-- **1974年**：回到加州，在Atari担任技术员。同年与好友Daniel Kottke前往印度进行为期7个月的精神之旅，接触禅宗佛教
-- **1974-1975年**：开始在洛斯阿尔托斯禅宗中心修行，师从乙川弘文（Kobun Chino Otogawa）。禅宗对他的产品哲学产生终身影响：简洁、专注、直觉
-
-### 与Wozniak的再次合作
-
-- **1975年**：Wozniak开始参加Homebrew Computer Club（家酿电脑俱乐部），着手设计个人电脑
-- **1975年底-1976年初**：Jobs看到了Wozniak手工制作的电路板的商业潜力——Woz只想免费分享设计，Jobs说服他一起创业
+> Research date: 2026-04-05
+> Sources: English Wikipedia, Britannica, CNN, NPR, ABC News, Biography.com, Macworld, FastCompany, Library of Congress, etc.
 
 ---
 
-## 第二章：Apple创立期（1976-1985）
+## Chapter 1: Early Years (1955-1976)
 
-### 车库创业
+### Birth and adoption
 
-- **1976年4月1日**：Steve Jobs（21岁）、Steve Wozniak（25岁）和Ronald Wayne（41岁）正式创立Apple Computer, Inc.。Wayne持有10%股份，但12天后以800美元卖回
-- 初始资金：Jobs卖掉自己的VW面包车（1500美元），Wozniak卖掉HP-65计算器（500美元）
-- **Apple I**：手工组装的裸电路板，售价666.66美元。主要在当地电脑商店The Byte Shop销售，生产了约200台
+- **February 24, 1955**: Steven Paul Jobs was born in San Francisco, California. His biological father was Abdulfattah "John" Jandali (a Syrian-born political science graduate student), his biological mother Joanne Schieble (a graduate student at the University of Wisconsin). The two were unmarried; Schieble's father opposed her marrying an Arab, so the child was put up for adoption
+- **1955**: Adopted by Paul Jobs (a machinist / used-car dealer) and Clara Jobs (an accountant), and settled in Mountain View, California
+- Jobs later learned he was adopted, which became an important psychological backdrop for his whole life. Paul Jobs assured him: "You were specially chosen"
 
-### Apple II与商业起飞
+### Growing-up environment
 
-- **1977年1月**：Apple Computer正式注册为公司
-- **1977年4月**：Apple II在西海岸电脑展（West Coast Computer Faire）发布。这是第一台面向大众消费者的个人电脑，配有彩色显示、键盘和塑料外壳
-- **1977年**：Mike Markkula加入，投资$250,000并提供商业经验，成为Apple第三位关键人物
-- **1978年5月17日**：女儿Lisa Brennan-Jobs出生，母亲为Chrisann Brennan。Jobs否认亲子关系，甚至在法庭文件中声称自己「不育」
-- **1979年**：参观Xerox PARC（帕洛阿尔托研究中心），看到图形用户界面（GUI）和鼠标的演示，深受震撼。这次参观直接催生了Lisa和Macintosh项目
-- **1980年12月12日**：Apple以每股22美元IPO，首日收盘价29美元，市值17.8亿美元。年仅25岁的Jobs身价超过2.5亿美元
-- **1980年**：DNA测试证明Lisa是Jobs的女儿。他开始（不情愿地）承担抚养义务
+- Grew up in the heart of Silicon Valley — Mountain View and Los Altos, with neighbors who were mostly HP engineers
+- Paul Jobs's garage became Steve's first "laboratory," where his father taught him to take apart and reassemble electronics and car parts
+- **The obsession with craftsmanship** came from his adoptive father: when Paul Jobs refinished furniture he insisted that even the back be perfect — "even if no one would see it"
 
-### Macintosh项目
+### School and early interests
 
-- **1979年**：Jef Raskin启动Macintosh项目，构想一台低成本、易用的电脑
-- **1981年**：Jobs从Lisa项目被排挤后接管Macintosh项目，将其重新定义为「改变世界」的产品
-- **1983年**：Jobs说服百事可乐总裁John Sculley加入Apple担任CEO，用了那句著名的话：「你想一辈子卖糖水，还是想改变世界？」
-- **1984年1月22日**：Ridley Scott导演的「1984」广告在Super Bowl XVIII第三节间隙播出，成为广告史上最具标志性的作品
-- **1984年1月24日**：Macintosh在De Anza College Flint Center的Apple年度股东大会上正式发布。Jobs从一个布袋中取出Mac，屏幕上显示「insanely great」。初始售价2,495美元
+- **1968 (age 13)**: Called HP CEO Bill Hewlett to ask for parts, and not only got the parts but also a summer internship
+- **Around 1969-1970**: Met Steve Wozniak at Homestead High School (Woz was 18, Jobs 13 at the time); the two became friends through a shared passion for electronics
+- **1971**: Worked with Wozniak to build the "Blue Box," an illegal device that allowed free long-distance calls. Jobs handled sales, Woz handled the technology. This was their first commercial venture together
+- **1972**: Graduated from Homestead High School
 
-### 权力斗争与被逐
+### Reed College and spiritual exploration
 
-- **1984-1985年**：Macintosh销量不及预期（初始热潮后迅速降温），Jobs与Sculley的矛盾激化
-- **1985年5月**：Sculley在Arthur Rock的支持下提出重组方案，计划将Jobs从Macintosh部门调离
-- **1985年5月24日**：Apple董事会投票支持Sculley的重组计划，Jobs失去所有运营职责
-- **1985年9月17日**：Jobs向Apple董事会提交辞职信。他带走了5名Apple高级员工，宣布创办新公司
+- **Fall 1972**: Entered Reed College in Portland, Oregon
+- **Late 1972 / early 1973**: Dropped out after one semester — felt it was a waste for his parents to spend their savings on his schooling when he didn't know what he wanted to do. But he continued auditing classes on campus for 18 months
+- **Auditing the calligraphy class**: Professor Robert Palladino's class gave him a deep interest in typefaces and typography, which ten years later directly influenced the Macintosh's font design. This is the core example of his later "connecting the dots" philosophy
+- **1974**: Returned to California and worked as a technician at Atari. That same year he traveled with his friend Daniel Kottke to India for a 7-month spiritual journey, encountering Zen Buddhism
+- **1974-1975**: Began practicing at the Los Altos Zen Center, studying under Kobun Chino Otogawa. Zen had a lifelong influence on his product philosophy: simplicity, focus, intuition
 
-**思想转折点**：被自己创建的公司驱逐是Jobs人生最大的打击，但他后来将其称为「一生中最好的事」——它让他重获创业者的自由和初学者的心态。
+### Working with Wozniak again
+
+- **1975**: Wozniak began attending the Homebrew Computer Club and started designing a personal computer
+- **Late 1975 - early 1976**: Jobs saw the commercial potential of Wozniak's hand-built circuit board — Woz only wanted to share the design for free; Jobs persuaded him to start a company together
 
 ---
 
-## 第三章：「流放」期（1985-1997）
+## Chapter 2: The Founding Years of Apple (1976-1985)
+
+### Garage startup
+
+- **April 1, 1976**: Steve Jobs (21), Steve Wozniak (25), and Ronald Wayne (41) formally founded Apple Computer, Inc. Wayne held a 10% stake but sold it back 12 days later for $800
+- Initial capital: Jobs sold his VW van ($1,500), Wozniak sold his HP-65 calculator ($500)
+- **Apple I**: a hand-assembled bare circuit board priced at $666.66. Sold mainly at the local computer store The Byte Shop; about 200 units were produced
+
+### Apple II and the commercial takeoff
+
+- **January 1977**: Apple Computer was formally incorporated
+- **April 1977**: The Apple II was unveiled at the West Coast Computer Faire. It was the first personal computer aimed at mass consumers, with color display, keyboard, and plastic case
+- **1977**: Mike Markkula joined, investing $250,000 and contributing business experience, becoming Apple's third key figure
+- **May 17, 1978**: Daughter Lisa Brennan-Jobs was born, with Chrisann Brennan as her mother. Jobs denied paternity, even claiming in court documents that he was "sterile"
+- **1979**: Visited Xerox PARC (Palo Alto Research Center), saw demonstrations of the graphical user interface (GUI) and the mouse, and was deeply struck. This visit directly gave rise to the Lisa and Macintosh projects
+- **December 12, 1980**: Apple went public at $22 per share, closing at $29 on the first day with a market cap of $1.78 billion. Jobs, only 25, was worth more than $250 million
+- **1980**: A DNA test showed that Lisa was Jobs's daughter. He began (reluctantly) to take on child-support obligations
+
+### The Macintosh project
+
+- **1979**: Jef Raskin started the Macintosh project, envisioning a low-cost, easy-to-use computer
+- **1981**: After being pushed out of the Lisa project, Jobs took over the Macintosh project and redefined it as a product that would "change the world"
+- **1983**: Jobs persuaded Pepsi president John Sculley to join Apple as CEO, using the famous line: "Do you want to sell sugar water for the rest of your life, or do you want to change the world?"
+- **January 22, 1984**: The "1984" ad directed by Ridley Scott aired during the third quarter break of Super Bowl XVIII, becoming the most iconic work in advertising history
+- **January 24, 1984**: The Macintosh was formally unveiled at Apple's annual shareholders meeting at the Flint Center at De Anza College. Jobs pulled the Mac out of a cloth bag, and the screen displayed "insanely great." Initial price $2,495
+
+### Power struggle and ouster
+
+- **1984-1985**: Macintosh sales fell short of expectations (the initial excitement cooled quickly), and the conflict between Jobs and Sculley intensified
+- **May 1985**: With Arthur Rock's backing, Sculley proposed a reorganization plan that would remove Jobs from the Macintosh division
+- **May 24, 1985**: Apple's board voted to support Sculley's reorganization plan, and Jobs lost all operating duties
+- **September 17, 1985**: Jobs submitted his resignation letter to Apple's board. He took 5 senior Apple employees with him and announced he was starting a new company
+
+**Turning point in thinking**: Being expelled from the company he built was the greatest blow of Jobs's life, but he later called it "the best thing that ever happened to me" — it restored his entrepreneurial freedom and a beginner's mind.
+
+---
+
+## Chapter 3: The "Wilderness" Years (1985-1997)
 
 ### NeXT Computer
 
-- **1985年9月**：创立NeXT, Inc.，目标是制造面向高等教育和商业市场的高端工作站
-- **1988年10月12日**：NeXT Computer（后称NeXT Cube）在旧金山交响乐大厅发布。售价6,500美元（不含显示器则更高），配备当时最先进的技术
-- NeXT的操作系统NeXTSTEP成为其真正遗产——面向对象编程、Objective-C语言、开发工具。Tim Berners-Lee在NeXT上发明了万维网（World Wide Web）
-- **1990年**：发布NeXTstation，定价更低，但仍然无法打开大众市场
-- **1993年**：NeXT停止硬件生产（总共仅售出约50,000台），转型为纯软件公司，专注NeXTSTEP/Intel
-- **1994年**：NeXT首次实现年度盈利（103万美元）
+- **September 1985**: Founded NeXT, Inc., aiming to build high-end workstations for the higher-education and business markets
+- **October 12, 1988**: The NeXT Computer (later called the NeXT Cube) was unveiled at Davies Symphony Hall in San Francisco. Priced at $6,500 (higher without the monitor), equipped with the most advanced technology of the time
+- NeXT's operating system, NeXTSTEP, became its real legacy — object-oriented programming, the Objective-C language, development tools. Tim Berners-Lee invented the World Wide Web on a NeXT
+- **1990**: Released the NeXTstation at a lower price, but still couldn't open up the mass market
+- **1993**: NeXT stopped hardware production (only about 50,000 units sold in total) and turned into a pure software company focused on NeXTSTEP/Intel
+- **1994**: NeXT posted its first annual profit ($1.03 million)
 
-### Pixar与动画革命
+### Pixar and the animation revolution
 
-- **1986年2月3日**：Jobs以500万美元从George Lucas手中收购Lucasfilm的电脑图形部门（Computer Graphics Division），并另外注资500万美元，成为Pixar的董事长和大股东
-- **1986年**：Pixar短片《Luxo Jr.》获得奥斯卡最佳动画短片提名，展示了电脑动画的潜力
-- **1988年**：《Tin Toy》成为第一部获得奥斯卡最佳动画短片的电脑动画作品
-- **1991年5月**：Pixar与迪士尼签署协议，合作制作三部电脑动画长片
-- **1991年3月18日**：Jobs与Laurene Powell在约塞米蒂国家公园的Ahwahnee Hotel结婚，禅宗老师乙川弘文主持仪式。两人在斯坦福商学院的一次演讲上相识
-- **1991年9月**：长子Reed Paul Jobs出生
-- **1995年**：女儿Erin Siena Jobs出生
-- **1995年11月22日**：《玩具总动员》（Toy Story）上映，成为史上第一部全电脑动画长片，全球票房3.73亿美元
-- **1995年11月29日**：Pixar在NASDAQ以代码「PIXR」IPO，发行价22美元，开盘半小时内从28美元涨到45美元，超越Netscape成为当年最大IPO。Jobs的Pixar股份价值约12亿美元
-- **1997年2月25日**：Pixar与迪士尼签署新的10年5部电影合作协议，利润五五分成，品牌平等标注
+- **February 3, 1986**: Jobs bought Lucasfilm's Computer Graphics Division from George Lucas for $5 million and injected another $5 million, becoming Pixar's chairman and majority shareholder
+- **1986**: Pixar's short film *Luxo Jr.* was nominated for the Academy Award for Best Animated Short Film, showing the potential of computer animation
+- **1988**: *Tin Toy* became the first computer-animated work to win the Oscar for Best Animated Short Film
+- **May 1991**: Pixar signed an agreement with Disney to jointly produce three computer-animated feature films
+- **March 18, 1991**: Jobs married Laurene Powell at the Ahwahnee Hotel in Yosemite National Park, with Zen teacher Kobun Chino Otogawa officiating. The two had met at a talk at Stanford Business School
+- **September 1991**: Eldest son Reed Paul Jobs was born
+- **1995**: Daughter Erin Siena Jobs was born
+- **November 22, 1995**: *Toy Story* was released, the first fully computer-animated feature film in history, grossing $373 million worldwide
+- **November 29, 1995**: Pixar went public on NASDAQ under the ticker "PIXR" at $22 per share; in the first half hour of trading it rose from $28 to $45, surpassing Netscape to become the largest IPO of the year. Jobs's Pixar stake was worth about $1.2 billion
+- **February 25, 1997**: Pixar signed a new 10-year, 5-film agreement with Disney, splitting profits 50/50 with equal branding credit
 
-**思想转折点**：流放期是Jobs成长为成熟领导者的关键阶段。在NeXT他学会了不再只追求「insanely great」而忽略商业现实；在Pixar他学会了放手让专业人士（John Lasseter、Ed Catmull）做他们擅长的事。Laurene和孩子们让他的生活有了锚点。
+**Turning point in thinking**: The wilderness years were the key stage in Jobs's growth into a mature leader. At NeXT he learned not to pursue only "insanely great" while ignoring business reality; at Pixar he learned to let professionals (John Lasseter, Ed Catmull) do what they do best. Laurene and the children gave his life an anchor.
 
-### 家庭关系变化
+### Changes in family relationships
 
-- **1980年代末-1990年代**：Jobs逐渐与女儿Lisa建立关系，Lisa一度搬来与Jobs和Laurene同住
-- **1998年**：小女儿Eve Jobs出生
-- 关系始终复杂：Lisa Brennan-Jobs的2018年回忆录《Small Fry》揭示了父女间的紧张与和解
-
----
-
-## 第四章：回归Apple（1997-2007）
-
-### 拯救濒临破产的Apple
-
-- **1996年12月20日**：Apple宣布以4.29亿美元收购NeXT。Jobs回到Apple担任「非正式顾问」（informal adviser），当时Apple CEO为Gil Amelio
-- **1997年7月9日**：Apple董事会解除Amelio的CEO职务
-- **1997年9月16日**：Jobs被任命为临时CEO（interim CEO，戏称iCEO），年薪象征性地设为1美元
-- **1997年**：发起「Think Different」广告运动，向爱因斯坦、甘地、毕加索等「疯狂的人」致敬。这不仅是广告，更是宣告Apple精神的回归
-- **1997年8月6日**：在Macworld Boston宣布Microsoft将向Apple投资1.5亿美元，引起台下嘘声，但这笔交易帮助Apple度过财务危机
-- **1997-1998年**：大幅精简产品线，砍掉Newton、Cyberdog、OpenDoc等项目。将Apple的几十条产品线简化为四象限矩阵：消费者/专业 × 台式机/笔记本
-- **1997年11月10日**：推出Apple Online Store，消费者可以直接定制和购买Apple产品
-
-### iMac与设计复兴
-
-- **1998年1月8日**：Apple宣布恢复盈利
-- **1998年5月6日**：发布iMac G3——半透明糖果色的一体机，由Jony Ive设计。这是Jobs回归后第一款标志性产品
-- **1998年8月15日**：iMac正式上市，成为Apple有史以来销售最快的产品。它重新定义了电脑可以是美丽的、有趣的
-- **1999年**：推出iMac的彩色系列（5种颜色），以及面向专业用户的Power Mac G3
-- **1999年6月**：推出iBook——消费者笔记本电脑
-
-### 数字中枢战略
-
-- **2000年1月5日**：在Macworld发布Mac OS X策略——基于NeXTSTEP技术的全新操作系统。Jobs正式将头衔从「临时CEO」改为CEO
-- **2001年3月24日**：Mac OS X正式发布
-- **2001年5月19日**：第一家Apple Retail Store在弗吉尼亚州Tysons Corner和加州Glendale同时开业。分析师普遍唱衰，后来被证明大错特错
-- **2001年10月23日**：发布初代iPod——「把1000首歌装进口袋」。售价399美元。起初仅支持Mac
-- **2001年1月**：发布iTunes软件（Mac版）
-- **2003年4月28日**：iTunes Music Store上线，首周售出100万首歌曲，证明人们愿意为音乐付费。每首歌99美分的定价模式颠覆了整个音乐产业
-- **2003年10月**：iTunes for Windows发布，iPod生态向PC用户开放
-
-### iPod的统治
-
-- **2004年1月**：iPod mini发布，更小巧、更时尚，价格更低（249美元）
-- **2005年1月**：iPod shuffle发布（无屏幕，99美元）
-- **2005年9月**：iPod nano取代iPod mini，极致纤薄设计
-- **2005年10月**：发布带视频功能的iPod，同时推出视频版iTunes Store
-- **2006年**：iPod占据美国数字音乐播放器市场约75%份额
-
-### 与迪士尼的合并
-
-- **2006年1月24日**：迪士尼宣布以74亿美元全股票交易收购Pixar。Jobs成为迪士尼最大个人股东（持股约7%），并加入迪士尼董事会
-
-**思想转折点**：回归后的Jobs完全不同于1985年离开时的那个人。他学会了：（1）聚焦——砍掉90%产品线；（2）与顶尖人才合作而非对抗；（3）设计不是装饰，而是产品的灵魂；（4）零售体验的重要性。iMac到iPod的连续成功证明了他的蜕变。
+- **Late 1980s - 1990s**: Jobs gradually built a relationship with his daughter Lisa, who at one point moved in with Jobs and Laurene
+- **1998**: Youngest daughter Eve Jobs was born
+- The relationship remained complicated: Lisa Brennan-Jobs's 2018 memoir *Small Fry* reveals both the tension and the reconciliation between father and daughter
 
 ---
 
-## 第五章：巅峰期（2007-2011）
+## Chapter 4: Return to Apple (1997-2007)
 
-### iPhone——重新发明手机
+### Saving a nearly bankrupt Apple
 
-- **2007年1月9日**：Jobs在Macworld大会上发布iPhone，用了那句著名的开场：「今天，Apple将重新发明手机。」他把iPhone描述为三样东西合一：一个宽屏iPod、一部革命性手机、一个突破性互联网设备
-- **2007年6月29日**：初代iPhone在美国正式上市，售价499美元（4GB）/599美元（8GB）。消费者在Apple Store门口排起长队
-- **2008年7月11日**：iPhone 3G发布，售价降至199美元，支持3G网络
+- **December 20, 1996**: Apple announced the acquisition of NeXT for $429 million. Jobs returned to Apple as an "informal adviser"; Apple's CEO at the time was Gil Amelio
+- **July 9, 1997**: Apple's board removed Amelio as CEO
+- **September 16, 1997**: Jobs was named interim CEO (jokingly "iCEO"), with a symbolic annual salary of $1
+- **1997**: Launched the "Think Different" ad campaign, paying tribute to "the crazy ones" such as Einstein, Gandhi, and Picasso. It was not just advertising but a declaration of the return of Apple's spirit
+- **August 6, 1997**: At Macworld Boston he announced that Microsoft would invest $150 million in Apple, drawing boos from the audience, but the deal helped Apple get through its financial crisis
+- **1997-1998**: Drastically streamlined the product line, cutting Newton, Cyberdog, OpenDoc, and other projects. Reduced Apple's dozens of product lines to a four-quadrant grid: consumer/professional × desktop/portable
+- **November 10, 1997**: Launched the Apple Online Store, where consumers could directly customize and buy Apple products
 
-### App Store——创造新经济
+### iMac and the design renaissance
 
-- **2008年7月10日**：App Store上线，首批500个应用。这创造了一个全新的软件分发和开发者经济生态
-- App Store在第一个周末下载量超过1000万次
-- 到2011年，App Store已有超过50万个应用，总下载量超过180亿次
+- **January 8, 1998**: Apple announced a return to profitability
+- **May 6, 1998**: Unveiled the iMac G3 — a translucent, candy-colored all-in-one designed by Jony Ive. It was the first signature product after Jobs's return
+- **August 15, 1998**: The iMac officially went on sale, becoming Apple's fastest-selling product ever. It redefined what a computer could be: beautiful and fun
+- **1999**: Released the iMac in a range of colors (5 colors), as well as the Power Mac G3 for professional users
+- **June 1999**: Released the iBook — a consumer laptop
 
-### MacBook Air与笔记本进化
+### The digital hub strategy
 
-- **2008年1月15日**：Jobs从一个标准文件信封中抽出MacBook Air，宣布它是「世界上最薄的笔记本电脑」
+- **January 5, 2000**: At Macworld he announced the Mac OS X strategy — a new operating system based on NeXTSTEP technology. Jobs formally changed his title from "interim CEO" to CEO
+- **March 24, 2001**: Mac OS X officially released
+- **May 19, 2001**: The first Apple Retail Stores opened simultaneously in Tysons Corner, Virginia and Glendale, California. Analysts generally predicted failure, which was later proved badly wrong
+- **October 23, 2001**: Unveiled the original iPod — "1,000 songs in your pocket." Priced at $399. At first it supported only the Mac
+- **January 2001**: Released the iTunes software (Mac version)
+- **April 28, 2003**: The iTunes Music Store launched, selling 1 million songs in its first week, proving people were willing to pay for music. The 99-cents-per-song pricing model upended the entire music industry
+- **October 2003**: iTunes for Windows released, opening the iPod ecosystem to PC users
 
-### iPad——定义新品类
+### Dominance of the iPod
 
-- **2010年1月27日**：Jobs在旧金山Yerba Buena Center发布iPad
-- **2010年4月3日**：iPad正式上市，首日售出超过30万台。在此之前，平板电脑品类几乎被认为是注定失败的
-- **2010年6月7日**：iPhone 4发布，引入Retina显示屏
-- **2011年3月2日**：Jobs亲自出席iPad 2发布会（当时已在病假中），这是他最后一次重大产品发布
+- **January 2004**: iPod mini released — smaller, trendier, cheaper ($249)
+- **January 2005**: iPod shuffle released (no screen, $99)
+- **September 2005**: iPod nano replaced the iPod mini, with an ultra-thin design
+- **October 2005**: Released the iPod with video capability, along with a video version of the iTunes Store
+- **2006**: The iPod held about 75% of the US digital music player market
 
-### iCloud与生态系统
+### The merger with Disney
 
-- **2011年6月6日**：Jobs在WWDC上发布iCloud，这是他最后一次公开keynote。他从病假中特意赶回发布这款产品，展示了他对云计算未来的远见
+- **January 24, 2006**: Disney announced the acquisition of Pixar for $7.4 billion in an all-stock deal. Jobs became Disney's largest individual shareholder (about 7%) and joined Disney's board
 
-### Apple总部
-
-- **2011年6月7日**：Jobs在Cupertino市议会最后一次公开露面，展示Apple Park（Apple Campus 2）的设计方案，将其比喻为「一艘着陆的宇宙飞船」。他没有看到它完工
-
----
-
-## 第六章：健康与遗产（2003-2011及之后）
-
-### 癌症诊断与治疗
-
-- **2003年10月**：一次肾脏CT扫描意外发现胰腺肿瘤。医生最初认为是普通胰腺癌（通常致命），后确诊为罕见的胰腺神经内分泌肿瘤（Pancreatic Neuroendocrine Tumor, pNET），手术可治愈
-- **2003年10月-2004年7月（约9个月）**：Jobs拒绝手术，尝试替代疗法——素食、针灸、草药、灵性治疗。这个决定后来被广泛认为可能延误了治疗的最佳时机
-- **2004年7月31日**：在斯坦福大学医学中心接受胰十二指肠切除术（Whipple手术），切除部分胰腺、胆囊、胃和小肠
-- **2004年8月1日**：向Apple员工发送邮件，告知自己患有「一种非常罕见的胰腺癌」，称手术成功，无需化疗或放疗
-- **2005年6月12日**：在斯坦福大学毕业典礼发表著名演讲——「Stay Hungry, Stay Foolish」。讲述三个故事：connecting the dots（人生点滴的连接）、love and loss（爱与失去）、death（死亡）。这成为互联网时代最被引用的演讲之一
-
-### 病情恶化
-
-- **2008年中**：Jobs明显消瘦，引发外界对其健康的广泛猜测。Apple称这是「常见的小毛病」
-- **2009年1月5日**：Jobs宣布自己的「荷尔蒙失调」比预期更复杂
-- **2009年1月14日**：Jobs宣布因健康原因休假，Tim Cook代理日常运营
-- **2009年4月**：在Memphis的Methodist University Hospital接受肝脏移植手术
-- **2009年6月底**：Jobs回到Apple办公室
-
-### 最后的岁月
-
-- **2011年1月17日**：Jobs宣布第二次病假，未设定返回日期，Tim Cook再次代理运营
-- **2011年3月2日**：从病假中返回主持iPad 2发布会（最后一次产品发布）
-- **2011年6月6日**：最后一次WWDC keynote，发布iCloud
-- **2011年6月7日**：最后一次公开露面，在Cupertino市议会展示Apple Park方案
-- **2011年8月24日**：Jobs正式辞去Apple CEO职务，致信董事会：「我一直说，如果有一天我不能再履行CEO的职责和期望，我会第一个告诉你们。很不幸，那一天到了。」Tim Cook接任CEO，Jobs转任董事会主席
-
-### 辞世
-
-- **2011年10月5日**：Steve Jobs在加州Palo Alto的家中因胰腺癌转移引发的呼吸衰竭去世，享年56岁。妻子Laurene、孩子们和姐妹们陪在身边
-- 他的最后遗言（据妹妹Mona Simpson在追悼会上的描述）：「Oh wow. Oh wow. Oh wow.」
-- **2011年10月16日**：Apple在Cupertino总部举行员工追悼会
-- **2011年10月19日**：斯坦福大学Memorial Church举行私人葬礼
-
-### 身后影响与遗产
-
-- **2012年**：Walter Isaacson的授权传记《Steve Jobs》出版（Jobs生前配合采访，但要求死后才出版）
-- **2013年**：Apple Park破土动工（2017年启用）
-- **2015年**：电影《Steve Jobs》上映（Aaron Sorkin编剧，Danny Boyle导演，Michael Fassbender主演）
-- **2018年**：女儿Lisa Brennan-Jobs出版回忆录《Small Fry》，揭示父女关系的复杂性
-- **2022年**：Laurene Powell Jobs的Emerson Collective成为全球最有影响力的慈善和投资机构之一
-- Apple在Jobs去世后的十年中市值从约3500亿美元增长到超过3万亿美元，成为全球市值最高的公司
+**Turning point in thinking**: The Jobs who returned was completely different from the one who left in 1985. He had learned: (1) focus — cutting 90% of the product line; (2) to work with top talent rather than against them; (3) that design is not decoration but the soul of the product; (4) the importance of the retail experience. The consecutive successes from the iMac to the iPod proved his transformation.
 
 ---
 
-## 附录：关键人际关系图谱
+## Chapter 5: The Peak (2007-2011)
 
-| 人物 | 关系 | 关键影响 |
+### iPhone — reinventing the phone
+
+- **January 9, 2007**: Jobs unveiled the iPhone at the Macworld conference, using the famous opening: "Today, Apple is going to reinvent the phone." He described the iPhone as three things in one: a widescreen iPod, a revolutionary phone, and a breakthrough internet device
+- **June 29, 2007**: The original iPhone officially went on sale in the US, priced at $499 (4GB) / $599 (8GB). Consumers lined up outside Apple Stores
+- **July 11, 2008**: iPhone 3G released, price lowered to $199, with 3G network support
+
+### App Store — creating a new economy
+
+- **July 10, 2008**: The App Store launched with the first 500 apps. It created an entirely new ecosystem of software distribution and a developer economy
+- The App Store saw more than 10 million downloads in its first weekend
+- By 2011 the App Store had more than 500,000 apps and more than 18 billion total downloads
+
+### MacBook Air and the evolution of the laptop
+
+- **January 15, 2008**: Jobs pulled the MacBook Air out of a standard manila envelope, announcing it as "the world's thinnest notebook"
+
+### iPad — defining a new category
+
+- **January 27, 2010**: Jobs unveiled the iPad at the Yerba Buena Center in San Francisco
+- **April 3, 2010**: The iPad officially went on sale, selling more than 300,000 units on the first day. Before this, the tablet category was almost considered doomed to fail
+- **June 7, 2010**: iPhone 4 released, introducing the Retina display
+- **March 2, 2011**: Jobs personally attended the iPad 2 launch (while on medical leave), his last major product launch
+
+### iCloud and the ecosystem
+
+- **June 6, 2011**: Jobs unveiled iCloud at WWDC, his last public keynote. He came back from medical leave specifically to launch this product, showing his vision for the future of cloud computing
+
+### Apple's headquarters
+
+- **June 7, 2011**: Jobs made his last public appearance at the Cupertino City Council, presenting the design for Apple Park (Apple Campus 2) and likening it to "a spaceship that has landed." He did not see it completed
+
+---
+
+## Chapter 6: Health and Legacy (2003-2011 and Beyond)
+
+### Cancer diagnosis and treatment
+
+- **October 2003**: A CT scan of the kidneys incidentally discovered a pancreatic tumor. Doctors initially thought it was ordinary pancreatic cancer (usually fatal), but it was later diagnosed as a rare pancreatic neuroendocrine tumor (pNET), curable by surgery
+- **October 2003 - July 2004 (about 9 months)**: Jobs refused surgery and tried alternative therapies — a vegan diet, acupuncture, herbs, spiritual healing. This decision was later widely thought to have possibly delayed the optimal window for treatment
+- **July 31, 2004**: Underwent a pancreaticoduodenectomy (Whipple procedure) at Stanford University Medical Center, removing part of the pancreas, the gallbladder, stomach, and small intestine
+- **August 1, 2004**: Sent an email to Apple employees, telling them he had "a very rare form of pancreatic cancer," saying the surgery was successful and no chemotherapy or radiation was needed
+- **June 12, 2005**: Delivered the famous speech at Stanford University's commencement — "Stay Hungry, Stay Foolish." It told three stories: connecting the dots, love and loss, and death. It became one of the most-quoted speeches of the internet age
+
+### Worsening condition
+
+- **Mid-2008**: Jobs visibly lost weight, triggering widespread speculation about his health. Apple called it "a common bug"
+- **January 5, 2009**: Jobs announced that his "hormone imbalance" was more complex than expected
+- **January 14, 2009**: Jobs announced a leave of absence for health reasons, with Tim Cook running day-to-day operations
+- **April 2009**: Underwent a liver transplant at Methodist University Hospital in Memphis
+- **Late June 2009**: Jobs returned to Apple's offices
+
+### The final years
+
+- **January 17, 2011**: Jobs announced a second medical leave with no return date set, and Tim Cook again ran operations
+- **March 2, 2011**: Returned from medical leave to host the iPad 2 launch (his last product launch)
+- **June 6, 2011**: His last WWDC keynote, launching iCloud
+- **June 7, 2011**: His last public appearance, presenting the Apple Park plan to the Cupertino City Council
+- **August 24, 2011**: Jobs formally resigned as Apple CEO, writing to the board: "I have always said if there ever came a day when I could no longer meet my duties and expectations as Apple's CEO, I would be the first to let you know. Unfortunately, that day has come." Tim Cook succeeded as CEO, and Jobs became chairman of the board
+
+### Death
+
+- **October 5, 2011**: Steve Jobs died at his home in Palo Alto, California, of respiratory arrest caused by the metastasis of pancreatic cancer, at age 56. His wife Laurene, his children, and his sisters were at his side
+- His last words (as described by his sister Mona Simpson at the memorial): "Oh wow. Oh wow. Oh wow."
+- **October 16, 2011**: Apple held a memorial service for employees at its Cupertino headquarters
+- **October 19, 2011**: A private funeral was held at Stanford University's Memorial Church
+
+### Posthumous influence and legacy
+
+- **2012**: Walter Isaacson's authorized biography *Steve Jobs* was published (Jobs cooperated with interviews while alive but asked that it be published only after his death)
+- **2013**: Ground was broken on Apple Park (opened in 2017)
+- **2015**: The film *Steve Jobs* was released (written by Aaron Sorkin, directed by Danny Boyle, starring Michael Fassbender)
+- **2018**: Daughter Lisa Brennan-Jobs published the memoir *Small Fry*, revealing the complexity of the father-daughter relationship
+- **2022**: Laurene Powell Jobs's Emerson Collective became one of the most influential philanthropic and investment organizations in the world
+- In the decade after Jobs's death, Apple's market cap grew from about $350 billion to more than $3 trillion, making it the most valuable company in the world
+
+---
+
+## Appendix: Map of Key Relationships
+
+| Person | Relationship | Key influence |
 |------|------|----------|
-| Steve Wozniak | 联合创始人 | Apple I/II的技术天才，Jobs的第一个搭档 |
-| Mike Markkula | 早期投资者/导师 | 教Jobs商业运营，投入Apple的第一笔大钱 |
-| John Sculley | Apple CEO（1983-1993） | 被Jobs招募，后将Jobs逐出Apple |
-| Jony Ive | Apple首席设计官 | 与Jobs共同塑造了Apple的设计语言（iMac到iPhone） |
-| Tim Cook | Apple COO/CEO | Jobs的接班人，运营天才 |
-| Ed Catmull | Pixar联合创始人 | Pixar的技术灵魂，教Jobs尊重创意流程 |
-| John Lasseter | Pixar首席创意官 | Pixar的创意灵魂，《玩具总动员》导演 |
-| Laurene Powell Jobs | 妻子 | 1991年结婚，Jobs的精神支柱和生活锚点 |
-| Chrisann Brennan | 前女友 | Lisa的母亲，早期关系复杂而痛苦 |
-| Lisa Brennan-Jobs | 长女 | 最初被否认，后逐渐和解的父女关系 |
-| Bob Iger | 迪士尼CEO | Pixar-Disney合并的关键人物，Jobs的朋友 |
-| Bill Gates | 微软创始人 | 一生的竞争对手和复杂的友谊 |
-| 乙川弘文 | 禅宗老师 | Jobs的精神导师，主持其婚礼 |
-| Mona Simpson | 亲妹妹（生母所生） | 1986年Jobs找到生母后认识，关系亲密 |
+| Steve Wozniak | Co-founder | Technical genius behind the Apple I/II, Jobs's first partner |
+| Mike Markkula | Early investor / mentor | Taught Jobs business operations, put in Apple's first big money |
+| John Sculley | Apple CEO (1983-1993) | Recruited by Jobs, later pushed Jobs out of Apple |
+| Jony Ive | Apple Chief Design Officer | Co-shaped Apple's design language with Jobs (iMac through iPhone) |
+| Tim Cook | Apple COO/CEO | Jobs's successor, an operations genius |
+| Ed Catmull | Pixar co-founder | Technical soul of Pixar, taught Jobs to respect the creative process |
+| John Lasseter | Pixar Chief Creative Officer | Creative soul of Pixar, director of *Toy Story* |
+| Laurene Powell Jobs | Wife | Married in 1991, Jobs's spiritual pillar and life anchor |
+| Chrisann Brennan | Ex-girlfriend | Lisa's mother; the early relationship was complicated and painful |
+| Lisa Brennan-Jobs | Eldest daughter | Initially denied, a father-daughter relationship that gradually reconciled |
+| Bob Iger | Disney CEO | Key figure in the Pixar-Disney merger, a friend of Jobs |
+| Bill Gates | Microsoft founder | Lifelong competitor and complicated friendship |
+| Kobun Chino Otogawa | Zen teacher | Jobs's spiritual mentor, officiated his wedding |
+| Mona Simpson | Biological sister (born to his biological mother) | Met after Jobs found his biological mother in 1986, a close relationship |
 
 ---
 
-## 附录：思想转折点总结
+## Appendix: Summary of Turning Points in Thinking
 
-1. **被领养**（1955）→ 「被选中」的信念，驱动力的根源
-2. **Reed College退学**（1973）→ 跟随好奇心而非既定路径
-3. **印度之行与禅宗**（1974）→ 简洁、直觉、专注的哲学基础
-4. **参观Xerox PARC**（1979）→ GUI是未来，用户体验重于技术规格
-5. **被Apple逐出**（1985）→ 「一生中最好的事」，获得重生的机会
-6. **Pixar与家庭**（1986-1997）→ 学会放手、信任团队、平衡生活
-7. **回归Apple**（1997）→ 聚焦的力量——「说不」比「说是」更重要
-8. **癌症诊断**（2003）→ 「记住你即将死去，是我知道的避免陷入患得患失的最好方法」
-9. **斯坦福演讲**（2005）→ Stay Hungry, Stay Foolish——公开的人生哲学宣言
-10. **iPhone发布**（2007）→ 证明一个人可以多次重新定义整个行业
+1. **Being adopted** (1955) → the belief of being "chosen," the root of his drive
+2. **Dropping out of Reed College** (1973) → follow curiosity rather than the set path
+3. **The trip to India and Zen** (1974) → the philosophical foundation of simplicity, intuition, focus
+4. **Visiting Xerox PARC** (1979) → the GUI is the future; user experience matters more than technical specs
+5. **Ousted from Apple** (1985) → "the best thing that ever happened to me," a chance at rebirth
+6. **Pixar and family** (1986-1997) → learned to let go, trust the team, balance life
+7. **Return to Apple** (1997) → the power of focus — "saying no" matters more than "saying yes"
+8. **Cancer diagnosis** (2003) → "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life"
+9. **The Stanford speech** (2005) → Stay Hungry, Stay Foolish — a public declaration of his philosophy of life
+10. **The iPhone launch** (2007) → proof that one person can redefine entire industries more than once
 
 ---
 
-## 信息源
+## Sources
 
 - [Steve Jobs - Wikipedia](https://en.wikipedia.org/wiki/Steve_Jobs)
 - [History of Apple Inc. - Wikipedia](https://en.wikipedia.org/wiki/History_of_Apple_Inc.)

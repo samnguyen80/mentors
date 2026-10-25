@@ -1,59 +1,59 @@
-# 查理·芒格 调研素材索引
+# Charlie Munger: Research Materials Index
 
-## 调研时间：2026-04-04
-## 调研方法：5个并行Agent分别负责不同维度，共执行50+次WebSearch
+## Research date: 2026-04-04
+## Research method: 5 parallel agents, each covering a different dimension, with 50+ WebSearch calls in total
 
-## 详细调研文件位置
+## Detailed Research File Locations
 
-| 维度 | 文件 | 内容摘要 |
+| Dimension | File | Content summary |
 |------|------|----------|
-| 著作与系统思考 | `/07-调研与分析/查理芒格思想体系深度调研-20260404.md` | 7个核心论点、6个原创概念、25种误判心理学完整清单、推荐书单、智识谱系 |
-| 长对话与即兴思考 | `/04-写作参考/调研-芒格即兴思考方式.md` | 资格论、I have nothing to add分析、降维类比DNA、渐进极端化策略、8条表达策略 |
-| 表达风格DNA | `/07-调研与分析/芒格表达风格DNA分析.md` | 句式模式、幽默类型分析、批评升级链、与巴菲特对比、金句精选 |
-| 外部批评与盲点 | `/04-写作参考/调研-芒格外部批评与盲点分析.md` | 7个盲点、阿里巴巴惨败、Munger Hall争议、选择性理性批评 |
-| 决策记录与行动 | `/芒格决策行动记录-调研.md` | 人生转折、6个关键投资决策、5个公开失误、言行一致性分析、时间线 |
+| Writings and systems thinking | `/07-research-and-analysis/charlie-munger-thought-system-deep-research-20260404.md` | 7 core arguments, 6 original concepts, the complete list of the 25 tendencies of human misjudgment, recommended reading list, intellectual lineage |
+| Long conversations and improvised thinking | `/04-writing-reference/research-munger-improvised-thinking.md` | The qualification argument, "I have nothing to add" analysis, the analogy-based dimensionality-reduction DNA, the gradual-extremization strategy, 8 expression strategies |
+| Expression style DNA | `/07-research-and-analysis/munger-expression-style-dna-analysis.md` | Sentence patterns, humor type analysis, criticism escalation ladder, comparison with Buffett, selected golden quotes |
+| External criticism and blind spots | `/04-writing-reference/research-munger-external-criticism-and-blind-spots-analysis.md` | 7 blind spots, the Alibaba debacle, the Munger Hall controversy, the selective-rationality critique |
+| Decision records and actions | `/munger-decisions-and-actions-research.md` | Life turning points, 6 key investment decisions, 5 public mistakes, words-versus-deeds consistency analysis, timeline |
 
-## 一手来源（芒格直接产出）
+## Primary Sources (produced directly by Munger)
 
-- 《穷查理宝典》(Poor Charlie's Almanack) — 核心著作
-- 1994 USC演讲「论基本的普世智慧」 — 多元思维模型首次完整阐述
-- 1995/2005 「人类误判心理学」演讲 — 25种认知偏误框架
-- 1986 哈佛演讲「如何保证人生痛苦」 — 逆向思考经典范例
-- 2007 USC法学院毕业演讲 — 配得上法则
-- 伯克希尔·哈撒韦年度股东大会发言（1978-2023）
-- Daily Journal年度股东会（2014-2023）
-- Wesco Financial股东信
+- *Poor Charlie's Almanack*: the core work
+- 1994 USC speech "A Lesson on Elementary, Worldly Wisdom": the first full exposition of the multiple mental models approach
+- 1995/2005 "The Psychology of Human Misjudgment" speech: the 25-bias cognitive framework
+- 1986 Harvard speech "How to Guarantee a Life of Misery": the classic example of inverted thinking
+- 2007 USC Law School commencement address: the law of deserving
+- Berkshire Hathaway annual shareholder meeting remarks (1978-2023)
+- Daily Journal annual meetings (2014-2023)
+- Wesco Financial shareholder letters
 
-## 二手来源（分析与评价）
+## Secondary Sources (analysis and evaluation)
 
-- Farnam Street (fs.blog) — 芒格思想的系统化传播者
-- CNBC、Bloomberg、Fortune — 新闻报道与访谈记录
-- City Journal — 芒格去世后的反思性评价
-- DL News (Wolfgang Munchau) — 对芒格加密立场的深度批评
-- Seeking Alpha — 阿里巴巴投资分析
-- Wikipedia — Munger Hall争议完整记录
+- Farnam Street (fs.blog): the systematic disseminator of Munger's thinking
+- CNBC, Bloomberg, Fortune: news coverage and interview transcripts
+- City Journal: reflective assessments after Munger's death
+- DL News (Wolfgang Munchau): in-depth criticism of Munger's stance on crypto
+- Seeking Alpha: Alibaba investment analysis
+- Wikipedia: full record of the Munger Hall controversy
 
-## 关键引用（原文）
+## Key Quotes (original text)
 
 > "You can't really know anything if you just remember isolated facts. You must have a latticework of models in your head." — USC 1994
 
-> "Invert, always invert." — 引用Jacobi，多场合反复使用
+> "Invert, always invert." — Quoting Jacobi, repeated on many occasions
 
-> "It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent." — 伯克希尔股东会
+> "It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent." — Berkshire shareholder meeting
 
-> "I never allow myself to have an opinion on anything that I don't know the other side's argument better than they do." — Daily Journal年会
+> "I never allow myself to have an opinion on anything that I don't know the other side's argument better than they do." — Daily Journal annual meeting
 
-> "Show me the incentive and I'll show you the outcome." — 多场合
+> "Show me the incentive and I'll show you the outcome." — On many occasions
 
 > "I regard Alibaba as one of the worst mistakes I ever made. I got charmed by the idea of their position in the Chinese internet; I didn't stop to realize they're still a goddamn retailer." — Daily Journal 2023
 
-> "All I want to know is where I'm going to die, so I'll never go there." — 多场合
+> "All I want to know is where I'm going to die, so I'll never go there." — On many occasions
 
-> "If you mix raisins with turds, they're still turds." — 伯克希尔年会
+> "If you mix raisins with turds, they're still turds." — Berkshire annual meeting
 
-## 矛盾与待验证
+## Contradictions and Items to Verify
 
-1. 阿里巴巴「零售商」归因 vs Costco也是零售商 — 真实失败原因可能是政策风险而非商业模型
-2. 芒格对中国的公开赞扬 vs 在中国投资的实际亏损 — 存在认知失调
-3. 芒格反对加密的「理性」论据 vs 实际表达的情绪化程度 — 选择性理性的典型案例
-4. Wheeler Munger基金1973-74崩溃 vs 集中投资哲学 — 幸存者偏差可能美化了该策略
+1. Attributing Alibaba's failure to being a "retailer" vs. Costco also being a retailer: the real cause of failure may be policy risk rather than the business model
+2. Munger's public praise of China vs. actual losses on his China investments: cognitive dissonance
+3. The "rational" arguments in Munger's opposition to crypto vs. the actual degree of emotionality expressed: a classic case of selective rationality
+4. The collapse of the Wheeler Munger fund in 1973-74 vs. the concentrated-investing philosophy: survivorship bias may be flattering that strategy
