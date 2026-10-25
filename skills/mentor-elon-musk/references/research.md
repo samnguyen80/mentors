@@ -1,69 +1,69 @@
-# Elon Musk 调研素材索引
+# Elon Musk Research Materials Index
 
-## 调研时间：2026-04-04
-## 调研方法：5个并行Agent，共40+轮WebSearch
+## Research date: 2026-04-04
+## Research method: 5 parallel agents, 40+ rounds of WebSearch
 
-## 完整调研文件
+## Full research files
 
-| 维度 | 文件位置 | 内容概述 |
+| Dimension | File location | Summary |
 |------|---------|---------|
-| 著作与系统思考 | `07-调研与分析/Elon-Musk-思想体系调研-20260404.md` | Master Plan系列、第一性原理操作、自创概念、推荐书单、矛盾分析 |
-| 长对话与即兴思考 | `07-调研与分析/马斯克即兴思考方式调研.md` | 播客访谈、法庭证词、五步算法、思维模式提取 |
-| 决策记录与行动 | `07-调研与分析/马斯克决策模式与行为分析-20260404.md` | SpaceX/Tesla/X/xAI/DOGE关键决策、言行一致清单、危机行为模式 |
-| 碎片表达 | Agent输出（未存文件） | Twitter风格分析、11394条推文统计、收购前后变化、公开辩论 |
-| 他者视角 | Agent输出（未存文件） | Isaacson传记发现、心理学分析、前员工评价、与贝佐斯/乔布斯对比 |
+| Writings and systematic thinking | `07-research-and-analysis/elon-musk-thought-system-research-20260404.md` | The Master Plan series, how first principles are actually applied, self-coined concepts, recommended reading list, analysis of contradictions |
+| Long-form conversations and improvised thinking | `07-research-and-analysis/musk-improvised-thinking-research.md` | Podcast interviews, court testimony, the five-step algorithm, extraction of thinking patterns |
+| Decision records and actions | `07-research-and-analysis/musk-decision-patterns-and-behavior-20260404.md` | Key decisions at SpaceX/Tesla/X/xAI/DOGE, a list of where words and deeds match, crisis behavior patterns |
+| Fragmentary expression | Agent output (not saved to file) | Twitter style analysis, statistics on 11,394 tweets, changes before and after the acquisition, public debates |
+| Other people's perspectives | Agent output (not saved to file) | Findings from the Isaacson biography, psychological analysis, former employees' assessments, comparisons with Bezos/Jobs |
 
-## 一手来源（马斯克本人）
+## Primary sources (Musk himself)
 
 - Tesla Master Plan Part 1 (2006) / Part Deux (2016) / Part 3 (2023)
-- SEC Filings: Tesla Proxy 2025, Schedule 13D (Twitter收购)
-- Ashlee Vance传记 (2015) — 大量一手访谈
-- Walter Isaacson传记 (2023) — 跟踪两年实录
+- SEC Filings: Tesla Proxy 2025, Schedule 13D (Twitter acquisition)
+- Ashlee Vance biography (2015) — extensive first-hand interviews
+- Walter Isaacson biography (2023) — a two-year, embedded, first-hand record
 
-## 关键播客/访谈
+## Key podcasts/interviews
 
 - Joe Rogan Experience #1470, #2054, #2404
 - Lex Fridman Podcast #252, #400, #438
 - TED 2017, TED 2022
 - All-In Summit 2024
 - Nikhil Kamath WTF Podcast
-- DealBook Summit 2023（「Go fuck yourself」事件）
-- CNN 2025采访（承认错误）
+- DealBook Summit 2023 (the "Go fuck yourself" incident)
+- CNN 2025 interview (admitting mistakes)
 
-## 关键外部分析
+## Key external analyses
 
-- Emerald学术研究: 马斯克领导风格的后现代文化分析
-- IMD商学院: 马斯克的自恋人格分析
-- Pew Research 2025: 美国公众对马斯克的评价
-- CNBC 35名前员工采访
-- 36氪: 11394条推文数据分析 / 20000条推文「发疯文学」分析
-- Zenodo: 马斯克Twitter/X话语演变追踪
+- Emerald academic study: a postmodern cultural analysis of Musk's leadership style
+- IMD Business School: an analysis of Musk's narcissistic personality
+- Pew Research 2025: how the American public views Musk
+- CNBC interviews with 35 former employees
+- 36Kr: data analysis of 11,394 tweets / analysis of 20,000 tweets in "unhinged literature" style
+- Zenodo: tracking the evolution of Musk's Twitter/X discourse
 
-## 关键引用（原文）
+## Key quotes (original text)
 
-> "The only rules you have to follow are the laws of physics — everything else is a recommendation." — Isaacson传记
+> "The only rules you have to follow are the laws of physics — everything else is a recommendation." — Isaacson biography
 
-> "I tend to approach things from a physics framework. Physics teaches you to reason from first principles rather than by analogy." — 多次公开采访
+> "I tend to approach things from a physics framework. Physics teaches you to reason from first principles rather than by analogy." — multiple public interviews
 
 > "What are the material constituents of the batteries? What is the stock market value of the material constituents?" — TED Talk
 
-> "The most common error of a smart engineer is to optimize a thing that should not exist." — 五步算法
+> "The most common error of a smart engineer is to optimize a thing that should not exist." — the five-step algorithm
 
-> "If you're not adding back at least 10% of what you deleted, you're not deleting enough." — Isaacson传记
+> "If you're not adding back at least 10% of what you deleted, you're not deleting enough." — Isaacson biography
 
-> "Manufacturing is 10x harder than designing." — 多次公开演讲
+> "Manufacturing is 10x harder than designing." — multiple public talks
 
-> "Failure is an option here. If things are not failing, you are not innovating enough." — SpaceX内部
+> "Failure is an option here. If things are not failing, you are not innovating enough." — SpaceX internal
 
 > "Yes, excessive automation at Tesla was a mistake. To be precise, my mistake. Humans are underrated." — Twitter 2018
 
 > "Some of the things that I say will be incorrect and should be corrected." — CNN 2025
 
-> "My mentality is that of a samurai. I would rather commit seppuku than fail." — Ashlee Vance传记
+> "My mentality is that of a samurai. I would rather commit seppuku than fail." — Ashlee Vance biography
 
-## 矛盾与待验证
+## Contradictions and open questions
 
-1. AI恐惧 vs AI开发: 他的「与其让别人开发不如我来」解释是否成立？还是单纯的竞争动机？
-2. 言论自由 vs 封号: 一个月内的自相矛盾，是真实转变还是一开始就是策略？
-3. DOGE实际影响: 「节省」数据被多方质疑，真实数字仍有争议
-4. SpaceX与xAI合并的真实动机: 效率提升还是IPO估值最大化？
+1. Fear of AI vs. building AI: does his explanation ("better that I build it than someone else") hold up? Or is it simply competitive motivation?
+2. Free speech vs. banning accounts: a self-contradiction within a single month. Was it a genuine shift, or a strategy from the start?
+3. The actual impact of DOGE: the "savings" figures have been questioned from many sides, and the true numbers remain disputed.
+4. The real motive behind the SpaceX–xAI merger: efficiency gains or maximizing the IPO valuation?

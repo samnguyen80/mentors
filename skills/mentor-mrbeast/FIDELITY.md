@@ -1,19 +1,19 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：97/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Fable 5），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total score: 97/100 · Grade A** | Test date: 2026-07-01 | Answering/grading: two independent agents (Claude Fable 5), methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
+| Dimension | Score | Verdict summary |
 |------|------|---------|
-| 立场一致性 | 30/30 | 三题（标题缩略图先行、首分钟留存、内容优先于制作精良）均命中真实公开立场，Q1=10/Q2=10/Q3=10：「先做缩略图再开机」「80/20反转」是播客原话级立场，首分钟四步结构对应泄露的36页内部手册 |
-| 风格辨识度 | 18/20 | 数据锚定（CTR×AVD、留存>90%、50+缩略图变体）、命令句零hedging、指纹清晰；扣2分因个别对仗金句略有通用爽文腔 |
-| 边缘诚实度 | 20/20 | 超范围题（B站起步策略）开头即声明「我没运营过B站，是用核心原则做的推断」，明确指出美元锚定不可照搬，结尾保留不确定性 |
-| 来源透明度 | 14/15 | 五份调研底稿来源索引完整（Lex Fridman #351/JRE #1788/泄露内部手册等一手来源远超50%）；扣1分因正文引语靠尾注间接溯源 |
-| 结构完整度 | 15/15 | 心智模型6个、诚实边界6条、内在张力4对、反例黑名单7条、含9条失败模式fallback树的防漂移约束，结构满配 |
+| Position consistency | 30/30 | All three questions (title and thumbnail first, first-minute retention, content over production polish) hit real public positions, Q1=10/Q2=10/Q3=10: "make the thumbnail before you pick up the camera" and the "80/20 reversal" are podcast-grade positions, and the four-step first-minute structure matches the leaked 36-page internal handbook |
+| Style distinctiveness | 18/20 | Data anchoring (CTR x AVD, retention >90%, 50+ thumbnail variants), imperative sentences with zero hedging, a clear fingerprint; 2 points off because a few antithetical punchlines have a slightly generic hustle-content tone |
+| Honesty at the edges | 20/20 | On the out-of-scope question (a Bilibili launch strategy), it opens by declaring "I have never run a Bilibili channel; this is an inference from core principles," explicitly flags that USD-anchored numbers cannot be copied over, and keeps the uncertainty at the end |
+| Source transparency | 14/15 | The source index across the five research drafts is complete (primary sources such as Lex Fridman #351 / JRE #1788 / the leaked internal handbook are far above 50%); 1 point off because quotes in the body are traced back only indirectly through end notes |
+| Structural completeness | 15/15 | 6 mental models, 6 honest boundaries, 4 pairs of internal tensions, a 7-item counter-example blacklist, and an anti-drift constraint with a fallback tree of 9 failure modes: the structure is fully populated |
 
-## 测试设计
+## Test Design
 
-- 3道已知立场题（人物公开反复表态的话题）+ 1道超范围题（人物从未讨论过，测诚实推断）+ 1道风格样本题
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 known-position questions (topics the figure has repeatedly taken a public stand on) + 1 out-of-scope question (something the figure has never discussed, testing honest inference) + 1 style-sample question
+- The answering agent reads only this skill's directory files and is forbidden to browse the web; the grading agent runs independently and judges against the figure's real public positions
+- Basis: the SkillLens paper (arXiv 2605.23899) empirically found that LLM self-evaluation accuracy is only 46.4%, so answering and grading are strictly separated
 
-> 评分judge简评：五道题答得像从泄露手册里长出来的，立场零偏离，超范围题的推断标注是全测试集里最干净的处理。出厂即精品。
+> Grading judge's brief comment: The five answers read as if they grew out of the leaked handbook, with zero deviation in position, and the inference labeling on the out-of-scope question is the cleanest handling in the whole test set. Boutique quality straight out of the box.
