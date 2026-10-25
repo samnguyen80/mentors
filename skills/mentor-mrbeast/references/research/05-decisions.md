@@ -1,322 +1,322 @@
-# MrBeast (Jimmy Donaldson) - 决策记录与行动
+# MrBeast (Jimmy Donaldson) - Decision Record and Actions
 
-> Agent 5 调研产出 | 基于11次WebSearch，覆盖早期决策、战略决策、内容决策、压力行为、言行一致性
+> Agent 5 research output | Based on 11 WebSearch queries, covering early decisions, strategic decisions, content decisions, behavior under pressure, and word-deed consistency
 
 ---
 
-## 1. 早期决策（2012-2018）
+## 1. Early Decisions (2012-2018)
 
-### 1.1 摸索期：五年算法痴迷（2012-2016）
+### 1.1 The groping period: five years of algorithm obsession (2012-2016)
 
-**时间线：**
-- **2012年2月**：13岁时以「MrBeast6000」名义上传第一个YouTube视频
-- **2012-2015**：早期内容包括Minecraft和Call of Duty游戏实况、估算其他YouTuber收入、YouTube创作技巧、YouTube drama评论
-- **2015-2016**：开始「Worst Intros」系列，嘲讽其他YouTuber糟糕的视频开场，积累到约3万订阅
+**Timeline:**
+- **February 2012**: At age 13, uploaded his first YouTube video under the name "MrBeast6000"
+- **2012-2015**: Early content included Minecraft and Call of Duty gameplay, estimating other YouTubers' earnings, YouTube creation tips, and commentary on YouTube drama
+- **2015-2016**: Started the "Worst Intros" series, mocking other YouTubers' terrible video openings, accumulating about 30,000 subscribers
 
-**算法研究的具体做法：**
-- 有一个长达五年的阶段，他「relentlessly, unhealthily obsessed with studying virality, studying the YouTube algorithm」
-- 每天花数小时分析缩略图、标题、视频节奏、观众留存曲线、以及什么让人点击
-- 和朋友一起试图分析和理解YouTube的推荐算法，以创造病毒式传播的视频
-- 测试了各种类型：游戏实况、YouTuber收入猜测、网络beef评论
+**Specifics of the algorithm research:**
+- For a five-year stretch, he was "relentlessly, unhealthily obsessed with studying virality, studying the YouTube algorithm"
+- Spent hours every day analyzing thumbnails, titles, video pacing, audience retention curves, and what makes people click
+- Worked with friends to analyze and understand YouTube's recommendation algorithm in order to create viral videos
+- Tested a variety of genres: gameplay, YouTuber earnings guesses, commentary on internet beefs
 
-**关键洞察：** 这不是随便看看数据。这是一个十几岁的孩子用五年时间做了一件事的极端案例。大多数人的「研究」是看几篇文章，MrBeast的「研究」是每天沉浸式分析平台数据。
+**Key insight:** This was not casual data-watching. It is an extreme case of a teenager spending five years on a single thing. Most people's "research" is reading a few articles; MrBeast's "research" was immersive daily analysis of platform data.
 
-### 1.2 退学决策（2016年底）
+### 1.2 The decision to drop out (late 2016)
 
-**决策：** 大学只上了两周就退学。
+**Decision:** Dropped out of college after only two weeks.
 
-**放弃了什么：**
-1. **大学教育**：入学两周后退出
-2. **家庭支持**：母亲不赞成，条件是退学就必须搬出家门。他真的被赶出去了
-3. **经济安全**：做YouTube六年还不够维持全职收入
+**What he gave up:**
+1. **A college education**: quit two weeks after enrolling
+2. **Family support**: his mother disapproved, on the condition that if he dropped out he had to move out. He was actually kicked out
+3. **Financial security**: after six years of YouTube, it still wasn't enough to sustain a full-time income
 
-**他的原话（Twitter）：**
+**His own words (Twitter):**
 > "I did YouTube for 6 years straight and wasn't making enough to do it full time. Went to college for 2 weeks and then dropped out and told my mom I'd rather be poor than do anything beside YouTube."
 
-**后续行动：**
-- 成功后第一件事是给母亲10万美元支票还房贷，让她退休
-- 他后来反过来警告别人不要轻率效仿：「It's painful to see people quit their job/drop out of school to make content full time before they're ready. For every person like me that makes it, thousands don't.」
+**Follow-up actions:**
+- The first thing he did after succeeding was give his mother a $100,000 check to pay off the mortgage and let her retire
+- Later, he reversed course and warned others not to imitate him rashly: "It's painful to see people quit their job/drop out of school to make content full time before they're ready. For every person like me that makes it, thousands don't."
 
-**关键洞察：** 这个决策的特殊之处不在于「退学」本身（很多人退学），而在于他在六年没有回报的情况下做出这个决策。这不是一个有数据支撑的理性选择，而是一个信念驱动的赌注。
+**Key insight:** What makes this decision special is not the "dropping out" itself (many people drop out), but that he made it after six years without payoff. It was not a rational choice backed by data, but a belief-driven bet.
 
-### 1.3 转折点：从Worst Intros到大预算视频
+### 1.3 The turning point: from Worst Intros to big-budget videos
 
-**「Worst Intros」系列（2015-2018）：**
-- 约70集以上，是他早期最成功的系列
-- 内容是嘲讽其他YouTuber（特别是Minecraft用户）的糟糕开场
-- 所有视频后来都被设为私密（转型后清理旧内容）
+**The "Worst Intros" series (2015-2018):**
+- About 70+ episodes, his most successful early series
+- The content mocked the bad openings of other YouTubers (especially Minecraft users)
+- All of the videos were later set to private (cleaning up old content after the transition)
 
-**真正的突破：数到100,000（2017年1月8日）**
-- 上传了一个近24小时的视频，从1数到100,000
-- 实际花了40小时，部分加速压缩到24小时以内
-- 目前超过3300万播放量
-- 这标志着从「评论其他人」到「自己做极端挑战」的转变
+**The real breakthrough: Counting to 100,000 (January 8, 2017)**
+- Uploaded a nearly 24-hour video counting from 1 to 100,000
+- It actually took 40 hours, partly sped up to compress it to under 24 hours
+- Currently over 33 million views
+- This marked the shift from "commenting on others" to "doing extreme challenges himself"
 
-**转型逻辑：** 从Worst Intros（低成本、评论向）到数到100,000（耐力挑战），再到大预算挑战和撒钱视频，有一条清晰的进化线。每一步都在加码「极端性」这个核心变量。
+**Logic of the transition:** From Worst Intros (low cost, commentary-oriented) to Counting to 100,000 (an endurance challenge), then to big-budget challenges and money-giveaway videos, there is a clear line of evolution. Each step raised the stakes on the core variable of "extremeness."
 
 ---
 
-## 2. 关键战略决策
+## 2. Key Strategic Decisions
 
-### 2.1 「撒钱」视频的起源（2017年）
+### 2.1 Origin of the "giving away money" videos (2017)
 
-**时间：** 2017年6月
+**Time:** June 2017
 
-**起源故事：**
-- 第一个品牌合作视频。品牌出价5000美元
-- Jimmy谈判到了1万美元，因为他想要一个更有力的标题（给无家可归者1万美元）
-- 视频病毒式传播
+**Origin story:**
+- The first branded-collaboration video. The brand offered $5,000
+- Jimmy negotiated it up to $10,000, because he wanted a more powerful title (giving $10,000 to homeless people)
+- The video went viral
 
-**他发现的公式：**
+**The formula he discovered:**
 > "So I had this idea if I take this branded money and I give it away in the video, that video will do well. And then I take the money from that video and I give away in the next video... I think I just cracked the code."
 
-**这个发现的本质：** 广告收入和赞助费 → 投入视频中作为赠品 → 视频因赠品获得更多播放 → 更多广告收入和赞助 → 更大的赠品。这是一个正反馈飞轮。
+**The essence of this discovery:** Ad revenue and sponsorship fees -> put into the video as giveaways -> the video gets more views because of the giveaways -> more ad revenue and sponsorship -> bigger giveaways. It is a positive-feedback flywheel.
 
-### 2.2 国际化决策：多语言频道（2021年）
+### 2.2 The internationalization decision: multilingual channels (2021)
 
-**时间线：**
-- **2021年7月8日**：启动西班牙语频道（MrBeast en Espanol + Beast Reacts en Espanol）
-- **2021年8月5日**：俄语频道
-- **2021年10月9日**：巴西葡萄牙语频道
-- **2021年11月**：法语和日语频道
+**Timeline:**
+- **July 8, 2021**: Launched the Spanish-language channels (MrBeast en Espanol + Beast Reacts en Espanol)
+- **August 5, 2021**: Russian channel
+- **October 9, 2021**: Brazilian Portuguese channel
+- **November 2021**: French and Japanese channels
 
-**执行方式：**
-- 视频内容完全相同，只替换文字和音频
-- 翻译由MrBeast自己创建的公司运营
-- **2023年**：正式成立Creator Global配音公司，将内部能力商业化，也服务其他YouTuber
+**How it was executed:**
+- The video content was identical; only the text and audio were replaced
+- Translation was run by a company MrBeast created himself
+- **2023**: Formally established the dubbing company Creator Global, commercializing the internal capability and also serving other YouTubers
 
-**策略演变（2022年12月后）：**
-- YouTube推出多音轨功能后，独立频道停止上传
-- 配音直接嵌入主频道视频，国际频道URL重定向到主频道
-- 这意味着所有观看量都集中到一个频道，推高了主频道的总数据
+**Strategy evolution (after December 2022):**
+- After YouTube launched the multi-audio-track feature, the standalone channels stopped uploading
+- Dubs were embedded directly into main-channel videos, and the international channel URLs redirected to the main channel
+- This meant all views were concentrated on a single channel, boosting the main channel's total numbers
 
-### 2.3 Feastables巧克力品牌（2022年）
+### 2.3 The Feastables chocolate brand (2022)
 
-**创办动机（三层）：**
-1. **个人健康**：克罗恩病（Crohn's disease）限制了他的饮食，促使他关注食品配料
-2. **供应链道德**：引用「超过150万儿童被用于可可农场非法童工」，不想参与这个体系
-3. **商业洞察**：很多品牌依赖网红营销做噱头，他想反过来——用产品质量本身说话
+**Motivations for founding it (three layers):**
+1. **Personal health**: Crohn's disease limits his diet, which led him to pay attention to food ingredients
+2. **Supply-chain ethics**: cited "more than 1.5 million children used as illegal child labor on cocoa farms," and didn't want to take part in that system
+3. **Business insight**: many brands rely on influencer marketing as a gimmick; he wanted to flip that, letting product quality itself do the talking
 
-**关键决策和执行细节：**
+**Key decisions and execution details:**
 
-| 决策 | 具体做法 |
+| Decision | Specific approach |
 |------|----------|
-| 产品优先 | 花一年多做产品开发，进行盲测对比Hershey's，必须在口味上赢才上市 |
-| 大众定价 | 不走高溢价网红品牌路线，定价与主流巧克力品牌持平 |
-| 零售分发 | 上市即进入5000+零售店，不只做线上粉丝生意 |
-| 结果 | 第一年销售额突破1亿美元，成为美国增长最快的巧克力品牌 |
+| Product first | Spent more than a year on product development, blind-tested against Hershey's, and would launch only if it won on taste |
+| Mass-market pricing | Did not take the high-premium influencer-brand route; priced on par with mainstream chocolate brands |
+| Retail distribution | Entered 5,000+ retail stores at launch, not just an online fan business |
+| Result | First-year sales topped $100 million, becoming the fastest-growing chocolate brand in the US |
 
-**关键洞察：** Feastables的策略核心是「不做网红品牌，做大众品牌」。定价平民化 + 零售覆盖 = 不依赖粉丝忠诚度，而是用产品力竞争。到2024年，Feastables的收入甚至超过了YouTube频道本身，而且——与YouTube频道不同——它实际上盈利了。
+**Key insight:** The core of Feastables' strategy is "don't build an influencer brand, build a mass-market brand." Affordable pricing + retail coverage = not depending on fan loyalty, but competing on product strength. By 2024, Feastables' revenue even exceeded that of the YouTube channel itself, and, unlike the YouTube channel, it actually turned a profit.
 
-### 2.4 Beast Burger的决策与失败（2020-2023）
+### 2.4 The Beast Burger decision and failure (2020-2023)
 
-**初始决策（2020）：**
-- 与Virtual Dining Concepts合作推出MrBeast Burger
-- 模式：虚拟厨房（Ghost Kitchen），利用现有餐厅的厨房做MrBeast品牌汉堡，通过外卖平台配送
-- 不需要自建门店，快速扩张
+**Initial decision (2020):**
+- Partnered with Virtual Dining Concepts to launch MrBeast Burger
+- Model: virtual kitchen (Ghost Kitchen), using existing restaurants' kitchens to make MrBeast-branded burgers, delivered through delivery platforms
+- No need to build its own stores, allowing rapid expansion
 
-**失败原因：**
-- **品质失控**：使用其他餐厅的厨房意味着无法控制制作质量
-- **合作方动机错位**：Virtual Dining Concepts更关注快速扩张以向其他名人推销这个模式，而非维护MrBeast Burger的品质
-- **社交媒体反噬**：粉丝开始分享半生不熟的汉堡照片
+**Reasons for failure:**
+- **Loss of quality control**: using other restaurants' kitchens meant he couldn't control the quality of preparation
+- **Misaligned partner incentives**: Virtual Dining Concepts cared more about expanding fast to pitch the model to other celebrities than about maintaining MrBeast Burger's quality
+- **Social media backlash**: fans began sharing photos of half-raw burgers
 
-**MrBeast的承认（Twitter）：**
+**MrBeast's admission (Twitter):**
 > "The problem with Beast Burger is I can't guarantee the quality of the order. When working with other restaurants it's impossible to control it sadly."
 
-**法律战：**
-- 2023年8月：MrBeast起诉Virtual Dining Concepts，称汉堡「inedible」（不可食用），要求关停
-- Virtual Dining Concepts反诉，索赔超过1亿美元，称MrBeast的指控「毫无根据」
+**The legal fight:**
+- August 2023: MrBeast sued Virtual Dining Concepts, calling the burgers "inedible" and demanding a shutdown
+- Virtual Dining Concepts countersued for over $100 million, calling MrBeast's allegations "baseless"
 
-**从失败中学到的：** Beast Burger的教训直接影响了Feastables的策略——对产品质量的绝对控制。Feastables自建供应链，不外包给他无法控制的第三方。
+**What he learned from the failure:** The lesson of Beast Burger directly shaped Feastables' strategy: absolute control over product quality. Feastables built its own supply chain rather than outsourcing to third parties he can't control.
 
-### 2.5 Beast Games：Amazon真人秀（2024-2026）
+### 2.5 Beast Games: the Amazon reality show (2024-2026)
 
-**交易规模：**
-- 2024年3月18日宣布与Amazon MGM Studios达成协议
-- 预算：1亿美元（实际花费超过这个数字）
-- 奖金：500万美元（宣称是真人秀史上最大单笔现金奖）
-- 参赛者：1000人（真人秀史上最大阵容）
-- 拍摄地点包括巴拿马珍珠群岛的La Vivienda Island
-- 打破44项吉尼斯世界纪录
+**Scale of the deal:**
+- Announced March 18, 2024, with an agreement with Amazon MGM Studios
+- Budget: $100 million (actual spending exceeded this figure)
+- Prize: $5 million (billed as the largest single cash prize in reality TV history)
+- Contestants: 1,000 (the largest cast in reality TV history)
+- Filming locations included La Vivienda Island in Panama's Pearl Islands
+- Broke 44 Guinness World Records
 
-**播出和反响：**
-- 2024年12月19日在Prime Video首播
-- 25天内吸引5000万观众，成为Prime Video史上最受欢迎的非剧本类节目
-- 2025年5月续订两季
-- 第二季2026年1月7日首播
+**Broadcast and reception:**
+- Premiered December 19, 2024 on Prime Video
+- Drew 50 million viewers in 25 days, becoming the most popular unscripted show in Prime Video history
+- Renewed for two seasons in May 2025
+- Season 2 premiered January 7, 2026
 
-**财务现实：**
-- MrBeast公开表示Beast Games最终花费超过1亿美元
-- 他个人在这个项目上亏损了数千万美元
-- 这与他的「reinvest everything」理念一致：短期亏损换取长期品牌价值和能力积累
+**Financial reality:**
+- MrBeast publicly stated that Beast Games ultimately cost more than $100 million
+- He personally lost tens of millions of dollars on the project
+- This is consistent with his "reinvest everything" philosophy: short-term loss in exchange for long-term brand value and capability building
 
 ---
 
-## 3. 内容决策模式
+## 3. Content Decision Patterns
 
-### 3.1 每个视频花多少钱？
+### 3.1 How much does each video cost?
 
-| 指标 | 数据 |
+| Metric | Data |
 |------|------|
-| 单视频平均制作成本 | 300-400万美元 |
-| 年度内容支出（2024） | 1.2亿美元 |
-| 年度内容支出（2026预计） | 2.5亿美元 |
-| 缩略图制作成本 | 约1万美元/个 |
-| 缩略图团队 | 5-6人专职 |
+| Average production cost per video | $3-4 million |
+| Annual content spend (2024) | $120 million |
+| Annual content spend (2026 projected) | $250 million |
+| Thumbnail production cost | about $10,000 each |
+| Thumbnail team | 5-6 full-time people |
 
-**他的辩护：**
+**His defense:**
 > "I don't think it's that crazy. They get 100 million views in seven days."
 
-### 3.2 如何决定一个视频创意值不值得做？
+### 3.2 How does he decide whether a video idea is worth making?
 
-**结构化流程：**
-1. **周会brainstorm**：每人带5个概念，初期不允许批评，全部记录
-2. **三重过滤**：
-   - 「这个缩略图会被点击吗？」
-   - 「这个能撑住15分钟以上吗？」
-   - 「这是只有我们才能做的事吗？」
-3. **个人兴奋度标准**：如果MrBeast自己不兴奋，淘汰
-4. **预算分析和后勤规划**：通过过滤后进入实际可行性评估
-5. **杀手级标准**：团队会完成视频、一起看完，如果缺少必要的「magic」，直接废弃——即使已经花了数百万美元
+**Structured process:**
+1. **Weekly brainstorm meeting**: everyone brings 5 concepts, no criticism allowed at first, everything is recorded
+2. **Triple filter**:
+   - "Will this thumbnail get clicked?"
+   - "Can this hold up for 15+ minutes?"
+   - "Is this something only we can do?"
+3. **Personal excitement standard**: if MrBeast himself isn't excited, it's eliminated
+4. **Budget analysis and logistics planning**: ideas that pass the filter move on to an actual feasibility assessment
+5. **The killer standard**: the team finishes the video and watches it together; if the necessary "magic" is missing, it is scrapped outright, even after millions of dollars have been spent
 
-**核心原则：**
-> "Creativity is the answer, not money." — 用创造力省钱，而不是用钱解决一切
+**Core principle:**
+> "Creativity is the answer, not money." - use creativity to save money, rather than using money to solve everything
 
-### 3.3 「Reinvest Everything」策略
+### 3.3 The "Reinvest Everything" strategy
 
-**他的原话：**
+**His own words:**
 > "I don't really make money, I just reinvest it all."
 
-**财务证据：**
-- 2024年Beast Industries收入4亿美元，但未能盈利（媒体业务成本过高）
-- 年收入范围6-7亿美元（他本人向Time确认）
-- 个人银行账户保持在100万美元以下
-- 最近向母亲借钱付婚礼费用
-- 对WSJ说：「I'm borrowing money. That's how little money I have.」
-- 补充：「Technically, everyone watching this video has more money than me in their bank account if you subtract the equity value of my company.」
+**Financial evidence:**
+- 2024 Beast Industries revenue was $400 million, but it failed to turn a profit (media business costs too high)
+- Annual revenue range of $600-700 million (confirmed by himself to Time)
+- Personal bank account kept under $1 million
+- Recently borrowed money from his mother to pay for his wedding
+- Told the WSJ: "I'm borrowing money. That's how little money I have."
+- Added: "Technically, everyone watching this video has more money than me in their bank account if you subtract the equity value of my company."
 
-**公司估值 vs 个人现金的矛盾：**
-- Beast Industries估值约50亿美元（2025年11月融资轮）
-- 2026年1月从Bitmine融资2亿美元
-- MrBeast持有公司「slightly over half」的股份
-- 纸面净资产约26亿美元
-- 但个人现金接近于零
-
----
-
-## 4. 在压力下的行为
-
-### 4.1 Ava Kris Tyson争议（2024年7月）
-
-**事件：** 长期合作伙伴Ava Kris Tyson被指控对未成年人进行「grooming」（网络诱骗）。
-
-**MrBeast的回应顺序：**
-1. Tyson于7月23日宣布「永久」退出MrBeast项目
-2. MrBeast表态：「disgusted and opposed to such unacceptable acts」
-3. 将Tyson从公司、频道、以及所有MrBeast相关项目中移除
-4. 雇佣Quinn Emanuel Urquhart & Sullivan律所进行第三方调查
-5. 调查结论：性行为不端指控「baseless」（无根据），包括被所谓的受害者自己否认
-
-**行为模式分析：**
-- 反应迅速，没有犹豫或模糊其辞
-- 选择了法律手段（第三方调查）而非公关手段
-- 先切割，再调查。不是等调查结果出来再做决定
-
-### 4.2 Beast Burger失败后的处理
-
-**关键行为：**
-- 公开承认问题：在Twitter上直接说「I can't guarantee the quality」
-- 采取法律行动：起诉合作方要求关停
-- 吸取教训：Feastables的全供应链控制策略直接来自Beast Burger的教训
-
-### 4.3 员工手册泄露争议（2024年9月）
-
-**事件：** YouTuber Rosanna Pansino泄露了MrBeast的36页内部员工手册「How to Succeed in MrBeast Production」。
-
-**文档核心内容：**
-- 将员工分为A/B/C三类：A-Player是「obsessive, learn from mistakes, coachable, intelligent」；C-Player是「just average」
-- 「Critical Components」哲学：被标记为关键的事项要「treat it like your baby, protect it at all costs, check in on it 10x a day」
-- 要求员工有「God himself couldn't stop you」的心态
-
-**外界反应：** 被批评为「toxic, unfair, and even dangerous workplace practices」的证据。
-
-**MrBeast的处理：** 没有道歉或撤回文档，也没有大规模公关回应。这与他面对争议时「快速切割或沉默应对」的模式一致。
+**The contradiction between company valuation and personal cash:**
+- Beast Industries is valued at about $5 billion (November 2025 funding round)
+- Raised $200 million from Bitmine in January 2026
+- MrBeast holds "slightly over half" of the company's shares
+- Paper net worth of about $2.6 billion
+- But his personal cash is close to zero
 
 ---
 
-## 5. 言行一致性检验
+## 4. Behavior Under Pressure
 
-### 5.1 「Obsess Over Every Detail」
+### 4.1 The Ava Kris Tyson controversy (July 2024)
 
-**他说的：** 要求员工对每个细节都痴迷，像保护自己的孩子一样保护关键组件。
+**Event:** Longtime collaborator Ava Kris Tyson was accused of "grooming" (online enticement) minors.
 
-**实际证据：**
+**Sequence of MrBeast's response:**
+1. On July 23, Tyson announced a "permanent" departure from MrBeast projects
+2. MrBeast stated he was "disgusted and opposed to such unacceptable acts"
+3. Removed Tyson from the company, the channels, and all MrBeast-related projects
+4. Hired the law firm Quinn Emanuel Urquhart & Sullivan to conduct a third-party investigation
+5. Investigation conclusion: the sexual misconduct allegations were "baseless," including denials by the alleged victims themselves
 
-| 领域 | 证据 |
+**Behavioral pattern analysis:**
+- Responded quickly, with no hesitation or equivocation
+- Chose legal means (a third-party investigation) rather than PR means
+- Cut ties first, investigated second. He did not wait for the investigation results before deciding
+
+### 4.2 Handling after the Beast Burger failure
+
+**Key behaviors:**
+- Publicly admitted the problem: said directly on Twitter, "I can't guarantee the quality"
+- Took legal action: sued the partner demanding a shutdown
+- Learned the lesson: Feastables' full supply-chain control strategy came directly from the lesson of Beast Burger
+
+### 4.3 The employee handbook leak controversy (September 2024)
+
+**Event:** YouTuber Rosanna Pansino leaked MrBeast's 36-page internal employee handbook, "How to Succeed in MrBeast Production."
+
+**Core contents of the document:**
+- Sorts employees into A/B/C tiers: an A-Player is "obsessive, learn from mistakes, coachable, intelligent"; a C-Player is "just average"
+- The "Critical Components" philosophy: items flagged as critical must be treated "like your baby, protect it at all costs, check in on it 10x a day"
+- Requires employees to have a "God himself couldn't stop you" mindset
+
+**Outside reaction:** Criticized as evidence of "toxic, unfair, and even dangerous workplace practices."
+
+**MrBeast's handling:** No apology or retraction of the document, and no large-scale PR response. This is consistent with his pattern when facing controversy: "cut ties quickly or respond with silence."
+
+---
+
+## 5. Word-Deed Consistency Check
+
+### 5.1 "Obsess Over Every Detail"
+
+**What he says:** Demands that employees be obsessed with every detail and protect critical components like their own children.
+
+**Actual evidence:**
+
+| Area | Evidence |
 |------|------|
-| 缩略图 | 每个视频生成约50个标题/缩略图组合，筛选到约20个进行A/B测试，花费约1万美元 |
-| 内容淘汰 | 完成的视频如果不够好会被废弃，即使已花费数百万美元 |
-| 产品开发 | Feastables花一年以上开发，盲测必须赢Hershey's才上市 |
-| 泄露文档 | 36页内部手册详细规定了每个环节的标准和期望 |
-| A/B测试 | 测试了约30个视频的闭嘴vs张嘴缩略图，全部选择数据胜出的方案 |
+| Thumbnails | Generates about 50 title/thumbnail combinations per video, narrows to about 20 for A/B testing, costing about $10,000 |
+| Content elimination | A finished video that isn't good enough is scrapped, even after millions of dollars have been spent |
+| Product development | Feastables took over a year to develop, and had to beat Hershey's in a blind test before launch |
+| Leaked document | The 36-page internal handbook specifies standards and expectations for every stage in detail |
+| A/B testing | Tested closed-mouth vs open-mouth thumbnails across about 30 videos, and went with the data-winning option every time |
 
-**一致性评级：** 高度一致。不只是嘴上说说，有大量系统化的执行证据。
+**Consistency rating:** Highly consistent. Not just talk; there is abundant evidence of systematic execution.
 
-### 5.2 「I Reinvest Everything」
+### 5.2 "I Reinvest Everything"
 
-**他说的：** 「I don't really make money, I just reinvest it all.」
+**What he says:** "I don't really make money, I just reinvest it all."
 
-**实际财务证据：**
+**Actual financial evidence:**
 
-| 指标 | 数据 |
+| Metric | Data |
 |------|------|
-| Beast Industries年收入（2024） | 约4亿美元 |
-| Beast Industries盈利（2024） | 未盈利 |
-| 个人银行存款 | 不到100万美元 |
-| 最近借款 | 向母亲借钱付婚礼费 |
-| Beast Games个人亏损 | 数千万美元 |
-| 2026年预计内容支出 | 2.5亿美元 |
-| 公司估值 | 约50亿美元 |
-| 净资产 | 约26亿美元（纸面） |
+| Beast Industries annual revenue (2024) | about $400 million |
+| Beast Industries profit (2024) | Not profitable |
+| Personal bank deposits | under $1 million |
+| Recent borrowing | borrowed from his mother to pay for the wedding |
+| Beast Games personal loss | tens of millions of dollars |
+| Projected 2026 content spend | $250 million |
+| Company valuation | about $5 billion |
+| Net worth | about $2.6 billion (on paper) |
 
-**一致性评级：** 高度一致，甚至超出预期。一个纸面上价值26亿美元的人，个人账户不到100万、需要向母亲借钱，这是极端的再投资行为。不过需要注意：这也可能是一种「战略性贫穷叙事」——公司估值50亿，他持有一半以上，随时可以通过股权融资获得现金。真正的问题不是「他有没有钱」，而是「他是否选择了不把钱套出来」。
+**Consistency rating:** Highly consistent, even beyond expectations. Someone worth $2.6 billion on paper, with under $1 million in a personal account and needing to borrow from his mother, is engaging in extreme reinvestment. Note, however, that this could also be a "strategic poverty narrative": the company is valued at $5 billion, he holds more than half, and he can get cash at any time through equity financing. The real question is not "does he have money" but "has he chosen not to cash out."
 
-### 5.3 「Thumbnails Are Everything」
+### 5.3 "Thumbnails Are Everything"
 
-**他说的：** 缩略图是YouTube成功最关键的因素之一。
+**What he says:** Thumbnails are one of the most critical factors in YouTube success.
 
-**实际投入证据：**
-- **团队**：5-6人专职做缩略图
-- **花费**：每个视频约1万美元用于缩略图
-- **数量**：每个视频生成约50个标题/缩略图概念，筛选到约20个
-- **A/B测试**：YouTube推出A/B测试功能后立即大规模使用
-- **数据驱动决策**：测试了约30个视频的闭嘴vs张嘴表情，全部30个闭嘴版本获得更高观看时长后，彻底放弃张嘴表情
-- **他的原话**：「Now that I can actually A/B test thumbnails I don't have to guess and I just test and see what people want. My mouth would have closed years ago if I had this tool.」
+**Actual evidence of investment:**
+- **Team**: 5-6 people working full-time on thumbnails
+- **Spend**: about $10,000 per video on thumbnails
+- **Volume**: about 50 title/thumbnail concepts generated per video, narrowed to about 20
+- **A/B testing**: used at scale immediately after YouTube launched its A/B testing feature
+- **Data-driven decisions**: tested closed-mouth vs open-mouth expressions across about 30 videos; after all 30 closed-mouth versions earned higher watch time, he abandoned open-mouth expressions entirely
+- **His own words**: "Now that I can actually A/B test thumbnails I don't have to guess and I just test and see what people want. My mouth would have closed years ago if I had this tool."
 
-**一致性评级：** 高度一致。这是他言行最一致的领域之一。不只是花时间，而是投入了真金白银和专业团队。
+**Consistency rating:** Highly consistent. This is one of the areas where his words and deeds are most aligned. He didn't just spend time; he invested real money and a professional team.
 
 ---
 
-## 6. 决策模式总结
+## 6. Summary of Decision Patterns
 
-### 核心行为特征
+### Core behavioral traits
 
-1. **极端时间投入**：五年研究算法后才有第一个突破，一年开发产品后才上市
-2. **飞轮思维**：赞助费→赠品→播放量→更多赞助费；YouTube→品牌→零售→更多YouTube
-3. **失败后的快速学习**：Beast Burger的品质失控 → Feastables的全链路控制
-4. **数据驱动但不被数据绑架**：用A/B测试验证直觉，但最终决策仍依赖「是否让我兴奋」
-5. **愿意亏损换能力**：Beast Games亏数千万但获得电视制作能力和Amazon关系
-6. **切割果断**：Ava Tyson事件中先切割再调查，不犹豫
+1. **Extreme time investment**: five years of algorithm research before the first breakthrough, a year of development before a product launch
+2. **Flywheel thinking**: sponsorship fees -> giveaways -> views -> more sponsorship fees; YouTube -> brand -> retail -> more YouTube
+3. **Fast learning after failure**: Beast Burger's loss of quality control -> Feastables' full-chain control
+4. **Data-driven but not held hostage by data**: uses A/B tests to validate intuition, but the final decision still relies on "does it excite me"
+5. **Willing to take losses in exchange for capability**: Beast Games lost tens of millions but gained TV production capability and the Amazon relationship
+6. **Decisive severing of ties**: in the Ava Tyson incident, cut ties first and investigated afterward, without hesitation
 
-### 决策时间框架
+### Decision time frames
 
-| 决策类型 | 时间框架 | 例子 |
+| Decision type | Time frame | Example |
 |----------|----------|------|
-| 危机切割 | 小时-天 | Ava Tyson事件 |
-| 内容决策 | 周 | 视频创意筛选 |
-| 产品开发 | 年 | Feastables |
-| 战略研究 | 年 | 五年算法研究 |
-| 能力投资 | 接受多年回报期 | Beast Games、国际化 |
+| Crisis severance | Hours to days | The Ava Tyson incident |
+| Content decisions | Weeks | Screening video ideas |
+| Product development | Years | Feastables |
+| Strategic research | Years | Five years of algorithm research |
+| Capability investment | Accepts multi-year payback periods | Beast Games, internationalization |
 
 ---
 

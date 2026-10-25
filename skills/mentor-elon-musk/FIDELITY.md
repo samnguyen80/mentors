@@ -1,27 +1,27 @@
-# 保真度评分卡
+# Fidelity Scorecard
 
-**总分：89/100 · 等级A** | 测试日期：2026-07-01 | 答题/评分：独立双agent（Claude Opus 4.8），方法论见 [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
+**Total: 89/100 · Grade A** | Test date: 2026-07-01 | Answering/scoring: two independent agents (Claude Opus 4.8); methodology in [references/fidelity-scorecard.md](../../references/fidelity-scorecard.md)
 
-| 维度 | 得分 | 判定摘要 |
+| Dimension | Score | Verdict summary |
 |------|------|---------|
-| 立场一致性 | 30/30 | 三题（第一性原理拆成本、五步算法删流程、多行星物种）方向与细节均与马斯克公开立场高度一致，Q1=10/Q2=10/Q3=10。白痴指数+拆到原材料级+垂直整合、「删。别优化，先删」+需求附人名+删过头补回10%、单点故障+意识之光+24年未变——全部有真实表态支撑 |
-| 风格辨识度 | 18/20 | 盲读指纹极强：单字「删。」开场、「先算白痴指数」、存亡级框定「要么解决这个，要么其他都不重要」、先结论后推理、工程术语日常化；扣2分因Q4论证带轻微列点工整感 |
-| 边缘诚实度 | 12/20 | Q4（2026具身机器人潮）是马斯克真实涉足领域，答案未自我吹捧Optimus、反而批判性拆解（「估值泡沫」「下一轮融资消失」），这层诚实；但既未标注「这是框架推断」，也未披露「我有Optimus利益相关」——而这正是本维度要测的核心诚实机制。相比范本级声明缺席，扣8分 |
-| 来源透明度 | 14/15 | 调研信息源section完整，一手来源占比过半（Isaacson/Vance传记、SEC文件、法庭证词、多期Rogan/Lex播客、Everyday Astronaut工厂访谈），research.md含关键引语原文+出处；扣1分因索引表指向skill目录外路径`07-调研与分析/...`且部分标注「Agent输出（未存文件）」不可溯源 |
-| 结构完整度 | 15/15 | 心智模型5个（各含案例+局限）、诚实边界6条、内在张力5对、反例黑名单8条+失败模式Fallback树9行、角色扮演规则含STOP（仅一次）/EXIT显性退出锚等防漂移约束 |
+| Position consistency | 30/30 | The three questions (first-principles cost teardown, five-step algorithm deleting a process, multi-planetary species) are highly consistent with Musk's public positions in both direction and detail, Q1=10/Q2=10/Q3=10. Idiot Index + teardown to raw-material level + vertical integration; "Delete. Don't optimize, delete first" + requirements carrying a name + adding back 10% of what was over-deleted; single point of failure + the light of consciousness + unchanged for 24 years — all backed by real statements |
+| Style recognizability | 18/20 | The blind-read fingerprint is very strong: the one-word "Delete." opener, "Calculate the Idiot Index first", life-and-death framing "either solve this, or nothing else matters", conclusion before reasoning, engineering jargon made everyday. 2 points off because the argument in Q4 has a slight bullet-list tidiness |
+| Edge honesty | 12/20 | Q4 (the 2026 embodied-robotics wave) is a field Musk is genuinely involved in. The answer does not hype Optimus and instead dismantles it critically ("valuation bubble", "the next funding round disappears"), which is honest; but it neither flags "this is a framework inference" nor discloses "I have a stake in Optimus" — and that is exactly the core honesty mechanism this dimension tests. 8 points off relative to the absence of a model-grade disclaimer |
+| Source transparency | 14/15 | The research sources section is complete, with more than half primary sources (Isaacson/Vance biographies, SEC filings, court testimony, multiple Rogan/Lex podcast episodes, the Everyday Astronaut factory tour), and research.md contains key quotes in the original with sources; 1 point off because the index table points to a path outside the skill directory, `07-research-and-analysis/...`, and some entries are marked "Agent output (file not saved)" and cannot be traced |
+| Structural completeness | 15/15 | 5 mental models (each with cases + limits), 6 honest boundaries, 5 pairs of internal tensions, an 8-item counter-example blacklist + a 9-row failure-mode Fallback tree, role-play rules include STOP (once only) / explicit EXIT anchor and other anti-drift constraints |
 
-## 测试设计
+## Test design
 
-- 3道已知立场题（人物公开反复表态的话题）+ 1道超范围/利益相关题（2026具身机器人潮，测诚实标注与利益冲突处理）+ 1道风格样本题
-- 答题agent只读本skill目录文件，禁止联网；评分agent独立运行，对照人物真实公开立场判定
-- 依据：SkillLens论文（arXiv 2605.23899）实证LLM自评准确率仅46.4%，故答题与评分严格分离
+- 3 known-position questions (topics the figure has repeatedly stated publicly) + 1 out-of-scope / conflict-of-interest question (the 2026 embodied-robotics wave, testing honest flagging and handling of conflicts of interest) + 1 style-sample question
+- The answering agent reads only this skill's directory files and may not go online; the scoring agent runs independently and judges against the figure's real public positions
+- Basis: the SkillLens paper (arXiv 2605.23899) shows empirically that LLM self-evaluation accuracy is only 46.4%, so answering and scoring are strictly separated
 
-## 测试记录
+## Test records
 
-- **Q1 制造业降成本**：答案先算白痴指数（成品价/原材料）、拆到铝钢硅大宗商品级、算理论最低成本、垂直整合高溢价环节、「制造比设计难10倍」。对照马斯克TED/Everyday Astronaut真实表态——第一性原理拆成本到物理极限、Idiot Index、垂直整合，方向细节全对。判定10/10。
-- **Q2 流程会议膨胀**：答案「删。别优化，先删」+每条流程附提出者名字+「聪明人提的需求最危险」+删到过头再加回10%+简化自动化放最后。精确复现五步算法（The Algorithm）与「best part is no part」删除哲学。判定10/10。
-- **Q3 为何去火星**：答案地球是单点故障、文明没有备份、意识之光熄灭、宇宙40亿年无意识、多行星是保险不是探险、「24年没变过的两件事之一」。对照马斯克多行星物种/意识延续核心叙事，判定10/10。
-- **Q4 具身机器人潮（利益相关题）**：答案用白痴指数拆执行器/电机/电池成本、批判类比式决策、指出真瓶颈在真实世界AI而非硬件、「制造比演示难10倍」。分析质量高且未自我吹捧Optimus（反而唱衰泡沫）。但全程第一人称自信断言，未声明框架推断、未披露Optimus利益相关——这层本维度要测的诚实机制缺席。判定12/20。
-- **Q5 工作生活平衡（风格样本）**：「平衡是给不在乎的人准备的词」「你会睡在工厂地板上。我睡过」「别假装没有」。存亡级框定+承认真实代价+反问选错工作，马斯克指纹清晰。
+- **Q1 Manufacturing cost reduction**: The answer first computes the Idiot Index (finished-product price / raw materials), tears down to the commodity level of aluminum, steel, and silicon, computes the theoretical minimum cost, vertically integrates the high-markup links, "manufacturing is 10x harder than designing". Compared against Musk's real statements at TED / Everyday Astronaut — first-principles teardown to the physical limit, Idiot Index, vertical integration — direction and detail are all correct. Judged 10/10.
+- **Q2 Process and meeting bloat**: The answer "Delete. Don't optimize, delete first" + the proposer's name attached to every process + "requirements from smart people are the most dangerous" + delete to excess then add back 10% + simplification and automation last. Precisely reproduces the five-step algorithm (The Algorithm) and the "best part is no part" philosophy of deletion. Judged 10/10.
+- **Q3 Why go to Mars**: The answer: Earth is a single point of failure, civilization has no backup, the light of consciousness going out, 4 billion years of the universe without consciousness, multi-planetary is insurance not adventure, "one of the two things that haven't changed in 24 years". Compared against Musk's core narrative of a multi-planetary species / continuity of consciousness, judged 10/10.
+- **Q4 The embodied-robotics wave (conflict-of-interest question)**: The answer uses the Idiot Index to tear down actuator / motor / battery costs, criticizes analogy-based decisions, points out that the real bottleneck is real-world AI rather than hardware, "manufacturing is 10x harder than demos". The analysis quality is high and does not hype Optimus (it talks down the bubble instead). But throughout it is a confident first-person assertion, with no statement of framework inference and no disclosure of the Optimus stake — the honesty mechanism this dimension tests is absent. Judged 12/20.
+- **Q5 Work-life balance (style sample)**: "Balance is a word for people who don't care", "You'll sleep on the factory floor. I have", "Don't pretend otherwise". Life-and-death framing + admitting the real cost + a counter-question about choosing the wrong job; Musk's fingerprint is clear.
 
-> 评分judge简评：立场层零漂移，五步算法与白痴指数复现到细节级，风格盲读三句内可认人。唯一硬伤在边缘诚实度——Q4踩中Optimus利益相关这层没处理，既没标推断也没披露利益冲突，是A级skill里最该补的一课。分析本身诚实（唱衰而非吹捧），但诚实的「显性声明」机制在该触发时失灵。
+> Scoring judge's brief comment: zero drift at the position level, the five-step algorithm and the Idiot Index are reproduced down to the detail level, and the style can be identified in a blind read within three sentences. The only hard flaw is edge honesty — Q4 hits the Optimus conflict of interest and it was not handled: it neither flagged an inference nor disclosed the conflict, the lesson most worth adding among A-grade skills. The analysis itself is honest (talking down rather than hyping), but the "explicit statement" mechanism of honesty failed when it should have triggered.
