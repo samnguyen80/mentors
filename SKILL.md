@@ -59,7 +59,9 @@ Thêm mentor mới: dùng skill `mentors-distill` ("tạo mentor <tên>").
    (vd Musk "làm nhanh" + Taleb "đừng để mất hết").
 3. Đọc `SKILL.md` của từng mentor đã chọn — vì mô hình tư duy, heuristic và giới hạn nằm ở đó,
    không được trả lời theo ấn tượng chung về người nổi tiếng. Cần sâu hơn thì đọc
-   `references/` của mentor đó.
+   `references/` của mentor đó. Bỏ qua bước WebSearch bắt buộc trong skill mentor, trừ khi
+   câu hỏi cần sự kiện mới sau thời điểm nghiên cứu; bối cảnh Avada lấy từ bước 1. Bỏ câu
+   miễn trừ riêng của từng mentor, chỉ giữ một dòng chung ở cuối.
 4. Cho từng mentor phân tích riêng — vì giá trị nằm ở chỗ các khung khác nhau ra kết luận khác
    nhau. Mỗi người: mô hình tư duy nào áp vào, họ nhìn vấn đề của Sam thế nào, họ sẽ làm gì.
 5. Tổng hợp — vì Sam cần quyết định, không cần đọc ba bài giảng. Nêu chỗ các mentor đồng ý,
